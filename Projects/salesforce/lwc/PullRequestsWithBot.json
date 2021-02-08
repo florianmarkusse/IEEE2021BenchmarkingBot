@@ -1,0 +1,1708 @@
+{
+    "data": {
+      "search": {
+        "edges": [
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): properly filter non-composed events",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 70,
+              "additions": 34,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Remove force-publish usage",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 7,
+              "additions": 0,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Update dependencies",
+              "comments": {
+                "totalCount": 5
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 276,
+              "additions": 291,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(babel-plugin-component): remove post-process decorator validation",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 54,
+              "additions": 58,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly dependency update",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 6
+              },
+              "deletions": 197,
+              "additions": 234,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: bump socket.io from 2.3.0 to 2.4.1",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "dependabot"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 62,
+              "additions": 88,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix(template-compiler): refactor logic to simplifiy attribute name handling",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 26,
+              "additions": 14,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix: properly add CSS custom properties to inline style attributes",
+              "comments": {
+                "totalCount": 16
+              },
+              "author": {
+                "login": "blittle"
+              },
+              "commits": {
+                "totalCount": 7
+              },
+              "deletions": 176,
+              "additions": 63,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix: unblock shadow methods",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 7
+              },
+              "deletions": 9,
+              "additions": 26,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): fix event propagation regression",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 309,
+              "additions": 546,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): fix event propagation regression",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 42,
+              "additions": 410,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test: test commit",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "Sumitjg"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 1,
+              "additions": 1,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): fix event propagation regression",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 198,
+              "additions": 588,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "test: dummy commit",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 0,
+              "additions": 1,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "Forked repo branch",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "Sumitjg"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 1,
+              "additions": 1,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "test: ci job tests",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "Sumitjg"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 1,
+              "additions": 14,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly dependencies and devDependencies update",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 70,
+              "additions": 97,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly dependency update",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "Sumitjg"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 2750,
+              "additions": 1550,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "chore: set dependency resolution to fix security vulnerability",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 5,
+              "additions": 6,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test(integration-karma): add integration tests for EventTarget",
+              "comments": {
+                "totalCount": 5
+              },
+              "author": {
+                "login": "abdulsattar"
+              },
+              "commits": {
+                "totalCount": 21
+              },
+              "deletions": 75,
+              "additions": 362,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly dependency update",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 568,
+              "additions": 810,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: bump node-notifier from 8.0.0 to 8.0.1",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "dependabot"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 18,
+              "additions": 32,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(synthetic-shadow): consolidate event retargeting to Event.prototype ",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 11
+              },
+              "deletions": 103,
+              "additions": 156,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test(synthetic-shadow): refactor Event-properties tests",
+              "comments": {
+                "totalCount": 6
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 13
+              },
+              "deletions": 227,
+              "additions": 179,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "build(deps): bump ini from 1.3.5 to 1.3.7",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "dependabot"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 4,
+              "additions": 3,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(synthetic-shadow): consolidate EventTarget prototype methods",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 74,
+              "additions": 49,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine-core): replaces vm.context wire connecting/disconnecting",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 157,
+              "additions": 237,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(integration-test): Remove duplicate code from integration tests",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 11
+              },
+              "deletions": 1398,
+              "additions": 929,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(synthetic-shadow): enable shadowRoot.dispatchEvent()",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 20
+              },
+              "deletions": 279,
+              "additions": 644,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Upgrade repo to node 14",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 861,
+              "additions": 877,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(synthetic-shadow): move node ownership logic into own module",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 10
+              },
+              "deletions": 110,
+              "additions": 132,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(synthetic-shadow): relatedTarget prototype patching for FocusEvent and MouseEvent",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 84,
+              "additions": 179,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Upgrade dependencies",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 88,
+              "additions": 87,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Upgrade dev dependencies",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 10
+              },
+              "deletions": 349,
+              "additions": 477,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "Update package.json",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 1,
+              "additions": 1,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix: add nucleus config",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 0,
+              "additions": 8,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(@lwc/engine-core): Extract HTML attribute -> props to @lwc/shared",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 132,
+              "additions": 106,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly update",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 974,
+              "additions": 1476,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): conservatively disable focus navigation routine upon focus",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 2,
+              "additions": 84,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "build: fix release branch restriction for npm publish",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 10,
+              "additions": 23,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix: improve wire decorator types",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "sfdc-jkovitz"
+              },
+              "commits": {
+                "totalCount": 11
+              },
+              "deletions": 25,
+              "additions": 26,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "feat: add HMR functionality",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 2,
+              "additions": 513,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(engine): fixes diffing algo when if has dynamic child",
+              "comments": {
+                "totalCount": 8
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 4,
+              "additions": 104,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "build: publish to npm using circleci",
+              "comments": {
+                "totalCount": 51
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 29
+              },
+              "deletions": 294,
+              "additions": 194,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore(lwc): Add missing depenency on @lwc/engine-server",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 0,
+              "additions": 1,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(engine): fix for diffing algo handling of null",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 2,
+              "additions": 135,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore(style-compiler): Update postcss to version 8",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 41,
+              "additions": 46,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): removing another public api isAttributeLocked",
+              "comments": {
+                "totalCount": 8
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 34,
+              "additions": 67,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(perf-benchmarks): BEST test case for slotting scenarios",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 48,
+              "additions": 276,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test(integration-karma): Defer all component creation in test blocks",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 31,
+              "additions": 46,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Upgrade to latest version of Babel",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 904,
+              "additions": 186,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: Weekly dependency upgrade",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 212,
+              "additions": 243,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore(lwc): Expose engine-server ESM artifact",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 6,
+              "additions": 6,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(synthetic-shadow): innerText and outerText polyfills",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 10,
+              "additions": 703,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(compiler): Upgrade babel and add plugins for stage 4 proposal",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 1040,
+              "additions": 619,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "chore(lwc): specify dom lib for types.d.ts",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 0,
+              "additions": 5,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): nested components with negative tabindex",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 5,
+              "additions": 53,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): Tab navigation after drag and drop",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 6
+              },
+              "deletions": 5,
+              "additions": 19,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "build: explicit ambient types",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 0,
+              "additions": 3,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: weekly dependency update",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 10
+              },
+              "deletions": 875,
+              "additions": 903,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "build(deps): bump lodash from 4.17.15 to 4.17.19",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "dependabot"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 4,
+              "additions": 3,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix(engine-server): isConnected should not be `true` during construction",
+              "comments": {
+                "totalCount": 5
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 11,
+              "additions": 45,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(wire-service): call wired methods without calling hooks",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 2,
+              "additions": 10,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(enginer-server): HTML escape",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 3,
+              "additions": 61,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test(engine-server): add slots coverage",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 2,
+              "additions": 87,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "docs(module-resolver): Update README documentation",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 6
+              },
+              "deletions": 221,
+              "additions": 385,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(engine-server): Add parameter check to renderComponent",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 1,
+              "additions": 65,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: lockfile updates",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 829,
+              "additions": 99,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(engine-server): Disable wire adapters in SSR",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 1,
+              "additions": 22,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): VM spring cleaning",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 217,
+              "additions": 202,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(wire-service): legacy adapters config calls with same config",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 5,
+              "additions": 107,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: update README.md",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "vovius"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 0,
+              "additions": 1,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "test(karma): Karma fast watch mode",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 5,
+              "additions": 14,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): implement renderer interface",
+              "comments": {
+                "totalCount": 8
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 6
+              },
+              "deletions": 247,
+              "additions": 481,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): add support for template hot swapping",
+              "comments": {
+                "totalCount": 9
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 14
+              },
+              "deletions": 0,
+              "additions": 486,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix: cache definition for constructor with circular dependency",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 6,
+              "additions": 30,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "docs: create README for lwc package",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "jbleyleSF"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 0,
+              "additions": 73,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(wire-service): config with all params being undefined",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 5
+              },
+              "deletions": 15,
+              "additions": 221,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "more changes on top of PR #1798",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 190,
+              "additions": 96,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): node-reactions using native web components",
+              "comments": {
+                "totalCount": 14
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 15
+              },
+              "deletions": 662,
+              "additions": 1079,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "test(module-resolver): Mics. changes",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 21
+              },
+              "deletions": 338,
+              "additions": 815,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(synthetic-shadow): composed copy, cut, and paste events",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 10
+              },
+              "deletions": 0,
+              "additions": 129,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test: migrate test suites with skipped unit tests to karma",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 11
+              },
+              "deletions": 2775,
+              "additions": 1065,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): Decouple createElement from engine internals",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 193,
+              "additions": 168,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(engine): @lwc/node-reactions",
+              "comments": {
+                "totalCount": 2
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 10
+              },
+              "deletions": 346,
+              "additions": 1133,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "chore: update release script to reflect correct footer in dist files",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 8,
+              "additions": 14,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: enable development mode assertions for prod_debug",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 1
+              },
+              "deletions": 1,
+              "additions": 5,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "fix(wire-service): dependent adapter receiving incomplete config",
+              "comments": {
+                "totalCount": 6
+              },
+              "author": {
+                "login": "jodarove"
+              },
+              "commits": {
+                "totalCount": 8
+              },
+              "deletions": 38,
+              "additions": 138,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat: upgrade best",
+              "comments": {
+                "totalCount": 5
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 136,
+              "additions": 152,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: update release script to reflect correct footer in dist files",
+              "comments": {
+                "totalCount": 6
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 8,
+              "additions": 14,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(synthetic-shadow): programmatic focus when delegating focus",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "ekashida"
+              },
+              "commits": {
+                "totalCount": 11
+              },
+              "deletions": 35,
+              "additions": 431,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "test(integration-test): Increase integration test timeout",
+              "comments": {
+                "totalCount": 3
+              },
+              "author": {
+                "login": "pmdartus"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 13,
+              "additions": 30,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "feat(module-resolver): implement module resolution",
+              "comments": {
+                "totalCount": 6
+              },
+              "author": {
+                "login": "diervo"
+              },
+              "commits": {
+                "totalCount": 35
+              },
+              "deletions": 219,
+              "additions": 1516,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(engine): to rely on native custom elements for connectness",
+              "comments": {
+                "totalCount": 7
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 3
+              },
+              "deletions": 8,
+              "additions": 85,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "feat(engine): @lwc/node-reactions",
+              "comments": {
+                "totalCount": 5
+              },
+              "author": {
+                "login": "ravijayaramappa"
+              },
+              "commits": {
+                "totalCount": 6
+              },
+              "deletions": 341,
+              "additions": 1132,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(node-reactions): experiment with domevents (second attempt)",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 35
+              },
+              "deletions": 326,
+              "additions": 1146,
+              "merged": false
+            }
+          },
+          {
+            "node": {
+              "title": "refactor(wire-service): wire decorator reform ",
+              "comments": {
+                "totalCount": 7
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 2954,
+              "additions": 2882,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "fix(engine): removing the remaining pieces of manual reactions",
+              "comments": {
+                "totalCount": 4
+              },
+              "author": {
+                "login": "caridy"
+              },
+              "commits": {
+                "totalCount": 4
+              },
+              "deletions": 239,
+              "additions": 150,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+              "title": "chore: move to new best hub",
+              "comments": {
+                "totalCount": 1
+              },
+              "author": {
+                "login": "jasonsilberman"
+              },
+              "commits": {
+                "totalCount": 2
+              },
+              "deletions": 2,
+              "additions": 2,
+              "merged": true
+            }
+          },
+          {
+            "node": {
+                "title": "feat: [WIP] first prototype of node reactions",
+                "comments": {
+                  "totalCount": 34
+                },
+                "author": {
+                  "login": "ravijayaramappa"
+                },
+                "commits": {
+                  "totalCount": 44
+                },
+                "deletions": 337,
+                "additions": 1080,
+                "merged": false
+              }
+          }
+        ]
+      }
+    }
+  }
