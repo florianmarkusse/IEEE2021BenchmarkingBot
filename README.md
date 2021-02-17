@@ -1,4 +1,4 @@
-# PR (Pull Request) Data Salesforce/lwc
+# PR (Pull Request) Data salesforce/lwc
 
 This directory contains the PR data for the salesforce/lwc project. The files have the following contents:
 
