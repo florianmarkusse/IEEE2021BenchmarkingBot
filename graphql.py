@@ -86,7 +86,7 @@ print(type(projects[0]))
 for project in projects:
   # Get bot PR data
   # Write to file
-
+  print(project.get("owner"))
   # Get all PR data
   # Write to file
 
@@ -94,22 +94,22 @@ for project in projects:
 
   
 
-# pull_requests = []
+pull_requests = []
 
-# query_result = run_query(get_query()) # Execute the query
-# edges = query_result["data"]["search"]["edges"]
-# pull_requests.extend(edges)
-# final_cursor = pull_requests[len(pull_requests) - 1]["cursor"]
+query_result = run_query(get_query()) # Execute the query
+edges = query_result["data"]["search"]["edges"]
+pull_requests.extend(edges)
+final_cursor = pull_requests[len(pull_requests) - 1]["cursor"]
 
-# while (len(edges) == 100):
-#   query_result = run_query(get_query(final_cursor)) # Execute the query
-#   edges = query_result["data"]["search"]["edges"]
-#   pull_requests.extend(edges)
-#   final_cursor = pull_requests[len(pull_requests) - 1]["cursor"]
+while (len(edges) == 100):
+  query_result = run_query(get_query(final_cursor)) # Execute the query
+  edges = query_result["data"]["search"]["edges"]
+  pull_requests.extend(edges)
+  final_cursor = pull_requests[len(pull_requests) - 1]["cursor"]
 
-# jsonData = json.dumps(pull_requests)
+jsonData = json.dumps(pull_requests)
 
-# file = open("test.json", 'a')
-# file.write(jsonData)
-# file.close()
+file = open("test.json", 'a')
+file.write(jsonData)
+file.close()
 

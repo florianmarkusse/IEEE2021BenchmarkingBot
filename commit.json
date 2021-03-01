@@ -1,0 +1,98 @@
+{
+    "sha": "e3abfbdea1b9e38dc1e2182330364d676ea36baa",
+    "node_id": "MDY6Q29tbWl0OTg2ODkxOTM6ZTNhYmZiZGVhMWI5ZTM4ZGMxZTIxODIzMzAzNjRkNjc2ZWEzNmJhYQ==",
+    "commit": {
+        "author": {
+            "name": "Ravi Jayaramappa",
+            "email": "ravi.jayaramappa@salesforce.com",
+            "date": "2019-09-11T21:00:39Z"
+        },
+        "committer": {
+            "name": "Ravi Jayaramappa",
+            "email": "ravi.jayaramappa@salesforce.com",
+            "date": "2019-09-11T21:02:57Z"
+        },
+        "message": "fix: revert to calling dom apis with explicit arguments\n\nfor perf reasons",
+        "tree": {
+            "sha": "705bb9585c062ddcb27a8c6c5b48e7475614b393",
+            "url": "https://api.github.com/repos/salesforce/lwc/git/trees/705bb9585c062ddcb27a8c6c5b48e7475614b393"
+        },
+        "url": "https://api.github.com/repos/salesforce/lwc/git/commits/e3abfbdea1b9e38dc1e2182330364d676ea36baa",
+        "comment_count": 0,
+        "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCAAdFiEEezxsn2VfBERYifeto6P3BANj2g4FAl15YQEACgkQo6P3BANj\n2g7W2xAAq3otXDF/0bDTQdFuIDC1vZbSzCUClLsJUzgAayu1nUwkDkJ/xMPZqeK8\nrEYWgBS9z0PK52eoNoOLRytB7WPRwtl52VZ/3/Y4wG9OznzrEikSNUTrEF/0rgJH\nLl+KHshh3WhBZKyqJfC9VApyQTjimsfdnSsC9g61p8Lcfb70H5bCL+lsD80Bk5CO\nam3TQq3OcSEhX6vxCBwu2OOgMOV+9SV9lbkrVT9xSmduex3utdgaIeAouWh+bqHK\nbMBpzIHeuXIAZMPLk/yYtdpWO1iS2dfbyXU4nWbGnnwYUchoWQu4dW8xw4ejUS6P\nVJA/i94L5SK+kThW5fIGVxz8VPcl8FjoxIagD36/QMAVqNtnNm33XlVb6qiItIxQ\nMzTi5GmYqdIauvtZVCKodr2eza8KhwbH8DYy2C9ZDF3lZ7tq8mhJRT7G9f7ZpwJC\nWBE5KUyHfpQ4Ow89MYKMiGlVBZW9rtt6mvlxxBphze5yngKiHAS6ZpmkTswZ8PCO\nl5uXwWxu5ickkNvciOkqUfnYWcMncRhWZkDZglqqBr7wJaNz63oWSSnMsbKWIM6Z\nyiVNyJPW5vQhr+rE5o7nRrcxOZI05viB/dSuzi0GCYjfM62WWcLsr194Qe8+5Tot\nCkjaURj8Wyu/EFz7fPcmO3GYF/k+tY3ZXHBKgRlAyghBAWMsJ3k=\n=ezGP\n-----END PGP SIGNATURE-----",
+            "payload": "tree 705bb9585c062ddcb27a8c6c5b48e7475614b393\nparent 8be8d6e800684b383a99d75e9b226ac33ca8dd5c\nauthor Ravi Jayaramappa <ravi.jayaramappa@salesforce.com> 1568235639 -0700\ncommitter Ravi Jayaramappa <ravi.jayaramappa@salesforce.com> 1568235777 -0700\n\nfix: revert to calling dom apis with explicit arguments\n\nfor perf reasons\n"
+        }
+    },
+    "url": "https://api.github.com/repos/salesforce/lwc/commits/e3abfbdea1b9e38dc1e2182330364d676ea36baa",
+    "html_url": "https://github.com/salesforce/lwc/commit/e3abfbdea1b9e38dc1e2182330364d676ea36baa",
+    "comments_url": "https://api.github.com/repos/salesforce/lwc/commits/e3abfbdea1b9e38dc1e2182330364d676ea36baa/comments",
+    "author": {
+        "login": "ravijayaramappa",
+        "id": 931465,
+        "node_id": "MDQ6VXNlcjkzMTQ2NQ==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/931465?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/ravijayaramappa",
+        "html_url": "https://github.com/ravijayaramappa",
+        "followers_url": "https://api.github.com/users/ravijayaramappa/followers",
+        "following_url": "https://api.github.com/users/ravijayaramappa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/ravijayaramappa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/ravijayaramappa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/ravijayaramappa/subscriptions",
+        "organizations_url": "https://api.github.com/users/ravijayaramappa/orgs",
+        "repos_url": "https://api.github.com/users/ravijayaramappa/repos",
+        "events_url": "https://api.github.com/users/ravijayaramappa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/ravijayaramappa/received_events",
+        "type": "User",
+        "site_admin": false
+    },
+    "committer": {
+        "login": "ravijayaramappa",
+        "id": 931465,
+        "node_id": "MDQ6VXNlcjkzMTQ2NQ==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/931465?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/ravijayaramappa",
+        "html_url": "https://github.com/ravijayaramappa",
+        "followers_url": "https://api.github.com/users/ravijayaramappa/followers",
+        "following_url": "https://api.github.com/users/ravijayaramappa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/ravijayaramappa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/ravijayaramappa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/ravijayaramappa/subscriptions",
+        "organizations_url": "https://api.github.com/users/ravijayaramappa/orgs",
+        "repos_url": "https://api.github.com/users/ravijayaramappa/repos",
+        "events_url": "https://api.github.com/users/ravijayaramappa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/ravijayaramappa/received_events",
+        "type": "User",
+        "site_admin": false
+    },
+    "parents": [
+        {
+            "sha": "8be8d6e800684b383a99d75e9b226ac33ca8dd5c",
+            "url": "https://api.github.com/repos/salesforce/lwc/commits/8be8d6e800684b383a99d75e9b226ac33ca8dd5c",
+            "html_url": "https://github.com/salesforce/lwc/commit/8be8d6e800684b383a99d75e9b226ac33ca8dd5c"
+        }
+    ],
+    "stats": {
+        "total": 24,
+        "additions": 10,
+        "deletions": 14
+    },
+    "files": [
+        {
+            "sha": "26f9ae2ed56031377d97eca6011ce6beec3c095d",
+            "filename": "packages/@lwc/node-reactions/src/dom-patching/node.ts",
+            "status": "modified",
+            "additions": 10,
+            "deletions": 14,
+            "changes": 24,
+            "blob_url": "https://github.com/salesforce/lwc/blob/e3abfbdea1b9e38dc1e2182330364d676ea36baa/packages/@lwc/node-reactions/src/dom-patching/node.ts",
+            "raw_url": "https://github.com/salesforce/lwc/raw/e3abfbdea1b9e38dc1e2182330364d676ea36baa/packages/@lwc/node-reactions/src/dom-patching/node.ts",
+            "contents_url": "https://api.github.com/repos/salesforce/lwc/contents/packages/@lwc/node-reactions/src/dom-patching/node.ts?ref=e3abfbdea1b9e38dc1e2182330364d676ea36baa",
+            "patch": "@@ -5,7 +5,7 @@\n  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT\n  */\n \n-import { getOwnPropertyDescriptor, defineProperties, ArraySlice } from '@lwc/shared';\n+import { getOwnPropertyDescriptor, defineProperties } from '@lwc/shared';\n import { ReactionRecord, QualifyingReactionTypes } from '../types';\n import queueReactionsForSubtree from '../core/traverse';\n import { flushQueue } from '../core/reaction-queue';\n@@ -23,13 +23,12 @@ export default function() {\n             enumerable: true,\n             configurable: true,\n             value: function(this: Node, aChild: Node) {\n-                const args: any = ArraySlice.call(arguments);\n                 // Performance optimization: Only check if the node being added is a registered node.\n                 // We made this decision because appendChild is on the critical path and cannot\n                 // subject every node to the expensive check that isQualifyingElement() performs\n                 if (!isQualifyingHost(aChild)) {\n                     // invoke with apply to preserve native behavior of missing arguments, invalid types etc\n-                    return appendChild.apply(this, args);\n+                    return appendChild.call(this, aChild);\n                 }\n \n                 let qualifiedReactionTypes: QualifyingReactionTypes = 0;\n@@ -42,7 +41,7 @@ export default function() {\n                 );\n \n                 // DOM Operation\n-                const result = appendChild.apply(this, args);\n+                const result = appendChild.call(this, aChild);\n \n                 if (isConnectedGetter.call(this)) {\n                     qualifiedReactionTypes = qualifiedReactionTypes | 1;\n@@ -64,13 +63,12 @@ export default function() {\n             writable: true,\n             enumerable: true,\n             configurable: true,\n-            value: function(this: Node, newNode: Node, _referenceNode: Node) {\n-                const args: any = ArraySlice.call(arguments);\n+            value: function(this: Node, newNode: Node, referenceNode: Node) {\n                 // Performance optimization: Only check if the node being added is a registered node.\n                 // We made this decision because insertBefore is on the critical path and cannot\n                 // subject every node to the expensive check that isQualifyingElement() performs\n                 if (!isQualifyingHost(newNode)) {\n-                    return insertBefore.apply(this, args);\n+                    return insertBefore.call(this, newNode, referenceNode);\n                 }\n \n                 let qualifiedReactionTypes: QualifyingReactionTypes = 0;\n@@ -82,7 +80,7 @@ export default function() {\n                 );\n \n                 // DOM Operation\n-                const result = insertBefore.apply(this, args);\n+                const result = insertBefore.call(this, newNode, referenceNode);\n \n                 if (isConnectedGetter.call(this)) {\n                     // Short circuit and check if parent is connected\n@@ -106,12 +104,11 @@ export default function() {\n             enumerable: true,\n             configurable: true,\n             value: function(this: Node, newChild: Node, oldChild: Node) {\n-                const args: any = ArraySlice.call(arguments);\n                 const oldChildIsQualified = isQualifyingElement(oldChild);\n                 const newChildIsQualified = isQualifyingElement(newChild);\n                 // If both oldChild and newChild are non qualifying elements, exit early\n                 if (!oldChildIsQualified && !newChildIsQualified) {\n-                    return replaceChild.apply(this, args);\n+                    return replaceChild.call(this, newChild, oldChild);\n                 }\n \n                 // Process oldChild\n@@ -147,7 +144,7 @@ export default function() {\n                 }\n \n                 // DOM Operation\n-                const result = replaceChild.apply(this, args);\n+                const result = replaceChild.call(this, newChild, oldChild);\n \n                 const reactionQueue: ReactionRecord[] = [];\n                 if (qualifiedReactionTypesForOldChild & 2) {\n@@ -175,7 +172,6 @@ export default function() {\n             enumerable: true,\n             configurable: true,\n             value: function(this: Node, child: Node) {\n-                const args: any = ArraySlice.call(arguments);\n                 // If child is connected and it is a qualifying element, process reaction records\n                 if (isConnectedGetter.call(this) && isQualifyingElement(child)) {\n                     const qualifyingChildren = (child as\n@@ -184,7 +180,7 @@ export default function() {\n                     const qualifiedReactionTypes: QualifyingReactionTypes = 2;\n \n                     // DOM operation\n-                    const result = removeChild.apply(this, args);\n+                    const result = removeChild.call(this, child);\n                     const reactionQueue: ReactionRecord[] = [];\n                     queueReactionsForSubtree(\n                         child as Element | DocumentFragment,\n@@ -195,7 +191,7 @@ export default function() {\n                     flushQueue(reactionQueue);\n                     return result;\n                 }\n-                return removeChild.apply(this, args);\n+                return removeChild.call(this, child);\n             },\n         },\n     });"
+        }
+    ]
+}
