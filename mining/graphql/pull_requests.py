@@ -1,4 +1,4 @@
-# File that collects all the PR data from the projects in 'projects.json' that is used in the data analysis that is possible to 
+# File that collects all the PR data from the projects that is used in the data analysis that is possible to 
 # be retrieved through the graphQL API from GitHub.
 
 import requests
@@ -17,10 +17,10 @@ def run_query(query, token): # A simple function to use requests.post to make th
 
         
 # The GraphQL query (with a few aditional bits included) itself defined as a multi-line string.      
-def get_query(cursor):
+def get_query(owner, repo, query, cursor):
   return """
   {{
-    search(query: "user:salesforce repo:lwc is:pr Best has detected that there is a in:comments created:>=2019-07-29 sort:created-desc", type: ISSUE, first: 100{result}) {{
+    search(query: "user:{owner} repo:{repo} {query}", type: ISSUE, first: 100{cursor}) {{
       edges {{
       cursor
       node {{
@@ -54,16 +54,22 @@ def get_query(cursor):
     }}
   }}
 }}
-""".format(result = "" if cursor == "" else  ', after: "' + cursor + '"')
+""".format(owner=owner, repo=repo, query=query, cursor="" if cursor == "" else  ', after: "' + cursor + '"')
 
 def get_prs(owner, repo, query, token):
-  pull_requests = []
+  results = []
   final_cursor = ""
 
-  while (len(pull_requests) % 100 == 0):
-    query_result = run_query(get_query(final_cursor), token) # Execute the query
+  while (len(results) % 100 == 0):
+    query_result = run_query(get_query(owner, repo, query, final_cursor), token) # Execute the query
     edges = query_result["data"]["search"]["edges"]
-    pull_requests.extend(edges)
-    final_cursor = pull_requests[len(pull_requests) - 1]["cursor"]
+    results.extend(edges)
+    final_cursor = results[len(results) - 1]["cursor"]
+
+  pull_requests = []
+
+  # Throw away cursor, only needed for pagination while querying GrapgQL database.
+  for result in results:
+    pull_requests.append(result.get("node"))
 
   return pull_requests
