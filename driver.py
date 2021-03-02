@@ -17,15 +17,30 @@ for project in projects:
 
   bot_prs = pull_requests.get_prs(owner, repo, botQuery, token)
 
-  wrong = 0
+  number_source_files_changed = []
+  additions = []
+  deletions = []
 
   # Add which files were changed in this PR.
   # In GraphQL it is only possible to get the number of files changed which includes documentation files 
   # which is undesirable to get like to like comparison of PRs with bot usage and without bot usage.
   for bot_pr in bot_prs:
-    bot_pr["changedFiles"] = changedFiles.get_all_changed_files(owner, repo, bot_pr.get("number"))
+    all_changed_files = changedFiles.get_all_changed_files(owner, repo, bot_pr.get("number"))
+    if isinstance(all_changed_files, list):
+      all_changed_source_files = file_management.get_only_source_files(all_changed_files)
+      number_source_files_changed.append(len(all_changed_files))
 
-  print(wrong)
+    additions.append(bot_pr.get("additions"))
+    deletions.append(bot_pr.get("deletions"))
+
+  print(additions)
+  print(len(additions))
+
+  print(deletions)
+  print(len(deletions))
+
+  print(number_source_files_changed)
+  print(len(number_source_files_changed))
 
   print(bot_prs[0].get("number"))
 

@@ -31,3 +31,18 @@ def get_projects_to_mine():
   projects = json.loads(file.read())
   file.close()
   return projects
+
+def get_only_source_files(files):
+
+  file = open("utility/programmingFileExtensions.json", "r")
+  extensions = tuple(json.loads(file.read()))
+  file.close()
+  
+
+  source_files = []
+
+  for file_name in files:
+    if file_name.endswith(extensions):
+      source_files.append(file_name)
+    
+  return source_files
