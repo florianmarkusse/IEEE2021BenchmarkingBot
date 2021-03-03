@@ -3,8 +3,9 @@
 import requests
 import json
 
-per_page_number = 30 # max 100 per GitHub API
+per_page_number = 30  # max 100 per GitHub API
 error_message = "GitHub REST API does not have the file changed."
+
 
 def get_changed_files_page(owner, repo, pull_number, page):
 
@@ -22,7 +23,8 @@ def get_changed_files_page(owner, repo, pull_number, page):
         'page': str(page)
     }
 
-    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/files'.format(owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
+    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/files'.format(
+        owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
 
     files = []
 
@@ -33,6 +35,7 @@ def get_changed_files_page(owner, repo, pull_number, page):
         return 402
 
     return files
+
 
 def get_all_changed_files(owner, repo, pull_number):
 

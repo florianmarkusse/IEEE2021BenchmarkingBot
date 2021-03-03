@@ -1,0 +1,58 @@
+[
+    {
+        "query" : "title",
+        "description": ""
+    },
+    {
+        "query" : "createdAt",
+        "description": ""
+    },
+    {
+        "query" : "merged",
+        "description": ""
+    },
+    {
+        "query" : "mergedAt",
+        "description": ""
+    },
+    {
+        "query" : "closed",
+        "description": ""
+    },
+    {
+        "query" : "closedAt",
+        "description": ""
+    },
+    {
+        "query" : "number",
+        "description": ""
+    },
+    {
+        "query" : "additions",
+        "description": ""
+    },
+    {
+        "query" : "deletions",
+        "description": ""
+    },
+    {
+        "query" : "author { login }",
+        "description": ""
+    },
+    {
+        "query" : "participants { totalCount }",
+        "description": ""
+    },
+    {
+        "query" : "reviews { totalCount }",
+        "description": ""
+    },
+    {
+        "query" : "comments { totalCount }",
+        "description": ""
+    },
+    {
+        "query" : "commits { totalCount }",
+        "description": ""
+    }
+]
