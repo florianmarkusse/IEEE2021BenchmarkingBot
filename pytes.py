@@ -1,21 +1,12 @@
-testList = [
-    "title",
-    "createdAt",
-    "participants {{ totalCount }}",
-    "number"
-]
+import datetime
 
-testString = ""
 
-for item in testList:
-    testString += (item + "\n")
 
-string = """
-{{
-    ... on PullRequest {{
-        {attributes}
-    }}
-}}
-""".format(attributes=testString)
+string = "2020-10-22T20:03:04"
+date_time_obj  = datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S')
 
-print(string)
+print('Date:', date_time_obj.date())
+
+new_start_date = "created>={date}".format(date=date_time_obj.date())
+
+print(new_start_date)
