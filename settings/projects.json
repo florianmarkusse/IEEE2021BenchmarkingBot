@@ -4,6 +4,6 @@
         "repo": "lwc",
         "botQuery": "is:pr sort:created-asc Best has detected that there is a in:comments",
         "allQuery": "is:pr sort:created-asc",
-        "startDate": "created:>=2019-07-29"
+        "startDate": "2019-07-29"
     }
 ]

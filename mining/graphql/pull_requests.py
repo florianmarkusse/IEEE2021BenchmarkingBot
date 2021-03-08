@@ -38,7 +38,7 @@ def get_query(owner, repo, search_parameters, start_date, attributes, cursor):
 
     return """
   {{
-    search(query: "repo:{owner}/{repo} {search_parameters} {start_date}", type: ISSUE, first: 100{cursor}) {{
+    search(query: "repo:{owner}/{repo} {search_parameters} created:>={start_date}", type: ISSUE, first: 100{cursor}) {{
       edges {{
       cursor
       node {{
@@ -64,9 +64,8 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
         query_result = run_query(
             get_query(owner, repo, search_parameters, start_date, attributes, final_cursor), token)  # Execute the query
         if len(query_result["data"]["search"]["edges"]) == 0:
-            print("empty query")
             if first_empty:
-              found_all = True
+                found_all = True
             first_empty = True
             
             start_date = get_new_start_date(results[len(results) - 1]["node"]["createdAt"])
@@ -95,8 +94,7 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
 
 def get_new_start_date(created_at):
     date_time_obj  = datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
-    print(date_time_obj.date())
-    return "created:>={date}".format(date=date_time_obj.date())
+    return date_time_obj.date()
 
 
 def get_updated_cursor(temp_result, last_pr):
@@ -108,13 +106,3 @@ def get_updated_cursor(temp_result, last_pr):
       return pr["cursor"]
 
   raise Exception("Could not get an updated cursor")
-
-def send_bogus_request(token):
-  query = """
-  {
-      rateLimit {
-          remaining
-      }
-  }
-  """
-  run_query(query, token)

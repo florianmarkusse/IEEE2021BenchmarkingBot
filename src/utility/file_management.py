@@ -12,18 +12,17 @@ def make_project_folder(path, owner, repo):
         os.mkdir(path + "/" + owner + "/" + repo)
 
 
-def write_data(pull_requests, owner, repo, is_only_bot):
+def write_data(pull_requests, owner, repo, file_name):
     """
     Writes the PR data to the file in json format
     """
-    path = "projects"
+    path = "data/projects"
     make_project_folder(path, owner, repo)
 
-    fileName = "botPRData" if is_only_bot else "allPRData"
     jsonData = json.dumps(pull_requests)
 
     file = open(path + "/" + owner + "/" + repo +
-                "/" + fileName + ".json", "w")
+                "/" + file_name + ".json", "w")
     file.write(jsonData)
     file.close()
 

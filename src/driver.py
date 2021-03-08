@@ -2,6 +2,7 @@ from utility import file_management
 from utility import helpers
 from mining.graphql import pull_requests
 from mining.rest import changed_files
+import datetime
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -106,10 +107,17 @@ for project in projects:
     #   - The PR's where the bot contributes
     #   - All the PR's
     #   - The PR's that are similar to the bot PR's without bot contribution
-    print(len(all_prs))
-    print(len(bot_prs))
-    print(len(similar_to_bot_prs))
 
+    current_date = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    print("found {size} PR's in total from {start_date} to {current_date}".format(size=len(all_prs), start_date=start_date, current_date=current_date))
+    print("found {size} PR's with bot contribution in total from {start_date} to {current_date}".format(size=len(bot_prs), start_date=start_date, current_date=current_date))
+    print("found {size} PR's similar to bot contribution in total from {start_date} to {current_date}".format(size=len(similar_to_bot_prs), start_date=start_date, current_date=current_date))
+
+
+    file_management.write_data(all_prs, owner, repo, "allPRs")
+    file_management.write_data(bot_prs, owner, repo, "botPRs")
+    file_management.write_data(similar_to_bot_prs, owner, repo, "similarToBotPRs")
 
 
 
