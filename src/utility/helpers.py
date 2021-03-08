@@ -1,3 +1,6 @@
+import datetime
+
+
 def get_only_files_with_extensions(files, extensions):
     extensions = tuple(extensions)
     source_files = []
@@ -40,5 +43,20 @@ def has_bot(pr, bot_prs):
     return False
 
 
-def pri():
-    print("pri")
+def get_date_from_string(created_at):
+    return datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
+
+
+def periodize_prs(prs, datetime_period):
+    period_prs = {}
+
+    for pr in prs:
+        date_object = get_date_from_string(pr.get("createdAt"))
+        period = date_object.strftime(datetime_period)
+
+        if period in period_prs:
+            period_prs[period].append(pr)
+        else:
+            period_prs[period] = [pr]
+
+    return period_prs

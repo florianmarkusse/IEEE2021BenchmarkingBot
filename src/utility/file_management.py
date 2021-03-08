@@ -65,3 +65,27 @@ def get_graphql_parameters():
     attributes = json.loads(file.read())
     file.close()
     return attributes
+
+
+def get_mined_PRs(owner, repo):
+    prs = {}
+
+    path = "../data/projects/{owner}/{repo}".format(owner=owner, repo=repo)
+
+    files = [
+        ("allPRs", "all_prs"),
+        ("botPRs", "bot_prs"),
+        ("similarToBotPRs", "similar_to_bot_prs"),
+    ]
+
+    for file in files:
+        full_path = path + "/{file_name}.json".format(file_name=file[0])
+
+        name = file[1]
+
+        file = open(full_path, "r")
+
+        prs[name] = json.loads(file.read())
+        file.close()
+
+    return prs

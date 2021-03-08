@@ -11,7 +11,7 @@ projects = file_management.get_projects_to_mine()
 # Get token for GitHub API
 token = file_management.get_token()
 
-# Get the GraphQL parameters, containing seach parameters and description
+# Get the GraphQL parameters, containing search parameters and description
 graphql_parameters = file_management.get_graphql_parameters()
 
 for project in projects:

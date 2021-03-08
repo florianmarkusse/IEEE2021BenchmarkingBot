@@ -3,8 +3,9 @@
 
 import datetime
 import time
-
 import requests
+
+from src.utility.helpers import get_date_from_string
 
 
 # A simple function to use requests.post to make the API call. Note the json= section.
@@ -16,7 +17,7 @@ def run_query(query, token):
 
     wait_time = 2
     exponent = 0
-    while (request.status_code == 502):
+    while request.status_code == 502:
         sleep_period = pow(wait_time, exponent)
         print("received 502, sleeping for {sleep_period}".format(sleep_period=sleep_period))
         time.sleep(sleep_period)
@@ -31,7 +32,7 @@ def run_query(query, token):
             request.status_code, query))
 
 
-# The GraphQL query (with a few aditional bits included) itself defined as a multi-line string.
+# The GraphQL query (with a few additional bits included) itself defined as a multi-line string.
 def get_query(owner, repo, search_parameters, start_date, attributes, cursor):
     return """
   {{
@@ -69,7 +70,7 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
             start_date = get_new_start_date(results[len(results) - 1]["node"]["createdAt"])
 
             # Perform query to get new cursor for new set of results
-            # Because cursor for result changes when query changes sasdly and we do not want duplicates in final result
+            # Because cursor for result changes when query changes sadly and we do not want duplicates in final result
             temp_query_result = run_query(
                 get_query(owner, repo, search_parameters, start_date, attributes, ""), token)
 
@@ -91,8 +92,7 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
 
 
 def get_new_start_date(created_at):
-    date_time_obj = datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
-    return date_time_obj.date()
+    return get_date_from_string(created_at).date()
 
 
 def get_updated_cursor(temp_result, last_pr):
