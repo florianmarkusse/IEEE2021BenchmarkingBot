@@ -52,4 +52,12 @@ for project in projects:
         "periodized": period_summaries
     }
 
-    file_management.write_data(summary, owner, repo, "summary")
+    for period_summary in period_summaries:
+        print("{period}\t{all_prs}\t{bot_prs}\t{fraction}".format(
+            period=period_summary["period"],
+            all_prs=period_summary["all_prs"],
+            bot_prs=period_summary["bot_prs"],
+            fraction=period_summary["fraction"]
+        ))
+
+    #file_management.write_data(summary, owner, repo, "summary")
