@@ -1,9 +1,7 @@
 import datetime
 
-
-
 string = "2020-10-22T20:03:04"
-date_time_obj  = datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S')
+date_time_obj = datetime.datetime.strptime(string, '%Y-%m-%dT%H:%M:%S')
 
 print('Date:', date_time_obj.date())
 

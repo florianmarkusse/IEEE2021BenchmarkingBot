@@ -1,19 +1,14 @@
 # File to get all the changed files from a specific PR, returned in list type
 
 import requests
-import json
-from utility import file_management
+from src.utility.helpers import get_only_files_with_extensions
+from src.utility.file_management import get_extensions
 
 per_page_number = 30  # max 100 per GitHub API
 error_message = "GitHub REST API does not have the file changed."
 
 
-def get_changed_files_pull_page(owner, repo, pull_number, page):
-
-    file = open("token.txt", "r")
-    token = file.read()
-    file.close()
-
+def get_changed_files_pull_page(owner, repo, pull_number, page, token):
     headers = {
         'Authorization': "token " + token,
         'accept': 'application/vnd.github.v3+json'
@@ -38,35 +33,54 @@ def get_changed_files_pull_page(owner, repo, pull_number, page):
     return files
 
 
-def get_all_changed_files_pull(owner, repo, pull_number):
-
+def get_all_changed_files_pull(owner, repo, pull_number, token):
     all_changed_files = []
-    files = []
     page = 0
 
-    while len(all_changed_files) % 30 == 0:
+    empty_page = False
+
+    while not empty_page:
         page += 1
-        files = get_changed_files_pull_page(owner, repo, pull_number, page)
+        files = get_changed_files_pull_page(owner, repo, pull_number, page, token)
         if files == 402:
             return error_message
+        if len(files) == 0:
+            empty_page = True
         all_changed_files.extend(files)
-        print("Current size of collected changed files from projects is {size}".format(size=len(all_changed_files)))
 
     return all_changed_files
 
-def get_all_changed_files(owner, repo, prs):
 
+def get_changes(owner, repo, prs, token):
+    changes = {
+        "source_files_changed": [],
+        "additions": [],
+        "deletions": []
+    }
+
+    changes_found = 0
     for pr in prs:
         pr["changedFiles"] = get_all_changed_files_pull(
-                owner, repo, pr.get("number")
-            )
+            owner, repo, pr.get("number"), token
+        )
         if isinstance(pr.get("changedFiles"), list):
-            pr["changedSourceFiles"] = helpers.get_only_files_with_extensions(
+            pr["changedSourceFiles"] = get_only_files_with_extensions(
                 pr.get("changedFiles"),
-                file_management.get_extensions()
+                get_extensions()
             )
-            number_source_files_changed.append(
+            changes["source_files_changed"].append(
                 len(
                     pr.get("changedSourceFiles")
                 )
             )
+
+        changes["additions"].append(pr.get("additions"))
+        changes["deletions"].append(pr.get("deletions"))
+
+        if changes_found % 100 == 0 and changes_found > 0:
+            print("currently found the changes for this many PR's: {size}".format(size=changes_found))
+        changes_found += 1
+
+    print("currently found the changes for this many PR's: {size}".format(size=changes_found))
+
+    return changes

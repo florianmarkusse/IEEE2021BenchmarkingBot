@@ -1,16 +1,14 @@
 # File that collects all the PR data from the projects that is used in the data analysis that is possible to
 # be retrieved through the graphQL API from GitHub.
 
-import requests
-import json
-import time
 import datetime
+import time
 
+import requests
 
 
 # A simple function to use requests.post to make the API call. Note the json= section.
 def run_query(query, token):
-
     headers = {"Authorization": "token {token}".format(token=token)}
 
     request = requests.post('https://api.github.com/graphql',
@@ -23,7 +21,7 @@ def run_query(query, token):
         print("received 502, sleeping for {sleep_period}".format(sleep_period=sleep_period))
         time.sleep(sleep_period)
         request = requests.post('https://api.github.com/graphql',
-                              json={'query': query}, headers=headers)
+                                json={'query': query}, headers=headers)
         exponent += 1
 
     if request.status_code == 200:
@@ -35,7 +33,6 @@ def run_query(query, token):
 
 # The GraphQL query (with a few aditional bits included) itself defined as a multi-line string.
 def get_query(owner, repo, search_parameters, start_date, attributes, cursor):
-
     return """
   {{
     search(query: "repo:{owner}/{repo} {search_parameters} created:>={start_date}", type: ISSUE, first: 100{cursor}) {{
@@ -49,7 +46,8 @@ def get_query(owner, repo, search_parameters, start_date, attributes, cursor):
     }}
   }}
 }}
-""".format(owner=owner, repo=repo, search_parameters=search_parameters, start_date=start_date, attributes=attributes, cursor="" if cursor == "" else ', after: "' + cursor + '"')
+""".format(owner=owner, repo=repo, search_parameters=search_parameters, start_date=start_date, attributes=attributes,
+           cursor="" if cursor == "" else ', after: "' + cursor + '"')
 
 
 def get_prs(owner, repo, search_parameters, start_date, attributes, token):
@@ -67,13 +65,13 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
             if first_empty:
                 found_all = True
             first_empty = True
-            
+
             start_date = get_new_start_date(results[len(results) - 1]["node"]["createdAt"])
 
             # Perform query to get new cursor for new set of results
             # Because cursor for result changes when query changes sasdly and we do not want duplicates in final result
             temp_query_result = run_query(
-            get_query(owner, repo, search_parameters, start_date, attributes, ""), token)  
+                get_query(owner, repo, search_parameters, start_date, attributes, ""), token)
 
             final_cursor = get_updated_cursor(temp_query_result, results[len(results) - 1])
         else:
@@ -93,16 +91,16 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
 
 
 def get_new_start_date(created_at):
-    date_time_obj  = datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
+    date_time_obj = datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
     return date_time_obj.date()
 
 
 def get_updated_cursor(temp_result, last_pr):
-  # Get cursor of PR that has same "createdAt" value as last_pr
-  prs = temp_result["data"]["search"]["edges"]
+    # Get cursor of PR that has same "createdAt" value as last_pr
+    prs = temp_result["data"]["search"]["edges"]
 
-  for pr in prs:
-    if pr["node"]["createdAt"] == last_pr["node"]["createdAt"]:
-      return pr["cursor"]
+    for pr in prs:
+        if pr["node"]["createdAt"] == last_pr["node"]["createdAt"]:
+            return pr["cursor"]
 
-  raise Exception("Could not get an updated cursor")
+    raise Exception("Could not get an updated cursor")

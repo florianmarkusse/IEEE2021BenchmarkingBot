@@ -2,12 +2,14 @@
 
 This directory contains the PR data for the salesforce/lwc project. The files have the following contents:
 
-- **botPRData.json**: This file contains all the PR's from 2019-07-29 (yyyy-mm-dd) until currentDate where the benchmark bot contributed in.
+- **botPRData.json**: This file contains all the PR's from 2019-07-29 (yyyy-mm-dd) until currentDate where the benchmark
+  bot contributed in.
 - **allPRData.json**: This file contains all the PR's from 2019-07-29 (yyyy-mm-dd) until currentDate.
 
 # PR features
 
 The data collected from each PR is the following (note that the data may have changed at the time of viewing):
+
 - **cursor**: This is a unique ID and is only used for pagination to retrieve all the data.
 - **title**: This is the current title of the PR.
 - **createdAt** (): The date the PR was created.
