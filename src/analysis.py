@@ -40,8 +40,6 @@ for project in projects:
 
         period_summaries.append(period_summary)
 
-    print(period_summaries)
-
     summary = {
         "totals": {
             "all_prs": len(prs.get("all_prs")),
@@ -52,12 +50,15 @@ for project in projects:
         "periodized": period_summaries
     }
 
+    print("{owner}/{repo}".format(owner=owner, repo=repo))
+    print("period\tbot PR's\t non-bot PR's\tfraction\ttotal PR's")
     for period_summary in period_summaries:
-        print("{period}\t{all_prs}\t{bot_prs}\t{fraction}".format(
+        print("{period}\t{bot_prs}\t{non_bot_prs}\t{fraction}\t{all_prs}".format(
             period=period_summary["period"],
-            all_prs=period_summary["all_prs"],
             bot_prs=period_summary["bot_prs"],
-            fraction=period_summary["fraction"]
+            non_bot_prs=period_summary["all_prs"]-period_summary["bot_prs"],
+            fraction=period_summary["fraction"],
+            all_prs=period_summary["all_prs"],
         ))
 
-    #file_management.write_data(summary, owner, repo, "summary")
+    file_management.write_data(summary, owner, repo, "summary")
