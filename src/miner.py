@@ -14,19 +14,21 @@ token = file_management.get_token()
 # Get the GraphQL parameters, containing search parameters and description
 graphql_parameters = file_management.get_graphql_parameters()
 
+# Standard query to collect PR's
+standard_query = "is:pr sort:created-asc"
+
 for project in projects:
 
     owner = project.get("owner")
     repo = project.get("repo")
-    botQuery = project.get("botQuery")
-    allQuery = project.get("allQuery")
+    bot_query = project.get("botQuery")
     start_date = project.get("startDate")
 
     print("Collecting PR's with bot contribution")
     bot_prs = pull_requests.get_prs(
         owner,
         repo,
-        botQuery,
+        standard_query + " " + bot_query,
         start_date,
         helpers.get_graphql_attributes(graphql_parameters),
         token
@@ -51,7 +53,7 @@ for project in projects:
     all_prs = pull_requests.get_prs(
         owner,
         repo,
-        allQuery,
+        standard_query,
         start_date,
         helpers.get_graphql_attributes(graphql_parameters),
         token

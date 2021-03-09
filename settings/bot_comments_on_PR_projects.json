@@ -1,0 +1,50 @@
+[
+  {
+    "owner": "salesforce",
+    "repo": "lwc",
+    "botQuery": "Best has detected that there is a in:comments",
+    "startDate": "2019-07-29"
+  },
+  {
+    "owner": "JuliaLang",
+    "repo": "julia",
+    "botQuery": "commenter:nanosoldier",
+    "startDate": "2016-04-01 "
+  },
+  {
+    "owner": "rust-lang",
+    "repo": "rust",
+    "botQuery": "commenter:rust-timer",
+    "startDate": "2018-08-18"
+  },
+  {
+    "owner": "diem",
+    "repo": "diem",
+    "botQuery": "Cluster Test Result in:comments repro cmd in:comments",
+    "startDate": "2020-03-03"
+  },
+  {
+    "owner": "apple",
+    "repo": "swift",
+    "botQuery": "@swift-ci benchmark in:comments",
+    "startDate": "2017-01-30"
+  },
+  {
+    "owner": "PaddlePaddle",
+    "repo": "Paddle",
+    "botQuery": "Thanks for your contribution! Please wait for the result of CI firstly. See Paddle CI Manual for details. in:comments",
+    "startDate": "2020-05-21"
+  },
+  {
+    "owner": "guardian",
+    "repo": "frontend",
+    "botQuery": "commenter:PRbuilds Apache Benchmark Load Testing in:comments",
+    "startDate": "2017-06-13"
+  },
+  {
+    "owner": "microsoft",
+    "repo": "fluentui",
+    "botQuery": "commenter:fabricteam Perf Analysis (Fluent) in:comments",
+    "startDate": "2020-11-04"
+  }
+]

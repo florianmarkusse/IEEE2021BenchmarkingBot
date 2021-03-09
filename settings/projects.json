@@ -2,8 +2,7 @@
   {
     "owner": "JuliaLang",
     "repo": "julia",
-    "botQuery": "is:pr sort:created-asc commenter:nanosoldier ",
-    "allQuery": "is:pr sort:created-asc",
+    "botQuery": "commenter:nanosoldier ",
     "startDate": "2016-04-01 "
   }
 ]
