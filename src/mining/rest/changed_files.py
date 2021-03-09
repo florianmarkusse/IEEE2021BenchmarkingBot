@@ -1,6 +1,8 @@
 # File to get all the changed files from a specific PR, returned in list type
 
 import requests
+import time
+
 from src.utility.helpers import get_only_files_with_extensions
 from src.utility.file_management import get_extensions
 
@@ -27,10 +29,14 @@ def get_changed_files_pull_page(owner, repo, pull_number, page, token):
     if resp.status_code == 200:
         for file_change in resp.json():
             files.append(file_change.get("filename"))
+        return files
+    if resp.status_code == 403:
+        print("Exceeded rate limit, waiting until window reset")
+        sleep_period = int(resp.headers["X-RateLimit-Reset"]) - int(time.time()) + 10
+        print("Sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
+        return get_changed_files_pull_page(owner, repo, pull_number, page, token)
     else:
         return 402
-
-    return files
 
 
 def get_all_changed_files_pull(owner, repo, pull_number, token):
@@ -78,7 +84,10 @@ def get_changes(owner, repo, prs, token):
         changes["deletions"].append(pr.get("deletions"))
 
         if changes_found % 100 == 0 and changes_found > 0:
-            print("currently found the changes for this many PR's: {size}".format(size=changes_found))
+            print("currently found the changes for this many PR's: {size} out of {total_size}".format(
+                size=changes_found,
+                total_size=len(prs)
+            ))
         changes_found += 1
 
     print("currently found the changes for this many PR's: {size}".format(size=changes_found))

@@ -19,7 +19,7 @@ def run_query(query, token):
     exponent = 0
     while request.status_code == 502:
         sleep_period = pow(wait_time, exponent)
-        print("received 502, sleeping for {sleep_period}".format(sleep_period=sleep_period))
+        print("received 502, sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
         time.sleep(sleep_period)
         request = requests.post('https://api.github.com/graphql',
                                 json={'query': query}, headers=headers)

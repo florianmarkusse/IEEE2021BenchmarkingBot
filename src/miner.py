@@ -70,7 +70,7 @@ for project in projects:
 
     for pr in all_prs:
         if helpers.is_similar(pr, min_max_source_files_changed, min_max_additions, min_max_deletions):
-            if not helpers.has_bot(pr, bot_prs):
+            if not helpers.pr_is_contained_in_prs(pr, bot_prs):
                 similar_to_bot_prs.append(pr)
 
     # Now have 3 datasets
