@@ -34,6 +34,7 @@ def get_changed_files_pull_page(owner, repo, pull_number, page, token):
         print("Exceeded rate limit, waiting until window reset")
         sleep_period = int(resp.headers["X-RateLimit-Reset"]) - int(time.time()) + 10
         print("Sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
+        time.sleep(sleep_period)
         return get_changed_files_pull_page(owner, repo, pull_number, page, token)
     else:
         return 402

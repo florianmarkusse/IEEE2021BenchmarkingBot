@@ -24,6 +24,8 @@ for project in projects:
     bot_query = project.get("botQuery")
     start_date = project.get("startDate")
 
+    print("Mining PR's from project {owner}/{repo}".format(owner=owner, repo=repo))
+
     print("Collecting PR's with bot contribution")
     bot_prs = pull_requests.get_prs(
         owner,
