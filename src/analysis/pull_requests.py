@@ -1,6 +1,10 @@
 from src.utility.helpers import periodize_prs, categorize_prs, get_date_from_string
 from statistics import mean, median
 
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+import collections
+
 
 def monthly_analysis(owner, repo, all_prs, bot_prs):
     all_prs_per_month = periodize_prs(all_prs, "%m-%y")
@@ -39,6 +43,37 @@ def monthly_analysis(owner, repo, all_prs, bot_prs):
             fraction=period_summary["fraction"],
             all_prs=period_summary["all_prs"],
         ))
+
+    periods = [period_summary["period"] for period_summary in period_summaries]
+    frequency_non_bot_pr_per_month = [(period_summary["all_prs"] - period_summary["bot_prs"]) for period_summary in
+                                      period_summaries]
+    frequency_bot_pr_per_month = [period_summary["bot_prs"] for period_summary in period_summaries]
+
+    fraction = [period_summary["fraction"] for period_summary in period_summaries]
+
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+
+    ax1.bar(periods, frequency_bot_pr_per_month, 0.35, label="Frequency bot PR's")
+    ax1.bar(periods, frequency_non_bot_pr_per_month, 0.35, label="Frequency non-bot PR's",
+            bottom=frequency_bot_pr_per_month)
+    ax2.plot(periods, fraction, color="gray")
+
+    ax1.set_ylabel('Frequency')
+    ax1.legend()
+
+    ax2.set_ylabel("Fraction bot PR's out of total PR's")
+
+    myLocator = mticker.MultipleLocator(4)
+    ax1.xaxis.set_major_locator(myLocator)
+
+    fig.autofmt_xdate()
+
+    plt.tight_layout(pad=0)
+    plt.savefig("../data/projects/{owner}/{repo}/images/bot_pr_periodized.png".format(owner=owner, repo=repo),
+                transparent=True)
+
+    plt.show()
 
     return period_summaries
 
@@ -89,11 +124,39 @@ def user_analysis(owner, repo, all_prs, bot_prs):
             all_prs=user_summary["all_prs"],
         ))
 
+    for cut_off in [0, 10, 50, 100]:
+        significant_contributors = [user_summary for user_summary in user_summaries if
+                                    user_summary["all_prs"] >= cut_off]
+
+        significant_contributors_fraction = [user_summary["fraction"] for user_summary in significant_contributors]
+        significant_contributors_total_prs = [user_summary["all_prs"] for user_summary in significant_contributors]
+
+        plt.xlim(left=0, right=1.0)
+
+        plt.scatter(significant_contributors_fraction, significant_contributors_total_prs)
+        plt.xlabel("Fraction PR's with bot contribution")
+        plt.ylabel("Number of PR's")
+
+        plt.tight_layout(pad=0)
+        plt.savefig("../data/projects/{owner}/{repo}/images/user_interaction_with_bot{cut_off}.png".format(
+            owner=owner, repo=repo, cut_off=cut_off),
+            transparent=True)
+
+        plt.show()
+
+    for i in range(20):
+        previous_interactors = len([user_summary for user_summary in user_summaries if user_summary["bot_prs"] >= i])
+        again_interactors = len([user_summary for user_summary in user_summaries if user_summary["bot_prs"] >= i + 1])
+
+        interact_again = '%.3f' % (again_interactors / previous_interactors)
+
+        print(
+            f"Odds of interaction from {i} interaction(s) to {i + 1} interaction(s):\t{interact_again}\t{previous_interactors}\t{again_interactors}")
+
     return user_summaries
 
 
 def pr_activity_analysis(owner, repo, prs, pr_type):
-
     pr_activity_summary = {}
 
     # Calculate avg/median comments/participants/reviews/commits
@@ -136,6 +199,11 @@ def pr_activity_analysis(owner, repo, prs, pr_type):
             commit_count=pr["commits"]["totalCount"]
         ))
 
+    pr_comment_frequency_analysis(owner, repo, pr_type, number_of_comments)
+    pr_participant_frequency_analysis(owner, repo, pr_type, number_of_participants)
+    pr_review_activity_analysis(owner, repo, pr_type, number_of_participants)
+    pr_commit_activity_analysis(owner, repo, pr_type, number_of_commits)
+
     return {
         "average_comments": mean(number_of_comments),
         "median_comments": median(number_of_comments),
@@ -146,3 +214,97 @@ def pr_activity_analysis(owner, repo, prs, pr_type):
         "average_commits": mean(number_of_commits),
         "median_commits": median(number_of_commits)
     }
+
+
+def pr_comment_frequency_analysis(owner, repo, pr_type, number_of_comments):
+    counter = collections.Counter(number_of_comments)
+    counter = sorted(counter.items())
+
+    if pr_type == "bot_PRs":
+        counter = [(pair[0], max(0, pair[1] - 2)) for pair in counter]
+
+    for cut_off in [40, 60]:
+        path = "../data/projects/{owner}/{repo}/images/{pr_type}_comment{cut_off}.png".format(owner=owner,
+                                                                                              repo=repo,
+                                                                                              pr_type=pr_type,
+                                                                                              cut_off=cut_off)
+        create_frequency_bar_chart(counter, cut_off, False, "Comments per PR", path)
+
+
+def pr_participant_frequency_analysis(owner, repo, pr_type, number_of_participants):
+    counter = collections.Counter(number_of_participants)
+    counter = sorted(counter.items())
+
+    if pr_type == "bot_PRs":
+        counter = [(pair[0], pair[1] - 1) for pair in counter]
+
+    for cut_off in [20]:
+        path = "../data/projects/{owner}/{repo}/images/{pr_type}_participant{cut_off}.png".format(owner=owner,
+                                                                                                  repo=repo,
+                                                                                                  pr_type=pr_type,
+                                                                                                  cut_off=cut_off)
+        create_frequency_bar_chart(counter, cut_off, True, "Participants per PR", path)
+
+
+def pr_review_activity_analysis(owner, repo, pr_type, number_of_reviews):
+    counter = collections.Counter(number_of_reviews)
+    counter = sorted(counter.items())
+
+    for cut_off in [10]:
+        path = "../data/projects/{owner}/{repo}/images/{pr_type}_review{cut_off}.png".format(owner=owner, repo=repo,
+                                                                                             pr_type=pr_type,
+                                                                                             cut_off=cut_off)
+        create_frequency_bar_chart(counter, cut_off, True, "Reviews per PR", path)
+
+
+def pr_commit_activity_analysis(owner, repo, pr_type, number_of_commits):
+    counter = collections.Counter(number_of_commits)
+    counter = sorted(counter.items())
+
+    for cut_off in [10]:
+        path = "../data/projects/{owner}/{repo}/images/{pr_type}_commit{cut_off}.png".format(owner=owner,
+                                                                                             repo=repo,
+                                                                                             pr_type=pr_type,
+                                                                                             cut_off=cut_off)
+        create_frequency_bar_chart(counter, cut_off, True, "Commits per PR", path)
+
+
+def create_frequency_bar_chart(counter, cut_off, is_every_tick, x_label, path):
+    counter_with_cut_off = []
+    for i in range(cut_off + 1):
+        found_in_counter = False
+        for pair in counter:
+            if not found_in_counter and pair[0] == i:
+                counter_with_cut_off.append((str(pair[0]), pair[1]))
+                found_in_counter = True
+        if not found_in_counter:
+            counter_with_cut_off.append((str(i), 0))
+
+    cut_offs = [count[1] for count in counter if count[0] > cut_off]
+    counter_with_cut_off.append((f">{cut_off}", sum(cut_offs)))
+
+    if is_every_tick:
+        ticks = [str(possible_tick[0]) for possible_tick in counter_with_cut_off]
+    else:
+        ticks = [str(ele) for ele in range(cut_off) if ele % 5 == 0 and ele != cut_off]
+        ticks.append(f">{cut_off}")
+
+    x = [str(pair[0]) for pair in counter_with_cut_off]
+    y = [pair[1] for pair in counter_with_cut_off]
+
+    show_frequency_bar_chart(x, y, ticks, x_label, path)
+
+
+def show_frequency_bar_chart(x, y, x_ticks, x_label, path):
+    fig, ax1 = plt.subplots()
+
+    plt.bar(x, y)
+    plt.xlabel(x_label)
+    plt.ylabel("Frequency")
+
+    ax1.xaxis.set_ticks(x_ticks)
+
+    plt.tight_layout(pad=0.04)
+    plt.savefig(path, transparent=True)
+
+    plt.show()
