@@ -224,7 +224,7 @@ def pr_comment_frequency_analysis(owner, repo, pr_type, number_of_comments):
         counter = [(pair[0], max(0, pair[1] - 2)) for pair in counter]
 
     for cut_off in [40, 60]:
-        path = "../data/projects/{owner}/{repo}/images/{pr_type}_comment{cut_off}.png".format(owner=owner,
+        path = "../data/projects/{owner}/{repo}/images/graphs/{pr_type}_comment{cut_off}.png".format(owner=owner,
                                                                                               repo=repo,
                                                                                               pr_type=pr_type,
                                                                                               cut_off=cut_off)
@@ -239,7 +239,7 @@ def pr_participant_frequency_analysis(owner, repo, pr_type, number_of_participan
         counter = [(pair[0], pair[1] - 1) for pair in counter]
 
     for cut_off in [20]:
-        path = "../data/projects/{owner}/{repo}/images/{pr_type}_participant{cut_off}.png".format(owner=owner,
+        path = "../data/projects/{owner}/{repo}/images/graphs/{pr_type}_participant{cut_off}.png".format(owner=owner,
                                                                                                   repo=repo,
                                                                                                   pr_type=pr_type,
                                                                                                   cut_off=cut_off)
@@ -251,7 +251,7 @@ def pr_review_activity_analysis(owner, repo, pr_type, number_of_reviews):
     counter = sorted(counter.items())
 
     for cut_off in [10]:
-        path = "../data/projects/{owner}/{repo}/images/{pr_type}_review{cut_off}.png".format(owner=owner, repo=repo,
+        path = "../data/projects/{owner}/{repo}/images/graphs/{pr_type}_review{cut_off}.png".format(owner=owner, repo=repo,
                                                                                              pr_type=pr_type,
                                                                                              cut_off=cut_off)
         create_frequency_bar_chart(counter, cut_off, True, "Reviews per PR", path)
@@ -262,7 +262,7 @@ def pr_commit_activity_analysis(owner, repo, pr_type, number_of_commits):
     counter = sorted(counter.items())
 
     for cut_off in [10]:
-        path = "../data/projects/{owner}/{repo}/images/{pr_type}_commit{cut_off}.png".format(owner=owner,
+        path = "../data/projects/{owner}/{repo}/images/graphs/{pr_type}_commit{cut_off}.png".format(owner=owner,
                                                                                              repo=repo,
                                                                                              pr_type=pr_type,
                                                                                              cut_off=cut_off)

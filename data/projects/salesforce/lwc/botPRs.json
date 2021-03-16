@@ -113,7 +113,8 @@
       "packages/integration-karma/test/shadow-dom/Element-properties/Element.outerHTML.spec.js",
       "packages/integration-karma/test/shadow-dom/Node-properties/Node.cloneNode.spec.js",
       "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.innerHTML.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: move to new best hub",
@@ -146,7 +147,8 @@
     ],
     "changedSourceFiles": [
       "packages/perf-benchmarks/best.headless.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(engine): removing the remaining pieces of manual reactions",
@@ -198,7 +200,8 @@
       "packages/@lwc/engine/src/framework/vm.ts",
       "packages/@lwc/engine/src/framework/wc.ts",
       "packages/@lwc/engine/src/shared/language.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(wire-service): wire decorator reform ",
@@ -374,7 +377,8 @@
       "packages/integration-tests/scripts/build.js",
       "packages/integration-tests/src/shared/templates.js",
       "packages/integration-tests/src/shared/todo.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(node-reactions): experiment with domevents (second attempt)",
@@ -486,7 +490,8 @@
       "packages/integration-karma/test/shadow-dom/Node-properties/Node.cloneNode.spec.js",
       "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.innerHTML.spec.js",
       "scripts/jest/root.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(engine): @lwc/node-reactions",
@@ -602,7 +607,8 @@
       "packages/integration-karma/test/shadow-dom/Node-properties/Node.cloneNode.spec.js",
       "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.innerHTML.spec.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): to rely on native custom elements for connectness",
@@ -644,7 +650,8 @@
       "packages/@lwc/engine/src/framework/upgrade.ts",
       "packages/@lwc/node-reactions/src/api.ts",
       "packages/@lwc/node-reactions/src/global/init.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(module-resolver): implement module resolution",
@@ -852,7 +859,8 @@
       "packages/@lwc/rollup-plugin/src/index.js",
       "packages/integration-karma/scripts/karma-plugins/lwc.js",
       "packages/integration-tests/scripts/build.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test(integration-test): Increase integration test timeout",
@@ -902,7 +910,8 @@
       "packages/integration-tests/src/components/accessibility/test-delegates-focus-tab-index-zero/delegates-focus-tab-index-zero.spec.js",
       "packages/integration-tests/src/components/wired/test-wired-method-suite/wired-method-suite.spec.js",
       "packages/integration-tests/src/components/wired/test-wired-prop-suite/wired-prop-suite.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(synthetic-shadow): programmatic focus when delegating focus",
@@ -993,7 +1002,8 @@
       "packages/integration-tests/src/components/delegates-focus-programmatic/test-slotted/integration/slotted/slotted.js",
       "packages/integration-tests/src/components/delegates-focus-programmatic/test-slotted/slotted.spec.js",
       "packages/integration-tests/src/components/delegates-focus-tab-navigation/test-issue-1031/issue-1031.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: update release script to reflect correct footer in dist files",
@@ -1025,7 +1035,8 @@
     ],
     "changedSourceFiles": [
       "scripts/release_npm.sh"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat: upgrade best",
@@ -1062,7 +1073,8 @@
     "changedSourceFiles": [
       "packages/perf-benchmarks/best.headless.config.js",
       "packages/perf-benchmarks/best.ie11.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(wire-service): dependent adapter receiving incomplete config",
@@ -1109,7 +1121,8 @@
       "packages/integration-karma/test/wire/reactive-params.spec.js",
       "packages/integration-karma/test/wire/x/cascadeWiredProps/cascadeWiredProps.js",
       "packages/integration-karma/test/wire/x/echoWireAdapter/echoWireAdapter.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: enable development mode assertions for prod_debug",
@@ -1141,7 +1154,8 @@
     ],
     "changedSourceFiles": [
       "packages/lwc/scripts/utils/rollup.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: update release script to reflect correct footer in dist files",
@@ -1173,7 +1187,8 @@
     ],
     "changedSourceFiles": [
       "scripts/release_npm.sh"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(engine): @lwc/node-reactions",
@@ -1287,7 +1302,8 @@
       "packages/integration-karma/test/shadow-dom/Node-properties/Node.cloneNode.spec.js",
       "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.innerHTML.spec.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): Decouple createElement from engine internals",
@@ -1337,7 +1353,8 @@
       "packages/@lwc/engine/src/framework/vm.ts",
       "packages/@lwc/engine/src/framework/wc.ts",
       "packages/@lwc/engine/src/shared/circular-module-dependencies.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test: migrate test suites with skipped unit tests to karma",
@@ -1510,7 +1527,8 @@
       "packages/integration-karma/test/shadow-dom/Node-properties/x/slottedParent/slottedParent.js",
       "packages/integration-karma/test/shadow-dom/Node-properties/x/textSlottedParent/textSlottedParent.js",
       "packages/integration-karma/test/shadow-dom/Node-properties/x/unslottedParent/unslottedParent.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): composed copy, cut, and paste events",
@@ -1553,7 +1571,8 @@
       "packages/integration-tests/src/components/events/test-clipboard-event-composed/clipboard-event-composed.spec.js",
       "packages/integration-tests/src/components/events/test-clipboard-event-composed/integration/child/child.js",
       "packages/integration-tests/src/components/events/test-clipboard-event-composed/integration/clipboard-event-composed/clipboard-event-composed.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test(module-resolver): Mics. changes",
@@ -1666,7 +1685,8 @@
       "packages/@lwc/module-resolver/src/index.ts",
       "packages/@lwc/module-resolver/src/utils.ts",
       "packages/@lwc/rollup-plugin/src/index.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): node-reactions using native web components",
@@ -1793,7 +1813,8 @@
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js",
       "packages/integration-karma/test/template/directive-for-each/index.spec.js",
       "scripts/jest/base.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "more changes on top of PR #1798",
@@ -1843,7 +1864,8 @@
       "packages/@lwc/engine/src/framework/vm.ts",
       "packages/@lwc/engine/src/framework/wc.ts",
       "packages/integration-karma/test/component/lifecycle-callbacks/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(wire-service): config with all params being undefined",
@@ -1889,7 +1911,8 @@
       "packages/integration-karma/test/wire/legacy-adapters/x/echoWireAdapter/echoWireAdapter.js",
       "packages/integration-karma/test/wire/legacy-adapters/x/staticWiredProps/staticWiredProps.js",
       "packages/integration-karma/test/wire/reactive-params.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "docs: create README for lwc package",
@@ -1919,7 +1942,8 @@
     "changedFiles": [
       "packages/lwc/README.md"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "fix: cache definition for constructor with circular dependency",
@@ -1958,7 +1982,8 @@
       "packages/@lwc/engine/src/framework/def.ts",
       "packages/integration-karma/test/component/auraIntegration/x/childMarkedAsCircular/childMarkedAsCircular.js",
       "packages/integration-karma/test/component/lockerIntegration/x/child/child.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): add support for template hot swapping",
@@ -2040,7 +2065,8 @@
       "packages/integration-karma/test/swapping/templates/base/simple/simple.js",
       "packages/integration-karma/test/swapping/templates/base/views/views.js",
       "packages/integration-karma/test/swapping/templates/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): implement renderer interface",
@@ -2120,7 +2146,8 @@
       "packages/@lwc/engine/src/framework/wiring.ts",
       "packages/@lwc/synthetic-shadow/src/faux-shadow/shadow-token.ts",
       "packages/integration-karma/test/shadow-dom/HTMLElement-properties/GlobalHTML.properties.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test(karma): Karma fast watch mode",
@@ -2152,7 +2179,8 @@
     ],
     "changedSourceFiles": [
       "packages/integration-karma/scripts/karma-plugins/lwc.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: update README.md",
@@ -2182,7 +2210,8 @@
     "changedFiles": [
       "README.md"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "fix(wire-service): legacy adapters config calls with same config",
@@ -2221,7 +2250,8 @@
       "packages/@lwc/wire-service/src/index.ts",
       "packages/integration-karma/test/wire/legacy-adapters/index.spec.js",
       "packages/integration-karma/test/wire/legacy-adapters/x/sameConfigCase/sameConfigCase.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): VM spring cleaning",
@@ -2281,7 +2311,8 @@
       "packages/@lwc/engine/src/framework/vm.ts",
       "packages/@lwc/engine/src/framework/wiring.ts",
       "packages/@lwc/engine/src/shared/format.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(engine-server): Disable wire adapters in SSR",
@@ -2319,7 +2350,8 @@
       "packages/@lwc/engine-core/src/framework/vm.ts",
       "packages/@lwc/engine-server/src/__tests__/fixtures/wire/modules/x/wire/adapter.js",
       "packages/@lwc/engine-server/src/__tests__/fixtures/wire/modules/x/wire/wire.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: lockfile updates",
@@ -2351,7 +2383,8 @@
       "packages/@lwc/compiler/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "feat(engine-server): Add parameter check to renderComponent",
@@ -2385,7 +2418,8 @@
     "changedSourceFiles": [
       "packages/@lwc/engine-server/src/__tests__/render-component.spec.ts",
       "packages/@lwc/engine-server/src/apis/render-component.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "docs(module-resolver): Update README documentation",
@@ -2420,7 +2454,8 @@
     "changedSourceFiles": [
       "packages/@lwc/module-resolver/src/index.ts",
       "packages/@lwc/module-resolver/src/resolve-module.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test(engine-server): add slots coverage",
@@ -2476,7 +2511,8 @@
       "packages/@lwc/engine-server/src/__tests__/fixtures/slots-nested/modules/x/slots-nested/slots-nested.js",
       "packages/@lwc/engine-server/src/__tests__/fixtures/slots-unknown/modules/x/receiver/receiver.js",
       "packages/@lwc/engine-server/src/__tests__/fixtures/slots-unknown/modules/x/slots-unknown/slots-unknown.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(enginer-server): HTML escape",
@@ -2522,7 +2558,8 @@
       "packages/@lwc/engine-server/src/renderer.ts",
       "packages/@lwc/engine-server/src/serializer.ts",
       "packages/@lwc/engine-server/src/utils/html-escape.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(wire-service): call wired methods without calling hooks",
@@ -2554,7 +2591,8 @@
     ],
     "changedSourceFiles": [
       "packages/@lwc/engine-core/src/framework/wiring.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(engine-server): isConnected should not be `true` during construction",
@@ -2594,7 +2632,8 @@
       "packages/@lwc/engine-server/src/__tests__/fixtures/getter-is-connected/modules/x/getter-is-connected/getter-is-connected.js",
       "packages/@lwc/engine-server/src/apis/render-component.ts",
       "packages/@lwc/engine-server/src/renderer.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "build(deps): bump lodash from 4.17.15 to 4.17.19",
@@ -2624,7 +2663,8 @@
     "changedFiles": [
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: weekly dependency update",
@@ -2657,7 +2697,8 @@
       "packages/integration-karma/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "build: explicit ambient types",
@@ -2687,7 +2728,8 @@
     "changedFiles": [
       "tsconfig.json"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): Tab navigation after drag and drop",
@@ -2719,7 +2761,8 @@
     ],
     "changedSourceFiles": [
       "packages/@lwc/synthetic-shadow/src/faux-shadow/focus.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): nested components with negative tabindex",
@@ -2762,7 +2805,8 @@
       "packages/integration-tests/src/components/delegates-focus-click/test-nested-tabindex-negative/integration/nested-tabindex-negative/nested-tabindex-negative.js",
       "packages/integration-tests/src/components/delegates-focus-click/test-nested-tabindex-negative/integration/parent/parent.js",
       "packages/integration-tests/src/components/delegates-focus-click/test-nested-tabindex-negative/nested-tabindex-negative.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore(lwc): specify dom lib for types.d.ts",
@@ -2792,7 +2836,8 @@
     "changedFiles": [
       "packages/lwc/tsconfig.json"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "feat(compiler): Upgrade babel and add plugins for stage 4 proposal",
@@ -2895,7 +2940,8 @@
       "packages/@lwc/compiler/typings/babel-merge-copy.d.ts",
       "packages/@lwc/compiler/typings/babel-preset-compat.d.ts",
       "packages/@lwc/compiler/typings/rollup-plugin-replace.d.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(synthetic-shadow): innerText and outerText polyfills",
@@ -2949,7 +2995,8 @@
       "packages/integration-karma/test/synthetic-shadow/inner-outer-text/x/container/container.js",
       "packages/integration-karma/test/synthetic-shadow/inner-outer-text/x/grandChild/grandChild.js",
       "packages/integration-karma/test/synthetic-shadow/inner-outer-text/x/slotable/slotable.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore(lwc): Expose engine-server ESM artifact",
@@ -2983,7 +3030,8 @@
     "changedSourceFiles": [
       "packages/lwc/index.js",
       "packages/lwc/scripts/build.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Weekly dependency upgrade",
@@ -3017,7 +3065,8 @@
       "packages/integration-tests/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: Upgrade to latest version of Babel",
@@ -3091,7 +3140,8 @@
       "packages/@lwc/compiler/typings/babel-merge-copy.d.ts",
       "packages/@lwc/compiler/typings/babel-preset-compat.d.ts",
       "packages/@lwc/compiler/typings/rollup-plugin-replace.d.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test(integration-karma): Defer all component creation in test blocks",
@@ -3127,7 +3177,8 @@
       "packages/integration-karma/test/native-shadow/HTMLSlotElement-properties/HTMLSlotElement.assignedElements.spec.js",
       "packages/integration-karma/test/native-shadow/HTMLSlotElement-properties/HTMLSlotElement.assignedNodes.spec.js",
       "packages/integration-karma/test/template/attribute-boolean-global/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(perf-benchmarks): BEST test case for slotting scenarios",
@@ -3205,7 +3256,8 @@
       "packages/perf-benchmarks/src/benchmark/cardComponent/cardComponent.js",
       "packages/perf-benchmarks/src/benchmark/slotUsageComponent/slotUsageComponent.js",
       "packages/perf-benchmarks/src/benchmark/utils/utils.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine): removing another public api isAttributeLocked",
@@ -3241,7 +3293,8 @@
       "packages/@lwc/engine-core/src/framework/base-bridge-element.ts",
       "packages/@lwc/engine-core/src/framework/main.ts",
       "packages/@lwc/engine-dom/src/apis/build-custom-element-constructor.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore(style-compiler): Update postcss to version 8",
@@ -3283,7 +3336,8 @@
       "packages/@lwc/style-compiler/src/transform.ts",
       "packages/@lwc/style-compiler/src/utils/message.ts",
       "packages/@lwc/style-compiler/typings/cssnano-preset-default.d.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(engine): fix for diffing algo handling of null",
@@ -3326,7 +3380,8 @@
       "packages/integration-karma/test/rendering/element-orders/x/slotFallback/slotFallback.js",
       "packages/integration-karma/test/rendering/element-orders/x/withDynamic/withDynamic.js",
       "packages/integration-karma/test/rendering/element-orders/x/withEach/withEach.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore(lwc): Add missing depenency on @lwc/engine-server",
@@ -3356,7 +3411,8 @@
     "changedFiles": [
       "packages/lwc/package.json"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "build: publish to npm using circleci",
@@ -3401,7 +3457,8 @@
       "scripts/release_canary_npm.js",
       "scripts/release_dist-tags.sh",
       "scripts/release_npm.sh"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(engine): fixes diffing algo when if has dynamic child",
@@ -3441,7 +3498,8 @@
       "packages/integration-karma/test/rendering/dynamic-childrens-inside-if/index.spec.js",
       "packages/integration-karma/test/rendering/dynamic-childrens-inside-if/x/forEachCmp/forEachCmp.js",
       "packages/integration-karma/test/rendering/dynamic-childrens-inside-if/x/lwcDynamic/lwcDynamic.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat: add HMR functionality",
@@ -3525,7 +3583,8 @@
       "packages/integration-karma/test/swapping/templates/base/simple/simple.js",
       "packages/integration-karma/test/swapping/templates/base/views/views.js",
       "packages/integration-karma/test/swapping/templates/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix: improve wire decorator types",
@@ -3557,7 +3616,8 @@
     ],
     "changedSourceFiles": [
       "packages/lwc/types.d.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "build: fix release branch restriction for npm publish",
@@ -3589,7 +3649,8 @@
     ],
     "changedSourceFiles": [
       "scripts/release/publish.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): conservatively disable focus navigation routine upon focus",
@@ -3631,7 +3692,8 @@
       "packages/integration-tests/src/components/delegates-focus-click/test-invoke-focus-on-click/integration/child/child.js",
       "packages/integration-tests/src/components/delegates-focus-click/test-invoke-focus-on-click/integration/invoke-focus-on-click/invoke-focus-on-click.js",
       "packages/integration-tests/src/components/delegates-focus-click/test-invoke-focus-on-click/invoke-focus-on-click.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: weekly update",
@@ -3664,7 +3726,8 @@
       "packages/integration-karma/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "refactor(@lwc/engine-core): Extract HTML attribute -> props to @lwc/shared",
@@ -3712,7 +3775,8 @@
       "packages/@lwc/shared/src/__tests__/html-attributes.spec.ts",
       "packages/@lwc/shared/src/html-attributes.ts",
       "packages/@lwc/shared/src/language.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix: add nucleus config",
@@ -3742,7 +3806,8 @@
     "changedFiles": [
       ".nucleus.yaml"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "Update package.json",
@@ -3772,7 +3837,8 @@
     "changedFiles": [
       "package.json"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: Upgrade dev dependencies",
@@ -3810,7 +3876,8 @@
     "changedSourceFiles": [
       "packages/integration-tests/scripts/wdio.local.conf.js",
       "packages/perf-benchmarks/best.base.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Upgrade dependencies",
@@ -3855,7 +3922,8 @@
       "packages/@lwc/style-compiler/src/postcss-lwc-plugin.ts",
       "packages/@lwc/style-compiler/src/selector-scoping/transform.ts",
       "packages/@lwc/style-compiler/src/selector-scoping/validate.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(synthetic-shadow): relatedTarget prototype patching for FocusEvent and MouseEvent",
@@ -3919,7 +3987,8 @@
       "packages/integration-tests/src/components/events/test-retarget-related-target/integration/child/child.js",
       "packages/integration-tests/src/components/events/test-retarget-related-target/integration/retarget-related-target/retarget-related-target.js",
       "packages/integration-tests/src/components/events/test-retarget-related-target/retarget-related-target.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(synthetic-shadow): move node ownership logic into own module",
@@ -3979,7 +4048,8 @@
       "packages/@lwc/synthetic-shadow/src/polyfills/iframe-content-window/patch.ts",
       "packages/@lwc/synthetic-shadow/src/polyfills/mutation-observer/polyfill.ts",
       "packages/@lwc/synthetic-shadow/src/shared/node-ownership.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Upgrade repo to node 14",
@@ -4131,7 +4201,8 @@
       "packages/integration-tests/src/components/events/test-slotted-event-target/slotted-event-target.spec.js",
       "packages/integration-tests/src/components/wired/test-wired-method-suite/wired-method-suite.spec.js",
       "packages/integration-tests/src/components/wired/test-wired-prop-suite/wired-prop-suite.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(synthetic-shadow): enable shadowRoot.dispatchEvent()",
@@ -4204,7 +4275,8 @@
       "packages/integration-karma/test/shadow-dom/ShadowRoot.dispatchEvent/x/container/container.js",
       "packages/integration-karma/test/shadow-dom/ShadowRoot.dispatchEvent/x/test/test.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(integration-test): Remove duplicate code from integration tests",
@@ -4370,7 +4442,8 @@
       "packages/integration-tests/src/components/wired/test-wired-method-suite/wired-method-suite.spec.js",
       "packages/integration-tests/src/components/wired/test-wired-prop-suite/wired-prop-suite.spec.js",
       "packages/integration-tests/src/shared/test-case.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(engine-core): replaces vm.context wire connecting/disconnecting",
@@ -4404,7 +4477,8 @@
     "changedSourceFiles": [
       "packages/@lwc/engine-core/src/framework/vm.ts",
       "packages/@lwc/engine-core/src/framework/wiring.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(synthetic-shadow): consolidate EventTarget prototype methods",
@@ -4454,7 +4528,8 @@
       "packages/@lwc/synthetic-shadow/src/faux-shadow/slot.ts",
       "packages/@lwc/synthetic-shadow/src/polyfills/click-event-composed/polyfill.ts",
       "packages/@lwc/synthetic-shadow/src/polyfills/event-listener/polyfill.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "build(deps): bump ini from 1.3.5 to 1.3.7",
@@ -4484,7 +4559,8 @@
     "changedFiles": [
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "test(synthetic-shadow): refactor Event-properties tests",
@@ -4553,7 +4629,8 @@
       "packages/integration-karma/test/shadow-dom/Event-properties/x/eventDispatchingChild/eventDispatchingChild.js",
       "packages/integration-karma/test/shadow-dom/Event-properties/x/eventHandlingParent/eventHandlingParent.js",
       "packages/integration-karma/test/shadow-dom/Event-properties/x/parentWithDynamicChild/parentWithDynamicChild.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(synthetic-shadow): consolidate event retargeting to Event.prototype ",
@@ -4593,7 +4670,8 @@
       "packages/@lwc/synthetic-shadow/src/polyfills/event/main.ts",
       "packages/@lwc/synthetic-shadow/src/polyfills/event/polyfill.ts",
       "packages/integration-karma/test/shadow-dom/Event-properties/Event.target.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: bump node-notifier from 8.0.0 to 8.0.1",
@@ -4623,7 +4701,8 @@
     "changedFiles": [
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: weekly dependency update",
@@ -4655,7 +4734,8 @@
       "packages/integration-tests/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "test(integration-karma): add integration tests for EventTarget",
@@ -4703,7 +4783,8 @@
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/EventTarget.dispatchEvent.spec.js",
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/EventTarget.removeEventListener.spec.js",
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/x/container/container.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: set dependency resolution to fix security vulnerability",
@@ -4734,7 +4815,8 @@
       "package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: weekly dependency update",
@@ -4764,7 +4846,8 @@
     "changedFiles": [
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: weekly dependencies and devDependencies update",
@@ -4797,7 +4880,8 @@
       "packages/integration-karma/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "test: ci job tests",
@@ -4831,7 +4915,8 @@
     ],
     "changedSourceFiles": [
       "packages/integration-karma/test/api/createElement/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "Forked repo branch",
@@ -4863,7 +4948,8 @@
     ],
     "changedSourceFiles": [
       "packages/integration-karma/test/api/createElement/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test: dummy commit",
@@ -4893,7 +4979,8 @@
     "changedFiles": [
       "README.md"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): fix event propagation regression",
@@ -4970,7 +5057,8 @@
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/button/button.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/buttonGroup/buttonGroup.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/container/container.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test: test commit",
@@ -5002,7 +5090,8 @@
     ],
     "changedSourceFiles": [
       "packages/integration-karma/test/api/createElement/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): fix event propagation regression",
@@ -5054,7 +5143,8 @@
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/buttonGroup/buttonGroup.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/buttonGroupInternal/buttonGroupInternal.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/container/container.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): fix event propagation regression",
@@ -5110,7 +5200,8 @@
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/buttonGroup/buttonGroup.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/buttonGroupInternal/buttonGroupInternal.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/x/container/container.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix: unblock shadow methods",
@@ -5146,7 +5237,8 @@
       "packages/@lwc/engine-core/src/framework/restrictions.ts",
       "packages/@lwc/synthetic-shadow/src/faux-shadow/shadow-root.ts",
       "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix: properly add CSS custom properties to inline style attributes",
@@ -5202,7 +5294,8 @@
       "packages/@lwc/template-compiler/src/__tests__/parser.spec.ts",
       "packages/@lwc/template-compiler/src/parser/style.ts",
       "packages/integration-karma/test/template/attribute-style/index.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(template-compiler): refactor logic to simplifiy attribute name handling",
@@ -5236,7 +5329,8 @@
     "changedSourceFiles": [
       "packages/@lwc/template-compiler/src/parser/attribute.ts",
       "packages/@lwc/template-compiler/src/parser/index.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: bump socket.io from 2.3.0 to 2.4.1",
@@ -5266,7 +5360,8 @@
     "changedFiles": [
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "chore: weekly dependency update",
@@ -5302,7 +5397,8 @@
       "packages/integration-tests/package.json",
       "yarn.lock"
     ],
-    "changedSourceFiles": []
+    "changedSourceFiles": [],
+    "callers": []
   },
   {
     "title": "refactor(babel-plugin-component): remove post-process decorator validation",
@@ -5340,7 +5436,8 @@
       "packages/@lwc/babel-plugin-component/src/constants.js",
       "packages/@lwc/babel-plugin-component/src/decorators/index.js",
       "packages/@lwc/babel-plugin-component/src/program.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Update dependencies",
@@ -5391,7 +5488,8 @@
       "packages/integration-karma/scripts/karma-plugins/env.js",
       "packages/integration-karma/scripts/karma-plugins/lwc.js",
       "packages/integration-karma/scripts/shared/options.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Remove force-publish usage",
@@ -5424,7 +5522,8 @@
     ],
     "changedSourceFiles": [
       "scripts/release/version.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): properly filter non-composed events",
@@ -5460,7 +5559,8 @@
       "packages/@lwc/synthetic-shadow/src/shared/event-target.ts",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/propagation.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): properly filter non-composed events",
@@ -5500,7 +5600,8 @@
       "packages/@lwc/synthetic-shadow/src/shared/event-target.ts",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/event-propagation.spec.js",
       "packages/integration-karma/test/shadow-dom/event-in-shadow-tree/propagation.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(template-compiler): Remove unused id from internal state",
@@ -5542,7 +5643,8 @@
       "packages/@lwc/template-compiler/src/index.ts",
       "packages/@lwc/template-compiler/src/parser/index.ts",
       "packages/@lwc/template-compiler/src/state.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(template-compiler): Apply correct binding for nested iterators",
@@ -5590,7 +5692,8 @@
       "packages/@lwc/template-compiler/src/__tests__/fixtures/directive-key/nested-iterator-if/expected.js",
       "packages/@lwc/template-compiler/src/codegen/index.ts",
       "packages/@lwc/template-compiler/src/shared/scope.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(template-compiler): Remove iterator.next restriction",
@@ -5634,7 +5737,8 @@
       "packages/@lwc/template-compiler/src/parser/expression.ts",
       "packages/@lwc/template-compiler/src/parser/index.ts",
       "packages/@lwc/template-compiler/src/shared/ir.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(template-compiler): Use single traversal for scoped id generation",
@@ -5670,7 +5774,8 @@
       "packages/@lwc/template-compiler/src/codegen/index.ts",
       "packages/@lwc/template-compiler/src/parser/index.ts",
       "packages/@lwc/template-compiler/src/state.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(synthetic-shadow): reusable utility method shouldInvokeListener()",
@@ -5704,7 +5809,8 @@
     "changedSourceFiles": [
       "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
       "packages/@lwc/synthetic-shadow/src/shared/event-target.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): fix invoking context for shadow root and custom element listeners",
@@ -5738,7 +5844,8 @@
     "changedSourceFiles": [
       "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/EventTarget.addEventListener.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(template-compiler): Misc. restructuring",
@@ -5788,7 +5895,8 @@
       "packages/@lwc/template-compiler/src/config.ts",
       "packages/@lwc/template-compiler/src/index.ts",
       "packages/@lwc/template-compiler/src/shared/ir.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(style-compiler): Lift CSS custom property restrictions",
@@ -5838,7 +5946,8 @@
       "packages/@lwc/style-compiler/src/custom-properties/validate.ts",
       "packages/@lwc/style-compiler/src/postcss-lwc-plugin.ts",
       "packages/@lwc/style-compiler/src/transform.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): guard non-composed event propagation fix with feature flag",
@@ -5874,7 +5983,8 @@
       "packages/@lwc/features/src/flags.ts",
       "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
       "packages/@lwc/synthetic-shadow/src/shared/event-target.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "perf(template-compiler): Replace @babel/generator by astring for codegen",
@@ -6148,7 +6258,8 @@
       "packages/@lwc/template-compiler/src/parser/index.ts",
       "packages/@lwc/template-compiler/src/shared/estree.ts",
       "packages/@lwc/template-compiler/src/shared/types.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): innerText of elements with non-selectable text",
@@ -6184,7 +6295,8 @@
     "changedSourceFiles": [
       "packages/@lwc/synthetic-shadow/src/3rdparty/inner-text.ts",
       "packages/integration-karma/test/synthetic-shadow/inner-outer-text/inner-outer-text.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "feat(style-compiler): always produced compressed code",
@@ -6314,7 +6426,8 @@
       "packages/@lwc/style-compiler/src/serialize.ts",
       "packages/@lwc/style-compiler/src/transform.ts",
       "packages/@lwc/style-compiler/typings/cssnano-preset-default.d.ts"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "test: assert that multiple identical listeners on same target are discarded",
@@ -6346,7 +6459,8 @@
     ],
     "changedSourceFiles": [
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/EventTarget.addEventListener.spec.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: Simplify root Babel config",
@@ -6378,7 +6492,8 @@
     ],
     "changedSourceFiles": [
       "babel.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "refactor(babel-plugin-component): post-process traversal removal and decorator transform clean up",
@@ -6456,7 +6571,8 @@
       "packages/@lwc/compiler/src/__tests__/fixtures/expected-dynamic-component.js",
       "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app_css_resolver.js",
       "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_ts_simple_app.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "chore: update dependencies",
@@ -6505,7 +6621,8 @@
       "packages/integration-tests/scripts/build.js",
       "packages/lwc/scripts/utils/rollup.js",
       "packages/perf-benchmarks/best.base.config.js"
-    ]
+    ],
+    "callers": []
   },
   {
     "title": "fix(synthetic-shadow): duplicate event listeners on template and host are not discarded",
@@ -6539,6 +6656,7 @@
     "changedSourceFiles": [
       "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
       "packages/integration-karma/test/shadow-dom/EventTarget-methods/EventTarget.addEventListener.spec.js"
-    ]
+    ],
+    "callers": []
   }
 ]
