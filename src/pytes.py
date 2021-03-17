@@ -15,7 +15,7 @@ for project in projects:
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
 
-    prs = file_management.get_mined_PRs(owner, repo)
+    prs = file_management.get_mined_prs(owner, repo)
     bot_prs = prs.get("bot_prs")
 
     has_caller = [bot_pr for bot_pr in bot_prs if len(bot_pr["callers"]) > 0]

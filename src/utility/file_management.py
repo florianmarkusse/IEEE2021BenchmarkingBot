@@ -6,10 +6,19 @@ def make_project_folder(path, owner, repo):
     """
     Makes the folder that stores the data for the PR's
     """
-    if not os.path.isdir(path + "/" + owner):
-        os.mkdir(path + "/" + owner)
-    if not os.path.isdir(path + "/" + owner + "/" + repo):
-        os.mkdir(path + "/" + owner + "/" + repo)
+    make_folder(path + "/" + owner)
+    make_folder(path + "/" + owner + "/" + repo)
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "examples")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "scatter")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "combo")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "frequency")
+
+
+def make_folder(path):
+    if not os.path.isdir(path):
+        os.mkdir(path)
 
 
 def write_data(pull_requests, owner, repo, file_name):
@@ -67,7 +76,7 @@ def get_graphql_parameters():
     return attributes
 
 
-def get_mined_PRs(owner, repo):
+def get_mined_prs(owner, repo):
     prs = {}
 
     path = "../data/projects/{owner}/{repo}".format(owner=owner, repo=repo)

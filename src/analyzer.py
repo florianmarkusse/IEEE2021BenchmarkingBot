@@ -22,17 +22,22 @@ for project in projects:
     owner = project.get("owner")
     repo = project.get("repo")
 
-    prs = file_management.get_mined_PRs(owner, repo)
+    prs = file_management.get_mined_prs(owner, repo)
+
+    # create directories if missing ../data/projects
+    file_management.make_project_folder("../data/projects", owner, repo)
 
     # Create summarizing data.
 
     # Do an analysis based on a monthly period.
-    #period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
+    period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
 
     #print("")
 
+
+
     # Do an analysis based on a per-user basis.
-    #user_summaries = pull_requests.user_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
+    user_summaries = pull_requests.user_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
 
     #print("")
 
