@@ -4,6 +4,21 @@ from statistics import mean, median
 
 
 def monthly_analysis(owner, repo, all_prs, bot_prs):
+    """
+    Perform a monthly analysis on the repository based on the PR's that were created and those that contain a bot
+    contribution.
+
+    Parameters
+    ----------
+    owner : The owner of the repository.
+    repo : The name of the repository.
+    all_prs : All the PR's of this repository.
+    bot_prs : All the PR's that contain a bot contribution of this repository.
+
+    Returns
+    -------
+    A dictionary where each entry is a period that contains PR data from that repository in that specific period.
+    """
     all_prs_per_month = periodize_prs(all_prs, "%m-%y")
     all_bot_prs_per_month = periodize_prs(bot_prs, "%m-%y")
 
@@ -30,6 +45,21 @@ def monthly_analysis(owner, repo, all_prs, bot_prs):
 
 
 def user_analysis(owner, repo, all_prs, bot_prs):
+    """
+    Perform a user analysis on the repository based on the PR's that were created and those that contain a bot
+    contribution.
+
+    Parameters
+    ----------
+    owner : The owner of the repository.
+    repo : The name of the repository.
+    all_prs : All the PR's of this repository.
+    bot_prs : All the PR's that contain a bot contribution of this repository.
+
+    Returns
+    -------
+    A dictionary where each entry is a contributor that contains PR data from that repository from that contributor.
+    """
     all_prs_per_user = categorize_prs(all_prs, "author", "login")
     bot_prs_per_user = categorize_prs(bot_prs, "author", "login")
 
@@ -68,6 +98,20 @@ def user_analysis(owner, repo, all_prs, bot_prs):
 
 
 def pr_activity_analysis(owner, repo, prs, pr_type):
+    """
+    Perform an activity analysis on the PR's of the repository.
+
+    Parameters
+    ----------
+    owner : The owner of the repository.
+    repo : The name of the repository.
+    prs : The PR's to perform the activity analysis on.
+    pr_type : he type of PR's where this is about (e.g. this can be about "bot_PRs")
+
+    Returns
+    -------
+    A summary of the activity in the PR's supplied with @prs.
+    """
     number_of_comments = []
     number_of_participants = []
     number_of_reviews = []
