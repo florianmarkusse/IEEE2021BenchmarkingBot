@@ -4,6 +4,22 @@ import collections
 
 
 def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
+    """
+    Creates frequency bar charts for each element in @cut_offs.
+
+    Parameters
+    ----------
+    owner : The owner of the repository.
+    repo : The name of the repository.
+    pr_type : The type of PR's where this is about (e.g. this can be about "bot_PRs")
+    frequencies : The frequency which something occurred per element in @frequencies.
+    x_label : The label to give to the x-axis in the resulting frequency bar chart.
+    cut_offs : List containing values for which the graph will create an overflow bucket for the elements that have a
+    greater value than the elements.
+
+    Returns
+    -------
+    """
     counter = collections.Counter(frequencies)
     sorted_counter = sorted(counter.items())
 
@@ -18,6 +34,7 @@ def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
             file_name=file_name,
             cut_off=cut_off
         )
+        # If showing ticks for more than 20 consecutive buckets, the labels will overlap.
         if cut_off <= 20:
             create_frequency_bar_chart(sorted_counter, cut_off, True, x_label, path)
         else:
@@ -25,6 +42,20 @@ def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
 
 
 def create_frequency_bar_chart(sorted_counter, cut_off, is_every_tick, x_label, path):
+    """
+    Creates a frequency bar chart.
+
+    Parameters
+    ----------
+    sorted_counter : The sorted counter that contains all the values that occur and how often they occurred.
+    cut_off : The value after which all the values will be put in the overflow bucket.
+    is_every_tick : Whether or not to show labels for the x-axis on every tick.
+    x_label : The label to give to the x-axis.
+    path : The path to save the resulting frequency bar chart.
+
+    Returns
+    -------
+    """
     counter_with_cut_off = []
     for i in range(cut_off + 1):
         found_in_counter = False

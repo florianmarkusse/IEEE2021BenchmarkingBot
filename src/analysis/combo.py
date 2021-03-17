@@ -5,6 +5,22 @@ from src.analysis import helpers
 
 
 def combo_period_analysis(owner, repo, period_summaries):
+    """
+    Creates a combo chart consisting of a stacked bar chart and line to analyze the usage over time.
+
+    Parameters
+    ----------
+    owner : The owner of the repository.
+    repo : The name of the repository.
+    period_summaries : The summaries categorized on a period. Assumed to have the following members:
+        "period": The name of this period (e.g. a month and year: 11-2020)
+        "all_prs": The number of all the PR's in this period.
+        "bot_prs": The number of all the PR's with bot contribution in this period.
+        "fraction": The fraction of the PR's with bot contribution out of all the PR's in this period.
+
+    Returns
+    -------
+    """
     periods = [period_summary["period"] for period_summary in period_summaries]
     frequency_non_bot_pr_per_month = [(period_summary["all_prs"] - period_summary["bot_prs"]) for period_summary in
                                       period_summaries]
