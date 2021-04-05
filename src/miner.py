@@ -2,6 +2,7 @@ import datetime
 
 from src.mining.graphql import pull_requests
 from src.mining.rest import changed_files
+from src.mining.rest import bot_caller
 from utility import file_management
 from utility import helpers
 
@@ -23,6 +24,7 @@ for project in projects:
     repo = project.get("repo")
     bot_query = project.get("botQuery")
     start_date = project.get("startDate")
+    bot_call_string = project.get("botCallString")
 
     print("Mining PR's from project {owner}/{repo}".format(owner=owner, repo=repo))
 
@@ -49,6 +51,11 @@ for project in projects:
     min_max_source_files_changed = (min(changes["source_files_changed"]), max(changes["source_files_changed"]))
     min_max_additions = (min(changes["additions"]), max(changes["additions"]))
     min_max_deletions = (min(changes["deletions"]), max(changes["deletions"]))
+
+    # Add which users called for a bot contribution in this PR. Done using REST as it is easier and follows the same
+    # procedure as collecting the changed files.
+    print("Collecting PR's with bot contribution caller(s)")
+    callers = bot_caller.get_bot_callers_prs(owner, repo, bot_prs, bot_call_string, token)
 
     # Collect all PR's
     print("Collecting all PR's")

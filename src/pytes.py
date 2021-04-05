@@ -18,5 +18,4 @@ for project in projects:
     prs = file_management.get_mined_prs(owner, repo)
     bot_prs = prs.get("bot_prs")
 
-    has_caller = [bot_pr for bot_pr in bot_prs if len(bot_pr["callers"]) > 0]
-    print(len(has_caller))
+    print(len(bot_prs))

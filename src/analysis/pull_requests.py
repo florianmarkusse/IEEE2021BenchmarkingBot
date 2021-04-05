@@ -1,4 +1,5 @@
-from src.analysis import frequency_graph, scatter_graph, data_printer, combo
+from src.analysis import data_printer
+from src.analysis.plotting import combo, frequency_graph, scatter_graph
 from src.utility.helpers import periodize_prs, categorize_prs, get_date_from_string
 from statistics import mean, median
 
@@ -44,7 +45,7 @@ def monthly_analysis(owner, repo, all_prs, bot_prs):
     return period_summaries
 
 
-def user_analysis(owner, repo, all_prs, bot_prs):
+def contributor_analysis(owner, repo, all_prs, bot_prs):
     """
     Perform a user analysis on the repository based on the PR's that were created and those that contain a bot
     contribution.
@@ -95,6 +96,12 @@ def user_analysis(owner, repo, all_prs, bot_prs):
     data_printer.print_contributor_created_prs_bot_interaction(user_summaries)
 
     return user_summaries
+
+
+def caller_analysis(owner, repo, all_prs, bot_prs):
+    bot_prs_per_caller = categorize_prs(bot_prs, "callers")
+
+    print(1)
 
 
 def pr_activity_analysis(owner, repo, prs, pr_type):

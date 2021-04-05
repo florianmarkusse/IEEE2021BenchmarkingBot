@@ -112,7 +112,9 @@
       "Make.inc",
       "src/options.h"
     ],
-    "callers": []
+    "callers": [
+      "tkelman"
+    ]
   },
   {
     "title": "Improve UnitRange indexing performance",
@@ -285,6 +287,7 @@
       "test/abstractarray.jl"
     ],
     "callers": [
+      "mbauman",
       "mbauman",
       "jrevels"
     ]
@@ -1012,7 +1015,9 @@
       "test/arrayops.jl",
       "test/tuple.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "MIT-licensed SparseMatrixCSC permute[!] and refactored [c]transpose[!]",
@@ -1734,6 +1739,7 @@
     "callers": [
       "timholy",
       "timholy",
+      "timholy",
       "jrevels",
       "timholy",
       "timholy",
@@ -2165,7 +2171,9 @@
     "changedSourceFiles": [
       "base/number.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "Deprecate functions vectorized via `@vectorize_(1|2)arg` in favor of compact broadcast syntax",
@@ -3502,7 +3510,9 @@
     "changedSourceFiles": [
       "base/abstractarray.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "specialize on type in getindex for types",
@@ -4135,6 +4145,7 @@
       "tkelman",
       "tkelman",
       "tkelman",
+      "tkelman",
       "tkelman"
     ]
   },
@@ -4258,6 +4269,7 @@
       "src/codegen.cpp"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao",
       "yuyichao"
     ]
@@ -4424,6 +4436,7 @@
       "test/boundscheck_exec.jl"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao"
     ]
   },
@@ -4460,7 +4473,9 @@
       "base/reduce.jl",
       "base/subarray.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "[release-0.5] Backports for 0.5.0-rc4",
@@ -4610,6 +4625,7 @@
       "test/pkg.jl"
     ],
     "callers": [
+      "tkelman",
       "tkelman",
       "tkelman"
     ]
@@ -5200,7 +5216,9 @@
       "test/spawn.jl",
       "ui/repl.c"
     ],
-    "callers": []
+    "callers": [
+      "tkelman"
+    ]
   },
   {
     "title": "[release-0.5] final backports for 0.5.0",
@@ -5288,6 +5306,7 @@
       "test/repl.jl"
     ],
     "callers": [
+      "tkelman",
       "tkelman",
       "tkelman"
     ]
@@ -5884,6 +5903,7 @@
     ],
     "callers": [
       "timholy",
+      "timholy",
       "jrevels",
       "timholy",
       "timholy",
@@ -5974,6 +5994,7 @@
       "test/complex.jl"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao",
       "yuyichao",
       "jrevels"
@@ -6667,7 +6688,9 @@
     "changedSourceFiles": [
       "src/codegen.cpp"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "Fix compilation on LLVM 4.0",
@@ -7797,6 +7820,7 @@
     "callers": [
       "mbauman",
       "mbauman",
+      "mbauman",
       "KristofferC",
       "jrevels",
       "mbauman",
@@ -7917,6 +7941,7 @@
       "base/arraymath.jl"
     ],
     "callers": [
+      "andreasnoack",
       "andreasnoack",
       "andreasnoack"
     ]
@@ -8606,7 +8631,9 @@
       "src/julia_internal.h",
       "src/julia_threads.h"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "improvements to push!, unshift!, append!, prepend!",
@@ -8889,6 +8916,7 @@
     ],
     "callers": [
       "yuyichao",
+      "yuyichao",
       "Keno",
       "Keno",
       "Keno",
@@ -9038,7 +9066,9 @@
       "src/threadgroup.h",
       "src/threading.c"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "Fix behavior of `foldr` on empty arrays (#20144)",
@@ -9149,7 +9179,9 @@
       "src/julia_threads.h",
       "src/threading.c"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "Deprecate negate keyword argument in Dates adjuster API",
@@ -9189,6 +9221,7 @@
       "test/dates/ranges.jl"
     ],
     "callers": [
+      "tkelman",
       "ararslan",
       "jrevels",
       "tkelman"
@@ -9760,6 +9793,7 @@
       "src/cgutils.cpp"
     ],
     "callers": [
+      "mbauman",
       "vchuravy",
       "jrevels",
       "jrevels",
@@ -9970,7 +10004,9 @@
       "test/abstractarray.jl",
       "test/subarray.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "Be equally forgiving of leading & trailing whitespace in number parsing",
@@ -10871,6 +10907,7 @@
       "src/julia_internal.h"
     ],
     "callers": [
+      "yuyichao",
       "jrevels"
     ]
   },
@@ -11082,6 +11119,7 @@
     "changedFiles": [],
     "changedSourceFiles": [],
     "callers": [
+      "KristofferC",
       "KristofferC"
     ]
   },
@@ -11158,6 +11196,7 @@
     "changedFiles": [],
     "changedSourceFiles": [],
     "callers": [
+      "KristofferC",
       "KristofferC",
       "jrevels",
       "jrevels",
@@ -11679,6 +11718,7 @@
       "test/offsetarray.jl"
     ],
     "callers": [
+      "timholy",
       "timholy"
     ]
   },
@@ -12283,7 +12323,9 @@
     "changedSourceFiles": [
       "base/int.jl"
     ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "inline mod1",
@@ -12317,6 +12359,7 @@
       "base/operators.jl"
     ],
     "callers": [
+      "KristofferC",
       "KristofferC"
     ]
   },
@@ -12589,6 +12632,7 @@
       "test/serialize.jl"
     ],
     "callers": [
+      "JeffBezanson",
       "JeffBezanson"
     ]
   },
@@ -12936,7 +12980,9 @@
       "src/datatype.c",
       "src/interpreter.c"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "group ccall'ed MPZ library functions in a module",
@@ -14635,7 +14681,9 @@
       "src/llvm-ptls.cpp",
       "src/threading.c"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "Completely remove partial linear indexing",
@@ -14742,7 +14790,9 @@
       "src/julia_internal.h",
       "src/typemap.c"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "replace pure annotations in promotion with inline",
@@ -15130,6 +15180,7 @@
       "test/tuple.jl"
     ],
     "callers": [
+      "tkelman",
       "tkelman",
       "tkelman",
       "tkelman"
@@ -16360,6 +16411,7 @@
       "test/workspace.jl"
     ],
     "callers": [
+      "tkelman",
       "tkelman"
     ]
   },
@@ -16419,6 +16471,7 @@
       "src/runtime_intrinsics.c"
     ],
     "callers": [
+      "timholy",
       "timholy",
       "timholy",
       "timholy"
@@ -16732,6 +16785,7 @@
       "test/llvmpasses/simdloop.ll"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao"
     ]
   },
@@ -16766,7 +16820,9 @@
     "changedSourceFiles": [
       "base/array.jl"
     ],
-    "callers": []
+    "callers": [
+      "mbauman"
+    ]
   },
   {
     "title": "Ensure Bool to Integer conversions always return 0 or 1",
@@ -17000,6 +17056,7 @@
       "test/test.jl"
     ],
     "callers": [
+      "tkelman",
       "tkelman"
     ]
   },
@@ -17735,6 +17792,7 @@
       "test/llvmpasses/alloc-opt.jl"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao",
       "yuyichao",
       "yuyichao",
@@ -18705,6 +18763,7 @@
     ],
     "callers": [
       "JeffBezanson",
+      "JeffBezanson",
       "ararslan",
       "JeffBezanson",
       "JeffBezanson",
@@ -18908,43 +18967,6 @@
       "fredrikekre",
       "fredrikekre"
     ]
-  },
-  {
-    "title": "fix method lookup intersection error",
-    "createdAt": "2017-07-31T16:31:22Z",
-    "merged": true,
-    "mergedAt": "2017-08-02T18:28:17Z",
-    "closed": true,
-    "closedAt": "2017-08-02T18:28:17Z",
-    "number": 23058,
-    "additions": 31,
-    "deletions": 18,
-    "author": {
-      "login": "vtjnash"
-    },
-    "participants": {
-      "totalCount": 6
-    },
-    "reviews": {
-      "totalCount": 7
-    },
-    "comments": {
-      "totalCount": 2
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "src/subtype.c",
-      "test/inference.jl",
-      "test/subtype.jl"
-    ],
-    "changedSourceFiles": [
-      "src/subtype.c",
-      "test/inference.jl",
-      "test/subtype.jl"
-    ],
-    "callers": []
   },
   {
     "title": "RFC: preserve more syntax in parsing `?`, `do`, and `elseif`",
@@ -19227,6 +19249,7 @@
       "test/show.jl"
     ],
     "callers": [
+      "fredrikekre",
       "fredrikekre"
     ]
   },
@@ -19477,7 +19500,9 @@
       "test/core.jl",
       "test/sets.jl"
     ],
-    "callers": []
+    "callers": [
+      "ararslan"
+    ]
   },
   {
     "title": "Much more aggressive alloc_elim_pass!",
@@ -19523,6 +19548,7 @@
       "test/parse.jl"
     ],
     "callers": [
+      "yuyichao",
       "yuyichao",
       "yuyichao",
       "yuyichao",
@@ -19766,7 +19792,9 @@
       "test/strings/basic.jl",
       "test/version.jl"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "Add Julia port of acos from Openlibm and add some tests.",
@@ -21400,6 +21428,7 @@
       "base/random/normal.jl"
     ],
     "callers": [
+      "rfourquet",
       "rfourquet"
     ]
   },
@@ -21526,7 +21555,9 @@
       "base/strings/string.jl",
       "src/cgutils.cpp"
     ],
-    "callers": []
+    "callers": [
+      "yuyichao"
+    ]
   },
   {
     "title": "Rework the broadcast API and document it",
@@ -21661,7 +21692,9 @@
       "base/inference.jl",
       "test/inline.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "Avoid row promotion in heterogeneous arrays",
@@ -21734,7 +21767,9 @@
     "changedSourceFiles": [
       "base/abstractarraymath.jl"
     ],
-    "callers": []
+    "callers": [
+      "pabloferz"
+    ]
   },
   {
     "title": "[WIP] improved dense-sparse and sparse-dense matrix multiplication kernels",
@@ -21832,6 +21867,7 @@
       "test/syntax.jl"
     ],
     "callers": [
+      "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson",
@@ -22438,6 +22474,7 @@
       "base/linalg/bidiag.jl"
     ],
     "callers": [
+      "fredrikekre",
       "fredrikekre"
     ]
   },
@@ -23196,6 +23233,7 @@
       "test/random.jl"
     ],
     "callers": [
+      "rfourquet",
       "ararslan",
       "rfourquet",
       "rfourquet"
@@ -24367,6 +24405,7 @@
       "test/arrayops.jl"
     ],
     "callers": [
+      "nalimilan",
       "nalimilan",
       "ararslan"
     ]
@@ -26394,6 +26433,7 @@
     ],
     "callers": [
       "JeffBezanson",
+      "JeffBezanson",
       "ararslan"
     ]
   },
@@ -26478,7 +26518,9 @@
       "src/jitlayers.cpp",
       "src/jloptions.c"
     ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "Stop setting force_noinline for functions of union arguments",
@@ -28091,6 +28133,7 @@
       "test/sets.jl"
     ],
     "callers": [
+      "jrevels",
       "JeffBezanson"
     ]
   },
@@ -28136,37 +28179,6 @@
     ]
   },
   {
-    "title": "Set VERSION to 0.7.0-beta",
-    "createdAt": "2018-06-23T20:52:03Z",
-    "merged": true,
-    "mergedAt": "2018-06-24T01:32:19Z",
-    "closed": true,
-    "closedAt": "2018-06-24T01:32:19Z",
-    "number": 27748,
-    "additions": 1,
-    "deletions": 1,
-    "author": {
-      "login": "ararslan"
-    },
-    "participants": {
-      "totalCount": 12
-    },
-    "reviews": {
-      "totalCount": 11
-    },
-    "comments": {
-      "totalCount": 1
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "VERSION"
-    ],
-    "changedSourceFiles": [],
-    "callers": []
-  },
-  {
     "title": "improve performance for parsing Floats",
     "createdAt": "2018-06-25T08:15:10Z",
     "merged": true,
@@ -28197,7 +28209,9 @@
     "changedSourceFiles": [
       "base/parse.jl"
     ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "avoid kind type dispatch bugs in tuple_type_head and tuple_type_tail",
@@ -28700,6 +28714,7 @@
     ],
     "callers": [
       "vtjnash",
+      "vtjnash",
       "KristofferC"
     ]
   },
@@ -28824,6 +28839,7 @@
       "base/missing.jl"
     ],
     "callers": [
+      "nalimilan",
       "nalimilan"
     ]
   },
@@ -28858,7 +28874,9 @@
     "changedSourceFiles": [
       "base/compiler/abstractinterpretation.jl"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "use `checkbounds` instead of `in` in copyto!",
@@ -28891,7 +28909,9 @@
     "changedSourceFiles": [
       "base/abstractarray.jl"
     ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "make simd loop over ranges perform better",
@@ -29033,7 +29053,9 @@
       "base/regex.jl",
       "test/regex.jl"
     ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "fix #27907, inference not detecting some cycles during constant prop",
@@ -29227,7 +29249,9 @@
     "changedSourceFiles": [
       "src/jitlayers.cpp"
     ],
-    "callers": []
+    "callers": [
+      "jrevels"
+    ]
   },
   {
     "title": "fix #28369, transpose of SparseMatrixCSC is not recursive",
@@ -29304,51 +29328,6 @@
       "andreasnoack",
       "andreasnoack"
     ]
-  },
-  {
-    "title": "check sizes of arguments in dot; fixes #28617",
-    "createdAt": "2018-08-15T09:37:52Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 28666,
-    "additions": 53,
-    "deletions": 15,
-    "author": {
-      "login": "ranocha"
-    },
-    "participants": {
-      "totalCount": 12
-    },
-    "reviews": {
-      "totalCount": 5
-    },
-    "comments": {
-      "totalCount": 22
-    },
-    "commits": {
-      "totalCount": 4
-    },
-    "changedFiles": [
-      "stdlib/LinearAlgebra/src/bitarray.jl",
-      "stdlib/LinearAlgebra/src/blas.jl",
-      "stdlib/LinearAlgebra/src/generic.jl",
-      "stdlib/LinearAlgebra/test/blas.jl",
-      "stdlib/LinearAlgebra/test/matmul.jl",
-      "stdlib/SparseArrays/src/linalg.jl",
-      "stdlib/SparseArrays/src/sparsevector.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/LinearAlgebra/src/bitarray.jl",
-      "stdlib/LinearAlgebra/src/blas.jl",
-      "stdlib/LinearAlgebra/src/generic.jl",
-      "stdlib/LinearAlgebra/test/blas.jl",
-      "stdlib/LinearAlgebra/test/matmul.jl",
-      "stdlib/SparseArrays/src/linalg.jl",
-      "stdlib/SparseArrays/src/sparsevector.jl"
-    ],
-    "callers": []
   },
   {
     "title": "Backports to 1.0.1",
@@ -29795,41 +29774,6 @@
     ]
   },
   {
-    "title": "Implement AbstractVector{T}(r::AbstractRange), fix #27138",
-    "createdAt": "2018-08-29T23:54:02Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 28956,
-    "additions": 10,
-    "deletions": 0,
-    "author": {
-      "login": "jw3126"
-    },
-    "participants": {
-      "totalCount": 7
-    },
-    "reviews": {
-      "totalCount": 7
-    },
-    "comments": {
-      "totalCount": 6
-    },
-    "commits": {
-      "totalCount": 2
-    },
-    "changedFiles": [
-      "base/abstractarray.jl",
-      "test/abstractarray.jl"
-    ],
-    "changedSourceFiles": [
-      "base/abstractarray.jl",
-      "test/abstractarray.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "RFC: Iterate over smaller set for setdiff[!](a,b)",
     "createdAt": "2018-09-05T13:11:03Z",
     "merged": true,
@@ -29939,49 +29883,6 @@
       "martinholters",
       "martinholters"
     ]
-  },
-  {
-    "title": "implement \"nearly division less\" algorithm for rand(a:b)",
-    "createdAt": "2018-09-18T10:14:48Z",
-    "merged": true,
-    "mergedAt": "2020-05-01T16:42:41Z",
-    "closed": true,
-    "closedAt": "2020-05-01T16:42:42Z",
-    "number": 29240,
-    "additions": 89,
-    "deletions": 57,
-    "author": {
-      "login": "rfourquet"
-    },
-    "participants": {
-      "totalCount": 10
-    },
-    "reviews": {
-      "totalCount": 2
-    },
-    "comments": {
-      "totalCount": 41
-    },
-    "commits": {
-      "totalCount": 7
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/LinearAlgebra/test/bunchkaufman.jl",
-      "stdlib/Random/docs/src/index.md",
-      "stdlib/Random/src/RNGs.jl",
-      "stdlib/Random/src/generation.jl",
-      "stdlib/Random/src/misc.jl",
-      "stdlib/Random/test/runtests.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/LinearAlgebra/test/bunchkaufman.jl",
-      "stdlib/Random/src/RNGs.jl",
-      "stdlib/Random/src/generation.jl",
-      "stdlib/Random/src/misc.jl",
-      "stdlib/Random/test/runtests.jl"
-    ],
-    "callers": []
   },
   {
     "title": "faster String allocation",
@@ -30096,7 +29997,9 @@
       "src/julia_threads.h",
       "src/llvm-late-gc-lowering.cpp"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "fix #29208, incorrect `Union{}` result from type intersection",
@@ -30132,6 +30035,7 @@
       "test/subtype.jl"
     ],
     "callers": [
+      "JeffBezanson",
       "JeffBezanson"
     ]
   },
@@ -31066,6 +30970,7 @@
       "base/strings/string.jl"
     ],
     "callers": [
+      "KristofferC",
       "KristofferC"
     ]
   },
@@ -31216,6 +31121,7 @@
       "test/subarray.jl"
     ],
     "callers": [
+      "KristofferC",
       "KristofferC"
     ]
   },
@@ -31400,42 +31306,6 @@
     ]
   },
   {
-    "title": "Define shape of some truncated zips",
-    "createdAt": "2018-11-04T16:55:14Z",
-    "merged": true,
-    "mergedAt": "2020-04-05T17:22:02Z",
-    "closed": true,
-    "closedAt": "2020-04-05T17:22:02Z",
-    "number": 29927,
-    "additions": 42,
-    "deletions": 5,
-    "author": {
-      "login": "mschauer"
-    },
-    "participants": {
-      "totalCount": 8
-    },
-    "reviews": {
-      "totalCount": 4
-    },
-    "comments": {
-      "totalCount": 25
-    },
-    "commits": {
-      "totalCount": 9
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/iterators.jl",
-      "test/iterators.jl"
-    ],
-    "changedSourceFiles": [
-      "base/iterators.jl",
-      "test/iterators.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "fix #29955, intersection bugs involving triangular constraints",
     "createdAt": "2018-11-09T22:35:41Z",
     "merged": true,
@@ -31471,6 +31341,7 @@
       "test/subtype.jl"
     ],
     "callers": [
+      "JeffBezanson",
       "JeffBezanson"
     ]
   },
@@ -31688,6 +31559,7 @@
     ],
     "changedSourceFiles": [],
     "callers": [
+      "KristofferC",
       "KristofferC"
     ]
   },
@@ -31730,7 +31602,9 @@
       "base/compiler/utilities.jl",
       "test/inline.jl"
     ],
-    "callers": []
+    "callers": [
+      "timholy"
+    ]
   },
   {
     "title": "perf: optimize append_any function",
@@ -31811,6 +31685,7 @@
       "base/subarray.jl"
     ],
     "callers": [
+      "mbauman",
       "mbauman",
       "mbauman"
     ]
@@ -31926,6 +31801,7 @@
       "base/set.jl"
     ],
     "callers": [
+      "martinholters",
       "martinholters"
     ]
   },
@@ -32552,6 +32428,7 @@
       "base/subarray.jl"
     ],
     "callers": [
+      "timholy",
       "timholy"
     ]
   },
@@ -32896,6 +32773,7 @@
       "test/syntax.jl"
     ],
     "callers": [
+      "JeffBezanson",
       "JeffBezanson"
     ]
   },
@@ -32935,6 +32813,7 @@
       "test/broadcast.jl"
     ],
     "callers": [
+      "mbauman",
       "mbauman"
     ]
   },
@@ -34600,49 +34479,6 @@
     ]
   },
   {
-    "title": "fix some bugs in diagonal subtyping",
-    "createdAt": "2019-04-25T19:30:03Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": true,
-    "closedAt": "2020-01-07T23:10:30Z",
-    "number": 31833,
-    "additions": 235,
-    "deletions": 55,
-    "author": {
-      "login": "JeffBezanson"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 7
-    },
-    "comments": {
-      "totalCount": 6
-    },
-    "commits": {
-      "totalCount": 2
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/essentials.jl",
-      "doc/src/devdocs/types.md",
-      "src/subtype.c",
-      "test/ambiguous.jl",
-      "test/subtype.jl",
-      "test/tuple.jl"
-    ],
-    "changedSourceFiles": [
-      "base/essentials.jl",
-      "src/subtype.c",
-      "test/ambiguous.jl",
-      "test/subtype.jl",
-      "test/tuple.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "gf: support more dispatch on abstract types",
     "createdAt": "2019-05-03T17:06:37Z",
     "merged": true,
@@ -35165,58 +35001,6 @@
     ]
   },
   {
-    "title": "RFC: Make empty ranges compare equal",
-    "createdAt": "2019-06-17T17:54:56Z",
-    "merged": true,
-    "mergedAt": "2020-05-04T20:05:21Z",
-    "closed": true,
-    "closedAt": "2020-05-04T20:05:22Z",
-    "number": 32348,
-    "additions": 56,
-    "deletions": 46,
-    "author": {
-      "login": "sostock"
-    },
-    "participants": {
-      "totalCount": 7
-    },
-    "reviews": {
-      "totalCount": 5
-    },
-    "comments": {
-      "totalCount": 23
-    },
-    "commits": {
-      "totalCount": 9
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/range.jl",
-      "base/strings/util.jl",
-      "stdlib/Dates/test/ranges.jl",
-      "stdlib/REPL/test/replcompletions.jl",
-      "test/core.jl",
-      "test/offsetarray.jl",
-      "test/ranges.jl",
-      "test/regex.jl",
-      "test/sorting.jl",
-      "test/strings/search.jl"
-    ],
-    "changedSourceFiles": [
-      "base/range.jl",
-      "base/strings/util.jl",
-      "stdlib/Dates/test/ranges.jl",
-      "stdlib/REPL/test/replcompletions.jl",
-      "test/core.jl",
-      "test/offsetarray.jl",
-      "test/ranges.jl",
-      "test/regex.jl",
-      "test/sorting.jl",
-      "test/strings/search.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "fix #21360, make global bindings thread safe",
     "createdAt": "2019-06-19T22:11:03Z",
     "merged": true,
@@ -35405,7 +35189,9 @@
       "src/gc.h",
       "src/julia_threads.h"
     ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "adjust some gc heuristics",
@@ -35617,46 +35403,6 @@
     "callers": [
       "KristofferC"
     ]
-  },
-  {
-    "title": "remove trim option to fkeep! and related functions",
-    "createdAt": "2019-08-20T08:21:29Z",
-    "merged": true,
-    "mergedAt": "2020-02-21T08:02:45Z",
-    "closed": true,
-    "closedAt": "2020-02-21T08:02:46Z",
-    "number": 32972,
-    "additions": 40,
-    "deletions": 63,
-    "author": {
-      "login": "KristofferC"
-    },
-    "participants": {
-      "totalCount": 4
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 5
-    },
-    "commits": {
-      "totalCount": 2
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/SparseArrays/src/sparsematrix.jl",
-      "stdlib/SparseArrays/src/sparsevector.jl",
-      "stdlib/SparseArrays/test/sparse.jl",
-      "stdlib/SparseArrays/test/sparsevector.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/SparseArrays/src/sparsematrix.jl",
-      "stdlib/SparseArrays/src/sparsevector.jl",
-      "stdlib/SparseArrays/test/sparse.jl",
-      "stdlib/SparseArrays/test/sparsevector.jl"
-    ],
-    "callers": []
   },
   {
     "title": "WIP: Backports for 1.3-RC2",
@@ -36862,47 +36608,6 @@
     ]
   },
   {
-    "title": "RFC: parse `a'` as call expression",
-    "createdAt": "2019-10-26T11:41:17Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 33683,
-    "additions": 15,
-    "deletions": 13,
-    "author": {
-      "login": "simeonschaub"
-    },
-    "participants": {
-      "totalCount": 8
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 13
-    },
-    "commits": {
-      "totalCount": 5
-    },
-    "changedFiles": [
-      "base/exports.jl",
-      "base/operators.jl",
-      "base/show.jl",
-      "src/julia-parser.scm",
-      "test/syntax.jl"
-    ],
-    "changedSourceFiles": [
-      "base/exports.jl",
-      "base/operators.jl",
-      "base/show.jl",
-      "src/julia-parser.scm",
-      "test/syntax.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "speedup BitSet iteration (by 2x or 3x)",
     "createdAt": "2019-10-27T15:25:25Z",
     "merged": true,
@@ -36987,40 +36692,6 @@
     "callers": [
       "vtjnash"
     ]
-  },
-  {
-    "title": "faster rand!(::MersenneTwister, ::Array{Bool})",
-    "createdAt": "2019-10-30T19:47:26Z",
-    "merged": true,
-    "mergedAt": "2020-05-04T10:04:01Z",
-    "closed": true,
-    "closedAt": "2020-05-04T10:04:01Z",
-    "number": 33721,
-    "additions": 55,
-    "deletions": 4,
-    "author": {
-      "login": "rfourquet"
-    },
-    "participants": {
-      "totalCount": 6
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 12
-    },
-    "commits": {
-      "totalCount": 4
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/Random/src/RNGs.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/Random/src/RNGs.jl"
-    ],
-    "callers": []
   },
   {
     "title": "datatype: reorganize layout calculation code",
@@ -37251,7 +36922,9 @@
       "test/core.jl",
       "test/threads_exec.jl"
     ],
-    "callers": []
+    "callers": [
+      "vtjnash"
+    ]
   },
   {
     "title": "Deprecate @horner and replace with evalpoly function",
@@ -37301,37 +36974,6 @@
     "callers": [
       "ararslan"
     ]
-  },
-  {
-    "title": "Minor fix for long form anonymous functions",
-    "createdAt": "2019-11-27T09:58:01Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 33961,
-    "additions": 1,
-    "deletions": 1,
-    "author": null,
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 11
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "src/julia-parser.scm"
-    ],
-    "changedSourceFiles": [
-      "src/julia-parser.scm"
-    ],
-    "callers": []
   },
   {
     "title": "Backports release 1.3.1",
@@ -37474,6 +37116,7 @@
       "timholy",
       "timholy",
       "timholy",
+      "timholy",
       "timholy"
     ]
   },
@@ -37566,42 +37209,6 @@
     "callers": [
       "vtjnash"
     ]
-  },
-  {
-    "title": "allow \u00b1 and \u2213 as unary operators",
-    "createdAt": "2019-12-26T10:58:25Z",
-    "merged": true,
-    "mergedAt": "2020-03-10T12:14:00Z",
-    "closed": true,
-    "closedAt": "2020-03-10T12:14:00Z",
-    "number": 34200,
-    "additions": 12,
-    "deletions": 2,
-    "author": {
-      "login": "simeonschaub"
-    },
-    "participants": {
-      "totalCount": 7
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 14
-    },
-    "commits": {
-      "totalCount": 3
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "src/julia-parser.scm",
-      "test/parse.jl"
-    ],
-    "changedSourceFiles": [
-      "src/julia-parser.scm",
-      "test/parse.jl"
-    ],
-    "callers": []
   },
   {
     "title": "WIP: Backports for 1.4-RC1",
@@ -37893,48 +37500,9 @@
       "test/threads.jl",
       "test/threads_exec.jl"
     ],
-    "callers": []
-  },
-  {
-    "title": "fix some cases of diagonal subtyping when a var also appears invariantly",
-    "createdAt": "2020-01-06T02:52:09Z",
-    "merged": true,
-    "mergedAt": "2020-01-15T22:37:57Z",
-    "closed": true,
-    "closedAt": "2020-01-15T22:37:57Z",
-    "number": 34272,
-    "additions": 177,
-    "deletions": 78,
-    "author": {
-      "login": "JeffBezanson"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 2
-    },
-    "comments": {
-      "totalCount": 19
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/essentials.jl",
-      "doc/src/devdocs/types.md",
-      "src/subtype.c",
-      "test/subtype.jl",
-      "test/tuple.jl"
-    ],
-    "changedSourceFiles": [
-      "base/essentials.jl",
-      "src/subtype.c",
-      "test/subtype.jl",
-      "test/tuple.jl"
-    ],
-    "callers": []
+    "callers": [
+      "KristofferC"
+    ]
   },
   {
     "title": "for PkgEval only: error when an implicit local at the toplevel shadows a global",
@@ -38133,56 +37701,6 @@
     "callers": [
       "vchuravy"
     ]
-  },
-  {
-    "title": "another soft scope PkgEval run",
-    "createdAt": "2020-01-21T18:38:59Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": true,
-    "closedAt": "2020-01-23T19:20:09Z",
-    "number": 34469,
-    "additions": 274,
-    "deletions": 26,
-    "author": {
-      "login": "JeffBezanson"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 6
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/options.jl",
-      "src/ast.c",
-      "src/jlfrontend.scm",
-      "src/jloptions.c",
-      "src/julia-syntax.scm",
-      "src/julia.h",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/Test/src/Test.jl",
-      "test/syntax.jl"
-    ],
-    "changedSourceFiles": [
-      "base/options.jl",
-      "src/ast.c",
-      "src/jlfrontend.scm",
-      "src/jloptions.c",
-      "src/julia-syntax.scm",
-      "src/julia.h",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/Test/src/Test.jl",
-      "test/syntax.jl"
-    ],
-    "callers": []
   },
   {
     "title": "Backports for Julia 1.4 RC2",
@@ -38543,41 +38061,6 @@
     ]
   },
   {
-    "title": "(DO NOT MERGE) don't allow identifiers to start with Lm (Letter, modifier)",
-    "createdAt": "2020-01-28T14:06:59Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 34549,
-    "additions": 3,
-    "deletions": 3,
-    "author": {
-      "login": "stevengj"
-    },
-    "participants": {
-      "totalCount": 9
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 14
-    },
-    "commits": {
-      "totalCount": 3
-    },
-    "changedFiles": [
-      "src/flisp/julia_extensions.c",
-      "test/syntax.jl"
-    ],
-    "changedSourceFiles": [
-      "src/flisp/julia_extensions.c",
-      "test/syntax.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "RFC: lower a' as var\"'\"(a)",
     "createdAt": "2020-02-02T23:40:17Z",
     "merged": true,
@@ -38624,46 +38107,6 @@
     "callers": []
   },
   {
-    "title": "Base.Ordering: do not ever discard `order` parameter",
-    "createdAt": "2020-02-10T15:22:20Z",
-    "merged": true,
-    "mergedAt": "2020-02-15T12:41:45Z",
-    "closed": true,
-    "closedAt": "2020-02-15T12:41:45Z",
-    "number": 34719,
-    "additions": 80,
-    "deletions": 13,
-    "author": {
-      "login": "tkluck"
-    },
-    "participants": {
-      "totalCount": 4
-    },
-    "reviews": {
-      "totalCount": 4
-    },
-    "comments": {
-      "totalCount": 13
-    },
-    "commits": {
-      "totalCount": 6
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/compiler/ssair/ir.jl",
-      "base/ordering.jl",
-      "test/choosetests.jl",
-      "test/ordering.jl"
-    ],
-    "changedSourceFiles": [
-      "base/compiler/ssair/ir.jl",
-      "base/ordering.jl",
-      "test/choosetests.jl",
-      "test/ordering.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "Convert range type in `reduced_index`",
     "createdAt": "2020-02-15T12:35:04Z",
     "merged": true,
@@ -38695,49 +38138,6 @@
     "changedSourceFiles": [
       "base/reducedim.jl",
       "test/offsetarray.jl"
-    ],
-    "callers": []
-  },
-  {
-    "title": "compiler type fixes",
-    "createdAt": "2020-02-25T20:00:13Z",
-    "merged": true,
-    "mergedAt": "2020-03-04T15:22:20Z",
-    "closed": true,
-    "closedAt": "2020-03-04T15:22:20Z",
-    "number": 34876,
-    "additions": 97,
-    "deletions": 25,
-    "author": {
-      "login": "vtjnash"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 1
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 3
-    },
-    "changedFiles": [
-      "base/compiler/typelimits.jl",
-      "base/compiler/typeutils.jl",
-      "src/cgutils.cpp",
-      "src/codegen.cpp",
-      "src/intrinsics.cpp",
-      "test/compiler/inference.jl"
-    ],
-    "changedSourceFiles": [
-      "base/compiler/typelimits.jl",
-      "base/compiler/typeutils.jl",
-      "src/cgutils.cpp",
-      "src/codegen.cpp",
-      "src/intrinsics.cpp",
-      "test/compiler/inference.jl"
     ],
     "callers": []
   },
@@ -38774,46 +38174,9 @@
     ],
     "callers": [
       "JeffBezanson",
+      "JeffBezanson",
       "JeffBezanson"
     ]
-  },
-  {
-    "title": "faster randn!(::MersenneTwister, ::Array{Float64})",
-    "createdAt": "2020-03-11T18:42:06Z",
-    "merged": true,
-    "mergedAt": "2020-04-24T12:40:41Z",
-    "closed": true,
-    "closedAt": "2020-04-24T12:40:41Z",
-    "number": 35078,
-    "additions": 28,
-    "deletions": 6,
-    "author": {
-      "login": "rfourquet"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 22
-    },
-    "commits": {
-      "totalCount": 2
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/LinearAlgebra/test/cholesky.jl",
-      "stdlib/LinearAlgebra/test/symmetric.jl",
-      "stdlib/Random/src/normal.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/LinearAlgebra/test/cholesky.jl",
-      "stdlib/LinearAlgebra/test/symmetric.jl",
-      "stdlib/Random/src/normal.jl"
-    ],
-    "callers": []
   },
   {
     "title": "use CodeGenOpt::None at optlevel<2, Default at 2, and Aggressive at >2",
@@ -38846,46 +38209,9 @@
     "changedSourceFiles": [
       "src/codegen.cpp"
     ],
-    "callers": []
-  },
-  {
-    "title": "Support `\u2299` and `\u2297` as elementwise- and outer-product operators",
-    "createdAt": "2020-03-18T14:39:01Z",
-    "merged": true,
-    "mergedAt": "2020-05-02T09:29:03Z",
-    "closed": true,
-    "closedAt": "2020-05-02T09:29:03Z",
-    "number": 35150,
-    "additions": 206,
-    "deletions": 3,
-    "author": {
-      "login": "timholy"
-    },
-    "participants": {
-      "totalCount": 14
-    },
-    "reviews": {
-      "totalCount": 26
-    },
-    "comments": {
-      "totalCount": 117
-    },
-    "commits": {
-      "totalCount": 8
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/LinearAlgebra/docs/src/index.md",
-      "stdlib/LinearAlgebra/src/LinearAlgebra.jl",
-      "stdlib/LinearAlgebra/src/dense.jl",
-      "stdlib/LinearAlgebra/test/addmul.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/LinearAlgebra/src/LinearAlgebra.jl",
-      "stdlib/LinearAlgebra/src/dense.jl",
-      "stdlib/LinearAlgebra/test/addmul.jl"
-    ],
-    "callers": []
+    "callers": [
+      "JeffBezanson"
+    ]
   },
   {
     "title": "Backports for Julia 1.4.1",
@@ -39357,54 +38683,6 @@
     ]
   },
   {
-    "title": "Revert \"Enable color output whenever stdout is TTY (#34347)\"",
-    "createdAt": "2020-03-29T08:04:56Z",
-    "merged": true,
-    "mergedAt": "2020-03-30T07:35:16Z",
-    "closed": true,
-    "closedAt": "2020-03-30T07:35:16Z",
-    "number": 35294,
-    "additions": 31,
-    "deletions": 43,
-    "author": {
-      "login": "maleadt"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 5
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/Base.jl",
-      "base/client.jl",
-      "base/loading.jl",
-      "base/stream.jl",
-      "base/ttyhascolor.jl",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/REPL/src/Terminals.jl",
-      "stdlib/REPL/test/repl.jl"
-    ],
-    "changedSourceFiles": [
-      "base/Base.jl",
-      "base/client.jl",
-      "base/loading.jl",
-      "base/stream.jl",
-      "base/ttyhascolor.jl",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/REPL/src/Terminals.jl",
-      "stdlib/REPL/test/repl.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "upgrade LLVM to 10",
     "createdAt": "2020-03-31T00:47:57Z",
     "merged": true,
@@ -39607,59 +38885,6 @@
     "callers": [
       "vtjnash"
     ]
-  },
-  {
-    "title": "Unrevert #34347 and bump Pkg to a version that is compatible with it",
-    "createdAt": "2020-04-07T10:26:11Z",
-    "merged": true,
-    "mergedAt": "2020-04-08T08:38:48Z",
-    "closed": true,
-    "closedAt": "2020-04-08T08:38:48Z",
-    "number": 35390,
-    "additions": 47,
-    "deletions": 34,
-    "author": {
-      "login": "KristofferC"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 2
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/Base.jl",
-      "base/client.jl",
-      "base/loading.jl",
-      "base/stream.jl",
-      "base/ttyhascolor.jl",
-      "deps/checksums/Pkg-23da050ea368fade2ff801daf69c928b11ef61ef.tar.gz/md5",
-      "deps/checksums/Pkg-23da050ea368fade2ff801daf69c928b11ef61ef.tar.gz/sha512",
-      "deps/checksums/Pkg-8c415b01924eb4452cb7be8438c2bbc0978d1152.tar.gz/md5",
-      "deps/checksums/Pkg-8c415b01924eb4452cb7be8438c2bbc0978d1152.tar.gz/sha512",
-      "stdlib/Pkg.version",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/REPL/src/Terminals.jl",
-      "stdlib/REPL/test/repl.jl"
-    ],
-    "changedSourceFiles": [
-      "base/Base.jl",
-      "base/client.jl",
-      "base/loading.jl",
-      "base/stream.jl",
-      "base/ttyhascolor.jl",
-      "stdlib/REPL/src/REPL.jl",
-      "stdlib/REPL/src/Terminals.jl",
-      "stdlib/REPL/test/repl.jl"
-    ],
-    "callers": []
   },
   {
     "title": "codegen: improve our argument annotations",
@@ -39898,41 +39123,6 @@
     "callers": [
       "timholy"
     ]
-  },
-  {
-    "title": "Return `HasEltype` only for homogenous non-empty tuples",
-    "createdAt": "2020-05-08T16:58:37Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": true,
-    "closedAt": "2020-12-09T16:02:11Z",
-    "number": 35809,
-    "additions": 9,
-    "deletions": 0,
-    "author": {
-      "login": "timholy"
-    },
-    "participants": {
-      "totalCount": 3
-    },
-    "reviews": {
-      "totalCount": 1
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/array.jl",
-      "base/generator.jl"
-    ],
-    "changedSourceFiles": [
-      "base/array.jl",
-      "base/generator.jl"
-    ],
-    "callers": []
   },
   {
     "title": "WIP: Backports release 1.4.2",
@@ -40267,41 +39457,6 @@
     ]
   },
   {
-    "title": "fix AbstractArrayStyle dimension promotion rule",
-    "createdAt": "2020-05-20T02:33:33Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 35948,
-    "additions": 21,
-    "deletions": 4,
-    "author": {
-      "login": "marius311"
-    },
-    "participants": {
-      "totalCount": 4
-    },
-    "reviews": {
-      "totalCount": 3
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/broadcast.jl",
-      "test/broadcast.jl"
-    ],
-    "changedSourceFiles": [
-      "base/broadcast.jl",
-      "test/broadcast.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "skip inferring calls that lead to `throw`",
     "createdAt": "2020-05-22T01:19:59Z",
     "merged": true,
@@ -40352,41 +39507,6 @@
       "JeffBezanson",
       "JeffBezanson"
     ]
-  },
-  {
-    "title": "Fix equality for one-element ranges",
-    "createdAt": "2020-05-29T15:06:59Z",
-    "merged": true,
-    "mergedAt": "2020-06-04T20:43:12Z",
-    "closed": true,
-    "closedAt": "2020-06-04T20:43:12Z",
-    "number": 36074,
-    "additions": 24,
-    "deletions": 7,
-    "author": {
-      "login": "sostock"
-    },
-    "participants": {
-      "totalCount": 7
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/range.jl",
-      "test/ranges.jl"
-    ],
-    "changedSourceFiles": [
-      "base/range.jl",
-      "test/ranges.jl"
-    ],
-    "callers": []
   },
   {
     "title": "Backports for Julia 1.5-RC1 (or beta2)",
@@ -40527,39 +39647,6 @@
       "test/show.jl",
       "test/subtype.jl",
       "test/syntax.jl"
-    ],
-    "callers": []
-  },
-  {
-    "title": "inference: ignore badly behaving generated functions",
-    "createdAt": "2020-06-02T14:41:15Z",
-    "merged": true,
-    "mergedAt": "2020-06-03T02:40:20Z",
-    "closed": true,
-    "closedAt": "2020-06-03T02:40:21Z",
-    "number": 36115,
-    "additions": 1,
-    "deletions": 0,
-    "author": {
-      "login": "vtjnash"
-    },
-    "participants": {
-      "totalCount": 4
-    },
-    "reviews": {
-      "totalCount": 1
-    },
-    "comments": {
-      "totalCount": 3
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/compiler/abstractinterpretation.jl"
-    ],
-    "changedSourceFiles": [
-      "base/compiler/abstractinterpretation.jl"
     ],
     "callers": []
   },
@@ -40937,44 +40024,6 @@
     ]
   },
   {
-    "title": "Make UnformScaling inequal to matrices",
-    "createdAt": "2020-08-04T15:54:08Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": true,
-    "closedAt": "2020-10-20T08:12:05Z",
-    "number": 36918,
-    "additions": 10,
-    "deletions": 40,
-    "author": {
-      "login": "jakobnissen"
-    },
-    "participants": {
-      "totalCount": 6
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 10
-    },
-    "commits": {
-      "totalCount": 4
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "stdlib/LinearAlgebra/src/uniformscaling.jl",
-      "stdlib/LinearAlgebra/test/uniformscaling.jl",
-      "stdlib/SparseArrays/test/sparse.jl"
-    ],
-    "changedSourceFiles": [
-      "stdlib/LinearAlgebra/src/uniformscaling.jl",
-      "stdlib/LinearAlgebra/test/uniformscaling.jl",
-      "stdlib/SparseArrays/test/sparse.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "Backports for 1.5.2",
     "createdAt": "2020-08-26T10:14:43Z",
     "merged": true,
@@ -41079,37 +40128,6 @@
     ]
   },
   {
-    "title": "Dummy PR to do a PkgEval run",
-    "createdAt": "2020-08-26T13:00:27Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": true,
-    "closedAt": "2020-12-09T11:40:58Z",
-    "number": 37214,
-    "additions": 0,
-    "deletions": 0,
-    "author": {
-      "login": "KristofferC"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 23
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "dummy"
-    ],
-    "changedSourceFiles": [],
-    "callers": []
-  },
-  {
     "title": "Switch Float16 to LLVM's half",
     "createdAt": "2020-09-10T11:55:14Z",
     "merged": true,
@@ -41177,46 +40195,6 @@
     "callers": []
   },
   {
-    "title": "fix #37540, interpolation in quoted exprs returned from macros",
-    "createdAt": "2020-09-14T20:19:05Z",
-    "merged": true,
-    "mergedAt": "2020-10-16T18:11:43Z",
-    "closed": true,
-    "closedAt": "2020-10-16T18:11:43Z",
-    "number": 37573,
-    "additions": 15,
-    "deletions": 9,
-    "author": {
-      "login": "JeffBezanson"
-    },
-    "participants": {
-      "totalCount": 7
-    },
-    "reviews": {
-      "totalCount": 1
-    },
-    "comments": {
-      "totalCount": 12
-    },
-    "commits": {
-      "totalCount": 3
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/essentials.jl",
-      "src/ast.c",
-      "stdlib/Distributed/src/macros.jl",
-      "test/syntax.jl"
-    ],
-    "changedSourceFiles": [
-      "base/essentials.jl",
-      "src/ast.c",
-      "stdlib/Distributed/src/macros.jl",
-      "test/syntax.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "allow standalone dotted ops, parse .op as (. op)",
     "createdAt": "2020-09-15T09:20:22Z",
     "merged": true,
@@ -41265,46 +40243,6 @@
     "callers": []
   },
   {
-    "title": "Complete transition to Artifacts stdlib",
-    "createdAt": "2020-09-15T18:56:40Z",
-    "merged": true,
-    "mergedAt": "2020-09-18T23:55:28Z",
-    "closed": true,
-    "closedAt": "2020-09-18T23:55:28Z",
-    "number": 37592,
-    "additions": 36,
-    "deletions": 17,
-    "author": {
-      "login": "staticfloat"
-    },
-    "participants": {
-      "totalCount": 3
-    },
-    "reviews": {
-      "totalCount": 3
-    },
-    "comments": {
-      "totalCount": 3
-    },
-    "commits": {
-      "totalCount": 3
-    },
-    "changedFiles": [
-      "contrib/generate_precompile.jl",
-      "doc/make.jl",
-      "stdlib/Artifacts/src/Artifacts.jl",
-      "stdlib/Artifacts/test/runtests.jl",
-      "stdlib/Pkg.version"
-    ],
-    "changedSourceFiles": [
-      "contrib/generate_precompile.jl",
-      "doc/make.jl",
-      "stdlib/Artifacts/src/Artifacts.jl",
-      "stdlib/Artifacts/test/runtests.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "bump Pkg version",
     "createdAt": "2020-09-16T07:30:55Z",
     "merged": false,
@@ -41340,43 +40278,6 @@
     "callers": []
   },
   {
-    "title": "Fix bug when inlining pending nodes",
-    "createdAt": "2020-09-17T21:05:16Z",
-    "merged": true,
-    "mergedAt": "2020-09-19T20:58:06Z",
-    "closed": true,
-    "closedAt": "2020-09-19T20:58:07Z",
-    "number": 37634,
-    "additions": 22,
-    "deletions": 7,
-    "author": {
-      "login": "Keno"
-    },
-    "participants": {
-      "totalCount": 6
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 8
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/ssair/ir.jl",
-      "test/compiler/inline.jl"
-    ],
-    "changedSourceFiles": [
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/ssair/ir.jl",
-      "test/compiler/inline.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "fix #37690, bug in `lambda-optimize-vars!` on outer variables assigned in loops",
     "createdAt": "2020-09-25T02:33:51Z",
     "merged": true,
@@ -41408,46 +40309,6 @@
     "changedSourceFiles": [
       "src/julia-syntax.scm",
       "test/core.jl"
-    ],
-    "callers": []
-  },
-  {
-    "title": "add StepRange support for CartesianIndices",
-    "createdAt": "2020-10-01T06:31:13Z",
-    "merged": true,
-    "mergedAt": "2020-10-09T17:27:28Z",
-    "closed": true,
-    "closedAt": "2020-10-09T17:27:29Z",
-    "number": 37829,
-    "additions": 494,
-    "deletions": 78,
-    "author": {
-      "login": "johnnychen94"
-    },
-    "participants": {
-      "totalCount": 4
-    },
-    "reviews": {
-      "totalCount": 19
-    },
-    "comments": {
-      "totalCount": 10
-    },
-    "commits": {
-      "totalCount": 22
-    },
-    "changedFiles": [
-      "NEWS.md",
-      "base/broadcast.jl",
-      "base/multidimensional.jl",
-      "base/range.jl",
-      "test/cartesian.jl"
-    ],
-    "changedSourceFiles": [
-      "base/broadcast.jl",
-      "base/multidimensional.jl",
-      "base/range.jl",
-      "test/cartesian.jl"
     ],
     "callers": []
   },
@@ -41623,53 +40484,6 @@
     ]
   },
   {
-    "title": "Implement dynamic SNCA domtree algorithm",
-    "createdAt": "2020-10-05T03:24:21Z",
-    "merged": true,
-    "mergedAt": "2020-10-15T00:29:26Z",
-    "closed": true,
-    "closedAt": "2020-10-15T00:29:26Z",
-    "number": 37884,
-    "additions": 683,
-    "deletions": 281,
-    "author": {
-      "login": "vchuravy"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 10
-    },
-    "commits": {
-      "totalCount": 5
-    },
-    "changedFiles": [
-      "base/compiler/ssair/basicblock.jl",
-      "base/compiler/ssair/domtree.jl",
-      "base/compiler/ssair/driver.jl",
-      "base/compiler/ssair/ir.jl",
-      "base/compiler/ssair/passes.jl",
-      "base/compiler/ssair/verify.jl",
-      "test/compiler/irpasses.jl",
-      "test/compiler/ssair.jl"
-    ],
-    "changedSourceFiles": [
-      "base/compiler/ssair/basicblock.jl",
-      "base/compiler/ssair/domtree.jl",
-      "base/compiler/ssair/driver.jl",
-      "base/compiler/ssair/ir.jl",
-      "base/compiler/ssair/passes.jl",
-      "base/compiler/ssair/verify.jl",
-      "test/compiler/irpasses.jl",
-      "test/compiler/ssair.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "Backports release 1.5.3",
     "createdAt": "2020-10-21T06:09:57Z",
     "merged": true,
@@ -41790,127 +40604,6 @@
       "KristofferC",
       "KristofferC"
     ]
-  },
-  {
-    "title": "Make Vararg not a DataType",
-    "createdAt": "2020-10-22T03:46:11Z",
-    "merged": true,
-    "mergedAt": "2020-12-15T02:48:25Z",
-    "closed": true,
-    "closedAt": "2020-12-15T02:48:25Z",
-    "number": 38136,
-    "additions": 662,
-    "deletions": 452,
-    "author": {
-      "login": "Keno"
-    },
-    "participants": {
-      "totalCount": 10
-    },
-    "reviews": {
-      "totalCount": 24
-    },
-    "comments": {
-      "totalCount": 35
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "base/boot.jl",
-      "base/broadcast.jl",
-      "base/combinatorics.jl",
-      "base/compiler/abstractinterpretation.jl",
-      "base/compiler/inferencestate.jl",
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/tfuncs.jl",
-      "base/compiler/typelattice.jl",
-      "base/compiler/typelimits.jl",
-      "base/compiler/typeutils.jl",
-      "base/docs/basedocs.jl",
-      "base/errorshow.jl",
-      "base/essentials.jl",
-      "base/methodshow.jl",
-      "base/promotion.jl",
-      "base/reflection.jl",
-      "base/show.jl",
-      "base/strings/util.jl",
-      "base/tuple.jl",
-      "contrib/generate_precompile.jl",
-      "doc/src/devdocs/types.md",
-      "doc/src/manual/types.md",
-      "src/builtins.c",
-      "src/cgutils.cpp",
-      "src/clangsa/GCChecker.cpp",
-      "src/codegen.cpp",
-      "src/dump.c",
-      "src/gf.c",
-      "src/jl_exported_data.inc",
-      "src/jltypes.c",
-      "src/julia.h",
-      "src/julia_internal.h",
-      "src/method.c",
-      "src/rtutils.c",
-      "src/staticdata.c",
-      "src/subtype.c",
-      "src/typemap.c",
-      "stdlib/InteractiveUtils/src/InteractiveUtils.jl",
-      "stdlib/Test/src/Test.jl",
-      "test/compiler/inference.jl",
-      "test/core.jl",
-      "test/show.jl",
-      "test/specificity.jl",
-      "test/subtype.jl",
-      "test/syntax.jl",
-      "test/tuple.jl"
-    ],
-    "changedSourceFiles": [
-      "base/boot.jl",
-      "base/broadcast.jl",
-      "base/combinatorics.jl",
-      "base/compiler/abstractinterpretation.jl",
-      "base/compiler/inferencestate.jl",
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/tfuncs.jl",
-      "base/compiler/typelattice.jl",
-      "base/compiler/typelimits.jl",
-      "base/compiler/typeutils.jl",
-      "base/docs/basedocs.jl",
-      "base/errorshow.jl",
-      "base/essentials.jl",
-      "base/methodshow.jl",
-      "base/promotion.jl",
-      "base/reflection.jl",
-      "base/show.jl",
-      "base/strings/util.jl",
-      "base/tuple.jl",
-      "contrib/generate_precompile.jl",
-      "src/builtins.c",
-      "src/cgutils.cpp",
-      "src/clangsa/GCChecker.cpp",
-      "src/codegen.cpp",
-      "src/dump.c",
-      "src/gf.c",
-      "src/jl_exported_data.inc",
-      "src/jltypes.c",
-      "src/julia.h",
-      "src/julia_internal.h",
-      "src/method.c",
-      "src/rtutils.c",
-      "src/staticdata.c",
-      "src/subtype.c",
-      "src/typemap.c",
-      "stdlib/InteractiveUtils/src/InteractiveUtils.jl",
-      "stdlib/Test/src/Test.jl",
-      "test/compiler/inference.jl",
-      "test/core.jl",
-      "test/show.jl",
-      "test/specificity.jl",
-      "test/subtype.jl",
-      "test/syntax.jl",
-      "test/tuple.jl"
-    ],
-    "callers": []
   },
   {
     "title": "Fake JLLs for all packages",
@@ -43461,46 +42154,6 @@
     "callers": []
   },
   {
-    "title": "bump Pkg to latest set of 1.6 backports",
-    "createdAt": "2020-12-03T14:16:00Z",
-    "merged": true,
-    "mergedAt": "2020-12-04T17:37:47Z",
-    "closed": true,
-    "closedAt": "2020-12-04T17:37:47Z",
-    "number": 38678,
-    "additions": 6,
-    "deletions": 6,
-    "author": {
-      "login": "KristofferC"
-    },
-    "participants": {
-      "totalCount": 5
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 8
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "deps/checksums/Pkg-2b9477594342702cdbf03bbfe9f33a849fda27bb.tar.gz/md5",
-      "deps/checksums/Pkg-2b9477594342702cdbf03bbfe9f33a849fda27bb.tar.gz/sha512",
-      "deps/checksums/Pkg-51595f958ddd326643a8b1b8902a3c47964d8cb4.tar.gz/md5",
-      "deps/checksums/Pkg-51595f958ddd326643a8b1b8902a3c47964d8cb4.tar.gz/sha512",
-      "deps/checksums/Tar-1b63f2ab6b891f1fd92ec0219877aeed7b98677a.tar.gz/md5",
-      "deps/checksums/Tar-1b63f2ab6b891f1fd92ec0219877aeed7b98677a.tar.gz/sha512",
-      "deps/checksums/Tar-74a2e675fea0a170f1aee6b547fdcd43d3f567b4.tar.gz/md5",
-      "deps/checksums/Tar-74a2e675fea0a170f1aee6b547fdcd43d3f567b4.tar.gz/sha512",
-      "stdlib/Pkg.version",
-      "stdlib/Tar.version"
-    ],
-    "changedSourceFiles": [],
-    "callers": []
-  },
-  {
     "title": "inline exp functions",
     "createdAt": "2020-12-05T23:37:48Z",
     "merged": false,
@@ -43534,41 +42187,6 @@
     "callers": [
       "vchuravy"
     ]
-  },
-  {
-    "title": "Have contrib/fixup-libstdc++ look in the private libdir for libjulia-intenral.",
-    "createdAt": "2020-12-08T07:32:23Z",
-    "merged": true,
-    "mergedAt": "2020-12-08T09:42:12Z",
-    "closed": true,
-    "closedAt": "2020-12-08T09:42:12Z",
-    "number": 38760,
-    "additions": 6,
-    "deletions": 5,
-    "author": {
-      "login": "maleadt"
-    },
-    "participants": {
-      "totalCount": 3
-    },
-    "reviews": {
-      "totalCount": 0
-    },
-    "comments": {
-      "totalCount": 2
-    },
-    "commits": {
-      "totalCount": 1
-    },
-    "changedFiles": [
-      "contrib/fixup-libgfortran.sh",
-      "contrib/fixup-libstdc++.sh"
-    ],
-    "changedSourceFiles": [
-      "contrib/fixup-libgfortran.sh",
-      "contrib/fixup-libstdc++.sh"
-    ],
-    "callers": []
   },
   {
     "title": "[WIP] Speed up dense-sparse matmul",
@@ -44923,41 +43541,6 @@
     ]
   },
   {
-    "title": "Divrem speedup and tests",
-    "createdAt": "2020-12-30T16:45:39Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 39045,
-    "additions": 56,
-    "deletions": 0,
-    "author": {
-      "login": "r7rohan"
-    },
-    "participants": {
-      "totalCount": 10
-    },
-    "reviews": {
-      "totalCount": 6
-    },
-    "comments": {
-      "totalCount": 16
-    },
-    "commits": {
-      "totalCount": 10
-    },
-    "changedFiles": [
-      "base/div.jl",
-      "test/numbers.jl"
-    ],
-    "changedSourceFiles": [
-      "base/div.jl",
-      "test/numbers.jl"
-    ],
-    "callers": []
-  },
-  {
     "title": "remove Core._apply Builtin",
     "createdAt": "2021-01-06T03:37:05Z",
     "merged": true,
@@ -45551,49 +44134,6 @@
     "callers": [
       "KristofferC"
     ]
-  },
-  {
-    "title": "[DO NOT MERGE] error for getproperty(::Pairs, ...)",
-    "createdAt": "2021-01-29T11:34:08Z",
-    "merged": false,
-    "mergedAt": null,
-    "closed": false,
-    "closedAt": null,
-    "number": 39448,
-    "additions": 29,
-    "deletions": 26,
-    "author": {
-      "login": "simeonschaub"
-    },
-    "participants": {
-      "totalCount": 3
-    },
-    "reviews": {
-      "totalCount": 2
-    },
-    "comments": {
-      "totalCount": 7
-    },
-    "commits": {
-      "totalCount": 5
-    },
-    "changedFiles": [
-      "base/accumulate.jl",
-      "base/iterators.jl",
-      "base/namedtuple.jl",
-      "base/reduce.jl",
-      "stdlib/InteractiveUtils/src/macros.jl",
-      "test/syntax.jl"
-    ],
-    "changedSourceFiles": [
-      "base/accumulate.jl",
-      "base/iterators.jl",
-      "base/namedtuple.jl",
-      "base/reduce.jl",
-      "stdlib/InteractiveUtils/src/macros.jl",
-      "test/syntax.jl"
-    ],
-    "callers": []
   },
   {
     "title": "Use libblastrampoline to forward to a user-defined BLAS at runtime",

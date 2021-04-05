@@ -1,5 +1,6 @@
 from utility import file_management
 from src.analysis import pull_requests
+from src.analysis.statistics import ks_test
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -21,7 +22,9 @@ for project in projects:
     period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
 
     # Do an analysis based on a per-contributor basis.
-    user_summaries = pull_requests.user_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
+    user_summaries = pull_requests.contributor_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
+    # Do an analysis based on a per-caller basis, where the caller is defined as the one who "calls" the bot.
+    caller_summaries = pull_requests.contributor_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
 
     # Do an activity analysis on the PR's.
     bot_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("bot_prs"), "bot_PRs")
@@ -42,5 +45,13 @@ for project in projects:
         "bot_pr_activity_summary": bot_pr_activity_summary,
         "similar_pr_activity_summary": similar_pr_activity_summary
     }
+    #
+    # ##
+    # # Write summarizing data.
+    # ##
+    # file_management.write_data(summary, owner, repo, "summary")
 
-    file_management.write_data(summary, owner, repo, "summary")
+    ##
+    # Perform statistical tests.
+    ##
+    # ks_test.do_stuff(prs.get("bot_prs"), prs.get("similar_to_bot_prs"))

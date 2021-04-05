@@ -5,7 +5,7 @@ per_page_number = 30  # max 100 per GitHub API
 error_message = "GitHub Comments API does not have the comments."
 
 
-def get_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, token):
+def get_commenter_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, token):
     headers = {
         'Authorization': "token " + token,
         'accept': 'application/vnd.github.v3+json'
@@ -34,18 +34,46 @@ def get_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, t
         sleep_period = int(resp.headers["X-RateLimit-Reset"]) - int(time.time()) + 10
         print("Sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
         time.sleep(sleep_period)
-        return get_bot_callers_pull_page(owner, repo, pull_number, page, token)
+        return get_commenter_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, token)
+    else:
+        return 402
+
+
+def get_description_bot_caller(owner, repo, pull_number, bot_call_string, token):
+    headers = {
+        'Authorization': "token " + token,
+        'accept': 'application/vnd.github.v3+json'
+    }
+
+    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/issues/{pull_number}'.format(
+        owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers)
+
+    if resp.status_code == 200:
+        description = resp.json()
+        if bot_call_string in description["body"]:
+            return [description["user"]["login"]]
+        else:
+            return []
+    if resp.status_code == 403:
+        print("Exceeded rate limit, waiting until window reset")
+        sleep_period = int(resp.headers["X-RateLimit-Reset"]) - int(time.time()) + 10
+        print("Sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
+        time.sleep(sleep_period)
+        return get_description_bot_caller(owner, repo, pull_number, bot_call_string, token)
     else:
         return 402
 
 
 def get_bot_callers_pr(owner, repo, pull_number, bot_call_string, token):
-    all_bot_callers = []
-    page = 0
 
+    # Get possible caller in PR description.
+    all_bot_callers = get_description_bot_caller(owner, repo, pull_number, bot_call_string, token)
+
+    # Get possible callers(s) in PR comments.
+    page = 0
     while True:
         page += 1
-        callers = get_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, token)
+        callers = get_commenter_bot_callers_pull_page(owner, repo, pull_number, bot_call_string, page, token)
         if callers == 402:
             return error_message
         if callers == 999:
@@ -54,6 +82,9 @@ def get_bot_callers_pr(owner, repo, pull_number, bot_call_string, token):
 
 
 def get_bot_callers_prs(owner, repo, prs, bot_call_string, token):
+
+    callers = []
+
     bot_callers_per_pr_found = 0
     for pr in prs:
         pr["callers"] = get_bot_callers_pr(owner, repo, pr.get("number"), bot_call_string, token)
@@ -64,5 +95,7 @@ def get_bot_callers_prs(owner, repo, prs, bot_call_string, token):
                 total_size=len(prs)
             ))
         bot_callers_per_pr_found += 1
+
+        callers.append(pr["callers"])
 
     print("currently found the bot callers for this many PR's: {size}".format(size=bot_callers_per_pr_found))
