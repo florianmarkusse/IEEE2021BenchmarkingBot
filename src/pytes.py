@@ -19,3 +19,14 @@ for project in projects:
     bot_prs = prs.get("bot_prs")
 
     print(len(bot_prs))
+    index = []
+    for pr in bot_prs:
+        if len(pr["callers"]) == 0:
+            index.append(bot_prs.index(pr))
+
+    print(index)
+
+    bot_prs = [element for i, element in enumerate(bot_prs) if i not in index]
+
+    print(len(bot_prs))
+    file_management.write_data(bot_prs, owner, repo, "botPRs")
