@@ -14,6 +14,8 @@ def make_project_folder(path, owner, repo):
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "scatter")
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "combo")
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "frequency")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "pie")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "boxplot")
 
 
 def make_folder(path):

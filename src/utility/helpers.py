@@ -110,9 +110,16 @@ def categorize_prs(prs, *attributes):
             else:
                 categorized_prs["uncategorized"] = [pr]
         else:
-            if category in categorized_prs:
-                categorized_prs[category].append(pr)
+            if isinstance(category, list):
+                for element in category:
+                    if element in categorized_prs:
+                        categorized_prs[element].append(pr)
+                    else:
+                        categorized_prs[element] = [pr]
             else:
-                categorized_prs[category] = [pr]
+                if category in categorized_prs:
+                    categorized_prs[category].append(pr)
+                else:
+                    categorized_prs[category] = [pr]
 
     return categorized_prs

@@ -1,4 +1,5 @@
 from scipy.stats import ks_2samp
+from src.analysis.helpers import split_prs_into_lists
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import math
@@ -31,28 +32,31 @@ def pp_plot(x, dist, line=True, ax=None):
     return ax
 
 
+def ks_test(first_distribution, second_distribution):
+    alpha = 0.01
+    c_alpha = 1.628  # Assuming alpha = 0.01
+    ks_critical_value = c_alpha * math.sqrt(
+        (len(first_distribution) + len(second_distribution)) /
+        (len(first_distribution) * len(second_distribution))
+    )
+    res = ks_2samp(first_distribution, second_distribution)
+
+    if res[0] > ks_critical_value:
+        print(f"Rejecting null hypothesis that both samples are drawn from the same sample.")
+        print(f"Because KS-statistic > cricitcal value")
+        print(f"{res[0]} > {ks_critical_value}")
+    else:
+        print(f"Cannot reject null hypothesis that both samples are drawn from the same sample.")
+        print(f"Because KS-statistic <= cricitcal value")
+        print(f"{res[0]} <= {ks_critical_value}")
+
+    print(f"p-values: {res[1]} with alpha: {alpha}")
+
+
 def do_stuff(bot_prs, sim_prs):
-    bot_number_of_comments = []
-    bot_number_of_participants = []
-    bot_number_of_reviews = []
-    bot_number_of_commits = []
 
-    for pr in bot_prs:
-        bot_number_of_comments.append(pr["comments"]["totalCount"])
-        bot_number_of_participants.append(pr["participants"]["totalCount"])
-        bot_number_of_reviews.append(pr["reviews"]["totalCount"])
-        bot_number_of_commits.append(pr["commits"]["totalCount"])
-
-    sim_number_of_comments = []
-    sim_number_of_participants = []
-    sim_number_of_reviews = []
-    sim_number_of_commits = []
-
-    for pr in sim_prs:
-        sim_number_of_comments.append(pr["comments"]["totalCount"])
-        sim_number_of_participants.append(pr["participants"]["totalCount"])
-        sim_number_of_reviews.append(pr["reviews"]["totalCount"])
-        sim_number_of_commits.append(pr["commits"]["totalCount"])
+    bot_variables = split_prs_into_lists(bot_prs)
+    sim_variables = split_prs_into_lists(sim_prs)
 
     c_alpha = 1.628  # Assuming alpha = 0.01
     ks_critical_value = c_alpha * math.sqrt(
