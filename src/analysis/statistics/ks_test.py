@@ -42,11 +42,11 @@ def ks_test(first_distribution, second_distribution):
     res = ks_2samp(first_distribution, second_distribution)
 
     if res[0] > ks_critical_value:
-        print(f"Rejecting null hypothesis that both samples are drawn from the same sample.")
+        print(f"Rejecting null hypothesis that both samples are drawn from the same distribution.")
         print(f"Because KS-statistic > cricitcal value")
         print(f"{res[0]} > {ks_critical_value}")
     else:
-        print(f"Cannot reject null hypothesis that both samples are drawn from the same sample.")
+        print(f"Cannot reject null hypothesis that both samples are drawn from the same distribution.")
         print(f"Because KS-statistic <= cricitcal value")
         print(f"{res[0]} <= {ks_critical_value}")
 

@@ -36,7 +36,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Faster BitArray packing and related operations",
@@ -77,7 +83,13 @@
     ],
     "callers": [
       "carlobaldassi"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFC: Enable threading build by default, but with only 1 thread",
@@ -114,7 +126,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Improve UnitRange indexing performance",
@@ -152,7 +170,13 @@
     "callers": [
       "timholy",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "compute `inline_worthy` after inference and cache it",
@@ -195,7 +219,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "call convert in Base.setfield!",
@@ -238,7 +268,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "RFC: Refactor indexing to use Varargs and ReshapedArrays",
@@ -290,7 +326,13 @@
       "mbauman",
       "mbauman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Support for 0-indexed and arbitrary-indexed arrays",
@@ -410,7 +452,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 52
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": "close #8269: grow arrays incrementally by factors of 1.5 rather than 2",
@@ -448,7 +496,13 @@
       "jrevels",
       "jrevels",
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 31
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "RFC: make SparseMatrixCSC immutable",
@@ -483,7 +537,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 44
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Rename LinearFast etc. and define an indexing `enumerate(::IndexMethod, iter)` method",
@@ -570,7 +630,13 @@
     "callers": [
       "tkelman",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 35
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "Make arrays and ranges hash and compare equal",
@@ -658,7 +724,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 90
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "Clean up the pivot selection for QuickSort",
@@ -695,7 +767,13 @@
       "pabloferz",
       "JeffBezanson",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "0.5-style comprehensions",
@@ -773,7 +851,13 @@
       "JeffBezanson",
       "jrevels",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 26
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": "GC clean up",
@@ -818,7 +902,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Change concatenation involving sparse matrices, sparse vectors and de\u2026",
@@ -861,7 +951,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFC: ensure the array constructors are generally using leaftypes",
@@ -903,7 +999,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Better indexing for coupled iteration of array with AbstractArray{Bool}",
@@ -939,7 +1041,13 @@
     "callers": [
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use memcmp to optimize == for bit integer arrays",
@@ -976,7 +1084,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Lispy Cartesian iteration",
@@ -1017,7 +1131,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "MIT-licensed SparseMatrixCSC permute[!] and refactored [c]transpose[!]",
@@ -1059,7 +1179,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 22
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "RFC: Nullables as collections",
@@ -1104,7 +1230,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 80
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 15
+    }
   },
   {
     "title": "Handle setfield! in alloc_elim_pass",
@@ -1141,7 +1273,13 @@
       "timholy",
       "andreasnoack",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "[release-0.4, RFC] backports for 0.4.6",
@@ -1280,7 +1418,13 @@
       "KristofferC",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Generalize broadcast to handle tuples and scalars",
@@ -1337,7 +1481,13 @@
       "stevengj",
       "tkelman",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 50
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "type inference runtime correctness (oldworld)",
@@ -1471,7 +1621,13 @@
       "jrevels",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Towards #12251 and #12153, reimplement all full(X) method defs. as convert(Array, X) and add convert(AbstractArray, X) methods for Factorizations",
@@ -1538,7 +1694,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Towards #12251 part 2, replace all full(X) calls with convert(Array, X) and migrate tests",
@@ -1657,7 +1819,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Refactor API for unconventionally-indexed arrays",
@@ -1745,7 +1913,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Change checked_add/sub/mul intrinsics to return overflow flag instead of error",
@@ -1800,7 +1974,13 @@
       "simonbyrne",
       "simonbyrne",
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "[WIP] Help wanted: switch Base.Test to use testsets everywhere",
@@ -2052,7 +2232,13 @@
     ],
     "callers": [
       "kshyatt"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 99
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 18
+    }
   },
   {
     "title": "Make unvetted `size` throw an error for arrays with non-1 indexing",
@@ -2138,7 +2324,13 @@
       "timholy",
       "timholy",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 32
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Revert \"Speed up iteration with numbers\"",
@@ -2173,7 +2365,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Deprecate functions vectorized via `@vectorize_(1|2)arg` in favor of compact broadcast syntax",
@@ -2337,7 +2535,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Use broadcast for array operators",
@@ -2379,7 +2583,13 @@
       "martinholters",
       "tkelman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Revise checkbounds again",
@@ -2430,7 +2640,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Make setindex! for sparse matrices and vectors not purge stored entries on zero assignment",
@@ -2473,7 +2689,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFC: Change Array(T, dims) to Array{T}(dims)",
@@ -2524,7 +2746,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "more compact lowering of return type decls on short functions",
@@ -2567,7 +2795,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "make \"dot\" operations (.+ etc) fusing broadcasts",
@@ -2714,7 +2948,13 @@
       "stevengj",
       "stevengj",
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 47
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "Make sure the LLVM metadata is initialized before our custom LLVM pass",
@@ -2753,7 +2993,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Remove `full` from `similar(full(X), T, dims)` calls in generic concatenation methods",
@@ -2788,7 +3034,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Fix #17680 (sparse general concatenation) and #17686 (concatenation of heterogeneous Matrix-Vector combinations)",
@@ -2833,7 +3085,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Restore type parameter for elementwise ops (fix #17794)",
@@ -2868,7 +3126,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "[release-0.5] revert #17389 for 0.5.0-rc1",
@@ -2959,7 +3223,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "use inferred type instead of `Union{}` for empty comprehensions",
@@ -3001,7 +3271,13 @@
     "callers": [
       "tkelman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Fix #17684 (concatenations involving annotated sparse/special matrices)",
@@ -3044,7 +3320,13 @@
       "vchuravy",
       "jrevels",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Improve promote_op",
@@ -3085,7 +3367,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "[release-0.5] backports for 0.5.0 rc2",
@@ -3326,7 +3614,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 21
+    }
   },
   {
     "title": "Fix typo in tbaa_decorate_gcframe",
@@ -3362,7 +3656,13 @@
     "callers": [
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Generalize getindex for AbstractUnitRanges",
@@ -3399,7 +3699,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Custom parser for dates.",
@@ -3442,7 +3748,13 @@
     "callers": [
       "simonbyrne",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 25
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Fix missing type parameter in _array_for",
@@ -3477,7 +3789,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Force inlining on indices(A, d)",
@@ -3512,7 +3830,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "specialize on type in getindex for types",
@@ -3547,7 +3871,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Some indices generalizations for linalg/generic",
@@ -3586,7 +3916,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Indices-aware find and fixes for logical indexing",
@@ -3625,7 +3961,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "fall back to dynamic dispatch in union-splitting optimization",
@@ -3660,7 +4002,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "assume `getfield` is non-volatile if inferred to be constant",
@@ -3696,7 +4044,13 @@
     "callers": [
       "JeffBezanson",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Simplify bounds checks for multi-dimensional array accesses",
@@ -3732,7 +4086,13 @@
     "callers": [
       "vtjnash",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "factor out the jl_get_llvmf code more cleanly",
@@ -3775,7 +4135,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Make similar faster and safer",
@@ -3812,7 +4178,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix more of the #18017 regression",
@@ -3850,7 +4222,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "[release-0.5] backports for 0.5.0-rc3",
@@ -4147,7 +4525,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 34
+    }
   },
   {
     "title": "Do codegen in control flow order",
@@ -4187,7 +4571,13 @@
     "callers": [
       "yuyichao",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Make sure `:push_loc` meta always has a corresponding `:pop_loc`",
@@ -4229,7 +4619,13 @@
     "callers": [
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFT(est): Accurate coverage with inlining on",
@@ -4272,7 +4668,13 @@
       "yuyichao",
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix #17970 (output of map over BitArrays)",
@@ -4309,7 +4711,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Some broadcast fixes",
@@ -4352,7 +4760,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "add faster done for strings",
@@ -4388,7 +4802,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Type inference opt passes clean up",
@@ -4438,7 +4858,13 @@
     "callers": [
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Faster indices for SubArray",
@@ -4475,7 +4901,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "[release-0.5] Backports for 0.5.0-rc4",
@@ -4628,7 +5060,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 27
+    }
   },
   {
     "title": "Fast versions of isequal() and isless() for Nullables",
@@ -4667,7 +5105,13 @@
     ],
     "callers": [
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "split SourceInfo out of LambdaInfo",
@@ -4795,7 +5239,13 @@
     "callers": [
       "tkelman",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Inline invoke (take 3) plus a few other tweaks",
@@ -4855,7 +5305,13 @@
     "callers": [
       "tkelman",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "type system revision and new subtype algorithm",
@@ -5086,7 +5542,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 130
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 24
+    }
   },
   {
     "title": "[release-0.4] backports for 0.4.7",
@@ -5218,7 +5680,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": "[release-0.5] final backports for 0.5.0",
@@ -5309,7 +5777,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Fix Tuple inference regression from #18467",
@@ -5346,7 +5820,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "small perf enhancement for deserialize of Arrays",
@@ -5381,7 +5861,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "simplify entry points to type inference",
@@ -5429,7 +5915,13 @@
     "callers": [
       "tkelman",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Restructure of the promotion mechanism for broadcast",
@@ -5482,7 +5974,13 @@
       "mbauman",
       "stevengj",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "backport of changes in #17057 that don't require new worlds",
@@ -5548,7 +6046,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Cleanup the usage of `jl_datatype_size`",
@@ -5612,7 +6116,13 @@
     "callers": [
       "vchuravy",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Avoid boxing variables that may be used undef",
@@ -5647,7 +6157,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "RFC: Fix skipchars inexact error/hanging (#16892)",
@@ -5686,7 +6202,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "eliminate intrinsics",
@@ -5838,7 +6360,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 30
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Make LinSpace generic",
@@ -5909,7 +6437,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 89
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "fast sorting of integer vectors with few uniques",
@@ -5944,7 +6478,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Do more constant propagation at type inference time",
@@ -5998,7 +6538,13 @@
       "yuyichao",
       "yuyichao",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "a couple more backports of changes in #17057 that don't require new worlds",
@@ -6039,7 +6585,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFC: revert back to one index for some elementwise operations",
@@ -6079,7 +6631,13 @@
       "KristofferC",
       "jrevels",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Added accumulate, accumulate!",
@@ -6131,7 +6689,13 @@
       "jrevels",
       "jrevels",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 48
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "fix #18948 (master)",
@@ -6168,7 +6732,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "fix #17758, deprecate `is`",
@@ -6286,7 +6856,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "hardware independent isinf/isnan/isfinite",
@@ -6321,7 +6897,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Export Julia's LLVM passes using LLVM C API compatible functions.",
@@ -6365,7 +6947,13 @@
     ],
     "callers": [
       "maleadt"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Simplify nz2nz_z2z-class sparse unary broadcast (and fix #18974)",
@@ -6400,7 +6988,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "prevent creation of Box for simple let-block variables",
@@ -6445,7 +7039,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Broadcast shouldn't use inbounds when calling f",
@@ -6483,7 +7083,13 @@
     "callers": [
       "stevengj",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "day of week cleanup",
@@ -6533,7 +7139,13 @@
     ],
     "callers": [
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "more generic broadcast over a single sparse matrix",
@@ -6570,7 +7182,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Faster view creation",
@@ -6612,7 +7230,13 @@
       "jrevels",
       "mbauman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "RFC: CodegenHooks for external language implementations",
@@ -6655,7 +7279,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Optimize `isdefined` on normal objects in codegen",
@@ -6690,7 +7320,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Fix compilation on LLVM 4.0",
@@ -6731,7 +7367,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Fix return type in broadcast when there are Type arguments",
@@ -6773,7 +7415,13 @@
     "callers": [
       "KristofferC",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "faster `String` allocation",
@@ -6929,7 +7577,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 33
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Improve significand performance",
@@ -6964,7 +7618,13 @@
     ],
     "callers": [
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Add pure Julia ldexp function",
@@ -7001,7 +7661,13 @@
     ],
     "callers": [
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Improve exponent function",
@@ -7036,7 +7702,13 @@
     ],
     "callers": [
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Always inline ith_all()",
@@ -7071,7 +7743,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "type stable last for heterogeneous tuples",
@@ -7108,7 +7786,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "RFC: Make `any` and `all` always short-circuit",
@@ -7148,7 +7832,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "speed up date time parsing",
@@ -7206,7 +7896,13 @@
       "shashi",
       "shashi",
       "shashi"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 51
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "improve t-function for `nfields`",
@@ -7241,7 +7937,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Inferable broadcast and promote_op of closures",
@@ -7284,7 +7986,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Reduce allocations in broadcast",
@@ -7324,7 +8032,13 @@
     "callers": [
       "KristofferC",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Handle non-const function in `return_types` special case",
@@ -7361,7 +8075,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Introduce `RowVector` as the transpose of a vector",
@@ -7457,7 +8177,13 @@
     "callers": [
       "tkelman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 92
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 15
+    }
   },
   {
     "title": "remove obsolete performance workaround using broadcast_elwise_op",
@@ -7494,7 +8220,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "RFC: Change LLVM version to 3.9.1",
@@ -7591,7 +8323,13 @@
     "callers": [
       "tkelman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "add missing imports for iszero to Big numbers",
@@ -7630,7 +8368,13 @@
       "KristofferC",
       "KristofferC",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "sparse vectors join the higher order function party",
@@ -7679,7 +8423,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Make op(Array, Scalar) use broadcast",
@@ -7719,7 +8469,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "broadcast[!] over combinations of scalars and sparse vectors/matrices",
@@ -7759,7 +8515,13 @@
     "callers": [
       "stevengj",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "RFC: Speedier, simpler and more systematic index conversions",
@@ -7828,7 +8590,13 @@
       "mbauman",
       "mbauman",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 24
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Check bounds for indexing tuples by logical masks",
@@ -7867,7 +8635,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Use containertype to determine array type for array broadcast",
@@ -7907,7 +8681,13 @@
       "tkelman",
       "andreasnoack",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Use broadcast for some operations in arraymath",
@@ -7944,7 +8724,13 @@
       "andreasnoack",
       "andreasnoack",
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Allow bitarray to handle shifts by a negative value.",
@@ -7981,7 +8767,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Integer /: restrict fallback to same-type case (fix #19714)",
@@ -8021,7 +8813,13 @@
     "callers": [
       "tkelman",
       "StefanKarpinski"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Limit broadcast mechanism over Nullables",
@@ -8066,7 +8864,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Deprecate manually vectorized methods in favor of dot syntax, monolithic edition",
@@ -8170,7 +8974,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Add pure julia exp function",
@@ -8215,7 +9025,13 @@
     "callers": [
       "vchuravy",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Make broadcast return BitArray even if it cannot be inferred",
@@ -8252,7 +9068,13 @@
     ],
     "callers": [
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Some broadcast performance tweaks",
@@ -8292,7 +9114,13 @@
     "callers": [
       "pabloferz",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Without DirtyCOW, julia causes penguins to freeze",
@@ -8327,7 +9155,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "only use accurate powf function",
@@ -8391,7 +9225,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 40
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Use view more in dot calls",
@@ -8426,7 +9266,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Make it easier to avoid StackOverflowErrors with promotion and convert",
@@ -8471,7 +9317,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Support using colon to omit a dimension in reshape",
@@ -8512,7 +9364,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "extend sparse map[!]/broadcast[!] to structured matrices",
@@ -8553,7 +9411,13 @@
       "Sacha0",
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "julia-syntax.scm: Remove deprecation warning",
@@ -8592,7 +9456,13 @@
       "Shade5",
       "stevengj",
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "GC marking cleanup",
@@ -8633,7 +9503,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "improvements to push!, unshift!, append!, prepend!",
@@ -8670,7 +9546,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "avoid a copy in readuntil",
@@ -8707,7 +9589,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Simplify scalar indexing",
@@ -8745,7 +9633,13 @@
       "mbauman",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Deprecate Array(T, dims...)",
@@ -8806,7 +9700,13 @@
     "callers": [
       "tkelman",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 24
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Make InexactError more informative",
@@ -8874,7 +9774,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Backport LLVM patches to fix X86 partial register stall",
@@ -8924,7 +9830,13 @@
       "Keno",
       "Keno",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 41
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "RFC: Deprecate partial linear indexing",
@@ -8982,7 +9894,13 @@
       "mbauman",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Extend sparse broadcast to VecOrMats",
@@ -9023,7 +9941,13 @@
       "pabloferz",
       "pabloferz",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "A few fixes to make the marking more parallel friendly",
@@ -9068,7 +9992,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Fix behavior of `foldr` on empty arrays (#20144)",
@@ -9105,7 +10035,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Add patch to set `-O2` for suitesparse build",
@@ -9142,7 +10078,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Thread safe marking",
@@ -9181,7 +10123,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Deprecate negate keyword argument in Dates adjuster API",
@@ -9225,7 +10173,13 @@
       "ararslan",
       "jrevels",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "RFC: Better inference of `_apply()` (splatting)",
@@ -9263,7 +10217,13 @@
     "callers": [
       "martinholters",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "minor codegen and inference changes",
@@ -9310,7 +10270,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "grabbag of subtyping punchlist items",
@@ -9388,7 +10354,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Use new compact parametric syntax where possible",
@@ -9657,7 +10629,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "small change to type intersection that fixes #20344",
@@ -9694,7 +10672,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "GC marking micro optimizations",
@@ -9749,7 +10733,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Try using \"native\" boundschecking for Array",
@@ -9802,7 +10792,13 @@
       "mbauman",
       "mbauman",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Separate dispatch for dropping trailing 1s (fixes for non-1 based arrays)",
@@ -9840,7 +10836,13 @@
     "callers": [
       "mbauman",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "remove `map` method for `Vector{Any}`",
@@ -9877,7 +10879,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Make `parse(T, \"\")` and `parse(T, \" \")` etc, more specific regarding whitespace and empty strings",
@@ -9914,7 +10922,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "codegen support for efficient union representations",
@@ -9961,7 +10975,13 @@
       "ararslan",
       "tkelman",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 25
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "RFC/WIP: fully deprecate partial indexing. Fixes #14770.",
@@ -10006,7 +11026,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Be equally forgiving of leading & trailing whitespace in number parsing",
@@ -10043,7 +11069,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "inline iterator functions for enumerate",
@@ -10078,7 +11110,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Improve performance of readuntil",
@@ -10120,7 +11158,13 @@
     "callers": [
       "omus",
       "omus"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Allow `limit_type_depth` to introduce more than one new `TypeVar`",
@@ -10157,7 +11201,13 @@
     ],
     "callers": [
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Speed-up repeat for AbstractArrays",
@@ -10192,7 +11242,13 @@
     ],
     "callers": [
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "minimal inlining of x^Val{p} for p=0,1,2,3 and x::Number",
@@ -10238,7 +11294,13 @@
       "stevengj",
       "stevengj",
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Couple of tuple speed-ups and fixes",
@@ -10281,7 +11343,13 @@
       "pabloferz",
       "pabloferz",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "fix #20704, `pure` annotation should not skip method errors",
@@ -10320,7 +11388,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "[release-0.5] backports for 0.5.1",
@@ -10680,7 +11754,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 40
+    }
   },
   {
     "title": "fast broadcast over combinations of tuples and scalars",
@@ -10716,7 +11796,13 @@
     "callers": [
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "improve `effect_free` to fix regressions from #20726",
@@ -10757,7 +11843,13 @@
       "JeffBezanson",
       "vchuravy",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "improve optimization passes to produce more compact IR",
@@ -10796,7 +11888,13 @@
       "JeffBezanson",
       "KristofferC",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "remove fastmath version of mod",
@@ -10831,7 +11929,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Make `_reshape_uncolon` easier on inference",
@@ -10867,7 +11971,13 @@
     "callers": [
       "timholy",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Optimize `isassigned` and inline `jl_array_isassigned`",
@@ -10909,7 +12019,13 @@
     "callers": [
       "yuyichao",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Precompute number of fields to skip in GC at the begin and end of a type",
@@ -10951,7 +12067,13 @@
     "callers": [
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Support @inbounds in setindex!(::Array, ::AbstractArray, ::AbstractVector}",
@@ -10986,7 +12108,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "compress AST in memory, not just on disk",
@@ -11049,7 +12177,13 @@
       "ararslan",
       "vtjnash",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Speed up copy!(dest, Rdest, src, Rsrc) by splitting out first dimension",
@@ -11089,7 +12223,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 24
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Benchmark 0.5 vs 0.6 [do not merge]",
@@ -11121,7 +12261,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Extensible and fast date parsing",
@@ -11166,7 +12312,13 @@
       "omus",
       "omus",
       "omus"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Benchmark 0.5 vs 0.6 [do not merge]",
@@ -11203,7 +12355,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Fixes, tests, & the future of Base.Slice",
@@ -11246,7 +12404,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "rename Core.BottomType => Core.TypeofBottom",
@@ -11303,7 +12467,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Faster promoting arithmetic",
@@ -11339,7 +12509,13 @@
     "callers": [
       "martinholters",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Introduce temporary if necessary to inline `_apply`",
@@ -11376,7 +12552,13 @@
     ],
     "callers": [
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "fix #21074, constant fold more expressions",
@@ -11416,7 +12598,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Make `@fastmath` aware of `Base.literal_pow`",
@@ -11455,7 +12643,13 @@
       "tkelman",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "refactor gc to only need to allocate virtual addresses as needed",
@@ -11497,7 +12691,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Fix bug in backsolve of sparse hermitian matrices",
@@ -11532,7 +12732,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Fix performance regression of #19325",
@@ -11568,7 +12774,13 @@
     "callers": [
       "alyst",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "WIP: enable GC sooner when loading precompiled modules",
@@ -11609,7 +12821,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "improve codegen of `setfield!` with constant integer index",
@@ -11644,7 +12862,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "speed-up prevpow2/nextpow2",
@@ -11680,7 +12904,13 @@
     "callers": [
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "More fixes for non-1 arrays",
@@ -11720,7 +12950,13 @@
     "callers": [
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Make codegen emit dereferenceability attributes",
@@ -11759,7 +12995,13 @@
       "tkelman",
       "Keno",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Split TBAA for array buffers",
@@ -11795,7 +13037,13 @@
     "callers": [
       "ararslan",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Improve code generation for homogenous tuples of unknown length",
@@ -11836,7 +13084,13 @@
       "ararslan",
       "Keno",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "codegen emit constant data as llvm constants",
@@ -11877,7 +13131,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "codegen optimizations for unions",
@@ -11919,7 +13179,13 @@
     "callers": [
       "vtjnash",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Refactor null_safe_op to workaround codegen changes",
@@ -11958,7 +13224,13 @@
       "ararslan",
       "ararslan",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "incremental precompile correctness issues",
@@ -12017,7 +13289,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Make TBAA for non leaftypes more precise",
@@ -12053,7 +13331,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix #21325, use special version of eltype",
@@ -12094,7 +13378,13 @@
       "pabloferz",
       "pabloferz",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Type-stabilize broadcast over tuples and scalars",
@@ -12131,7 +13421,13 @@
     ],
     "callers": [
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "improve codegen of typecheck on first field of new structs",
@@ -12167,7 +13463,13 @@
     "callers": [
       "tkelman",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "speed up ambiguous method checking and intersection; helps #21173",
@@ -12211,7 +13513,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #21370, regression in dynamic dispatch of complex constructors",
@@ -12255,7 +13563,13 @@
     "callers": [
       "JeffBezanson",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Avoid inlining setindex!(::Array, ::Any, ::AbstractVector)",
@@ -12290,7 +13604,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "use ifelse for mod",
@@ -12325,7 +13645,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "inline mod1",
@@ -12361,7 +13687,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Use comprehension instead of map for AbstractArray filter",
@@ -12397,7 +13729,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "call `static_eval` less during codegen",
@@ -12433,7 +13771,13 @@
     "callers": [
       "JeffBezanson",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Add pure julia exp10 function",
@@ -12477,7 +13821,13 @@
     "callers": [
       "ararslan",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 29
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Add inlined methods for ntuple(f, Val{N}) for 0 \u2264 N \u2264 15",
@@ -12518,7 +13868,13 @@
       "Sacha0",
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Give symbolic name to special libname on windows.",
@@ -12559,7 +13915,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Try to loosen cfunction optimization type check",
@@ -12594,7 +13956,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "improvements to serializer",
@@ -12634,7 +14002,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "RFC: make Ref(x) always construct a RefValue(x) object",
@@ -12674,7 +14048,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "don't drop profile / coverage information for statements",
@@ -12713,7 +14093,13 @@
       "yuyichao",
       "JeffBezanson",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use `sincos` from libm in `cis`",
@@ -12763,7 +14149,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Implement GC mark loop",
@@ -12808,7 +14200,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: sort eigenvalues in a canonical order",
@@ -12858,7 +14256,13 @@
     "callers": [
       "stevengj",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "small optimization to `f(...; kw...)` when `kw` is empty",
@@ -12902,7 +14306,13 @@
     "callers": [
       "tkelman",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix #21604, check Any fields at runtime",
@@ -12943,7 +14353,13 @@
       "tkelman",
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "optimize field access when field types don't depend on parameters",
@@ -12982,7 +14398,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "group ccall'ed MPZ library functions in a module",
@@ -13027,7 +14449,13 @@
       "jrevels",
       "rfourquet",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Make reshape(::BitArray,...) type stable",
@@ -13067,7 +14495,13 @@
       "Sacha0",
       "jrevels",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "I heard you like inferring types but don't like global state...",
@@ -13112,7 +14546,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "[release-0.5] backports for 0.5.2",
@@ -14448,7 +15888,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 35
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 22
+    }
   },
   {
     "title": "Recover some lost build flags for openblas",
@@ -14484,7 +15930,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "[release-0.6] backports for 0.6.0-rc1",
@@ -14557,7 +16009,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Make ntuple(f, n) and ntuple(f, Val{n}) throw ArgumentError when n < 0 ",
@@ -14596,7 +16054,13 @@
     "callers": [
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Fix in(x, r::Range{<:Integer}) when x is not numeric",
@@ -14636,7 +16100,13 @@
     "callers": [
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Optimize sysimg TLS access on Linux",
@@ -14683,7 +16153,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Completely remove partial linear indexing",
@@ -14741,7 +16217,13 @@
       "mbauman",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "dispatch speedups",
@@ -14792,7 +16274,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "replace pure annotations in promotion with inline",
@@ -14842,7 +16330,13 @@
       "KristofferC",
       "jrevels",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Fix and enforce reinterpret/unsafe_wrap alignment",
@@ -14891,7 +16385,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 33
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "Implement function multi versioning in sysimg",
@@ -14981,7 +16481,13 @@
     "callers": [
       "vtjnash",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 39
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "[release-0.6] backports for 0.6.0-rc2",
@@ -15184,7 +16690,13 @@
       "tkelman",
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 24
+    }
   },
   {
     "title": "The GC root placement pass 1.0 deserves",
@@ -15255,7 +16767,13 @@
       "Keno",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 41
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "inference: remove hacks around type-system incorrectness",
@@ -15297,7 +16815,13 @@
     "callers": [
       "KristofferC",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "fix #21848, bug in widening done by limit_type_depth",
@@ -15334,7 +16858,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "fix #21906, `ccall` causes unnecessary variable `Box`",
@@ -15369,7 +16899,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "inference: improve cycle detection",
@@ -15417,7 +16953,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "LAPACK wrappers: use resize!(a) instead of a = Vector{T}()",
@@ -15455,7 +16997,13 @@
       "ararslan",
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Method overwriting by an ambiguity should also invalidate the method cache",
@@ -15492,7 +17040,13 @@
     ],
     "callers": [
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "limit maximum vector alignment to heap alignment",
@@ -15553,7 +17107,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "support pre-allocation in BigInt ctor",
@@ -15589,7 +17149,13 @@
     "callers": [
       "KristofferC",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "faster rem(::BigInt, ::Type{Union{Bool, Int, UInt...}})",
@@ -15627,7 +17193,13 @@
       "rfourquet",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix Period objects hashing to match ==",
@@ -15664,7 +17236,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "improve inferability of base",
@@ -15725,7 +17303,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Don't use totality when defining the (potentially) partial order relation <=",
@@ -15762,7 +17346,13 @@
     ],
     "callers": [
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Do exact array resize!() in more cases",
@@ -15804,7 +17394,13 @@
       "KristofferC",
       "andreasnoack",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 46
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "replace current_module() with @__MODULE__",
@@ -15982,7 +17578,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Inline some shift operators",
@@ -16017,7 +17619,13 @@
     ],
     "callers": [
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Fix sparse type parameter (fixes #22110)",
@@ -16052,7 +17660,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "fix extrema(A,dim) when length(dim)>1",
@@ -16090,7 +17704,13 @@
     "callers": [
       "tkelman",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "[release-0.6] backports for 0.6.0-rc3",
@@ -16413,7 +18033,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 26
+    }
   },
   {
     "title": "Replace several intrinsics with Julia equivalents",
@@ -16475,7 +18101,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use map instead of broadcast for Array*/Number and Matrix+-Matrix.",
@@ -16513,7 +18145,13 @@
     "callers": [
       "pabloferz",
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Decide inline-worthiness based on a more nuanced cost model",
@@ -16566,7 +18204,13 @@
       "timholy",
       "tkelman",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 32
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Introduce a function barrier to mapslices",
@@ -16601,7 +18245,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Treat bounds check in isassigned as, well, bounds check",
@@ -16642,7 +18292,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "output the system image as static data",
@@ -16703,7 +18359,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Add a custom LLVM pass to replace fastmath multiple and add with muladd",
@@ -16749,7 +18411,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Treat sub and div as induction in simd loop lowering",
@@ -16787,7 +18455,13 @@
     "callers": [
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Ensure indexing into Array{Bool} returns Bool",
@@ -16822,7 +18496,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Ensure Bool to Integer conversions always return 0 or 1",
@@ -16860,7 +18540,13 @@
     "callers": [
       "tkelman",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Don't special-case inference of splatting ::Any parameters",
@@ -16897,7 +18583,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Remove order::Ordering keyword argument to sort* methods where possible",
@@ -16936,7 +18628,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "[release-0.6] final backports for 0.6.0",
@@ -17058,7 +18756,13 @@
     "callers": [
       "tkelman",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 18
+    }
   },
   {
     "title": "[GC Lowering] Implement load refinements",
@@ -17103,7 +18807,13 @@
       "Keno",
       "Keno",
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Support isbits Union array elements and struct fields",
@@ -17162,7 +18872,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 30
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Turn off PIC for the JIT",
@@ -17197,7 +18913,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Use Val(x) and f(::Val{x})",
@@ -17319,7 +19041,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "duplicate invoke expr during call method splitting",
@@ -17357,7 +19085,13 @@
       "vtjnash",
       "vtjnash",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Max the cutoff for splat penalty much higher",
@@ -17393,7 +19127,13 @@
     "callers": [
       "andyferris",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Symmetric/Hermitian solver with misc RHS",
@@ -17432,7 +19172,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Add TargetMachine arg to addOptimizationPasses.",
@@ -17473,7 +19219,13 @@
       "maleadt",
       "ararslan",
       "maleadt"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Remove ieee754_rem_pio2 in favor of a rem_pio2_kernel written in Julia.",
@@ -17519,7 +19271,13 @@
       "simonbyrne",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 54
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "faster rand(::MersenneTwister, UnitRange{<:BitInteger}) (fix #22600)",
@@ -17555,7 +19313,13 @@
     "callers": [
       "tkelman",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "speed up common cases of type application. helps #22593",
@@ -17591,7 +19355,13 @@
     "callers": [
       "ararslan",
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "RFC: replace `ANY` with `@nospecialize` annotation",
@@ -17736,7 +19506,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Add LLVM level allocation optimization pass",
@@ -17798,7 +19574,13 @@
       "yuyichao",
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 29
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Add a white list of known non-safepoint functions",
@@ -17837,7 +19619,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix corner cases of binary arithmetic ops between sparse vectors and scalars (#21515)",
@@ -17874,7 +19662,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "parametrize Diagonal on the wrapped vector type",
@@ -17914,7 +19708,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Inlining cost model: don't count :invokes that `throw`",
@@ -17949,7 +19749,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Add fast path for merge with Dicts",
@@ -17984,7 +19790,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Make DomainError more informative",
@@ -18062,7 +19874,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "split random.jl into a new random/ directory and clean-up",
@@ -18112,7 +19930,13 @@
     "callers": [
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 26
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "RFC: change array and range promotion rule not to convert both containers",
@@ -18153,7 +19977,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Make OverflowError more informative",
@@ -18216,7 +20046,13 @@
     "callers": [
       "tkelman",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Implement Union type sorting. Implements #22664",
@@ -18256,7 +20092,13 @@
     "callers": [
       "tkelman",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "linearize much of codegen",
@@ -18295,7 +20137,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Sin, cos, sincos tan, and more rem_pio2",
@@ -18340,7 +20188,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "RFC: Continuation of #20607, revision of sum, prod, and reduce",
@@ -18393,7 +20247,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "RFC: make boundscheck a value",
@@ -18471,7 +20331,13 @@
       "vtjnash",
       "vtjnash",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "dlopen: eliminate internal soname mapping",
@@ -18520,7 +20386,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 55
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "respecialize normalized vararg type parameters as part of precise_container_type",
@@ -18557,7 +20429,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "fix matrix power of Symmetric/Hermitian",
@@ -18596,7 +20474,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "parametrize Bidiagonal on wrapped vector type",
@@ -18640,7 +20524,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "treat String as immutable in `===`. part of #22193",
@@ -18681,7 +20571,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "fix #17240, evaluate keyword argument defaults in successive scopes",
@@ -18720,7 +20616,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "part 1 of #9147: zero-initialize all Arrays",
@@ -18768,7 +20670,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "more predictable global binding resolution",
@@ -18830,7 +20738,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "improved product iterator",
@@ -18868,7 +20782,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "parametrize SymTridiagonal on the wrapped vector type",
@@ -18915,7 +20835,13 @@
     "callers": [
       "fredrikekre",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Update deprecated tuple type call's in cfunction",
@@ -18966,7 +20892,13 @@
       "KristofferC",
       "fredrikekre",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "RFC: preserve more syntax in parsing `?`, `do`, and `elseif`",
@@ -19009,7 +20941,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Widen less aggressively in tmerge",
@@ -19046,7 +20984,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Add Julia port of Openlibm asin",
@@ -19089,7 +21033,13 @@
       "ararslan",
       "ararslan",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "remove additional rule that parameters must match for dispatch",
@@ -19167,7 +21117,13 @@
       "ararslan",
       "ararslan",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "improve some IntSet operations",
@@ -19202,7 +21158,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "parametrize Tridiagonal on the wrapped vector type",
@@ -19251,7 +21213,13 @@
     "callers": [
       "fredrikekre",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix missing inlining-cost for loops",
@@ -19291,7 +21259,13 @@
     "callers": [
       "JeffBezanson",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "small change in rational constructor",
@@ -19327,7 +21301,13 @@
     "callers": [
       "tkelman",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "inference: implement a basic DCE pass",
@@ -19362,7 +21342,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Absolutely, positively perfect ranges. Never wrong. No way.",
@@ -19411,7 +21397,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "enable switching the default RNG (fix #23199)",
@@ -19462,7 +21454,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 103
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Preserve the input element type in unique",
@@ -19502,7 +21500,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Much more aggressive alloc_elim_pass!",
@@ -19557,7 +21561,13 @@
       "vtjnash",
       "yuyichao",
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "break-with-value and for/else implementation",
@@ -19599,7 +21609,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 48
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "deprecate fallback constructor",
@@ -19794,7 +21810,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Add Julia port of acos from Openlibm and add some tests.",
@@ -19838,7 +21860,13 @@
       "ararslan",
       "ararslan",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Remove `&x` convention in ccall in mpfr",
@@ -19873,7 +21901,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Remove `&x` convention in ccall in gmp",
@@ -19908,7 +21942,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Update deprecated ccall syntax in arpack",
@@ -19943,7 +21983,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Use iszero and isone in MPFR",
@@ -19978,7 +22024,13 @@
     ],
     "callers": [
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use direct load and store instead of memcpy in simple cases",
@@ -20019,7 +22071,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Make sure error from `Expr(:new)` is not optimized away.",
@@ -20062,7 +22120,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Add Julia port of atan from Openlibm.",
@@ -20106,7 +22170,13 @@
       "fredrikekre",
       "andreasnoack",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "Update deprecated `&x` syntax  in blas",
@@ -20143,7 +22213,13 @@
       "fredrikekre",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use refs instead of Vector in Lapack",
@@ -20181,7 +22257,13 @@
     "callers": [
       "andreasnoack",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Fix deprecations",
@@ -20246,7 +22328,13 @@
     ],
     "callers": [
       "tkelman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Remove global const  in init in cholmod",
@@ -20285,7 +22373,13 @@
     ],
     "callers": [
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": " Add Julia port of atan2 from Openlibm and add some tests.",
@@ -20327,7 +22421,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Make exception types consistent",
@@ -20404,7 +22504,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "better constant variable inference",
@@ -20441,7 +22547,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #23107, ensure `Array` constructor always makes new arrays",
@@ -20483,7 +22595,13 @@
     "callers": [
       "fredrikekre",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: make `promote` throw an error if no arguments can be changed",
@@ -20529,7 +22647,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "add few missing methods for set-like operations",
@@ -20580,7 +22704,13 @@
       "rfourquet",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix #23567",
@@ -20621,7 +22751,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "`unsafe_load` -> `@inbounds codeunit`",
@@ -20657,7 +22793,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "WIP: Remove RevString",
@@ -20718,7 +22860,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Replace Nullable{T} with Union{Some{T}, Void}",
@@ -20931,7 +23079,13 @@
       "andreasnoack",
       "ararslan",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 60
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": "Backports for 0.6.1",
@@ -21229,7 +23383,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 39
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 32
+    }
   },
   {
     "title": "require explicit predicates in `find` functions",
@@ -21315,7 +23475,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 26
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "Fix length calculation of broadcast over tuples",
@@ -21353,7 +23519,13 @@
     "callers": [
       "Sacha0",
       "Sacha0"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Make var and std work for Vector{Vector{T}}",
@@ -21390,7 +23562,13 @@
     ],
     "callers": [
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "random: remove useless @inline",
@@ -21430,7 +23608,13 @@
     "callers": [
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "inference: ~~refine~~ replace recursion non-detection algorithm",
@@ -21482,7 +23666,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Fix a small number of invalid unsafe code",
@@ -21557,7 +23747,13 @@
     ],
     "callers": [
       "yuyichao"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Rework the broadcast API and document it",
@@ -21610,7 +23806,13 @@
     "callers": [
       "fredrikekre",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 47
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "random: introduce `Sampler` to formalize hooking into rand machinery",
@@ -21656,7 +23858,13 @@
       "rfourquet",
       "rfourquet",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Inlining statement cost: don't penalize call-Exprs that throw",
@@ -21694,7 +23902,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Avoid row promotion in heterogeneous arrays",
@@ -21734,7 +23948,13 @@
       "pabloferz",
       "pabloferz",
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Restore repeat performance for arrays of scalars",
@@ -21769,7 +23989,13 @@
     ],
     "callers": [
       "pabloferz"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "[WIP] improved dense-sparse and sparse-dense matrix multiplication kernels",
@@ -21809,7 +24035,13 @@
       "ararslan",
       "Sacha0",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "turn on linear IR",
@@ -21872,7 +24104,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Uninline trig functions.",
@@ -21907,7 +24145,13 @@
     ],
     "callers": [
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "codegen: sizeof optimizations",
@@ -21944,7 +24188,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Add Julia ports of hyperbolic (including inverse) functions from openlibm.",
@@ -21984,7 +24234,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "make x^-n equivalent to inv(x)^n for literal n",
@@ -22041,7 +24297,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "inference: IPO constant propagation",
@@ -22084,7 +24346,13 @@
       "pabloferz",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "RFC: Deprecate multi-value non-scalar indexed assignment",
@@ -22199,7 +24467,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 34
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "fix soundness of inferred typevar bounds",
@@ -22247,7 +24521,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "WIP: Backports for 0.6.2",
@@ -22398,7 +24678,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 81
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 29
+    }
   },
   {
     "title": "Faster, more correct complex^complex",
@@ -22440,7 +24726,13 @@
       "ararslan",
       "stevengj",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "use direct field access in A_mul_B_td!",
@@ -22476,7 +24768,13 @@
     "callers": [
       "fredrikekre",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Add missing and Missing",
@@ -22544,7 +24842,13 @@
       "nalimilan",
       "ararslan",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "Change find() to return the same index type as pairs()",
@@ -22595,7 +24899,13 @@
       "nalimilan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Use reverse iteration protocol in `mapfoldr_impl`",
@@ -22632,7 +24942,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Add exp2 port of Openlibm exp2.",
@@ -22676,7 +24992,13 @@
       "ViralBShah",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "faster rand! for Dict, Set, BitSet",
@@ -22713,7 +25035,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "fix some FIXMEs in random, and take 2 to #9174",
@@ -22754,7 +25082,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "implement getfield overloading",
@@ -22825,7 +25159,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 30
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": " Use three-valued logic with missing values in ==(::Tuple, ::Tuple) ",
@@ -22862,7 +25202,13 @@
     ],
     "callers": [
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "simplify rand(::UnitRange) a bit",
@@ -22905,7 +25251,13 @@
       "rfourquet",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "[WIP] Make it easier to extend broadcast!",
@@ -22943,7 +25295,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 41
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "RNG: make a Sampler out of rand(::MersenneTwister, ::UnitRange)",
@@ -22984,7 +25342,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Make BitSet store any Int",
@@ -23033,7 +25397,13 @@
       "rfourquet",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 26
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Make inbounds macros expression-like",
@@ -23077,7 +25447,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "faster rand!(::MersenneTwister, ::UnitRange)",
@@ -23118,7 +25494,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "MersenneTwister: more efficient integer generation with caching",
@@ -23162,7 +25544,13 @@
       "rfourquet",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "faster rand(::UnitRange{Bool})",
@@ -23197,7 +25585,13 @@
     ],
     "callers": [
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "MersenneTwister: more efficient Float64 scalar generation with caching",
@@ -23237,7 +25631,13 @@
       "ararslan",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Iteration protocol change",
@@ -23489,7 +25889,13 @@
       "vtjnash",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 57
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "remove legacy at-pure annotation from linalg/adjtrans",
@@ -23526,7 +25932,13 @@
       "vchuravy",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "faster rand(::MersenneTwister, ::Union{[U]Int{8,16,32},Bool})",
@@ -23564,7 +25976,13 @@
     "callers": [
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "RFC: Customizable lazy broadcasting with options for pure-Julia fusion and eager evaluation",
@@ -23664,7 +26082,13 @@
       "mbauman",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 58
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Change sentinel in find(first|next|prev|last) to `nothing`",
@@ -23770,7 +26194,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "kill `isleaftype`",
@@ -23902,7 +26332,13 @@
       "ararslan",
       "vtjnash",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Fix backpropagation of conditionals when the type is later widened",
@@ -23949,7 +26385,13 @@
       "ararslan",
       "Keno",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Fix mod1, fld1 issues.",
@@ -23986,7 +26428,13 @@
     ],
     "callers": [
       "simonbyrne"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Fix performance problem in LLVM JumpThreading",
@@ -24025,7 +26473,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Add type annotations on inference-generated error cases",
@@ -24061,7 +26515,13 @@
     "callers": [
       "Keno",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Document what the cache in readuntil is for. NFC.",
@@ -24098,7 +26558,13 @@
       "Keno",
       "ararslan",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Use Stateful in String code",
@@ -24146,7 +26612,13 @@
       "Keno",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "readuntil bugfix",
@@ -24183,7 +26655,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "create Accumulate iterator",
@@ -24239,7 +26717,13 @@
       "simonbyrne",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 22
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Preserve noinline meta node and use it to emit LLVM noinline attribute",
@@ -24282,7 +26766,13 @@
     ],
     "callers": [
       "maleadt"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "union-splitting optimizations",
@@ -24331,7 +26821,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Make map() and broadcast() faster for Union{T, Missing/Nothing} element types",
@@ -24369,7 +26865,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Add optimized findall(::AbstractArray{Bool}) method",
@@ -24408,7 +26910,13 @@
       "nalimilan",
       "nalimilan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "More thorough aliasing detection in nonscalar copy, broadcast and assignment",
@@ -24480,7 +26988,13 @@
       "mbauman",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Julia port of Openlibm expm1.",
@@ -24524,7 +27038,13 @@
       "KristofferC",
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "codegen: optimization fixes / improvements",
@@ -24575,7 +27095,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Add Julia port of cbrt from Openlibm.",
@@ -24619,7 +27145,13 @@
       "ararslan",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "codegen restructuring",
@@ -24716,7 +27248,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Very WIP: New optimizer",
@@ -24834,7 +27372,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Separate AbstractString interface from iteration protocol",
@@ -24891,7 +27435,13 @@
       "Keno",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 25
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Optimize dataids(::AbstractArray)",
@@ -24936,7 +27486,13 @@
       "ararslan",
       "ararslan",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 25
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "fix early return in emit_builtin_call",
@@ -24973,7 +27529,13 @@
       "KristofferC",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Deprecate implicit scalar broadcasting in setindex!",
@@ -25071,7 +27633,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Fix build from source on alpine linux",
@@ -25117,7 +27685,13 @@
       "ararslan",
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Bump LLVM version to 6.0.0",
@@ -25184,7 +27758,13 @@
       "vchuravy",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 11
+    }
   },
   {
     "title": "prevent fill! from inlining",
@@ -25222,7 +27802,13 @@
       "ararslan",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Deprecate defaulting to scalar in broadcast (take 2)",
@@ -25283,7 +27869,13 @@
       "mbauman",
       "vchuravy",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "fix perf regression for bitrand",
@@ -25322,7 +27914,13 @@
       "KristofferC",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "codegen: use compiler trampoline closing over method-instance",
@@ -25399,7 +27997,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "enable the SLP Vectorizer optimization pass by default",
@@ -25447,7 +28051,13 @@
       "ararslan",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Fix conversion in getindex",
@@ -25485,7 +28095,13 @@
     "callers": [
       "mbauman",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "inference: remove MAX_TYPE_DEPTH limit, rewrite tmerge",
@@ -25547,7 +28163,13 @@
       "quinnj",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Deprecate linearindices in favor of LinearIndices",
@@ -25639,7 +28261,13 @@
       "mbauman",
       "nalimilan",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "ensure more iterators stay type-stable",
@@ -25687,7 +28315,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Benchmark new optimizer",
@@ -25967,7 +28601,13 @@
       "Keno",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "enable/improve constant propagation through varargs methods ",
@@ -26020,7 +28660,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Backports for Julia v0.6.3",
@@ -26168,7 +28814,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 44
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 20
+    }
   },
   {
     "title": "Upgrade to LLVM 6 and use BinaryBuilder for LLVM on CI",
@@ -26229,7 +28881,13 @@
       "vchuravy",
       "vchuravy",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Broadcast performance: fix type stability",
@@ -26264,7 +28922,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "[NewOptimizer] Make simdloop marker more robust",
@@ -26311,7 +28975,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "WIP: Rebase #24478",
@@ -26351,7 +29021,13 @@
     "callers": [
       "Keno",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "WIP: Relax restrictions on specsig for vararg",
@@ -26388,7 +29064,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix and generalize comprehension lowering",
@@ -26435,7 +29117,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Benchmarks vs 0.6 in prep for 0.7 release [do not merge]",
@@ -26483,7 +29171,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "benchmark something",
@@ -26520,7 +29214,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Stop setting force_noinline for functions of union arguments",
@@ -26557,7 +29257,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "combine `ifelse` and `select_value`; improve `ifelse` t-func",
@@ -26625,7 +29331,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "More robust iteration over Vectors",
@@ -26664,7 +29376,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Re-enable BB simplification pass",
@@ -26699,7 +29417,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Introduce improved SROA pass",
@@ -26748,7 +29472,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Get rid of the tricks to avoid overflow in the AbstractUnitRange iterator",
@@ -26785,7 +29515,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Avoid over-pessimization in apply_type_tfunc",
@@ -26822,7 +29558,13 @@
     ],
     "callers": [
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Simplify iteration over ranges in general",
@@ -26861,7 +29603,13 @@
       "haampie",
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "upgrade OpenBLAS to 0.3.0",
@@ -26903,7 +29651,13 @@
     "callers": [
       "ararslan",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 24
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Improve support for ranges with nonstandard Integers",
@@ -26944,7 +29698,13 @@
       "KristofferC",
       "mbauman",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "increased compiler nospecialization",
@@ -26990,7 +29750,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "inference: re-architect entry points for more clarity",
@@ -27063,7 +29829,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "mpfr: speed improvements",
@@ -27104,7 +29876,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "optimizer: lower inline cost threshold",
@@ -27200,7 +29978,13 @@
       "KristofferC",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Guarantee inbounds iteration over Array{T}",
@@ -27248,7 +30032,13 @@
       "mbauman",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 45
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Bump tuple inference length cutoff from 16 to 32",
@@ -27297,7 +30087,13 @@
       "ararslan",
       "andyferris",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 27
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Limit the `unioncomplexity` instead of the `unionlen` in `tmerge`",
@@ -27340,7 +30136,13 @@
       "martinholters",
       "martinholters",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 22
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Inference for splatting numbers (and more)",
@@ -27382,7 +30184,13 @@
     "callers": [
       "martinholters",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Document `@simd` and remove invalid uses",
@@ -27432,7 +30240,13 @@
       "ararslan",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "remove Expr `typ` field",
@@ -27525,7 +30339,13 @@
     "callers": [
       "vtjnash",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Simplify zip take 2",
@@ -27566,7 +30386,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Use propagate_inbounds in AbstractArray iterator",
@@ -27602,7 +30428,13 @@
     "callers": [
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "typeintersect: convert union of tuples to tuple of unions",
@@ -27646,7 +30478,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "optimize compilation",
@@ -27691,7 +30529,13 @@
     "callers": [
       "vtjnash",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports for 0.6.4",
@@ -27766,7 +30610,13 @@
     "callers": [
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 26
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "compiler: improve jl_get_specialization1",
@@ -27805,7 +30655,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Fix getindex inlining for Array{Union{T,Missing}}",
@@ -27844,7 +30700,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Revert \"Revert \"enable the SLP Vectorizer optimization pass by default\"\"",
@@ -27880,7 +30742,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "`@simd` breaks generic code",
@@ -27933,7 +30801,13 @@
       "vchuravy",
       "KristofferC",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "manually inline setfield! in Stateful popfirst!",
@@ -27970,7 +30844,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "improve perf for string with both strings and chars as argument",
@@ -28007,7 +30887,13 @@
       "KristofferC",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Move `v0` to an `init` keyword argument for `reduce`, etc",
@@ -28085,7 +30971,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Avoid broken kind type handling when compiling `isa`",
@@ -28135,7 +31027,13 @@
     "callers": [
       "jrevels",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 22
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Add optimized mapreduce implementation for SkipMissing",
@@ -28176,7 +31074,13 @@
       "ararslan",
       "nalimilan",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "improve performance for parsing Floats",
@@ -28211,7 +31115,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "avoid kind type dispatch bugs in tuple_type_head and tuple_type_tail",
@@ -28248,7 +31158,13 @@
       "jrevels",
       "jrevels",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Use QuickSort rather than MergeSort by default for Union{<:Number, Missing} arrays",
@@ -28283,7 +31199,13 @@
     ],
     "callers": [
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Check referential equality before comparing the content when checking String equality.",
@@ -28318,7 +31240,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Let tmerge form a Union more often",
@@ -28358,7 +31286,13 @@
       "martinholters",
       "martinholters",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "some updates and fixes to inlining cost",
@@ -28416,7 +31350,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "codegen: mark tbaa information in more places",
@@ -28461,7 +31401,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "rearrange inlining of `ensureroom` and speed it up",
@@ -28502,7 +31448,13 @@
       "KristofferC",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 17
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Use correct effect_free predicate in inlining",
@@ -28543,7 +31495,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Backport LLVM D42691.",
@@ -28580,7 +31538,13 @@
     "callers": [
       "maleadt",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "more compiler cleanup [nfc]",
@@ -28632,7 +31596,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Stateful: fix major bug in implementation",
@@ -28679,7 +31649,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "performance fix: String join",
@@ -28716,7 +31692,13 @@
       "vtjnash",
       "vtjnash",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Stop removing functions without proving them nothrow in inlining",
@@ -28765,7 +31747,13 @@
       "Keno",
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Support mapreduce over dimensions with SkipMissing",
@@ -28805,7 +31793,13 @@
     ],
     "callers": [
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Remove type assertion hack in mapreduce for skipmissing",
@@ -28841,7 +31835,13 @@
     "callers": [
       "nalimilan",
       "nalimilan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "avoid backedges for functions whose result is not used",
@@ -28876,7 +31876,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "use `checkbounds` instead of `in` in copyto!",
@@ -28911,7 +31917,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "make simd loop over ranges perform better",
@@ -28946,7 +31958,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "improve variable promotion in closure conversion",
@@ -28983,7 +32001,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "use a type parameter for stream in EachLine, improves performance",
@@ -29018,7 +32042,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC Revert \"Enable PCRE UTF-8 validity string checks (#26731)\"",
@@ -29055,7 +32085,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #27907, inference not detecting some cycles during constant prop",
@@ -29096,7 +32132,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "enable abstract interpreter to constant prop even if method source is generated",
@@ -29131,7 +32173,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "fix #28293, compile time regression in OrdinaryDiffEq ",
@@ -29166,7 +32214,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "Deprecate nextpow2/prevpow2",
@@ -29215,7 +32269,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Revive #27659: Revert \"Revert \"enable the SLP Vectorizer optimization pass by default\"\"",
@@ -29251,7 +32311,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "fix #28369, transpose of SparseMatrixCSC is not recursive",
@@ -29288,7 +32354,13 @@
     ],
     "callers": [
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "improve slicing lazily transposed sparse matrices: WIP",
@@ -29327,7 +32399,13 @@
       "andreasnoack",
       "andreasnoack",
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Backports to 1.0.1",
@@ -29665,7 +32743,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 33
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 65
+    }
   },
   {
     "title": "DO NOT MERGE: Nanosoldier testing",
@@ -29711,7 +32795,13 @@
       "ararslan",
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 30
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "add inference lattice element for Tuples",
@@ -29771,7 +32861,13 @@
       "jrevels",
       "jrevels",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 29
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "RFC: Iterate over smaller set for setdiff[!](a,b)",
@@ -29809,7 +32905,13 @@
     "callers": [
       "fredrikekre",
       "fredrikekre"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "fix perf regression from not specializing on iterate on tuples",
@@ -29844,7 +32946,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Change `Zip` data structure to a flat one",
@@ -29882,7 +32990,13 @@
     "callers": [
       "martinholters",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 32
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "faster String allocation",
@@ -29921,7 +33035,13 @@
       "vtjnash",
       "JeffBezanson",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "always obey inline declarations if the calling signature is concrete",
@@ -29956,7 +33076,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "GC improvements for #28986",
@@ -29999,7 +33125,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "fix #29208, incorrect `Union{}` result from type intersection",
@@ -30037,7 +33169,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #29269, type intersection bug in union parameters with typevars",
@@ -30085,7 +33223,13 @@
     "callers": [
       "JeffBezanson",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "WIP: Backports for 1.0.2",
@@ -30484,7 +33628,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 61
+    }
   },
   {
     "title": "Port helper functions,_ldexp_exp and _frexp_exp, for hyperbolic functions",
@@ -30524,7 +33674,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Improve aliasing detection of wrappers of SubArrays",
@@ -30572,7 +33728,13 @@
     "callers": [
       "mbauman",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 32
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "improve performance for materializing a string from a vector of Char",
@@ -30610,7 +33772,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "fix perf regression from not specializing on iterate on tuples",
@@ -30645,7 +33813,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Fix inling of `_apply(_apply, ...)`",
@@ -30682,7 +33856,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Implement multiply-add interface in LinearAlgebra",
@@ -30751,7 +33931,13 @@
     "callers": [
       "fredrikekre",
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 32
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "Improve performance of logical indexing with BitVectors",
@@ -30786,7 +33972,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "various string search perf improvements",
@@ -30822,7 +34014,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Change simd loop lowering",
@@ -30859,7 +34057,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "speed up logical indexing by bitarray",
@@ -30897,7 +34101,13 @@
     "callers": [
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "inference performance: drop some unnecessary edges, cache more",
@@ -30934,7 +34144,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "improve performance for string range indexing",
@@ -30972,7 +34188,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Make broadcast recursion in `flatten` structural",
@@ -31007,7 +34229,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "broadcast cleanup",
@@ -31048,7 +34276,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "manually deconstruct and reconstruct subarray when throwing boundserror ",
@@ -31083,7 +34317,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "inline copyto! for SubArrays",
@@ -31123,7 +34363,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "interpreter: fix pref regression from #29795",
@@ -31158,7 +34404,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "use the simpler copyto! even if element types are different",
@@ -31194,7 +34446,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "consolidate some of the parsing code",
@@ -31230,7 +34488,13 @@
     "callers": [
       "JeffBezanson",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Faster findall for bitarrays",
@@ -31268,7 +34532,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "avoid expensive runtime div in parse for common bases",
@@ -31303,7 +34573,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #29955, intersection bugs involving triangular constraints",
@@ -31343,7 +34619,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Backports for 1.0.3",
@@ -31527,7 +34809,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 33
+    }
   },
   {
     "title": "Benchmark against 1.0.0 for potential 1.1.0 release",
@@ -31561,7 +34849,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": " Inliner cost model: don't count :unreachable branches ",
@@ -31604,7 +34898,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "perf: optimize append_any function",
@@ -31651,7 +34951,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Try implementing N-dimensional indexing for fast linear SubArrays",
@@ -31688,7 +34994,13 @@
       "mbauman",
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Create new sparse matrix for R factor in sparse least square solve",
@@ -31726,7 +35038,13 @@
       "andreasnoack",
       "ararslan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "faster maximum, minimum (#28849)",
@@ -31763,7 +35081,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 9
+    }
   },
   {
     "title": "Force specialization on the type argument of `_similar_for`",
@@ -31803,7 +35127,13 @@
     "callers": [
       "martinholters",
       "martinholters"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "attempt to refine return type when it could be improved via PartialTuple",
@@ -31846,7 +35176,13 @@
     ],
     "callers": [
       "jrevels"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "fix maximum on generic orders",
@@ -31885,7 +35221,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "gf: fix jl_isa_compileable_sig again",
@@ -31924,7 +35266,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "faster mapfoldl for tuples",
@@ -31963,7 +35311,13 @@
       "fredrikekre",
       "fredrikekre",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "Fix performance of broadcast and collect with Union{T, Missing}",
@@ -32001,7 +35355,13 @@
     "callers": [
       "nalimilan",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "infer/optimize splatting of NamedTuples, similar to Tuples",
@@ -32049,7 +35409,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": -1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Backports for 1.1.0-rc2",
@@ -32213,7 +35579,13 @@
       "KristofferC",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Add inbounds annotation in `map!` computation",
@@ -32248,7 +35620,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Force specialization of the SubArray boundserror method.",
@@ -32284,7 +35662,13 @@
     "callers": [
       "maleadt",
       "maleadt"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Make length(A.nzval)==nnz(A) #30662",
@@ -32343,7 +35727,13 @@
       "andreasnoack",
       "andreasnoack",
       "andreasnoack"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 77
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Extend PartialTuple for structs",
@@ -32392,7 +35782,13 @@
     ],
     "callers": [
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Delete unused arguments in subarray code",
@@ -32430,7 +35826,13 @@
     "callers": [
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "some better type info in Base to improve latency a bit",
@@ -32502,7 +35904,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "reduce `MAX_TYPEUNION_COMPLEXITY` to 2",
@@ -32542,7 +35950,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "more precise types in keyword argument method lowering",
@@ -32579,7 +35993,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Backports for 1.0.4",
@@ -32731,7 +36151,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 31
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 29
+    }
   },
   {
     "title": "another improvement to closure analysis precision",
@@ -32775,7 +36201,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Workaround #28126, support SIMDing broadcast in more cases",
@@ -32815,7 +36247,13 @@
     "callers": [
       "mbauman",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "fix overflow in CartesianIndices iteration",
@@ -32855,7 +36293,13 @@
     "callers": [
       "vchuravy",
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "Backports for 1.1.1",
@@ -33003,7 +36447,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 26
+    }
   },
   {
     "title": "Refactor `Expr(:simdloop)` to `Expr(:loopinfo, ...)`",
@@ -33071,7 +36521,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "internals: better representation for code",
@@ -33194,7 +36650,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "optimize (a little bit) faster",
@@ -33244,7 +36706,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "RFC: Fix #31392, unaliasing of broadcast arguments against destinations with repeated indices",
@@ -33283,7 +36751,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "optimize: add at least a small cost for most instructions",
@@ -33324,7 +36798,13 @@
       "vtjnash",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": " codegen: ensure Bool arithmetic is done in mod-2",
@@ -33370,7 +36850,13 @@
       "vtjnash",
       "ararslan",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Revert #26418, remove noinline annotation from fill!",
@@ -33405,7 +36891,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Backports for 1.2-RC1",
@@ -34319,7 +37811,13 @@
       "ararslan",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 71
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 22
+    }
   },
   {
     "title": "inference: accelerate type-limits under wide-recursion",
@@ -34356,7 +37854,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "fix #31760, regression in Dict `iterate`",
@@ -34391,7 +37895,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "use Iterators.reverse for foldr etc.",
@@ -34429,7 +37939,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "subtyping: apply performance optimization in more places",
@@ -34476,7 +37992,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "gf: support more dispatch on abstract types",
@@ -34549,7 +38071,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 8
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "internal: more uniform usage of jlcall ABI again",
@@ -34611,7 +38139,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "issubset: don't create a Set out of dicts",
@@ -34650,7 +38184,13 @@
       "rfourquet",
       "rfourquet",
       "rfourquet"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Amend matrix * vector specialization for strided arrays",
@@ -34685,7 +38225,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Disable BB `GMP` and `MPFR`, to fix performance regressions",
@@ -34722,7 +38268,13 @@
       "fredrikekre",
       "ararslan",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "WIP: Backports 1.2.0 rc2",
@@ -34998,7 +38550,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 16
+    }
   },
   {
     "title": "fix #21360, make global bindings thread safe",
@@ -35036,7 +38594,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "fix #31521, make regexes thread-safe",
@@ -35077,7 +38641,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "fix #30653, call `malloc_trim` sometimes",
@@ -35112,7 +38682,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Disallow ranges with Integer eltype but non-integer step",
@@ -35150,7 +38726,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "adjust heap-size-based full collection heuristic to use only old objects",
@@ -35191,7 +38773,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "adjust some gc heuristics",
@@ -35226,7 +38814,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Upgrade to LLVM v8.0.1",
@@ -35402,7 +38996,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 29
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "WIP: Backports for 1.3-RC2",
@@ -35698,7 +39298,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 59
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 26
+    }
   },
   {
     "title": "fix some broadcast patterns to avoid allocations",
@@ -35733,7 +39339,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "improve performance of setindex! on IdDict",
@@ -35768,7 +39380,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "WIP: Backports for 1.0.5",
@@ -35913,7 +39531,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 23
+    }
   },
   {
     "title": "fix performance regression in broadcasting in some cases",
@@ -35948,7 +39572,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Update GMP and MPFR builds to use better compiler flags",
@@ -36091,7 +39721,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Changed check_top_bit InexactError",
@@ -36126,7 +39762,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Backports for Julia 1.3-RC3",
@@ -36393,7 +40035,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 15
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "Correct bias in random float sampling.",
@@ -36439,7 +40087,13 @@
       "andreasnoack",
       "mschauer",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 21
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "Add a builtin that allows specifying which iterate method to use",
@@ -36495,7 +40149,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Revert \"Revert \"Bump Pkg to 1.4-DEV. (#33364)\" (#33410)\"",
@@ -36533,7 +40193,13 @@
     "callers": [
       "KristofferC",
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Transducer as an optimization: map, filter and flatten",
@@ -36570,7 +40236,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 8
+    }
   },
   {
     "title": "remove SinkingPass from pass pipeline",
@@ -36605,7 +40277,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "speedup BitSet iteration (by 2x or 3x)",
@@ -36640,7 +40318,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "simplify @allocated macro",
@@ -36691,7 +40375,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "datatype: reorganize layout calculation code",
@@ -36744,7 +40434,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 0
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "Only compute effect-free once",
@@ -36804,7 +40500,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "codegen: optimize returning an argument",
@@ -36841,7 +40543,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "layout optimization internal changes (support pointers inlining/unboxing into parents/codegen) [disabled]",
@@ -36924,7 +40632,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Deprecate @horner and replace with evalpoly function",
@@ -36973,7 +40687,13 @@
     ],
     "callers": [
       "ararslan"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Backports release 1.3.1",
@@ -37074,7 +40794,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 30
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 15
+    }
   },
   {
     "title": "Use safer computation of midpoint in sorting (fixes #33977)",
@@ -37118,7 +40844,13 @@
       "timholy",
       "timholy",
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "enable inline allocation of structs with pointers",
@@ -37155,7 +40887,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "disallow setindex on immutable values",
@@ -37208,7 +40946,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "WIP: Backports for 1.4-RC1",
@@ -37502,7 +41246,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 31
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Update to LLVM 9",
@@ -37659,7 +41409,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports for Julia 1.4 RC2",
@@ -38017,7 +41773,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "new LLVM optimization pass list",
@@ -38054,7 +41816,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 1
+    }
   },
   {
     "title": "use CodeGenOpt::None at optlevel<2, Default at 2, and Aggressive at >2",
@@ -38089,7 +41857,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports for Julia 1.4.1",
@@ -38516,7 +42290,13 @@
     "callers": [
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "some inlining cost model updates",
@@ -38558,7 +42338,13 @@
       "JeffBezanson",
       "vtjnash",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "upgrade LLVM to 10",
@@ -38709,7 +42495,13 @@
     "changedSourceFiles": [],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 23
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "typemap: attempt split on typenames also",
@@ -38762,7 +42554,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "codegen: improve our argument annotations",
@@ -38799,7 +42597,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Annotate Julia reference accesses for atomic release/consume",
@@ -38868,7 +42672,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 38
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Remove inline annotations from broadcast kernels",
@@ -38903,7 +42713,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "allow standalone dotted operators",
@@ -38949,7 +42765,13 @@
     ],
     "callers": [
       "stevengj"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 18
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "A grab bag of latency reductions",
@@ -39000,7 +42822,13 @@
     ],
     "callers": [
       "timholy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "WIP: Backports release 1.4.2",
@@ -39081,7 +42909,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 10
+    }
   },
   {
     "title": "micro-optimize iterate on string",
@@ -39116,7 +42950,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 2
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "WIP: Backports for Julia 1.5-beta-1",
@@ -39256,7 +43096,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "reduce invalidations from `!`",
@@ -39295,7 +43141,13 @@
     ],
     "callers": [
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "faster repeat(::AbstractArray ...)",
@@ -39332,7 +43184,13 @@
     ],
     "callers": [
       "mbauman"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "skip inferring calls that lead to `throw`",
@@ -39384,7 +43242,13 @@
       "JeffBezanson",
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "set default max_methods to 3",
@@ -39430,7 +43294,13 @@
     "callers": [
       "JeffBezanson",
       "JeffBezanson"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 13
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "reduce some codegen costs",
@@ -39478,7 +43348,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports 1.5.1",
@@ -39757,7 +43633,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 16
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Backports for 1.5.2",
@@ -39861,7 +43743,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 11
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 14
+    }
   },
   {
     "title": "[LLVM] upgrade to LLVM 11",
@@ -40032,7 +43920,13 @@
       "christopher-dG",
       "christopher-dG",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Backports release 1.5.3",
@@ -40154,7 +44048,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 28
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 13
+    }
   },
   {
     "title": "inline exp functions",
@@ -40189,7 +44089,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 19
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 7
+    }
   },
   {
     "title": "[WIP] Speed up dense-sparse matmul",
@@ -40229,7 +44135,13 @@
       "dkarrasch",
       "dkarrasch",
       "dkarrasch"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 9
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "inference: inter-procedural conditional constraint back-propagation",
@@ -40294,7 +44206,13 @@
       "aviatesk",
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 20
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Move CHOLMOD.common_struct from Vector{UInt8} to an actual struct",
@@ -40335,7 +44253,13 @@
     ],
     "callers": [
       "musm"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 10
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "WIP: Backports 1.6-beta",
@@ -41504,7 +45428,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 17
+    }
   },
   {
     "title": "Use dot and views in QR code",
@@ -41541,7 +45471,13 @@
     ],
     "callers": [
       "dkarrasch"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 6
+    }
   },
   {
     "title": "Backports 1.6-rc1",
@@ -41773,7 +45709,13 @@
       "KristofferC",
       "KristofferC",
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 12
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 23
+    }
   },
   {
     "title": "inference: enable constant propagation for union-split signatures",
@@ -41818,7 +45760,13 @@
       "aviatesk",
       "aviatesk",
       "aviatesk"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports 1.5.4",
@@ -42038,7 +45986,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 14
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 12
+    }
   },
   {
     "title": "fix #39379, use first\u2218LinearIndices instead of 1",
@@ -42075,7 +46029,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 7
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "regex: enable safe handling of invalid UTF-8 by default",
@@ -42113,7 +46073,13 @@
     "callers": [
       "vtjnash",
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 3
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   },
   {
     "title": "add Type to kwargs internal argument",
@@ -42154,7 +46120,13 @@
     ],
     "callers": [
       "vtjnash"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "Backports for 1.6-RC2",
@@ -42394,7 +46366,13 @@
     ],
     "callers": [
       "KristofferC"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 22
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 30
+    }
   },
   {
     "title": "mark julia.write_barrier readonly on argument",
@@ -42429,7 +46407,13 @@
     ],
     "callers": [
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 1
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 2
+    }
   },
   {
     "title": "Use copysign LLVM intrinsic rather than bithack ourselves",
@@ -42466,7 +46450,13 @@
       "vtjnash",
       "vtjnash",
       "vchuravy"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 6
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 5
+    }
   },
   {
     "title": "Remove inlining's dependence on method table lookups",
@@ -42512,7 +46502,13 @@
     "callers": [
       "Keno",
       "Keno"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 4
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 4
+    }
   },
   {
     "title": "allow trailing dims in inplace broadcast",
@@ -42549,6 +46545,12 @@
     ],
     "callers": [
       "simeonschaub"
-    ]
+    ],
+    "humanComments": {
+      "totalCount": 5
+    },
+    "benchmarkBotFreeParticipants": {
+      "totalCount": 3
+    }
   }
 ]

@@ -3,6 +3,7 @@ import datetime
 from src.mining.graphql import pull_requests
 from src.mining.rest import changed_files
 from src.mining.rest import bot_caller
+from src.mining.enhancement import enhancement
 from utility import file_management
 from utility import helpers
 
@@ -56,6 +57,14 @@ for project in projects:
     # procedure as collecting the changed files.
     print("Collecting PR's with bot contribution caller(s)")
     callers = bot_caller.get_bot_callers_prs(owner, repo, bot_prs, bot_call_string, token)
+
+    # Want to add 2 members for each bot PR:
+    #   - "human" comments: The number of comments made by human contributors to human contributors. Note that this
+    #   number excludes the contribution by the benchmarking bot as well as the comments asking for a benchmark.
+    #   - participants without benchmarking bot: Simply the number of participants excluding the benchmarking bot, i.e.
+    #   the number of participants minus 1.
+    enhancement.add_human_comments_member(bot_prs)
+    enhancement.add_benchmark_bot_free_participants_member(bot_prs)
 
     # Collect all PR's
     print("Collecting all PR's")
