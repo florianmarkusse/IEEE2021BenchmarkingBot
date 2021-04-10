@@ -1,6 +1,16 @@
 import datetime
 
 
+def get_date_from_string(github_date_string):
+    """
+    Create datetime object from string given in ISO 8601 format.
+    """
+    if isinstance(github_date_string, str):
+        return datetime.datetime.strptime(github_date_string, '%Y-%m-%dT%H:%M:%SZ')
+    else:
+        return datetime.datetime.min
+
+
 def get_only_files_with_extensions(files, extensions):
     """
     Keeps only the files that have the extensions present in the extensions variable.
@@ -41,6 +51,41 @@ def is_similar(pr, min_max_source_files_changed, min_max_additions, min_max_dele
     )
 
 
+def find_one_to_one(bot_pr, all_prs):
+    #   month within created and closed
+    #   merged and merged
+    #   closed and closed
+    #   0.5-2x additions
+    #   0.5-2x deletions
+    #   +-1 number of changedSourceFiles
+    if bot_pr["closed"] and len(bot_pr["changedSourceFiles"]) > 1:
+        one_to_one_matches = [candidate_match for candidate_match in all_prs if
+                              bot_pr["number"] != candidate_match["number"] and
+                              bot_pr["merged"] == candidate_match["merged"] and
+                              bot_pr["closed"] == candidate_match["closed"] and
+                              are_dates_within_x_days(get_date_from_string(bot_pr["createdAt"]),
+                                                      get_date_from_string(candidate_match["createdAt"]),
+                                                      30) and
+                              are_dates_within_x_days(get_date_from_string(bot_pr["closedAt"]),
+                                                      get_date_from_string(candidate_match["closedAt"]),
+                                                      30) and
+                              within_range_incl(bot_pr["additions"], [0.5 * candidate_match["additions"],
+                                                                      2 * candidate_match["additions"]]) and
+                              within_range_incl(bot_pr["deletions"], [0.5 * candidate_match["deletions"],
+                                                                      2 * candidate_match["deletions"]]) and
+                              within_range_incl(len(candidate_match["changedSourceFiles"]),
+                                                [len(bot_pr["changedSourceFiles"]) - 1,
+                                                 len(bot_pr["changedSourceFiles"]) + 1])
+                              ]
+        return one_to_one_matches
+    else:
+        return []
+
+
+def are_dates_within_x_days(first_date, second_date, x):
+    return first_date - datetime.timedelta(x) <= second_date <= first_date + datetime.timedelta(x)
+
+
 def within_range_incl(val, bounds):
     """
     Checks if the value is withing the bounds given (inclusive).
@@ -56,13 +101,6 @@ def pr_is_contained_in_prs(pr, other_prs):
         if int(pr.get("number")) == int(other_pr.get("number")):
             return True
     return False
-
-
-def get_date_from_string(created_at):
-    """
-    Create datetime object from string given in ISO 8601 format.
-    """
-    return datetime.datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
 
 
 def periodize_prs(prs, datetime_period):

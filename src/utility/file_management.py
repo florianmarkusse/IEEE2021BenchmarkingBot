@@ -87,6 +87,8 @@ def get_mined_prs(owner, repo):
         ("allPRs", "all_prs"),
         ("botPRs", "bot_prs"),
         ("similarToBotPRs", "similar_to_bot_prs"),
+        ("botPRsMatching", "bot_prs_matching"),
+        ("nonBotPrsMatching", "non_bot_prs_matching"),
     ]
 
     for file in files:

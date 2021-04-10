@@ -18,20 +18,25 @@ for project in projects:
     # Create summarizing data.
     ##
 
-    # Do an analysis based on a monthly period.
+    # # Do an analysis based on a monthly period.
     # period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
     #
     # # Do an analysis based on a per-contributor basis.
     # user_summaries = pull_requests.contributor_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
-    #
-    # # Do an activity analysis on the PR's.
+
+    # # Do an activity analysis on the PR's for similar PR's
     # bot_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("bot_prs"), "bot_PRs")
     # similar_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("similar_to_bot_prs"),
     #                                                                  "sim_PRs")
     # all_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("all_prs"), "all_PRs")
 
+    # Do an activity analysis on the PR's with one-to-one matching PR's
+    bot_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("bot_prs_matching"), "bot prs matching")
+    similar_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("non_bot_prs_matching"),
+                                                                     "non bot prs matching")
+
     # Statistical test on PR variables and their frequencies
-    statistical_tests.perform_statistical_tests(prs.get("bot_prs"), prs.get("similar_to_bot_prs"))
+    statistical_tests.perform_statistical_tests(prs.get("bot_prs_matching"), prs.get("non_bot_prs_matching"))
 
     #
     # summary = {

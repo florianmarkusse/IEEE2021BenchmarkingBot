@@ -54,5 +54,9 @@
   {
     "query": "commits { totalCount }",
     "description": ""
+  },
+  {
+    "query": "labels(first: 30) { edges { node { name } } }",
+    "description": ""
   }
 ]

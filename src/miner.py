@@ -91,29 +91,39 @@ for project in projects:
             if not helpers.pr_is_contained_in_prs(pr, bot_prs):
                 similar_to_bot_prs.append(pr)
 
-    # Now have 3 datasets
+    matchings = []
+    for bot_pr in bot_prs:
+        matchings.append((bot_pr, helpers.find_one_to_one(bot_pr, all_prs)))
+
+    bot_matching_prs = []
+    non_bot_matching_prs = []
+
+    for matching in matchings:
+        if len(matching[1]) > 0:
+            bot_matching_prs.append(matching[0])
+            pr_match = matching[1][0]
+            non_bot_matching_prs.append(pr_match)
+
+            for match in matchings:
+                if pr_match in match[1]:
+                    match[1].remove(pr_match)
+
+    # Now have 5 datasets
     #   - The PR's where the bot contributes
     #   - All the PR's
     #   - The PR's that are similar to the bot PR's without bot contribution
+    #   - bot PR's one-to-one matched to
+    #   - similar PR's
 
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print("found {size} PR's in total from {start_date} to {current_date}".format(
-        size=len(all_prs),
-        start_date=start_date,
-        current_date=current_date)
-    )
-    print("found {size} PR's with bot contribution in total from {start_date} to {current_date}".format(
-        size=len(bot_prs),
-        start_date=start_date,
-        current_date=current_date)
-    )
-    print("found {size} PR's similar to bot contribution in total from {start_date} to {current_date}".format(
-        size=len(similar_to_bot_prs),
-        start_date=start_date,
-        current_date=current_date)
-    )
+    print(f"Found {len(all_prs)} PR's in total from {start_date} to {current_date}")
+    print(f"Found {len(bot_prs)} PR's with bot contribution in total from {start_date} to {current_date}")
+    print(f"Found {len(similar_to_bot_prs)} PR's similar to bot contribution in total from {start_date} to {current_date}")
+    print(f"Found {len(bot_matching_prs)} one-tone-matchings in total from {start_date} to {current_date}")
 
     file_management.write_data(all_prs, owner, repo, "allPRs")
     file_management.write_data(bot_prs, owner, repo, "botPRs")
     file_management.write_data(similar_to_bot_prs, owner, repo, "similarToBotPRs")
+    file_management.write_data(bot_matching_prs, owner, repo, "botPRsMatching")
+    file_management.write_data(non_bot_matching_prs, owner, repo, "nonBotPRsMatching")
