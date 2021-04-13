@@ -1,6 +1,6 @@
 from utility import file_management
 from src.analysis.plotting import qq_plot, top_ten
-from src.analysis.hypotheses import pr_activity
+from src.analysis.hypotheses import pr_activity, pr_impact, pr_contribution
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -35,6 +35,26 @@ for project in projects:
     ### PR impact
 
     # PR status
+    for data_set in data_sets:
+        pr_impact.generate_pr_status(owner, repo, data_set)
+
+    # Commits
+    for data_set in data_sets:
+        pr_impact.generate_commits(owner, repo, data_set)
+
+    # Source files changed
+    for data_set in data_sets:
+        pr_impact.generate_source_files_changed(owner, repo, data_set)
+
+    # Additions - Deletions
+    for data_set in data_sets:
+        pr_impact.generate_additions_deletions(owner, repo, data_set)
+
+    ### PR contribution
+    # TODO add allprs and botprs data set as well.
+    for data_set in data_sets:
+        pr_contribution.generate_pr_contribution(owner, repo, data_set)
+
 
     # # Do an analysis based on a monthly period.
     # period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
