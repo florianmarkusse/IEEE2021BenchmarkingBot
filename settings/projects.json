@@ -4,6 +4,7 @@
     "repo": "julia",
     "botQuery": "commenter:nanosoldier",
     "startDate": "2016-04-01 ",
-    "botCallString": "runbenchmarks("
+    "botCallString": "runbenchmarks(",
+    "botUsername": "nanosoldier"
   }
 ]

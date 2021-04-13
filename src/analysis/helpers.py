@@ -22,15 +22,15 @@ def split_prs_into_lists(prs, remove_bot_contribution=True):
 
     for pr in prs:
         if remove_bot_contribution and "humanComments" in pr:
-            number_of_comments.append(pr["humanComments"]["totalCount"])
+            number_of_comments.append(pr["humanComments"])
         else:
-            number_of_comments.append(pr["comments"]["totalCount"])
+            number_of_comments.append(pr["comments"])
         if remove_bot_contribution and "benchmarkBotFreeParticipants" in pr:
-            number_of_participants.append(pr["benchmarkBotFreeParticipants"]["totalCount"])
+            number_of_participants.append(pr["benchmarkBotFreeParticipants"])
         else:
-            number_of_participants.append(pr["participants"]["totalCount"])
-        number_of_reviews.append(pr["reviews"]["totalCount"])
-        number_of_commits.append(pr["commits"]["totalCount"])
+            number_of_participants.append(pr["participants"])
+        number_of_reviews.append(pr["reviews"])
+        number_of_commits.append(pr["commits"])
 
     return {
         "number_of_comments": number_of_comments,

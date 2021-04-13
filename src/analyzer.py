@@ -1,6 +1,6 @@
 from utility import file_management
-from src.analysis import pull_requests
-from src.analysis.statistics import statistical_tests
+from src.analysis.plotting import qq_plot, top_ten
+from src.analysis.hypotheses import pr_activity
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -9,7 +9,7 @@ for project in projects:
     owner = project.get("owner")
     repo = project.get("repo")
 
-    prs = file_management.get_mined_prs(owner, repo)
+    data_sets = file_management.get_mined_prs(owner, repo)
 
     # create directories if missing.
     file_management.make_project_folder("../data/projects", owner, repo)
@@ -17,6 +17,24 @@ for project in projects:
     ##
     # Create summarizing data.
     ##
+
+    ### PR Activity
+
+    # Participants
+    for data_set in data_sets:
+        pr_activity.generate_participants(owner, repo, data_set)
+
+    # Comments
+    for data_set in data_sets:
+        pr_activity.generate_comments(owner, repo, data_set)
+
+    # Reviews
+    for data_set in data_sets:
+        pr_activity.generate_reviews(owner, repo, data_set)
+
+    ### PR impact
+
+    # PR status
 
     # # Do an analysis based on a monthly period.
     # period_summaries = pull_requests.monthly_analysis(owner, repo, prs.get("all_prs"), prs.get("bot_prs"))
@@ -30,13 +48,13 @@ for project in projects:
     #                                                                  "sim_PRs")
     # all_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("all_prs"), "all_PRs")
 
-    # Do an activity analysis on the PR's with one-to-one matching PR's
-    bot_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("bot_prs_matching"), "bot prs matching")
-    similar_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("non_bot_prs_matching"),
-                                                                     "non bot prs matching")
-
-    # Statistical test on PR variables and their frequencies
-    statistical_tests.perform_statistical_tests(prs.get("bot_prs_matching"), prs.get("non_bot_prs_matching"))
+    # # Do an activity analysis on the PR's with one-to-one matching PR's
+    # bot_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("performance_labeled_bot_prs"), "performance_labeled_bot_prs")
+    # similar_pr_activity_summary = pull_requests.pr_activity_analysis(owner, repo, prs.get("performance_labeled_all_prs"),
+    #                                                                  "performance_labeled_all_prs")
+    #
+    # # Statistical test on PR variables and their frequencies
+    # statistical_tests.perform_statistical_tests(prs.get("performance_labeled_bot_prs"), prs.get("performance_labeled_all_prs"))
 
     #
     # summary = {

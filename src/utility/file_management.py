@@ -16,6 +16,8 @@ def make_project_folder(path, owner, repo):
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "frequency")
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "pie")
     make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "boxplot")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "top_ten")
+    make_folder(path + "/" + owner + "/" + repo + "/" + "images" + "/" + "graphs" + "/" + "qq")
 
 
 def make_folder(path):
@@ -79,26 +81,31 @@ def get_graphql_parameters():
 
 
 def get_mined_prs(owner, repo):
-    prs = {}
+    prs = []
 
-    path = "../data/projects/{owner}/{repo}".format(owner=owner, repo=repo)
+    path = f"../data/projects/{owner}/{repo}"
 
-    files = [
-        ("allPRs", "all_prs"),
-        ("botPRs", "bot_prs"),
-        ("similarToBotPRs", "similar_to_bot_prs"),
-        ("botPRsMatching", "bot_prs_matching"),
-        ("nonBotPrsMatching", "non_bot_prs_matching"),
+    comparison_data_sets = [
+        # (bot PR's file name, all PR's file name, data set name)
+        ("botPRs", "allPRs", "D")
     ]
 
-    for file in files:
-        full_path = path + "/{file_name}.json".format(file_name=file[0])
+    for data_sets in comparison_data_sets:
+        bot_prs_full_path = path + f"/{data_sets[0]}.json"
+        non_bot_prs_full_path = path + f"/{data_sets[0]}.json"
 
-        name = file[1]
+        bot_prs_file = open(bot_prs_full_path, "r")
+        non_bot_prs_file = open(non_bot_prs_full_path, "r")
 
-        file = open(full_path, "r")
+        prs.append({
+            "name": data_sets[2],
+            "bot_prs_name": "Bot PR's",
+            "non_bot_prs_name": "Similar PR's'",
+            "bot_prs": json.loads(bot_prs_file.read()),
+            "non_bot_prs": json.loads(non_bot_prs_file.read())
+        })
 
-        prs[name] = json.loads(file.read())
-        file.close()
+        bot_prs_file.close()
+        non_bot_prs_file.close()
 
     return prs

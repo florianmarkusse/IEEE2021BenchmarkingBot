@@ -137,6 +137,12 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
     for result in results:
         pull_requests.append(result.get("node"))
 
+    # Remove "totalCount" extra depth for ease-of-use.
+    for pr in pull_requests:
+        pr["reviews"] = pr["reviews"]["totalCount"]
+        pr["comments"] = pr["comments"]["totalCount"]
+        pr["commits"] = pr["commits"]["totalCount"]
+
     return pull_requests
 
 

@@ -61,7 +61,7 @@ def find_one_to_one(bot_pr, all_prs):
     if bot_pr["closed"] and len(bot_pr["changedSourceFiles"]) > 1:
         one_to_one_matches = [candidate_match for candidate_match in all_prs if
                               bot_pr["number"] != candidate_match["number"] and
-                              bot_pr["merged"] == candidate_match["merged"] and
+                              candidate_match["merged"] and
                               bot_pr["closed"] == candidate_match["closed"] and
                               are_dates_within_x_days(get_date_from_string(bot_pr["createdAt"]),
                                                       get_date_from_string(candidate_match["createdAt"]),

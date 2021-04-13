@@ -2,7 +2,7 @@ from src.analysis import data_printer
 from src.analysis.plotting import combo, frequency_graph, scatter_graph, pie, boxplot
 from src.utility.helpers import periodize_prs, categorize_prs, get_date_from_string
 from src.analysis.helpers import split_prs_into_lists
-from statistics import mean, median
+from tests import mean, median
 
 
 def monthly_analysis(owner, repo, all_prs, bot_prs):
@@ -162,6 +162,7 @@ def pr_activity_analysis(owner, repo, prs, pr_type):
     """
 
     variables = split_prs_into_lists(prs)
+    print(variables)
 
     # Create frequency bar charts for the different types of activity in PR's
     frequency_graph.frequency_analysis(owner, repo, pr_type, variables["number_of_comments"], "Comments per PR",

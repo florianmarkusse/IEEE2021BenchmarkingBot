@@ -28,8 +28,6 @@ def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
 
     for cut_off in cut_offs:
         path = helpers.get_graph_path(owner, repo) + "/frequency/{pr_type}_{file_name}{cut_off}.png".format(
-            owner=owner,
-            repo=repo,
             pr_type=pr_type,
             file_name=file_name,
             cut_off=cut_off

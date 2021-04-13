@@ -36,11 +36,11 @@
     "description": ""
   },
   {
-    "query": "author { login }",
+    "query": "baseRefName",
     "description": ""
   },
   {
-    "query": "participants { totalCount }",
+    "query": "author { login }",
     "description": ""
   },
   {

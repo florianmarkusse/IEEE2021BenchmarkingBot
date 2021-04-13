@@ -7,7 +7,7 @@ from src.utility.helpers import get_only_files_with_extensions
 from src.utility.file_management import get_extensions
 
 per_page_number = 30  # max 100 per GitHub API
-error_message = "GitHub REST API does not have the file changed."
+error_message = "GitHub REST API does not have the file(s) changed."
 
 
 def get_changed_files_pull_page(owner, repo, pull_number, page, token):

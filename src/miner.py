@@ -1,9 +1,6 @@
 import datetime
 
-from src.mining.graphql import pull_requests
-from src.mining.rest import changed_files
-from src.mining.rest import bot_caller
-from src.mining.enhancement import enhancement
+from src.mining import collector, matcher
 from utility import file_management
 from utility import helpers
 
@@ -17,10 +14,9 @@ token = file_management.get_token()
 graphql_parameters = file_management.get_graphql_parameters()
 
 # Standard query to collect PR's
-standard_query = "is:pr sort:created-asc"
+standard_query = "is:pr is:closed sort:created-asc"
 
 for project in projects:
-
     owner = project.get("owner")
     repo = project.get("repo")
     bot_query = project.get("botQuery")
@@ -29,101 +25,25 @@ for project in projects:
 
     print("Mining PR's from project {owner}/{repo}".format(owner=owner, repo=repo))
 
-    print("Collecting PR's with bot contribution")
-    bot_prs = pull_requests.get_prs(
-        owner,
-        repo,
-        standard_query + " " + bot_query,
-        start_date,
-        helpers.get_graphql_attributes(graphql_parameters),
-        token
-    )
+    bot_prs = collector.collect_and_enrich(owner, repo, standard_query + " " + bot_query, start_date,
+                                           helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                           "botPRs", token)
+    all_prs = collector.collect_and_enrich(owner, repo, standard_query, start_date,
+                                           helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                           "allPRs", token)
 
-    number_source_files_changed = []
-    additions = []
-    deletions = []
+    # Find Matchings.
+    matcher.do_matchings(owner, repo, bot_prs, all_prs)
 
-    # Add which files were changed in this PR.
-    # In GraphQL it is only possible to get the number of files changed which includes documentation files
-    # which is undesirable to get like to like comparison of PRs with bot usage and without bot usage.
-    print("Collecting PR's with bot contribution changed files")
-    changes = changed_files.get_changes(owner, repo, bot_prs, token)
-
-    min_max_source_files_changed = (min(changes["source_files_changed"]), max(changes["source_files_changed"]))
-    min_max_additions = (min(changes["additions"]), max(changes["additions"]))
-    min_max_deletions = (min(changes["deletions"]), max(changes["deletions"]))
-
-    # Add which users called for a bot contribution in this PR. Done using REST as it is easier and follows the same
-    # procedure as collecting the changed files.
-    print("Collecting PR's with bot contribution caller(s)")
-    callers = bot_caller.get_bot_callers_prs(owner, repo, bot_prs, bot_call_string, token)
-
-    # Want to add 2 members for each bot PR:
-    #   - "human" comments: The number of comments made by human contributors to human contributors. Note that this
-    #   number excludes the contribution by the benchmarking bot as well as the comments asking for a benchmark.
-    #   - participants without benchmarking bot: Simply the number of participants excluding the benchmarking bot, i.e.
-    #   the number of participants minus 1.
-    enhancement.add_human_comments_member(bot_prs)
-    enhancement.add_benchmark_bot_free_participants_member(bot_prs)
-
-    # Collect all PR's
-    print("Collecting all PR's")
-    all_prs = pull_requests.get_prs(
-        owner,
-        repo,
-        standard_query,
-        start_date,
-        helpers.get_graphql_attributes(graphql_parameters),
-        token
-    )
-
-    # Add which files were changed in this PR.
-    # In GraphQL it is only possible to get the number of files changed which includes documentation files
-    # which is undesirable to get like to like comparison of PRs with bot usage and without bot usage.
-    print("Collecting all PR's changed files")
-    changed_files.get_changes(owner, repo, all_prs, token)
-
-    # A subset of all the pr's that have similar source file amount changed and additions / deletions
-    similar_to_bot_prs = []
-
-    for pr in all_prs:
-        if helpers.is_similar(pr, min_max_source_files_changed, min_max_additions, min_max_deletions):
-            if not helpers.pr_is_contained_in_prs(pr, bot_prs):
-                similar_to_bot_prs.append(pr)
-
-    matchings = []
-    for bot_pr in bot_prs:
-        matchings.append((bot_pr, helpers.find_one_to_one(bot_pr, all_prs)))
-
-    bot_matching_prs = []
-    non_bot_matching_prs = []
-
-    for matching in matchings:
-        if len(matching[1]) > 0:
-            bot_matching_prs.append(matching[0])
-            pr_match = matching[1][0]
-            non_bot_matching_prs.append(pr_match)
-
-            for match in matchings:
-                if pr_match in match[1]:
-                    match[1].remove(pr_match)
-
-    # Now have 5 datasets
+    # Now we have the following:
     #   - The PR's where the bot contributes
     #   - All the PR's
-    #   - The PR's that are similar to the bot PR's without bot contribution
     #   - bot PR's one-to-one matched to
     #   - similar PR's
+    #   - performance labeled bot PR's
+    #   - performance labeled all PR's
 
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 
     print(f"Found {len(all_prs)} PR's in total from {start_date} to {current_date}")
     print(f"Found {len(bot_prs)} PR's with bot contribution in total from {start_date} to {current_date}")
-    print(f"Found {len(similar_to_bot_prs)} PR's similar to bot contribution in total from {start_date} to {current_date}")
-    print(f"Found {len(bot_matching_prs)} one-tone-matchings in total from {start_date} to {current_date}")
-
-    file_management.write_data(all_prs, owner, repo, "allPRs")
-    file_management.write_data(bot_prs, owner, repo, "botPRs")
-    file_management.write_data(similar_to_bot_prs, owner, repo, "similarToBotPRs")
-    file_management.write_data(bot_matching_prs, owner, repo, "botPRsMatching")
-    file_management.write_data(non_bot_matching_prs, owner, repo, "nonBotPRsMatching")
