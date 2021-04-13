@@ -80,19 +80,45 @@ def get_graphql_parameters():
     return attributes
 
 
-def get_mined_prs(owner, repo):
+def get_all_mined_prs(owner, repo):
+    path = f"../data/projects/{owner}/{repo}"
+
+    # (bot PR's file name, all PR's file name, data set name)
+    data_set = ("botPRs", "allPRs", "ALL PRS - ALL BOT PRS")
+
+    bot_prs_full_path = path + f"/{data_set[0]}.json"
+    non_bot_prs_full_path = path + f"/{data_set[1]}.json"
+
+    bot_prs_file = open(bot_prs_full_path, "r")
+    non_bot_prs_file = open(non_bot_prs_full_path, "r")
+
+    data_set = {
+        "name": data_set[2],
+        "bot_prs_name": "Bot PR's",
+        "non_bot_prs_name": "Similar PR's'",
+        "bot_prs": json.loads(bot_prs_file.read()),
+        "non_bot_prs": json.loads(non_bot_prs_file.read())
+    }
+
+    bot_prs_file.close()
+    non_bot_prs_file.close()
+
+    return data_set
+
+
+def get_data_sets(owner, repo):
     prs = []
 
     path = f"../data/projects/{owner}/{repo}"
 
     comparison_data_sets = [
         # (bot PR's file name, all PR's file name, data set name)
-        ("botPRs", "allPRs", "D")
+        ("botPRsTest", "allPRsTest", "TEST")
     ]
 
     for data_sets in comparison_data_sets:
         bot_prs_full_path = path + f"/{data_sets[0]}.json"
-        non_bot_prs_full_path = path + f"/{data_sets[0]}.json"
+        non_bot_prs_full_path = path + f"/{data_sets[1]}.json"
 
         bot_prs_file = open(bot_prs_full_path, "r")
         non_bot_prs_file = open(non_bot_prs_full_path, "r")

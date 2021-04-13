@@ -1,0 +1,684 @@
+[
+  {
+    "title": "RFC: Enable threading build by default, but with only 1 thread",
+    "createdAt": "2016-04-22T06:41:04Z",
+    "merged": true,
+    "mergedAt": "2016-04-24T04:17:04Z",
+    "closed": true,
+    "closedAt": "2016-04-24T04:17:04Z",
+    "number": 15997,
+    "additions": 2,
+    "deletions": 2,
+    "baseRefName": "master",
+    "author": {
+      "login": "tkelman"
+    },
+    "reviews": 0,
+    "comments": 5,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "multithreading"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "Make.inc",
+      "src/options.h"
+    ],
+    "changedSourceFiles": [
+      "Make.inc",
+      "src/options.h"
+    ],
+    "callers": [
+      "tkelman"
+    ],
+    "participants": [
+      "jrevels",
+      "tkelman",
+      "nanosoldier",
+      "StefanKarpinski"
+    ],
+    "reviewers": [],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 3,
+    "commenterAndLengths": [
+      [
+        "tkelman",
+        197
+      ],
+      [
+        "nanosoldier",
+        304
+      ],
+      [
+        "jrevels",
+        242
+      ],
+      [
+        "StefanKarpinski",
+        52
+      ],
+      [
+        "jrevels",
+        302
+      ],
+      [
+        "tkelman",
+        49
+      ]
+    ]
+  },
+  {
+    "title": "Improve UnitRange indexing performance",
+    "createdAt": "2016-04-27T17:42:34Z",
+    "merged": true,
+    "mergedAt": "2016-05-01T09:16:38Z",
+    "closed": true,
+    "closedAt": "2016-05-01T09:16:38Z",
+    "number": 16078,
+    "additions": 15,
+    "deletions": 6,
+    "baseRefName": "master",
+    "author": {
+      "login": "timholy"
+    },
+    "reviews": 0,
+    "comments": 4,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/range.jl",
+      "test/ranges.jl"
+    ],
+    "changedSourceFiles": [
+      "base/range.jl",
+      "test/ranges.jl"
+    ],
+    "callers": [
+      "timholy",
+      "jrevels"
+    ],
+    "participants": [
+      "timholy",
+      "jrevels",
+      "nanosoldier"
+    ],
+    "reviewers": [],
+    "humanComments": 0,
+    "benchmarkBotFreeParticipants": 2,
+    "commenterAndLengths": [
+      [
+        "timholy",
+        140
+      ],
+      [
+        "timholy",
+        144
+      ],
+      [
+        "timholy",
+        56
+      ],
+      [
+        "jrevels",
+        150
+      ],
+      [
+        "nanosoldier",
+        327
+      ]
+    ]
+  },
+  {
+    "title": "compute `inline_worthy` after inference and cache it",
+    "createdAt": "2016-05-03T18:33:23Z",
+    "merged": true,
+    "mergedAt": "2016-05-05T04:27:08Z",
+    "closed": true,
+    "closedAt": "2016-05-05T04:27:08Z",
+    "number": 16186,
+    "additions": 71,
+    "deletions": 75,
+    "baseRefName": "master",
+    "author": {
+      "login": "JeffBezanson"
+    },
+    "reviews": 0,
+    "comments": 2,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/inference.jl",
+      "src/alloc.c",
+      "src/dump.c",
+      "src/jltypes.c",
+      "src/julia.h"
+    ],
+    "changedSourceFiles": [
+      "base/inference.jl",
+      "src/alloc.c",
+      "src/dump.c",
+      "src/jltypes.c",
+      "src/julia.h"
+    ],
+    "callers": [
+      "JeffBezanson"
+    ],
+    "participants": [
+      "JeffBezanson",
+      "nanosoldier"
+    ],
+    "reviewers": [],
+    "humanComments": 0,
+    "benchmarkBotFreeParticipants": 1,
+    "commenterAndLengths": [
+      [
+        "JeffBezanson",
+        34
+      ],
+      [
+        "JeffBezanson",
+        52
+      ],
+      [
+        "nanosoldier",
+        327
+      ]
+    ]
+  },
+  {
+    "title": "Make arrays and ranges hash and compare equal",
+    "createdAt": "2016-05-17T09:52:40Z",
+    "merged": true,
+    "mergedAt": "2017-12-21T19:54:04Z",
+    "closed": true,
+    "closedAt": "2017-12-21T19:54:04Z",
+    "number": 16401,
+    "additions": 329,
+    "deletions": 82,
+    "baseRefName": "master",
+    "author": {
+      "login": "nalimilan"
+    },
+    "reviews": 17,
+    "comments": 92,
+    "commits": 11,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "breaking"
+          }
+        },
+        {
+          "node": {
+            "name": "hashing"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/abstractarray.jl",
+      "base/char.jl",
+      "base/hashing.jl",
+      "base/hashing2.jl",
+      "base/irrationals.jl",
+      "base/operators.jl",
+      "base/range.jl",
+      "base/traits.jl",
+      "stdlib/Dates/src/periods.jl",
+      "stdlib/Dates/src/ranges.jl",
+      "stdlib/Dates/test/periods.jl",
+      "stdlib/Dates/test/ranges.jl",
+      "test/abstractarray.jl",
+      "test/arrayops.jl",
+      "test/broadcast.jl",
+      "test/char.jl",
+      "test/functional.jl",
+      "test/hashing.jl",
+      "test/iterators.jl",
+      "test/math.jl",
+      "test/numbers.jl",
+      "test/random.jl",
+      "test/ranges.jl",
+      "test/reduce.jl",
+      "test/sparse/sparse.jl",
+      "test/sparse/sparsevector.jl",
+      "test/tuple.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/char.jl",
+      "base/hashing.jl",
+      "base/hashing2.jl",
+      "base/irrationals.jl",
+      "base/operators.jl",
+      "base/range.jl",
+      "base/traits.jl",
+      "stdlib/Dates/src/periods.jl",
+      "stdlib/Dates/src/ranges.jl",
+      "stdlib/Dates/test/periods.jl",
+      "stdlib/Dates/test/ranges.jl",
+      "test/abstractarray.jl",
+      "test/arrayops.jl",
+      "test/broadcast.jl",
+      "test/char.jl",
+      "test/functional.jl",
+      "test/hashing.jl",
+      "test/iterators.jl",
+      "test/math.jl",
+      "test/numbers.jl",
+      "test/random.jl",
+      "test/ranges.jl",
+      "test/reduce.jl",
+      "test/sparse/sparse.jl",
+      "test/sparse/sparsevector.jl",
+      "test/tuple.jl"
+    ],
+    "callers": [
+      "tkelman"
+    ],
+    "participants": [
+      "StefanKarpinski",
+      "JeffBezanson",
+      "yurivish",
+      "nalimilan",
+      "toivoh",
+      "tkelman",
+      "oscardssmith",
+      "nanosoldier",
+      "vchuravy",
+      "timholy"
+    ],
+    "reviewers": [
+      "quinnj",
+      "nalimilan",
+      "tkelman"
+    ],
+    "humanComments": 90,
+    "benchmarkBotFreeParticipants": 9,
+    "commenterAndLengths": [
+      [
+        "nalimilan",
+        1684
+      ],
+      [
+        "nalimilan",
+        565
+      ],
+      [
+        "StefanKarpinski",
+        58
+      ],
+      [
+        "StefanKarpinski",
+        205
+      ],
+      [
+        "StefanKarpinski",
+        423
+      ],
+      [
+        "nalimilan",
+        714
+      ],
+      [
+        "toivoh",
+        229
+      ],
+      [
+        "StefanKarpinski",
+        72
+      ],
+      [
+        "nalimilan",
+        194
+      ],
+      [
+        "StefanKarpinski",
+        283
+      ],
+      [
+        "StefanKarpinski",
+        201
+      ],
+      [
+        "nalimilan",
+        439
+      ],
+      [
+        "StefanKarpinski",
+        74
+      ],
+      [
+        "toivoh",
+        322
+      ],
+      [
+        "StefanKarpinski",
+        20
+      ],
+      [
+        "nalimilan",
+        430
+      ],
+      [
+        "StefanKarpinski",
+        27
+      ],
+      [
+        "nalimilan",
+        83
+      ],
+      [
+        "StefanKarpinski",
+        40
+      ],
+      [
+        "StefanKarpinski",
+        70
+      ],
+      [
+        "nalimilan",
+        323
+      ],
+      [
+        "tkelman",
+        69
+      ],
+      [
+        "nalimilan",
+        206
+      ],
+      [
+        "timholy",
+        1743
+      ],
+      [
+        "nalimilan",
+        652
+      ],
+      [
+        "timholy",
+        35
+      ],
+      [
+        "timholy",
+        102
+      ],
+      [
+        "nalimilan",
+        1584
+      ],
+      [
+        "StefanKarpinski",
+        100
+      ],
+      [
+        "nalimilan",
+        2510
+      ],
+      [
+        "nalimilan",
+        75
+      ],
+      [
+        "tkelman",
+        47
+      ],
+      [
+        "nanosoldier",
+        325
+      ],
+      [
+        "nalimilan",
+        177
+      ],
+      [
+        "tkelman",
+        172
+      ],
+      [
+        "nalimilan",
+        128
+      ],
+      [
+        "nalimilan",
+        5
+      ],
+      [
+        "StefanKarpinski",
+        25
+      ],
+      [
+        "nalimilan",
+        977
+      ],
+      [
+        "nalimilan",
+        1217
+      ],
+      [
+        "nalimilan",
+        1128
+      ],
+      [
+        "StefanKarpinski",
+        89
+      ],
+      [
+        "nalimilan",
+        1542
+      ],
+      [
+        "StefanKarpinski",
+        187
+      ],
+      [
+        "nalimilan",
+        1370
+      ],
+      [
+        "StefanKarpinski",
+        67
+      ],
+      [
+        "nalimilan",
+        920
+      ],
+      [
+        "nalimilan",
+        4182
+      ],
+      [
+        "StefanKarpinski",
+        55
+      ],
+      [
+        "nalimilan",
+        948
+      ],
+      [
+        "oscardssmith",
+        183
+      ],
+      [
+        "StefanKarpinski",
+        475
+      ],
+      [
+        "nalimilan",
+        318
+      ],
+      [
+        "StefanKarpinski",
+        211
+      ],
+      [
+        "nalimilan",
+        151
+      ],
+      [
+        "StefanKarpinski",
+        103
+      ],
+      [
+        "StefanKarpinski",
+        211
+      ],
+      [
+        "nalimilan",
+        1143
+      ],
+      [
+        "StefanKarpinski",
+        87
+      ],
+      [
+        "nalimilan",
+        516
+      ],
+      [
+        "oscardssmith",
+        71
+      ],
+      [
+        "nalimilan",
+        127
+      ],
+      [
+        "StefanKarpinski",
+        74
+      ],
+      [
+        "nalimilan",
+        364
+      ],
+      [
+        "oscardssmith",
+        97
+      ],
+      [
+        "StefanKarpinski",
+        296
+      ],
+      [
+        "nalimilan",
+        40
+      ],
+      [
+        "StefanKarpinski",
+        144
+      ],
+      [
+        "nalimilan",
+        982
+      ],
+      [
+        "StefanKarpinski",
+        1335
+      ],
+      [
+        "nalimilan",
+        404
+      ],
+      [
+        "StefanKarpinski",
+        184
+      ],
+      [
+        "nalimilan",
+        863
+      ],
+      [
+        "StefanKarpinski",
+        80
+      ],
+      [
+        "nalimilan",
+        140
+      ],
+      [
+        "StefanKarpinski",
+        289
+      ],
+      [
+        "nalimilan",
+        1076
+      ],
+      [
+        "nalimilan",
+        69
+      ],
+      [
+        "nalimilan",
+        174
+      ],
+      [
+        "timholy",
+        113
+      ],
+      [
+        "nalimilan",
+        209
+      ],
+      [
+        "yurivish",
+        547
+      ],
+      [
+        "nalimilan",
+        137
+      ],
+      [
+        "StefanKarpinski",
+        223
+      ],
+      [
+        "vchuravy",
+        177
+      ],
+      [
+        "nalimilan",
+        295
+      ],
+      [
+        "vchuravy",
+        93
+      ],
+      [
+        "JeffBezanson",
+        314
+      ],
+      [
+        "nalimilan",
+        369
+      ],
+      [
+        "StefanKarpinski",
+        358
+      ],
+      [
+        "StefanKarpinski",
+        190
+      ],
+      [
+        "nalimilan",
+        373
+      ],
+      [
+        "nalimilan",
+        111
+      ]
+    ]
+  }
+]

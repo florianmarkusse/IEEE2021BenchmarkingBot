@@ -9,7 +9,7 @@ for project in projects:
     owner = project.get("owner")
     repo = project.get("repo")
 
-    data_sets = file_management.get_mined_prs(owner, repo)
+    data_sets = file_management.get_data_sets(owner, repo)
 
     # create directories if missing.
     file_management.make_project_folder("../data/projects", owner, repo)
@@ -20,40 +20,42 @@ for project in projects:
 
     ### PR Activity
 
-    # Participants
-    for data_set in data_sets:
-        pr_activity.generate_participants(owner, repo, data_set)
+    # # Participants
+    # for data_set in data_sets:
+    #     pr_activity.generate_participants(owner, repo, data_set)
 
-    # Comments
+    # # Comments
+    # for data_set in data_sets:
+    #     pr_activity.generate_comments(owner, repo, data_set)
+    #
+    # # Reviews
+    # for data_set in data_sets:
+    #     pr_activity.generate_reviews(owner, repo, data_set)
+    #
+    # ### PR impact
+    #
+    # # PR status
+    # for data_set in data_sets:
+    #     pr_impact.generate_pr_status(owner, repo, data_set)
+    #
+    # # Commits
+    # for data_set in data_sets:
+    #     pr_impact.generate_commits(owner, repo, data_set)
+    #
+    # # Source files changed
+    # for data_set in data_sets:
+    #     pr_impact.generate_source_files_changed(owner, repo, data_set)
+    #
+    # # Additions - Deletions
+    # for data_set in data_sets:
+    #     pr_impact.generate_additions_deletions(owner, repo, data_set)
+    #
+    # ### PR contribution
+    # # TODO add allprs and botprs data set as well.
     for data_set in data_sets:
-        pr_activity.generate_comments(owner, repo, data_set)
-
-    # Reviews
-    for data_set in data_sets:
-        pr_activity.generate_reviews(owner, repo, data_set)
-
-    ### PR impact
-
-    # PR status
-    for data_set in data_sets:
-        pr_impact.generate_pr_status(owner, repo, data_set)
-
-    # Commits
-    for data_set in data_sets:
-        pr_impact.generate_commits(owner, repo, data_set)
-
-    # Source files changed
-    for data_set in data_sets:
-        pr_impact.generate_source_files_changed(owner, repo, data_set)
-
-    # Additions - Deletions
-    for data_set in data_sets:
-        pr_impact.generate_additions_deletions(owner, repo, data_set)
-
-    ### PR contribution
-    # TODO add allprs and botprs data set as well.
-    for data_set in data_sets:
-        pr_contribution.generate_pr_contribution(owner, repo, data_set)
+        pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
+    # all_data = file_management.get_all_mined_prs(owner, repo)
+    # pr_contribution.generate_pr_contribution(owner, repo, data_set, False)
 
 
     # # Do an analysis based on a monthly period.

@@ -3,6 +3,7 @@ import statistics
 from src.analysis.plotting import qq_plot, top_ten
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
 
+
 def generate_participants(owner, repo, data_set):
     # Q-Q plot
     distributions = get_distributions(data_set, "benchmarkBotFreeParticipants")
@@ -21,13 +22,13 @@ def generate_participants(owner, repo, data_set):
                                "participants")
 
 
-def comments_printer(owner, repo, data_set, pr_type):
+def get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, pr_type):
     # comments length distribution
     prs_total_comment_lengths_without_bot = []
     for pr in data_set[pr_type]:
         bot_indices = []
         for pair in pr["commenterAndLengths"]:
-            if pair[0] != get_bot_username(owner, repo):
+            if pair[0] == get_bot_username(owner, repo):
                 bot_indices.append(pr["commenterAndLengths"].index(pair))
         non_countable_indices = []
         for index in bot_indices:
@@ -42,12 +43,18 @@ def comments_printer(owner, repo, data_set, pr_type):
 
         prs_total_comment_lengths_without_bot.append(total_length)
 
+    return prs_total_comment_lengths_without_bot
+
+
+def comments_printer(owner, repo, data_set, pr_type):
+    comment_lengths = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, pr_type)
+
     print(
-        f"{owner}/{repo}: Median comment length for {data_set['name']}: {pr_type}: "
-        f"{statistics.median(prs_total_comment_lengths_without_bot)}")
+        f"{owner}/{repo}: Median total comment length for {data_set['name']}: {pr_type}: "
+        f"{statistics.median(comment_lengths)}")
     print(
-        f"{owner}/{repo}: Average comment length for {data_set['name']}: {pr_type}: "
-        f"{statistics.mean(prs_total_comment_lengths_without_bot)}")
+        f"{owner}/{repo}: Average total comment length for {data_set['name']}: {pr_type}: "
+        f"{statistics.mean(comment_lengths)}")
 
 
 def generate_comments(owner, repo, data_set):
@@ -73,6 +80,14 @@ def generate_comments(owner, repo, data_set):
                         data_set["non_bot_prs_name"], "comments")
 
     # comments length distribution
+    comment_lengths_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "bot_prs")
+    comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "non_bot_prs")
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], comment_lengths_bot_prs,
+                        comment_lengths_non_bot_prs,
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], "comment_lengths")
+
     comments_printer(owner, repo, data_set, "bot_prs")
     comments_printer(owner, repo, data_set, "non_bot_prs")
 
@@ -86,7 +101,7 @@ def generate_reviews(owner, repo, data_set):
                         data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "reviews")
 
-    reviews_categorized = categorize_data_set(owner, repo, data_set, "reviews")
+    reviews_categorized = categorize_data_set(owner, repo, data_set, "reviewers")
 
     top_ten.create_top_ten_prs(owner, repo, data_set["name"], data_set["bot_prs"], reviews_categorized[0],
                                data_set["bot_prs_name"],

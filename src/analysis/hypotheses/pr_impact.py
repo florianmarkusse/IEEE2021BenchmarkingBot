@@ -16,7 +16,7 @@ def pr_status_printer(owner, repo, data_set, pr_type):
     print(f"{owner}/{repo}: # of merges for {data_set['name']}: {pr_type}: {total_merges}")
     print(f"{owner}/{repo}: # of closes for {data_set['name']}: {pr_type}: {total_closes}")
     print(
-        f"{owner}/{repo}: merge/close for {data_set['name']}: {pr_type}: {total_merges / (total_closes + total_merges)}")
+        f"{owner}/{repo}: merge probability for PR opened for {data_set['name']}: {pr_type}: {total_merges / (total_closes + total_merges)}")
 
 
 def generate_pr_status(owner, repo, data_set):
