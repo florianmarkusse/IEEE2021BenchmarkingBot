@@ -10,6 +10,7 @@ for project in projects:
     repo = project.get("repo")
 
     data_sets = file_management.get_data_sets(owner, repo)
+    all_data = file_management.get_all_mined_prs(owner, repo)
 
     # create directories if missing.
     file_management.make_project_folder("../data/projects", owner, repo)
@@ -17,6 +18,11 @@ for project in projects:
     ##
     # Create summarizing data.
     ##
+
+    # Data sets sizes
+    # for data_set in data_sets:
+    #     print(f" {data_set['name']}: bot PR's size: {len(data_set['bot_prs'])}")
+    #     print(f" {data_set['name']}: non bot PR's size: {len(data_set['non_bot_prs'])}")
 
     ### PR Activity
 
@@ -28,9 +34,9 @@ for project in projects:
     # for data_set in data_sets:
     #     pr_activity.generate_comments(owner, repo, data_set)
     #
-    # # Reviews
-    # for data_set in data_sets:
-    #     pr_activity.generate_reviews(owner, repo, data_set)
+    # Reviews
+    for data_set in data_sets:
+        pr_activity.generate_reviews(owner, repo, data_set)
     #
     # ### PR impact
     #
@@ -49,13 +55,12 @@ for project in projects:
     # # Additions - Deletions
     # for data_set in data_sets:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set)
-    #
+
     # ### PR contribution
-    # # TODO add allprs and botprs data set as well.
-    for data_set in data_sets:
-        pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
-    # all_data = file_management.get_all_mined_prs(owner, repo)
-    # pr_contribution.generate_pr_contribution(owner, repo, data_set, False)
+    # pr_contribution.generate_pr_contribution(owner, repo, all_data, False)
+    # for data_set in data_sets:
+    #     pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
+
 
 
     # # Do an analysis based on a monthly period.

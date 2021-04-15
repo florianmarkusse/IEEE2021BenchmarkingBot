@@ -4,7 +4,7 @@ import matplotlib.ticker as ticker
 from src.analysis import helpers
 
 
-def combo_period_analysis(owner, repo, period_summaries):
+def combo_period_analysis(owner, repo, data_set_name, period_summaries):
     """
     Creates a combo chart consisting of a stacked bar chart and line to analyze the usage over time.
 
@@ -34,7 +34,7 @@ def combo_period_analysis(owner, repo, period_summaries):
     ax1.bar(periods, frequency_bot_pr_per_month, 0.35, label="Frequency bot PR's")
     ax1.bar(periods, frequency_non_bot_pr_per_month, 0.35, label="Frequency non-bot PR's",
             bottom=frequency_bot_pr_per_month)
-    ax2.plot(periods, fraction, color="gray")
+    ax2.plot(periods, fraction, color="red")
 
     ax1.set_ylabel('Frequency')
     ax1.legend()
@@ -47,6 +47,6 @@ def combo_period_analysis(owner, repo, period_summaries):
     fig.autofmt_xdate()
 
     plt.tight_layout(pad=0)
-    plt.savefig(helpers.get_graph_path(owner, repo) + "/combo/bot_pr_periodized.png", transparent=True)
+    plt.savefig(helpers.get_graph_path(owner, repo) + f"/combo/{data_set_name}_bot_pr_periodized.png", transparent=True)
 
     plt.show()

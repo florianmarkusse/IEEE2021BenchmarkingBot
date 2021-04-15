@@ -1,6 +1,6 @@
 import statistics
 
-from src.analysis.plotting import qq_plot, top_ten
+from src.analysis.plotting import qq_plot, top_ten, scatter_graph
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
 
 

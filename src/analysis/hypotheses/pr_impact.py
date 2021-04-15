@@ -1,5 +1,6 @@
 from src.analysis.hypotheses.subroutines import get_distributions
 from src.analysis.plotting import qq_plot
+from src.utility import helpers
 import statistics
 
 
@@ -7,7 +8,13 @@ def pr_status_printer(owner, repo, data_set, pr_type):
     total_merges = 0
     total_closes = 0
 
+    days_until_merged_or_closed = []
+
     for pr in data_set[pr_type]:
+        date_created = helpers.get_date_from_string(pr["createdAt"])
+        date_closed = helpers.get_date_from_string(pr["closedAt"])
+        time_opened = date_closed - date_created
+        days_until_merged_or_closed.append(time_opened.seconds / (24 * 60 * 60))
         if pr["merged"]:
             total_merges += 1
         else:
@@ -17,6 +24,12 @@ def pr_status_printer(owner, repo, data_set, pr_type):
     print(f"{owner}/{repo}: # of closes for {data_set['name']}: {pr_type}: {total_closes}")
     print(
         f"{owner}/{repo}: merge probability for PR opened for {data_set['name']}: {pr_type}: {total_merges / (total_closes + total_merges)}")
+    print(
+        f"{owner}/{repo}: Median days opened until merged/closed for {data_set['name']}: {pr_type}: "
+        f"{statistics.median(days_until_merged_or_closed)}")
+    print(
+        f"{owner}/{repo}: Average days opened until merged/closed for {data_set['name']}: {pr_type}: "
+        f"{statistics.mean(days_until_merged_or_closed)}")
 
 
 def generate_pr_status(owner, repo, data_set):
@@ -29,7 +42,10 @@ def generate_pr_status(owner, repo, data_set):
 def generate_commits(owner, repo, data_set):
     distributions = get_distributions(data_set, "commits")
 
-    qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1], data_set["bot_prs_name"],
+    x_dist = [commit for commit in distributions[0] if commit < 200]
+    y_dist = [commit for commit in distributions[1] if commit < 200]
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist, data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "commits")
 
 

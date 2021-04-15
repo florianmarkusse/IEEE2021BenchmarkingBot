@@ -17,7 +17,8 @@ for project in projects:
     bot_call_string = project.get("botCallString")
 
     data_set_names = [
-        "allPRs"
+        "allPRs",
+        "botPRs",
     ]
 
     for data_set_name in data_set_names:
@@ -26,30 +27,14 @@ for project in projects:
 
         prs = json.loads(file.read())
 
-        for pr in prs:
-            if "comment_lengths" in pr:
-                pr.pop("comment_lengths")
-
-
         file.close()
-
-        print(f"Collecting {data_set_name} participants/bot callers/comment lengths")
-        participants_bot_callers_comment_lengths.get_bot_caller_participants_commenters_in_prs(owner, repo, prs,
-                                                                                               bot_call_string, token)
-        file_management.write_data(prs, owner, repo, data_set_name)
-
-        print(f"Collecting {data_set_name} reviewers")
-        reviewers.get_bot_callers_prs(owner, repo, prs, token)
-        file_management.write_data(prs, owner, repo, data_set_name)
 
         print(f"Enriching {data_set_name} with human comments")
         enhancement.add_human_comments_member(prs)
         file_management.write_data(prs, owner, repo, data_set_name)
 
         print(f"Enriching {data_set_name} with benchmark bot free participants")
-        enhancement.add_benchmark_bot_free_participants_member(prs)
-        file_management.write_data(prs, owner, repo, data_set_name)
-
+        enhancement.add_benchmark_bot_free_participants_member(owner, repo, prs)
         file_management.write_data(prs, owner, repo, data_set_name)
 
 

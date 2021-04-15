@@ -113,7 +113,9 @@ def get_data_sets(owner, repo):
 
     comparison_data_sets = [
         # (bot PR's file name, all PR's file name, data set name)
-        ("botPRsTest", "allPRsTest", "TEST")
+        ("botPrsPerformanceLabels", "nonBotPrsPerformanceLabels", "A"),
+        ("botPRsOneToOne", "nonBotPRsOneToOne", "B"),
+        ("botPRsChangedSourceFilesLargerThanOne", "nonBotPRsChangedSourceFilesLargerThanOne", "C")
     ]
 
     for data_sets in comparison_data_sets:

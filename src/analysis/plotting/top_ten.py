@@ -14,8 +14,6 @@ def create_top_ten_prs(owner, repo, data_set_name, prs, categorized_prs, pr_type
                                         sorted(attribute_occurrence_normalized.items(), key=lambda ele: ele[1],
                                                reverse=True)}
 
-    print(descending_attributes_normalized)
-
     top_ten_attribute_occurrences_normalized = {}
 
     for attribute in list(descending_attributes_normalized)[0:10]:
@@ -30,7 +28,9 @@ def create_top_ten_prs(owner, repo, data_set_name, prs, categorized_prs, pr_type
 
     plt.barh(top_attributes, top_normalized_values)
     plt.ylabel("Top " + attribute_label)
-    plt.xlabel('Normalized frequency')
+
+    ylab = attribute_label[:-1]
+    plt.xlabel(f'Probability of being a {ylab.lower()} in a PR')
 
     plt.xlim(left=0.0, right=1.0)
 

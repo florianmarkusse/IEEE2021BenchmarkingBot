@@ -27,7 +27,7 @@ def do_one_to_one_matching(owner, repo, bot_prs, all_prs, file_name):
                     match[1].remove(pr_match)
 
     file_management.write_data(bot_matching_prs, owner, repo, "botPRs" + file_name)
-    file_management.write_data(non_bot_matching_prs, owner, repo, "botPRs" + file_name)
+    file_management.write_data(non_bot_matching_prs, owner, repo, "nonBotPRs" + file_name)
 
 
 def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_name):
@@ -43,7 +43,7 @@ def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_
             changed_source_all_prs.append(pr)
 
     file_management.write_data(changed_source_bot_prs, owner, repo, "botPRs" + file_name)
-    file_management.write_data(changed_source_all_prs, owner, repo, "botPRs" + file_name)
+    file_management.write_data(changed_source_all_prs, owner, repo, "nonBotPRs" + file_name)
 
 
 def do_performance_label_matching(owner, repo, bot_prs, all_prs, file_name):
@@ -65,7 +65,7 @@ def do_performance_label_matching(owner, repo, bot_prs, all_prs, file_name):
             performance_labeled_all_prs.append(pr)
 
     file_management.write_data(performance_labeled_bot_prs, owner, repo, "botPRs" + file_name)
-    file_management.write_data(performance_labeled_all_prs, owner, repo, "botPRs" + file_name)
+    file_management.write_data(performance_labeled_all_prs, owner, repo, "nonBotPRs" + file_name)
 
     return {
         "bot_prs": performance_labeled_bot_prs,
