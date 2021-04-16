@@ -1,3 +1,5 @@
 __pycache__/
 token.txt
 .vscode
+.idea/misc.xml
+.idea/MSCdata.iml
