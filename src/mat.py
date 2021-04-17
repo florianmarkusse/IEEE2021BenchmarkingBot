@@ -2,8 +2,8 @@ import datetime
 
 from src.mining import collector, matcher
 from src.mining.enhancement import enhancement
-from utility import file_management
-from utility import helpers
+from src.utility import file_management
+from src.utility import helpers
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()

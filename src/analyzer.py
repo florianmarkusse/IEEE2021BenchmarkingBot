@@ -1,4 +1,4 @@
-from utility import file_management
+from src.utility import file_management
 from src.analysis.plotting import qq_plot, top_ten
 from src.analysis.hypotheses import pr_activity, pr_impact, pr_contribution
 
@@ -34,9 +34,9 @@ for project in projects:
     # for data_set in data_sets:
     #     pr_activity.generate_comments(owner, repo, data_set)
     #
-    # Reviews
-    for data_set in data_sets:
-        pr_activity.generate_reviews(owner, repo, data_set)
+    # # Reviews
+    # for data_set in data_sets:
+    #     pr_activity.generate_reviews(owner, repo, data_set)
     #
     # ### PR impact
     #
@@ -56,10 +56,10 @@ for project in projects:
     # for data_set in data_sets:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set)
 
-    # ### PR contribution
-    # pr_contribution.generate_pr_contribution(owner, repo, all_data, False)
-    # for data_set in data_sets:
-    #     pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
+    ### PR contribution
+    pr_contribution.generate_pr_contribution(owner, repo, all_data, False)
+    for data_set in data_sets:
+        pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
 
 
 

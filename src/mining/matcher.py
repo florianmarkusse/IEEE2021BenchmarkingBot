@@ -3,7 +3,7 @@ from src.utility import helpers, file_management
 
 def do_matchings(owner, repo, bot_prs, all_prs):
     do_one_to_one_matching(owner, repo, bot_prs, all_prs, "OneToOne")
-    do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, "ChangedSourceFilesLargerThanOne")
+    do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, "ChangedSourceFilesAtLeast")
     do_performance_label_matching(owner, repo, bot_prs, all_prs, "PerformanceLabels")
 
 
@@ -31,19 +31,23 @@ def do_one_to_one_matching(owner, repo, bot_prs, all_prs, file_name):
 
 
 def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_name):
-    changed_source_bot_prs = []
-    changed_source_all_prs = []
 
-    for pr in bot_prs:
-        if pr["closed"] and len(pr["changedSourceFiles"]) > 1:
-            changed_source_bot_prs.append(pr)
 
-    for pr in all_prs:
-        if pr["closed"] and len(pr["changedSourceFiles"]) > 1:
-            changed_source_all_prs.append(pr)
+    at_least_source_files = [2, 4, 8]
 
-    file_management.write_data(changed_source_bot_prs, owner, repo, "botPRs" + file_name)
-    file_management.write_data(changed_source_all_prs, owner, repo, "nonBotPRs" + file_name)
+    for at_least in at_least_source_files:
+        changed_source_bot_prs = []
+        changed_source_all_prs = []
+        for pr in bot_prs:
+            if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
+                changed_source_bot_prs.append(pr)
+
+        for pr in all_prs:
+            if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
+                changed_source_all_prs.append(pr)
+
+        file_management.write_data(changed_source_bot_prs, owner, repo, "botPRs" + file_name + str(at_least))
+        file_management.write_data(changed_source_all_prs, owner, repo, "nonBotPRs" + file_name + str(at_least))
 
 
 def do_performance_label_matching(owner, repo, bot_prs, all_prs, file_name):
