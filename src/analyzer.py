@@ -26,9 +26,9 @@ for project in projects:
 
     ### PR Activity
 
-    # # Participants
-    # for data_set_pair in data_set_pairs:
-    #     pr_activity.generate_participants(owner, repo, data_set_pair)
+    # Participants
+    for data_set_pair in data_set_pairs:
+        pr_activity.generate_participants(owner, repo, data_set_pair)
 
     # # Comments
     # for data_set_pair in data_set_pairs:
@@ -57,8 +57,8 @@ for project in projects:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set)
 
     ### PR contribution
-    for data_set_pair in data_set_pairs:
-        pr_contribution.generate_pr_contribution(owner, repo, data_set_pair)
+    # for data_set_pair in data_set_pairs:
+    #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
 
 
 

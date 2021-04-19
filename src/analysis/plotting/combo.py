@@ -10,6 +10,7 @@ def combo_period_analysis(owner, repo, data_set_name, period_summaries):
 
     Parameters
     ----------
+    data_set_name :
     owner : The owner of the repository.
     repo : The name of the repository.
     period_summaries : The summaries categorized on a period. Assumed to have the following members:
@@ -48,5 +49,31 @@ def combo_period_analysis(owner, repo, data_set_name, period_summaries):
 
     plt.tight_layout(pad=0)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/combo/{data_set_name}_bot_pr_periodized.png", transparent=True)
+
+    plt.show()
+
+
+def combo_period(owner, repo, data_set_name, period_name, periods, bot_frequency, non_bot_frequency, bot_fraction):
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+
+    ax1.bar(periods, bot_frequency, 0.35, label="Frequency bot PR's")
+    ax1.bar(periods, non_bot_frequency, 0.35, label="Frequency non-bot PR's",
+            bottom=bot_frequency)
+    ax2.plot(periods, bot_fraction, color="red")
+    ax2.set_ylim([0.0, 1.0])
+
+    ax1.set_ylabel('Frequency')
+    ax1.legend()
+
+    ax2.set_ylabel("Fraction bot PR's out of total PR's")
+
+    myLocator = ticker.MultipleLocator(1)
+    ax1.xaxis.set_major_locator(myLocator)
+
+    fig.autofmt_xdate()
+
+    plt.tight_layout(pad=0)
+    plt.savefig(helpers.get_graph_path(owner, repo) + f"/combo/{data_set_name}_{period_name}_bot_pr_periodized.png", transparent=True)
 
     plt.show()

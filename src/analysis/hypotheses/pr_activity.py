@@ -1,6 +1,7 @@
 import statistics
+import collections
 
-from src.analysis.plotting import qq_plot, top_ten, scatter_graph
+from src.analysis.plotting import qq_plot, top_ten, frequency_graph
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
 
 
@@ -10,6 +11,32 @@ def generate_participants(owner, repo, data_set):
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1], data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "participants")
+
+    # Histogram
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Number of participants",
+        list(range(0, 31)),
+        distributions[0],
+        data_set["bot_prs_name"],
+        distributions[1],
+        data_set["non_bot_prs_name"],
+        0.5
+    )
+
+    # bins = list(range(0, 15))
+    #
+    # bot_pr_participants_frequencies = collections.Counter(distributions[0])
+    # bot_pr_values = []
+    # for bin in bins:
+    #     if bin in bot_pr_participants_frequencies.keys():
+    #         bot_pr_values.append(bot_pr_participants_frequencies[bin])
+    #     else:
+    #         bot_pr_values.append(0)
+    # print(bot_pr_values)
+    # print(len(bot_pr_values))
 
     # participant distribution
     participant_categorization = categorize_data_set(owner, repo, data_set, "participants")
@@ -81,7 +108,8 @@ def generate_comments(owner, repo, data_set):
 
     # comments length distribution
     comment_lengths_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "bot_prs")
-    comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "non_bot_prs")
+    comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set,
+                                                                                     "non_bot_prs")
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], comment_lengths_bot_prs,
                         comment_lengths_non_bot_prs,

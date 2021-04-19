@@ -2,6 +2,19 @@ from src.analysis import helpers
 import matplotlib.pyplot as plt
 import collections
 
+def create_overlapping_histogram(owner, repo, data_set_name, x_label, bins, first_values, first_name, second_values,
+                                 second_name, max_value=1.0):
+    plt.hist(first_values, bins, alpha=0.5, label=first_name, color='blue', edgecolor="black", density=True)
+    plt.hist(second_values, bins, alpha=0.5, label=second_name, color='green', edgecolor="black", density=True)
+    plt.xlabel(x_label)
+    plt.legend(loc='upper right')
+    plt.ylim([0, max_value])
+
+    plt.tight_layout(pad=0.04)
+    plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}.png", transparent=True)
+
+    plt.show()
+
 
 def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
     """
