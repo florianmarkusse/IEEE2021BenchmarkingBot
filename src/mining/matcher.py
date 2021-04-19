@@ -1,17 +1,29 @@
 from src.utility import helpers, file_management
+import os
 
 
-def do_matchings(owner, repo, bot_prs, all_prs):
-    do_one_to_one_matching(owner, repo, bot_prs, all_prs, "OneToOne")
-    do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, "ChangedSourceFilesAtLeast")
-    do_performance_label_matching(owner, repo, bot_prs, all_prs, "PerformanceLabels")
+def create_non_bot_prs(owner, repo):
+    mined_prs = file_management.get_all_mined_prs(owner, repo)
+    all_bot_prs = mined_prs.get("bot_prs")
+    all_bot_prs_numbers = [pr["number"] for pr in all_bot_prs]
+    all_prs = mined_prs.get("all_prs")
+
+    all_non_bot_prs = [pr for pr in all_prs if pr["number"] not in all_bot_prs_numbers]
+
+    file_management.write_data(all_non_bot_prs, owner, repo, "nonBotPRs")
 
 
-def do_one_to_one_matching(owner, repo, bot_prs, all_prs, file_name):
+def do_matchings(owner, repo, bot_prs, non_bot_prs):
+    do_one_to_one_matching(owner, repo, bot_prs, non_bot_prs, "OneToOne")
+    do_changed_source_files_larger_matching(owner, repo, bot_prs, non_bot_prs, "ChangedSourceFilesAtLeast")
+    do_performance_label_matching(owner, repo, bot_prs, non_bot_prs, "PerformanceLabels")
+
+
+def do_one_to_one_matching(owner, repo, bot_prs, non_bot_prs, file_name):
     # Find one to one matchings of bot PR's and all PR's
     matchings = []
     for bot_pr in bot_prs:
-        matchings.append((bot_pr, helpers.find_one_to_one(bot_pr, all_prs)))
+        matchings.append((bot_pr, helpers.find_one_to_one(bot_pr, non_bot_prs)))
 
     bot_matching_prs = []
     non_bot_matching_prs = []
@@ -30,9 +42,7 @@ def do_one_to_one_matching(owner, repo, bot_prs, all_prs, file_name):
     file_management.write_data(non_bot_matching_prs, owner, repo, "nonBotPRs" + file_name)
 
 
-def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_name):
-
-
+def do_changed_source_files_larger_matching(owner, repo, bot_prs, non_bot_prs, file_name):
     at_least_source_files = [2, 4, 8]
 
     for at_least in at_least_source_files:
@@ -42,7 +52,7 @@ def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_
             if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
                 changed_source_bot_prs.append(pr)
 
-        for pr in all_prs:
+        for pr in non_bot_prs:
             if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
                 changed_source_all_prs.append(pr)
 
@@ -50,28 +60,15 @@ def do_changed_source_files_larger_matching(owner, repo, bot_prs, all_prs, file_
         file_management.write_data(changed_source_all_prs, owner, repo, "nonBotPRs" + file_name + str(at_least))
 
 
-def do_performance_label_matching(owner, repo, bot_prs, all_prs, file_name):
+def do_performance_label_matching(owner, repo, bot_prs, non_bot_prs, file_name):
     performance_label = {
         "node": {
             "name": "performance"
         }
     }
 
-    performance_labeled_bot_prs = []
-    performance_labeled_all_prs = []
-
-    for pr in bot_prs:
-        if pr["closed"] and performance_label in pr["labels"]["edges"]:
-            performance_labeled_bot_prs.append(pr)
-
-    for pr in all_prs:
-        if pr["closed"] and performance_label in pr["labels"]["edges"]:
-            performance_labeled_all_prs.append(pr)
+    performance_labeled_bot_prs = [pr for pr in bot_prs if performance_label in pr["labels"]["edges"]]
+    performance_labeled_all_prs = [pr for pr in non_bot_prs if performance_label in pr["labels"]["edges"]]
 
     file_management.write_data(performance_labeled_bot_prs, owner, repo, "botPRs" + file_name)
     file_management.write_data(performance_labeled_all_prs, owner, repo, "nonBotPRs" + file_name)
-
-    return {
-        "bot_prs": performance_labeled_bot_prs,
-        "non_bot_prs": performance_labeled_all_prs
-    }

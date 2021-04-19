@@ -84,24 +84,24 @@ def get_all_mined_prs(owner, repo):
     path = f"../data/projects/{owner}/{repo}"
 
     # (bot PR's file name, all PR's file name, data set name)
-    data_set = ("botPRs", "allPRs", "ALL PRS - ALL BOT PRS")
+    data_set = ("botPRs", "nonBotPRs", "BOT PRS - NON BOT PRS")
 
     bot_prs_full_path = path + f"/{data_set[0]}.json"
-    non_bot_prs_full_path = path + f"/{data_set[1]}.json"
+    all_prs_full_path = path + f"/{data_set[1]}.json"
 
     bot_prs_file = open(bot_prs_full_path, "r")
-    non_bot_prs_file = open(non_bot_prs_full_path, "r")
+    all_prs_file = open(all_prs_full_path, "r")
 
     data_set = {
         "name": data_set[2],
         "bot_prs_name": "Bot PR's",
-        "non_bot_prs_name": "Similar PR's'",
+        "non_bot_prs_name": "Non bot PR's",
         "bot_prs": json.loads(bot_prs_file.read()),
-        "non_bot_prs": json.loads(non_bot_prs_file.read())
+        "non_bot_prs": json.loads(all_prs_file.read())
     }
 
     bot_prs_file.close()
-    non_bot_prs_file.close()
+    all_prs_file.close()
 
     return data_set
 
@@ -139,3 +139,35 @@ def get_data_sets(owner, repo):
         non_bot_prs_file.close()
 
     return prs
+
+
+def get_data_set_pairs(owner, repo):
+    path = f"../data/projects/{owner}/{repo}"
+    files_in_dir = os.listdir(path)
+    data_files = [file for file in files_in_dir if file.endswith(".json")]
+
+    data_set_pairs = []
+
+    for data_file in data_files:
+        pair_file = "non" + data_file[0].upper() + data_file[1:]
+        if pair_file in data_files:
+            name = data_file[3:len(data_file) - 5]
+
+            bot_prs_full_path = path + f"/{data_file}"
+            non_bot_prs_full_path = path + f"/{pair_file}"
+
+            bot_prs_file = open(bot_prs_full_path, "r")
+            non_bot_prs_file = open(non_bot_prs_full_path, "r")
+
+            data_set_pairs.append({
+                "name": name,
+                "bot_prs_name": "Bot PR's",
+                "non_bot_prs_name": "Similar non-bot PR's'",
+                "bot_prs": json.loads(bot_prs_file.read()),
+                "non_bot_prs": json.loads(non_bot_prs_file.read())
+            })
+
+            bot_prs_file.close()
+            non_bot_prs_file.close()
+
+    return data_set_pairs

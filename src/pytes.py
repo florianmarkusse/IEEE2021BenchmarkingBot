@@ -1,13 +1,11 @@
-from utility import file_management, helpers
-import json
-from src.mining.enhancement import enhancement
-from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers
+from src.utility import file_management
+import os
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
 
 # Get token for GitHub API
-token = file_management.get_token()
+# token = file_management.get_token()
 
 for project in projects:
     owner = project.get("owner")
@@ -16,25 +14,11 @@ for project in projects:
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
 
-    data_set_names = [
-        "allPRs",
-        "botPRs",
-    ]
+    data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
-    for data_set_name in data_set_names:
-
-        file = open(f"../data/projects/{owner}/{repo}/{data_set_name}.json", 'r')
-
-        prs = json.loads(file.read())
-
-        file.close()
-
-        print(f"Enriching {data_set_name} with human comments")
-        enhancement.add_human_comments_member(prs)
-        file_management.write_data(prs, owner, repo, data_set_name)
-
-        print(f"Enriching {data_set_name} with benchmark bot free participants")
-        enhancement.add_benchmark_bot_free_participants_member(owner, repo, prs)
-        file_management.write_data(prs, owner, repo, data_set_name)
-
-
+    for data_set_pair in data_set_pairs:
+        print(data_set_pair["name"])
+        print(data_set_pair["bot_prs_name"])
+        print(data_set_pair["non_bot_prs_name"])
+        print(len(data_set_pair["bot_prs"]))
+        print(len(data_set_pair["non_bot_prs"]))

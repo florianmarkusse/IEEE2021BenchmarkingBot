@@ -1,8 +1,8 @@
 import datetime
 
 from src.mining import collector, matcher
-from utility import file_management
-from utility import helpers
+from src.utility import file_management
+from src.utility import helpers
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -32,8 +32,11 @@ for project in projects:
                                            helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
                                            "allPRs", token)
 
-    # Find Matchings.
-    matcher.do_matchings(owner, repo, bot_prs, all_prs)
+    # Create non bot PR's.
+    matcher.create_non_bot_prs(owner, repo)
+
+    data = file_management.get_all_mined_prs(owner, repo)
+    matcher.do_matchings(owner, repo, data.get("bot_prs"), data.get("non_bot_prs"))
 
     # Now we have the following:
     #   - The PR's where the bot contributes
@@ -42,8 +45,3 @@ for project in projects:
     #   - similar PR's
     #   - performance labeled bot PR's
     #   - performance labeled all PR's
-
-    current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-
-    print(f"Found {len(all_prs)} PR's in total from {start_date} to {current_date}")
-    print(f"Found {len(bot_prs)} PR's with bot contribution in total from {start_date} to {current_date}")

@@ -4,7 +4,7 @@ from src.utility.helpers import periodize_prs
 from src.analysis.helpers import split_prs_into_lists
 
 
-def generate_pr_contribution(owner, repo, data_set, members_are_exclusive):
+def generate_pr_contribution(owner, repo, data_set, months_per_period):
     """
     Perform a monthly analysis on the repository based on the PR's that were created and those that contain a bot
     contribution.
@@ -26,20 +26,13 @@ def generate_pr_contribution(owner, repo, data_set, members_are_exclusive):
     period_summaries = []
 
     for period in all_prs_per_month:
-        if members_are_exclusive:
-            non_bot_prs_per_period = len(all_prs_per_month[period]) if period in all_prs_per_month else 0
-            bot_prs_per_period = len(all_bot_prs_per_month[period]) if period in all_bot_prs_per_month else 0
-            period_summary = {
-                "period": period,
-                "all_prs": non_bot_prs_per_period + bot_prs_per_period,
-                "bot_prs": bot_prs_per_period,
-            }
-        else:
-            period_summary = {
-                "period": period,
-                "all_prs": len(all_prs_per_month[period]),
-                "bot_prs": len(all_bot_prs_per_month[period]) if period in all_bot_prs_per_month else 0,
-            }
+        non_bot_prs_per_period = len(all_prs_per_month[period]) if period in all_prs_per_month else 0
+        bot_prs_per_period = len(all_bot_prs_per_month[period]) if period in all_bot_prs_per_month else 0
+        period_summary = {
+            "period": period,
+            "all_prs": non_bot_prs_per_period + bot_prs_per_period,
+            "bot_prs": bot_prs_per_period,
+        }
 
         period_summary["fraction"] = period_summary["bot_prs"] / period_summary["all_prs"]
 

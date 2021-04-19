@@ -9,11 +9,11 @@ for project in projects:
     owner = project.get("owner")
     repo = project.get("repo")
 
-    data_sets = file_management.get_data_sets(owner, repo)
-    all_data = file_management.get_all_mined_prs(owner, repo)
-
-    # create directories if missing.
+    # Create directories if missing.
     file_management.make_project_folder("../data/projects", owner, repo)
+
+    # Get data set pairs.
+    data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
     ##
     # Create summarizing data.
@@ -27,16 +27,16 @@ for project in projects:
     ### PR Activity
 
     # # Participants
-    # for data_set in data_sets:
-    #     pr_activity.generate_participants(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
     # # Comments
-    # for data_set in data_sets:
-    #     pr_activity.generate_comments(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_comments(owner, repo, data_set_pair)
     #
     # # Reviews
-    # for data_set in data_sets:
-    #     pr_activity.generate_reviews(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_reviews(owner, repo, data_set_pair)
     #
     # ### PR impact
     #
@@ -57,9 +57,8 @@ for project in projects:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set)
 
     ### PR contribution
-    pr_contribution.generate_pr_contribution(owner, repo, all_data, False)
-    for data_set in data_sets:
-        pr_contribution.generate_pr_contribution(owner, repo, data_set, True)
+    for data_set_pair in data_set_pairs:
+        pr_contribution.generate_pr_contribution(owner, repo, data_set_pair)
 
 
 
