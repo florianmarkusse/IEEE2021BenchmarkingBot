@@ -18,25 +18,14 @@ def generate_participants(owner, repo, data_set):
         repo,
         data_set["name"],
         "Number of participants",
-        list(range(0, 31)),
+        15,
         distributions[0],
         data_set["bot_prs_name"],
         distributions[1],
         data_set["non_bot_prs_name"],
-        0.5
+        0.4,
+        True
     )
-
-    # bins = list(range(0, 15))
-    #
-    # bot_pr_participants_frequencies = collections.Counter(distributions[0])
-    # bot_pr_values = []
-    # for bin in bins:
-    #     if bin in bot_pr_participants_frequencies.keys():
-    #         bot_pr_values.append(bot_pr_participants_frequencies[bin])
-    #     else:
-    #         bot_pr_values.append(0)
-    # print(bot_pr_values)
-    # print(len(bot_pr_values))
 
     # participant distribution
     participant_categorization = categorize_data_set(owner, repo, data_set, "participants")
@@ -106,6 +95,22 @@ def generate_comments(owner, repo, data_set):
                         data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "comments")
 
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Number of comments",
+        40,
+        bot_pr_comments_distribution_without_bot_contribution,
+        data_set["bot_prs_name"],
+        number_of_comments_distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True,
+        5,
+        False
+    )
+
     # comments length distribution
     comment_lengths_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "bot_prs")
     comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set,
@@ -115,6 +120,22 @@ def generate_comments(owner, repo, data_set):
                         comment_lengths_non_bot_prs,
                         data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "comment_lengths")
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Total comment length (x10000)",
+        50000,
+        comment_lengths_bot_prs,
+        data_set["bot_prs_name"],
+        comment_lengths_non_bot_prs,
+        data_set["non_bot_prs_name"],
+        0.01,
+        True,
+        10000,
+        True
+    )
 
     comments_printer(owner, repo, data_set, "bot_prs")
     comments_printer(owner, repo, data_set, "non_bot_prs")
@@ -131,9 +152,17 @@ def generate_reviews(owner, repo, data_set):
 
     reviews_categorized = categorize_data_set(owner, repo, data_set, "reviewers")
 
-    top_ten.create_top_ten_prs(owner, repo, data_set["name"], data_set["bot_prs"], reviews_categorized[0],
-                               data_set["bot_prs_name"],
-                               "reviewers")
-    top_ten.create_top_ten_prs(owner, repo, data_set["name"], data_set["non_bot_prs"], reviews_categorized[1],
-                               data_set["non_bot_prs_name"],
-                               "reviewers")
+    # Histogram
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Number of reviews",
+        60,
+        distributions[0],
+        data_set["bot_prs_name"],
+        distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True
+    )

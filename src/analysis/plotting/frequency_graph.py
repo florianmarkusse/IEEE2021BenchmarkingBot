@@ -1,17 +1,67 @@
-from src.analysis import helpers
-import matplotlib.pyplot as plt
 import collections
 
-def create_overlapping_histogram(owner, repo, data_set_name, x_label, bins, first_values, first_name, second_values,
-                                 second_name, max_value=1.0):
-    plt.hist(first_values, bins, alpha=0.5, label=first_name, color='blue', edgecolor="black", density=True)
-    plt.hist(second_values, bins, alpha=0.5, label=second_name, color='green', edgecolor="black", density=True)
+import matplotlib.pyplot as plt
+import numpy as np
+
+from src.analysis import helpers
+
+
+def create_overlapping_histogram(owner, repo, data_set_name, x_label, max_bin_value, first_values, first_name,
+                                 second_values, second_name, max_value=1.0, overflow=False, tick_frequency=5,
+                                 is_step=False):
+    if overflow:
+        bins = range(0, max_bin_value + 2)
+
+        if is_step:
+            plt.hist(np.clip(first_values, bins[0], bins[-1] - 1), bins, label=first_name, color='blue',
+                     density=True, histtype='step')
+            plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, label=second_name, color='green',
+                     density=True, histtype='step')
+        else:
+            plt.hist(np.clip(first_values, bins[0], bins[-1] - 1), bins, alpha=0.5, label=first_name, color='blue',
+                     edgecolor="black", density=True)
+            plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, alpha=0.5, label=second_name, color='green',
+                     edgecolor="black", density=True)
+
+        x_labels = [str(i) for i in bins]
+        del x_labels[-1]
+
+        x_labels_frequency = [x_label for x_label in x_labels if int(x_label) % tick_frequency == 0]
+        if int(x_labels_frequency[-1]) > 100:
+            x_labels_frequency_scientific = []
+            for label in x_labels_frequency:
+                number = label[0]
+                x_labels_frequency_scientific.append(number)
+            x_labels_frequency = x_labels_frequency_scientific
+        x_labels_frequency[-1] += '+'
+        N_labels = len(x_labels) / tick_frequency
+        plt.xlim([0 - 0.5, max(bins) + 0.5])
+        plt.xticks(tick_frequency * np.arange(N_labels) + 0.5, x_labels_frequency)
+    else:
+        bins = range(0, max_bin_value + 2)
+
+        if is_step:
+            plt.hist(first_values, [bucket - 0.5 for bucket in bins], label=first_name, color='blue',
+                     density=True, histtype='step')
+            plt.hist(second_values, [bucket - 0.5 for bucket in bins], label=second_name, color='green',
+                     density=True, histtype='step')
+        else:
+            plt.hist(first_values, [bucket - 0.5 for bucket in bins], alpha=0.5, label=first_name, color='blue',
+                     edgecolor="black", density=True)
+            plt.hist(second_values, [bucket - 0.5 for bucket in bins], alpha=0.5, label=second_name, color='green',
+                     edgecolor="black", density=True)
+
     plt.xlabel(x_label)
-    plt.legend(loc='upper right')
+    plt.xlabel(x_label, size=24)
+
+    plt.xticks(size=20)
+    plt.yticks(size=20)
+    plt.legend(loc='upper right', fontsize=20)
     plt.ylim([0, max_value])
 
     plt.tight_layout(pad=0.04)
-    plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}.png", transparent=True)
+    plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}_{x_label.replace(' ', '_')}.png",
+                transparent=True)
 
     plt.show()
 

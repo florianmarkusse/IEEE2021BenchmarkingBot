@@ -85,6 +85,9 @@ def find_one_to_one(bot_pr, all_prs):
 def are_dates_within_x_days(first_date, second_date, x):
     return first_date - datetime.timedelta(x) <= second_date <= first_date + datetime.timedelta(x)
 
+def isBeforeOther(first_date, second_date):
+    return first_date < second_date
+
 
 def within_range_incl(val, bounds):
     """

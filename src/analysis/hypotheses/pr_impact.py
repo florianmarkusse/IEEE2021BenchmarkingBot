@@ -1,5 +1,5 @@
 from src.analysis.hypotheses.subroutines import get_distributions
-from src.analysis.plotting import qq_plot
+from src.analysis.plotting import qq_plot, frequency_graph
 from src.utility import helpers
 import statistics
 
@@ -47,6 +47,21 @@ def generate_commits(owner, repo, data_set):
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist, data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "commits")
+
+    # Histogram
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Number of commits",
+        60,
+        distributions[0],
+        data_set["bot_prs_name"],
+        distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True
+    )
 
 
 def source_files_changed_printer(owner, repo, data_set, pr_type):

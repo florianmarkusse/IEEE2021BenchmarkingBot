@@ -1,5 +1,5 @@
 from src.mining.graphql import pull_requests
-from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers
+from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers, commits
 from src.mining.enhancement import enhancement
 from src.utility import file_management
 
@@ -16,6 +16,7 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
     #   - bot callers
     #   - comment length per comment
     #   - reviewers
+    #   - commits at PR open
     #   - "human" comments: The number of comments made by human contributors to human contributors. Note that this
     #     number excludes the contribution by the benchmarking bot as well as the comments asking for a benchmark.
     #   - participants without benchmarking bot: Simply the number of participants excluding the benchmarking bot, i.e.
@@ -30,7 +31,11 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Collecting {file_name} reviewers")
-    reviewers.get_bot_callers_prs(owner, repo, prs, token)
+    reviewers.get_reviewers_prs(owner, repo, prs, token)
+    file_management.write_data(prs, owner, repo, file_name)
+
+    print(f"Collecting {file_name} commits at open")
+    commits.get_commits_prs(owner, repo, prs, token)
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Enriching {file_name} with human comments")
@@ -38,7 +43,7 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Enriching {file_name} with benchmark bot free participants")
-    enhancement.add_benchmark_bot_free_participants_member(prs)
+    enhancement.add_benchmark_bot_free_participants_member(owner, repo, prs)
     file_management.write_data(prs, owner, repo, file_name)
 
     return prs

@@ -20,45 +20,45 @@ for project in projects:
     ##
 
     # Data sets sizes
-    # for data_set in data_sets:
-    #     print(f" {data_set['name']}: bot PR's size: {len(data_set['bot_prs'])}")
-    #     print(f" {data_set['name']}: non bot PR's size: {len(data_set['non_bot_prs'])}")
+    # for data_set_pair in data_set_pairs:
+    #     print(f" {data_set_pair['name']}: bot PR's size: {len(data_set_pair['bot_prs'])}")
+    #     print(f" {data_set_pair['name']}: non bot PR's size: {len(data_set_pair['non_bot_prs'])}")
 
     ### PR Activity
 
     # Participants
-    for data_set_pair in data_set_pairs:
-        pr_activity.generate_participants(owner, repo, data_set_pair)
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
     # # Comments
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_comments(owner, repo, data_set_pair)
     #
-    # # Reviews
+    # Reviews
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_reviews(owner, repo, data_set_pair)
     #
     # ### PR impact
     #
     # # PR status
-    # for data_set in data_sets:
-    #     pr_impact.generate_pr_status(owner, repo, data_set)
-    #
+    # for data_set_pair in data_set_pairs:
+    #     pr_impact.generate_pr_status(owner, repo, data_set_pair)
+
     # # Commits
-    # for data_set in data_sets:
-    #     pr_impact.generate_commits(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_impact.generate_commits(owner, repo, data_set_pair)
     #
     # # Source files changed
-    # for data_set in data_sets:
-    #     pr_impact.generate_source_files_changed(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_impact.generate_source_files_changed(owner, repo, data_set_pair)
     #
     # # Additions - Deletions
-    # for data_set in data_sets:
-    #     pr_impact.generate_additions_deletions(owner, repo, data_set)
+    # for data_set_pair in data_set_pairs:
+    #     pr_impact.generate_additions_deletions(owner, repo, data_set_pair)
 
     ### PR contribution
-    # for data_set_pair in data_set_pairs:
-    #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    for data_set_pair in data_set_pairs:
+        pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
 
 
 

@@ -84,7 +84,7 @@ def qq_plot(x, y, quantiles=None, interpolation='nearest', ax=None, rug=False,
 
     # Compute quantiles of the two samples
     if isinstance(quantiles, numbers.Integral):
-        quantiles = np.linspace(start=0, stop=1, endpoint=True, num=int(quantiles) + 1)
+        quantiles = np.linspace(start=0, stop=1, endpoint=True, num=int(quantiles))
     else:
         quantiles = np.atleast_1d(np.sort(quantiles))
     x_quantiles = np.quantile(x, quantiles, interpolation=interpolation)
