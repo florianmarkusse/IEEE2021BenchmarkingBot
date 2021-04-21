@@ -40,24 +40,30 @@ def generate_pr_status(owner, repo, data_set):
 
 
 def generate_commits(owner, repo, data_set):
-    distributions = get_distributions(data_set, "commits")
+    commit_distributions_at_open = get_distributions(data_set, "commitsAtOpen")
+    commits_distributions_at_close = get_distributions(data_set, "commits")
 
-    x_dist = [commit for commit in distributions[0] if commit < 200]
-    y_dist = [commit for commit in distributions[1] if commit < 200]
+    bot_commits_added = []
+    non_bot_commits_added = []
 
-    qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist, data_set["bot_prs_name"],
-                        data_set["non_bot_prs_name"], "commits")
+    for index in range(len(commit_distributions_at_open[0])):
+        bot_commits_added.append(commits_distributions_at_close[0][index] - commit_distributions_at_open[0][index])
+        non_bot_commits_added.append(commits_distributions_at_close[1][index] - commit_distributions_at_open[1][index])
+
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_commits_added, non_bot_commits_added, data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], "commits_added")
 
     # Histogram
     frequency_graph.create_overlapping_histogram(
         owner,
         repo,
         data_set["name"],
-        "Number of commits",
+        "Number of commits added after PR open",
         60,
-        distributions[0],
+        bot_commits_added,
         data_set["bot_prs_name"],
-        distributions[1],
+        non_bot_commits_added,
         data_set["non_bot_prs_name"],
         0.4,
         True

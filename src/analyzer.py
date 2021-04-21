@@ -44,9 +44,9 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_pr_status(owner, repo, data_set_pair)
 
-    # # Commits
-    # for data_set_pair in data_set_pairs:
-    #     pr_impact.generate_commits(owner, repo, data_set_pair)
+    # Commits
+    for data_set_pair in data_set_pairs:
+        pr_impact.generate_commits(owner, repo, data_set_pair)
     #
     # # Source files changed
     # for data_set_pair in data_set_pairs:
