@@ -25,7 +25,6 @@ for project in projects:
     #     print(f" {data_set_pair['name']}: non bot PR's size: {len(data_set_pair['non_bot_prs'])}")
 
     ### PR Activity
-
     # Participants
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_participants(owner, repo, data_set_pair)
@@ -38,15 +37,18 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_reviews(owner, repo, data_set_pair)
     #
+    # Benchmarking bot callers
+    for data_set_pair in data_set_pairs:
+        pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair["bot_prs"])
+
     # ### PR impact
     #
     # # PR status
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_pr_status(owner, repo, data_set_pair)
-
-    # Commits
-    for data_set_pair in data_set_pairs:
-        pr_impact.generate_commits(owner, repo, data_set_pair)
+    # # Commits
+    # for data_set_pair in data_set_pairs:
+    #     pr_impact.generate_commits(owner, repo, data_set_pair)
     #
     # # Source files changed
     # for data_set_pair in data_set_pairs:
@@ -56,6 +58,6 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set_pair)
 
-    ### PR contribution
-    for data_set_pair in data_set_pairs:
-        pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    # ### PR contribution
+    # for data_set_pair in data_set_pairs:
+    #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)

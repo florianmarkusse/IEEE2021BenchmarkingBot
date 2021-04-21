@@ -166,3 +166,7 @@ def generate_reviews(owner, repo, data_set):
         0.4,
         True
     )
+
+
+def generate_benchmarking_bot_callers(owner, repo, bot_prs):
+    print("hi")
