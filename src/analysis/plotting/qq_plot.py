@@ -26,16 +26,6 @@ def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_la
     plt.show()
 
 
-def equality_line(ax1, label=None):
-    limits = [
-        np.min([ax1.get_xlim(), ax1.get_ylim()]),
-        np.max([ax1.get_xlim(), ax1.get_ylim()]),
-    ]
-    ax1.set_xlim(limits)
-    ax1.set_ylim(limits)
-    ax1.plot(limits, limits, 'k-', alpha=0.75, zorder=0, label=label)
-
-
 def qq_plot(x, y, quantiles=None, interpolation='nearest', ax=None, rug=False,
             rug_length=0.05, rug_kwargs=None, **kwargs):
     """Draw a quantile-quantile plot for `x` versus `y`.

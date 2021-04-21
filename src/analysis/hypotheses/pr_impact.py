@@ -50,8 +50,8 @@ def generate_commits(owner, repo, data_set):
         bot_commits_added.append(commits_distributions_at_close[0][index] - commit_distributions_at_open[0][index])
         non_bot_commits_added.append(commits_distributions_at_close[1][index] - commit_distributions_at_open[1][index])
 
-
-    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_commits_added, non_bot_commits_added, data_set["bot_prs_name"],
+    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_commits_added, non_bot_commits_added,
+                        data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "commits_added")
 
     # Histogram
