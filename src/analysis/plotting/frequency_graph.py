@@ -6,28 +6,30 @@ import numpy as np
 from src.analysis import helpers
 
 
-def create_overlapping_histogram(owner, repo, data_set_name, x_label, max_bin_value, first_values, first_name,
-                                 second_values, second_name, max_value=1.0, overflow=False, tick_frequency=5,
-                                 is_step=False):
+def create_overlapping_histogram(owner, repo, data_set_name, x_label, overflow_value, first_values, first_name,
+                                 second_values=None, second_name=None, max_value=1.0, overflow=False, tick_frequency=5,
+                                 is_step=False, density=True):
     if overflow:
-        bins = range(0, max_bin_value + 2)
+        bins = range(0, overflow_value + 2)
 
         if is_step:
             plt.hist(np.clip(first_values, bins[0], bins[-1] - 1), bins, label=first_name, color='blue',
-                     density=True, histtype='step')
-            plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, label=second_name, color='green',
-                     density=True, histtype='step')
+                     density=density, histtype='step')
+            if second_values is not None:
+                plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, label=second_name, color='green',
+                         density=density, histtype='step')
         else:
             plt.hist(np.clip(first_values, bins[0], bins[-1] - 1), bins, alpha=0.5, label=first_name, color='blue',
-                     edgecolor="black", density=True)
-            plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, alpha=0.5, label=second_name, color='green',
-                     edgecolor="black", density=True)
+                     edgecolor="black", density=density)
+            if second_values is not None:
+                plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, alpha=0.5, label=second_name, color='green',
+                         edgecolor="black", density=density)
 
         x_labels = [str(i) for i in bins]
         del x_labels[-1]
 
         x_labels_frequency = [x_label for x_label in x_labels if int(x_label) % tick_frequency == 0]
-        if int(x_labels_frequency[-1]) > 100:
+        if int(x_labels_frequency[-1]) > 1000:
             x_labels_frequency_scientific = []
             for label in x_labels_frequency:
                 number = label[0]
@@ -38,18 +40,20 @@ def create_overlapping_histogram(owner, repo, data_set_name, x_label, max_bin_va
         plt.xlim([0 - 0.5, max(bins) + 0.5])
         plt.xticks(tick_frequency * np.arange(N_labels) + 0.5, x_labels_frequency)
     else:
-        bins = range(0, max_bin_value + 2)
+        bins = range(0, overflow_value + 2)
 
         if is_step:
             plt.hist(first_values, [bucket - 0.5 for bucket in bins], label=first_name, color='blue',
-                     density=True, histtype='step')
-            plt.hist(second_values, [bucket - 0.5 for bucket in bins], label=second_name, color='green',
-                     density=True, histtype='step')
+                     density=density, histtype='step')
+            if second_values is not None:
+                plt.hist(second_values, [bucket - 0.5 for bucket in bins], label=second_name, color='green',
+                         density=density, histtype='step')
         else:
             plt.hist(first_values, [bucket - 0.5 for bucket in bins], alpha=0.5, label=first_name, color='blue',
-                     edgecolor="black", density=True)
-            plt.hist(second_values, [bucket - 0.5 for bucket in bins], alpha=0.5, label=second_name, color='green',
-                     edgecolor="black", density=True)
+                     edgecolor="black", density=density)
+            if second_values is not None:
+                plt.hist(second_values, [bucket - 0.5 for bucket in bins], alpha=0.5, label=second_name, color='green',
+                         edgecolor="black", density=density)
 
     plt.xlabel(x_label)
     plt.xlabel(x_label, size=24)

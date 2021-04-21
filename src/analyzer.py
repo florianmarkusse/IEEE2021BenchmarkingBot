@@ -39,7 +39,7 @@ for project in projects:
     #
     # Benchmarking bot callers
     for data_set_pair in data_set_pairs:
-        pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair["bot_prs"])
+        pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair)
 
     # ### PR impact
     #

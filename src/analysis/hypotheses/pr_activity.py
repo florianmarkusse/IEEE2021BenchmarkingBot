@@ -1,8 +1,9 @@
 import statistics
 import collections
 
-from src.analysis.plotting import qq_plot, top_ten, frequency_graph
+from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
+from src.utility import helpers
 
 
 def generate_participants(owner, repo, data_set):
@@ -168,5 +169,38 @@ def generate_reviews(owner, repo, data_set):
     )
 
 
-def generate_benchmarking_bot_callers(owner, repo, bot_prs):
-    print("hi")
+def generate_benchmarking_bot_callers(owner, repo, data_set):
+
+    caller_to_prs = helpers.categorize_prs(data_set["bot_prs"], "callers")
+
+    caller_frequencies = []
+    for key in caller_to_prs:
+        caller_frequencies.append(len(caller_to_prs[key]))
+
+    result = boxplot.boxplot(owner, repo, data_set["name"], caller_frequencies, "benchmark_bot_calls")
+
+    outlier_values = []
+    for ele in result["fliers"]:
+        for outlier in ele.get_data()[1]:
+            outlier_values.append(outlier)
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Benchmark bot calls",
+        min(outlier_values),
+        caller_frequencies,
+        "Contributors",
+        None,
+        None,
+        0.4,
+        True,
+        20,
+        False,
+        True
+    )
+    # print(data_set["name"])
+    # print(len(caller_to_prs.keys()))
+    # print(list(caller_to_prs.keys())[0])
+    # print(len(caller_to_prs[list(caller_to_prs.keys())[0]]))
