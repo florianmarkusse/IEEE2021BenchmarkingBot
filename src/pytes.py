@@ -19,6 +19,7 @@ for project in projects:
 
     data = file_management.get_all_mined_prs(owner, repo)
 
+
     print(f"Collecting bot PR's commits at open")
     commits.get_commits_prs(owner, repo, data["bot_prs"], token)
     file_management.write_data(data["bot_prs"], owner, repo, "botPRs")
