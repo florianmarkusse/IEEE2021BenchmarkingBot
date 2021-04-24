@@ -1,4 +1,5 @@
-from src.analysis.plotting import combo, boxplot
+from src.analysis.plotting import combo, boxplot, frequency_graph
+from src.analysis.hypotheses import subroutines
 from src.utility.helpers import periodize_prs
 from src.analysis.helpers import split_prs_into_lists
 from functools import cmp_to_key
@@ -116,3 +117,31 @@ def generate_quarterly_pr_contribution(owner, repo, data_set):
 
     combo.combo_period(owner, repo, data_set["name"], "quarterly", periods, bot_frequency, non_bot_frequency,
                        bot_fraction)
+
+
+def generate_pr_benchmark_calling(owner, repo, data_set):
+
+    bot_username = subroutines.get_bot_username(owner, repo)
+    benchmarking_bot_calls = []
+
+    for pr in data_set["bot_prs"]:
+        total_bot_calls = 0
+        for comment in pr["commenterAndLengths"]:
+            if bot_username in comment:
+                total_bot_calls += 1
+        benchmarking_bot_calls.append(total_bot_calls)
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Benchmark bot calls",
+        10,
+        benchmarking_bot_calls,
+        data_set["bot_prs_name"],
+        None,
+        None,
+        1.0,
+        True,
+        1,
+    )

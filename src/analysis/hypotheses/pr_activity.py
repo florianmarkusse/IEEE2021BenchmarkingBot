@@ -28,15 +28,27 @@ def generate_participants(owner, repo, data_set):
         True
     )
 
-    # participant distribution
-    participant_categorization = categorize_data_set(owner, repo, data_set, "participants")
+    at_least = 3
 
-    top_ten.create_top_ten_prs(owner, repo, data_set["name"], data_set["bot_prs"], participant_categorization[0],
-                               data_set["bot_prs_name"],
-                               "participants")
-    top_ten.create_top_ten_prs(owner, repo, data_set["name"], data_set["non_bot_prs"], participant_categorization[1],
-                               data_set["non_bot_prs_name"],
-                               "participants")
+    distributions = get_distributions(data_set, "benchmarkBotFreeParticipants", at_least)
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1], data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"participants at least {at_least}")
+
+    # Histogram
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        f"Number of participants at least {at_least}",
+        15,
+        distributions[0],
+        data_set["bot_prs_name"],
+        distributions[1],
+        data_set["non_bot_prs_name"],
+        0.5,
+        True
+    )
 
 
 def get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, pr_type):
@@ -101,6 +113,41 @@ def generate_comments(owner, repo, data_set):
         repo,
         data_set["name"],
         "Number of comments",
+        40,
+        bot_pr_comments_distribution_without_bot_contribution,
+        data_set["bot_prs_name"],
+        number_of_comments_distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True,
+        5,
+        False
+    )
+
+    at_least = 5
+
+    bot_pr_comments_distribution_without_bot_contribution = []
+    for pr in data_set["bot_prs"]:
+        benchmark_bot_contributions = 0
+        for pair in pr["commenterAndLengths"]:
+            if pair[0] == get_bot_username(owner, repo):
+                benchmark_bot_contributions += 1
+        result = max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
+        if result >= at_least:
+            bot_pr_comments_distribution_without_bot_contribution.append(result)
+
+    number_of_comments_distributions = get_distributions(data_set, "comments", at_least)
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
+                        number_of_comments_distributions[1],
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"comments at least {at_least}")
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        f"Number of comments at least {at_least}",
         40,
         bot_pr_comments_distribution_without_bot_contribution,
         data_set["bot_prs_name"],

@@ -1,13 +1,16 @@
 from src.utility.file_management import get_projects_to_mine
 from src.utility.helpers import categorize_prs
 
-def get_distributions(data_set, attribute):
+
+def get_distributions(data_set, attribute, at_least=0):
     x_distribution = []
     for pr in data_set["bot_prs"]:
-        x_distribution.append(pr[attribute])
+        if pr[attribute] >= at_least:
+            x_distribution.append(pr[attribute])
     y_distribution = []
     for pr in data_set["non_bot_prs"]:
-        y_distribution.append(pr[attribute])
+        if pr[attribute] >= at_least:
+            y_distribution.append(pr[attribute])
 
     return x_distribution, y_distribution
 

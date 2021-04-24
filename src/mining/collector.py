@@ -1,5 +1,5 @@
 from src.mining.graphql import pull_requests
-from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers, commits
+from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers
 from src.mining.enhancement import enhancement
 from src.utility import file_management
 
@@ -32,10 +32,6 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
 
     print(f"Collecting {file_name} reviewers")
     reviewers.get_reviewers_prs(owner, repo, prs, token)
-    file_management.write_data(prs, owner, repo, file_name)
-
-    print(f"Collecting {file_name} commits at open")
-    commits.get_commits_prs(owner, repo, prs, token)
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Enriching {file_name} with human comments")

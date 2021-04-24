@@ -29,17 +29,17 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
-    # # Comments
-    # for data_set_pair in data_set_pairs:
-    #     pr_activity.generate_comments(owner, repo, data_set_pair)
+    # Comments
+    for data_set_pair in data_set_pairs:
+        pr_activity.generate_comments(owner, repo, data_set_pair)
     #
     # Reviews
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_reviews(owner, repo, data_set_pair)
     #
-    # Benchmarking bot callers
-    for data_set_pair in data_set_pairs:
-        pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair)
+    # # Benchmarking bot callers
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair)
 
     # ### PR impact
     #
@@ -61,3 +61,5 @@ for project in projects:
     # ### PR contribution
     # for data_set_pair in data_set_pairs:
     #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    # for data_set_pair in data_set_pairs:
+    #     pr_contribution.generate_pr_benchmark_calling(owner, repo, data_set_pair)
