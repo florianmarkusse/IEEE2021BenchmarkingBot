@@ -29,7 +29,9 @@
     "owner": "apple",
     "repo": "swift",
     "botQuery": "@swift-ci benchmark in:comments",
-    "startDate": "2017-01-30"
+    "startDate": "2017-01-30",
+    "botCallString": "@swift-ci benchmark",
+    "botUsername": "swift-ci"
   },
   {
     "owner": "PaddlePaddle",
