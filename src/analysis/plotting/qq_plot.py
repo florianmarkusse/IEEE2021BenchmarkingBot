@@ -6,7 +6,7 @@ from scipy import stats
 from src.analysis import helpers
 
 
-def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_label, y_label, file_name):
+def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_label, y_label, file_name, log_scale=False):
     plt.figure()
     qq_plot(x_distribution, y_distribution, edgecolor='k')
     plt.xlabel(x_label, size=20)
@@ -26,7 +26,7 @@ def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_la
     plt.show()
 
 
-def qq_plot(x, y, quantiles=None, interpolation='nearest', ax=None, rug=False,
+def qq_plot(x, y, log_scale=False, quantiles=None, interpolation='nearest', ax=None, rug=False,
             rug_length=0.05, rug_kwargs=None, **kwargs):
     """Draw a quantile-quantile plot for `x` versus `y`.
 
@@ -34,6 +34,8 @@ def qq_plot(x, y, quantiles=None, interpolation='nearest', ax=None, rug=False,
     ----------
     x, y : array-like
         One-dimensional numeric arrays.
+
+    log_scale :
 
     ax : matplotlib.axes.Axes, optional
         Axes on which to plot. If not provided, the current axes will be used.
@@ -99,3 +101,7 @@ def qq_plot(x, y, quantiles=None, interpolation='nearest', ax=None, rug=False,
 
     # Draw the q-q plot
     ax.scatter(x_quantiles, y_quantiles, **kwargs)
+
+    if log_scale:
+        ax.set_yscale('log')
+        ax.set_xscale('log')

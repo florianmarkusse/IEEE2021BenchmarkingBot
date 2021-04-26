@@ -46,27 +46,44 @@ def generate_commits(owner, repo, data_set):
                         data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "Number of commits")
 
-    x_dist = [commit for commit in distributions[0] if commit < 200]
-    y_dist = [commit for commit in distributions[1] if commit < 200]
-
-    qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist,
-                        data_set["bot_prs_name"],
-                        data_set["non_bot_prs_name"], "Number of commits #<200")
-
     # Histogram
     frequency_graph.create_overlapping_histogram(
         owner,
         repo,
         data_set["name"],
-        "Number of commits added",
+        "Number of commits",
         60,
         distributions[0],
         data_set["bot_prs_name"],
         distributions[1],
         data_set["non_bot_prs_name"],
-        0.5,
+        0.6,
         True
     )
+
+    at_most = 200
+
+    x_dist = [commit for commit in distributions[0] if commit <= at_most]
+    y_dist = [commit for commit in distributions[1] if commit <= at_most]
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist,
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"Number of commits at most {at_most}")
+
+    at_least = 3
+
+    distributions = get_distributions(data_set, "benchmarkBotFreeParticipants", at_least)
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1],
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"Number of commits at least {at_least}")
+
+    x_dist = [commit for commit in distributions[0] if commit <= at_most]
+    y_dist = [commit for commit in distributions[1] if commit <= at_most]
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], x_dist, y_dist,
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"Number of commits at least {at_least} at most {at_most}")
 
 
 def source_files_changed_printer(owner, repo, data_set, pr_type):

@@ -8,8 +8,10 @@
   {
     "owner": "JuliaLang",
     "repo": "julia",
-    "botQuery": "commenter:nanosoldier",
-    "startDate": "2016-04-01 "
+    "botQuery": "runbenchmarks( in:comments",
+    "startDate": "2016-04-01 ",
+    "botCallString": "runbenchmarks(",
+    "botUsername": "nanosoldier"
   },
   {
     "owner": "rust-lang",
