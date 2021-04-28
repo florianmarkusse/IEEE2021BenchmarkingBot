@@ -1,12 +1,23 @@
 from src.utility import helpers, file_management
 import os
-
+import json
 
 def create_non_bot_prs(owner, repo):
-    mined_prs = file_management.get_all_mined_prs(owner, repo)
-    all_bot_prs = mined_prs.get("bot_prs")
-    all_bot_prs_numbers = [pr["number"] for pr in all_bot_prs]
-    all_prs = mined_prs.get("all_prs")
+
+    path = f"../data/projects/{owner}/{repo}"
+    all_prs_full_path = path + "/allPRs.json"
+
+    all_prs_file = open(all_prs_full_path, "r")
+    all_prs = json.loads(all_prs_file.read())
+    all_prs_file.close()
+
+    bot_prs_full_path = path + "/botPRs.json"
+
+    bot_prs_file = open(bot_prs_full_path, 'r')
+    bot_prs = json.loads(bot_prs_file.read())
+    bot_prs_file.close()
+
+    all_bot_prs_numbers = [pr["number"] for pr in bot_prs]
 
     all_non_bot_prs = [pr for pr in all_prs if pr["number"] not in all_bot_prs_numbers]
 
@@ -45,15 +56,16 @@ def do_one_to_one_matching(owner, repo, bot_prs, non_bot_prs, file_name):
 def do_changed_source_files_larger_matching(owner, repo, bot_prs, non_bot_prs, file_name):
     at_least_source_files = [2, 4, 8]
 
+    key = "changedSourceFiles"
     for at_least in at_least_source_files:
         changed_source_bot_prs = []
         changed_source_all_prs = []
         for pr in bot_prs:
-            if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
+            if key in pr and pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
                 changed_source_bot_prs.append(pr)
 
         for pr in non_bot_prs:
-            if pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
+            if key in pr and pr["closed"] and len(pr["changedSourceFiles"]) >= at_least:
                 changed_source_all_prs.append(pr)
 
         file_management.write_data(changed_source_bot_prs, owner, repo, "botPRs" + file_name + str(at_least))

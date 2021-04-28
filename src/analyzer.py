@@ -1,6 +1,6 @@
 from src.utility import file_management
-from src.analysis.plotting import qq_plot, top_ten
-from src.analysis.hypotheses import pr_activity, pr_impact, pr_contribution
+from src.analysis.plotting import qq_plot, top_ten, frequency_graph
+from src.analysis.hypotheses import pr_activity, pr_impact, pr_contribution, subroutines
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -30,23 +30,55 @@ for project in projects:
     #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
     # Comments
-    for data_set_pair in data_set_pairs:
-        pr_activity.generate_comments(owner, repo, data_set_pair)
+    # for data_set_pair in data_set_pairs:
+    #     pr_activity.generate_comments(owner, repo, data_set_pair)
+
+    # changed_source_sets = []
+    # colors = ["red", "green", "blue"]
+    # found = 0
+    # for data_set_pair in data_set_pairs:
+    #     if any(chr.isdigit() for chr in data_set_pair["name"]):
+    #         number = ""
+    #         for char in data_set_pair["name"]:
+    #             if char.isdigit():
+    #                 number = char
     #
-    # Reviews
+    #         comments_after_benchmarking_bot_distributions = subroutines.get_distributions(data_set_pair, "commentsAfterContribution")
+    #         number_of_comments_distributions = subroutines.get_distributions(data_set_pair, "comments")
+    #
+    #         fraction_of_comments_after_benchmarking_contribution = []
+    #
+    #         for index in range(len(number_of_comments_distributions[0])):
+    #             fraction = comments_after_benchmarking_bot_distributions[0][index] / \
+    #                        number_of_comments_distributions[0][index]
+    #             fraction_of_comments_after_benchmarking_contribution.append(fraction)
+    #
+    #         add = {
+    #             "name": f">= {number}",
+    #             "data": fraction_of_comments_after_benchmarking_contribution,
+    #             "color": colors[found]
+    #         }
+    #         found += 1
+    #
+    #         changed_source_sets.append(add)
+    #
+    # frequency_graph.compare_changed_files(owner, repo, "changed_files", 1.0, changed_source_sets, "Fraction of comments remaining",
+    #                                       1.0, 0.1, 1, False, True)
+
+    # # Reviews
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_reviews(owner, repo, data_set_pair)
-    #
+
     # # Benchmarking bot callers
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_benchmarking_bot_callers(owner, repo, data_set_pair)
 
     # ### PR impact
     #
-    # # PR status
+    # PR status
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_pr_status(owner, repo, data_set_pair)
-    # # Commits
+    # Commits
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_commits(owner, repo, data_set_pair)
     #
@@ -54,12 +86,12 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_source_files_changed(owner, repo, data_set_pair)
     #
-    # # Additions - Deletions
+    # Additions - Deletions
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set_pair)
 
-    # ### PR contribution
-    # for data_set_pair in data_set_pairs:
-    #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    ### PR contribution
+    for data_set_pair in data_set_pairs:
+        pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
     # for data_set_pair in data_set_pairs:
     #     pr_contribution.generate_pr_benchmark_calling(owner, repo, data_set_pair)

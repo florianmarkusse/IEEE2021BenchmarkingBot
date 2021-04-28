@@ -72,7 +72,7 @@ def generate_commits(owner, repo, data_set):
 
     at_least = 3
 
-    distributions = get_distributions(data_set, "benchmarkBotFreeParticipants", at_least)
+    distributions = get_distributions(data_set, "commits", at_least)
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1],
                         data_set["bot_prs_name"],
@@ -90,7 +90,8 @@ def source_files_changed_printer(owner, repo, data_set, pr_type):
     source_files_changed = []
 
     for pr in data_set[pr_type]:
-        source_files_changed.append(len(pr["changedSourceFiles"]))
+        if "changedSourceFiles" in pr:
+            source_files_changed.append(len(pr["changedSourceFiles"]))
 
     print(
         f"{owner}/{repo}: Median source files changed length for {data_set['name']}: {pr_type}: "

@@ -1,7 +1,7 @@
 import statistics
 import collections
 
-from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot
+from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot, scatter_graph
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
 from src.utility import helpers
 
@@ -169,7 +169,7 @@ def generate_comments(owner, repo, data_set):
                         data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "comment_lengths")
 
-    frequency_graph.create_overlapping_histogram_step(
+    frequency_graph.create_single_hist(
         owner,
         repo,
         data_set["name"],
@@ -185,28 +185,45 @@ def generate_comments(owner, repo, data_set):
     )
 
     comments_after_benchmarking_bot_distributions = get_distributions(data_set, "commentsAfterContribution")
+    number_of_comments_distributions = get_distributions(data_set, "comments")
 
-    fraction_of_comments_after_benchmarking_contriubiton = []
+    fraction_of_comments_after_benchmarking_contribution = []
 
     for index in range(len(number_of_comments_distributions[0])):
         fraction = comments_after_benchmarking_bot_distributions[0][index] / number_of_comments_distributions[0][index]
-        fraction_of_comments_after_benchmarking_contriubiton.append(fraction)
+        fraction_of_comments_after_benchmarking_contribution.append(fraction)
 
+    scatter_graph.scatter_graph(owner, repo, data_set["name"],
+                                number_of_comments_distributions[0], fraction_of_comments_after_benchmarking_contribution,
+                                "total # of comments", "Fraction comments remaining")
 
-
-    frequency_graph.create_overlapping_histogram_step(
+    frequency_graph.create_single_hist(
         owner,
         repo,
         data_set["name"],
         f"Fraction of comments remaining",
-        0.9,
-        fraction_of_comments_after_benchmarking_contriubiton,
+        1.0,
+        fraction_of_comments_after_benchmarking_contribution,
         data_set["bot_prs_name"],
-        None,
-        None,
-        0.4,
+        0.25,
         0.1,
-        1
+        1,
+        False,
+        False
+    )
+    frequency_graph.create_single_hist(
+        owner,
+        repo,
+        data_set["name"],
+        f"Fraction of comments remaining",
+        1.0,
+        fraction_of_comments_after_benchmarking_contribution,
+        data_set["bot_prs_name"],
+        1.0,
+        0.1,
+        1,
+        False,
+        True
     )
 
     comments_printer(owner, repo, data_set, "bot_prs")
@@ -235,7 +252,7 @@ def generate_reviews(owner, repo, data_set):
         data_set["bot_prs_name"],
         distributions[1],
         data_set["non_bot_prs_name"],
-        0.4,
+        0.5,
         True
     )
 
