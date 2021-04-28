@@ -42,4 +42,8 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
     enhancement.add_benchmark_bot_free_participants_member(owner, repo, prs)
     file_management.write_data(prs, owner, repo, file_name)
 
+    print(f"Enriching {file_name} with comments after benchmarking bot contribution")
+    enhancement.add_comments_after_benchmarking_bot_contribution(owner, repo, prs)
+    file_management.write_data(prs, owner, repo, file_name)
+
     return prs

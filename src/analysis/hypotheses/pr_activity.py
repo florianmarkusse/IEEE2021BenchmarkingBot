@@ -91,84 +91,83 @@ def generate_comments(owner, repo, data_set):
 
     # get_distributions does not work correctly for bot PR's as benchmarking bot can also comment on the PR. This would
     # inflate the actual number of human contributions.
-    # bot_pr_comments_distribution_without_bot_contribution = []
-    # for pr in data_set["bot_prs"]:
-    #     benchmark_bot_contributions = 0
-    #     for pair in pr["commenterAndLengths"]:
-    #         if pair[0] == get_bot_username(owner, repo):
-    #             benchmark_bot_contributions += 1
-    #     bot_pr_comments_distribution_without_bot_contribution.append(
-    #         max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
-    #     )
-    #
-    # number_of_comments_distributions = get_distributions(data_set, "comments")
-    #
-    # qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
-    #                     number_of_comments_distributions[1],
-    #                     data_set["bot_prs_name"],
-    #                     data_set["non_bot_prs_name"], "comments")
-    #
-    # frequency_graph.create_overlapping_histogram(
-    #     owner,
-    #     repo,
-    #     data_set["name"],
-    #     "Number of comments",
-    #     40,
-    #     bot_pr_comments_distribution_without_bot_contribution,
-    #     data_set["bot_prs_name"],
-    #     number_of_comments_distributions[1],
-    #     data_set["non_bot_prs_name"],
-    #     0.4,
-    #     True,
-    #     5,
-    #     False
-    # )
-    #
-    # at_least = 5
-    #
-    # bot_pr_comments_distribution_without_bot_contribution = []
-    # for pr in data_set["bot_prs"]:
-    #     benchmark_bot_contributions = 0
-    #     for pair in pr["commenterAndLengths"]:
-    #         if pair[0] == get_bot_username(owner, repo):
-    #             benchmark_bot_contributions += 1
-    #     result = max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
-    #     if result >= at_least:
-    #         bot_pr_comments_distribution_without_bot_contribution.append(result)
-    #
-    # number_of_comments_distributions = get_distributions(data_set, "comments", at_least)
-    #
-    # qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
-    #                     number_of_comments_distributions[1],
-    #                     data_set["bot_prs_name"],
-    #                     data_set["non_bot_prs_name"], f"comments at least {at_least}")
-    #
-    # # Comment when doing step histogram
-    # frequency_graph.create_overlapping_histogram(
-    #     owner,
-    #     repo,
-    #     data_set["name"],
-    #     f"Number of comments at least {at_least}",
-    #     40,
-    #     bot_pr_comments_distribution_without_bot_contribution,
-    #     data_set["bot_prs_name"],
-    #     number_of_comments_distributions[1],
-    #     data_set["non_bot_prs_name"],
-    #     0.4,
-    #     True,
-    #     5,
-    #     False
-    # )
+    bot_pr_comments_distribution_without_bot_contribution = []
+    for pr in data_set["bot_prs"]:
+        benchmark_bot_contributions = 0
+        for pair in pr["commenterAndLengths"]:
+            if pair[0] == get_bot_username(owner, repo):
+                benchmark_bot_contributions += 1
+        bot_pr_comments_distribution_without_bot_contribution.append(
+            max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
+        )
+
+    number_of_comments_distributions = get_distributions(data_set, "comments")
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
+                        number_of_comments_distributions[1],
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], "comments")
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        "Number of comments",
+        40,
+        bot_pr_comments_distribution_without_bot_contribution,
+        data_set["bot_prs_name"],
+        number_of_comments_distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True,
+        5,
+        False
+    )
+
+    at_least = 5
+
+    bot_pr_comments_distribution_without_bot_contribution = []
+    for pr in data_set["bot_prs"]:
+        benchmark_bot_contributions = 0
+        for pair in pr["commenterAndLengths"]:
+            if pair[0] == get_bot_username(owner, repo):
+                benchmark_bot_contributions += 1
+        result = max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
+        if result >= at_least:
+            bot_pr_comments_distribution_without_bot_contribution.append(result)
+
+    number_of_comments_distributions = get_distributions(data_set, "comments", at_least)
+
+    qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
+                        number_of_comments_distributions[1],
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], f"comments at least {at_least}")
+
+    frequency_graph.create_overlapping_histogram(
+        owner,
+        repo,
+        data_set["name"],
+        f"Number of comments at least {at_least}",
+        40,
+        bot_pr_comments_distribution_without_bot_contribution,
+        data_set["bot_prs_name"],
+        number_of_comments_distributions[1],
+        data_set["non_bot_prs_name"],
+        0.4,
+        True,
+        5,
+        False
+    )
 
     # comments length distribution
     comment_lengths_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "bot_prs")
     comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set,
                                                                                      "non_bot_prs")
 
-    # qq_plot.qq_plotting(owner, repo, data_set["name"], comment_lengths_bot_prs,
-    #                     comment_lengths_non_bot_prs,
-    #                     data_set["bot_prs_name"],
-    #                     data_set["non_bot_prs_name"], "comment_lengths")
+    qq_plot.qq_plotting(owner, repo, data_set["name"], comment_lengths_bot_prs,
+                        comment_lengths_non_bot_prs,
+                        data_set["bot_prs_name"],
+                        data_set["non_bot_prs_name"], "comment_lengths")
 
     frequency_graph.create_overlapping_histogram_step(
         owner,
@@ -180,16 +179,38 @@ def generate_comments(owner, repo, data_set):
         data_set["bot_prs_name"],
         comment_lengths_non_bot_prs,
         data_set["non_bot_prs_name"],
-        1000,
-        True,
-        10000,
-        True,
-        False,
-        5000
+        1.0,
+        2500,
+        4
     )
 
-    # comments_printer(owner, repo, data_set, "bot_prs")
-    # comments_printer(owner, repo, data_set, "non_bot_prs")
+    comments_after_benchmarking_bot_distributions = get_distributions(data_set, "commentsAfterContribution")
+
+    fraction_of_comments_after_benchmarking_contriubiton = []
+
+    for index in range(len(number_of_comments_distributions[0])):
+        fraction = comments_after_benchmarking_bot_distributions[0][index] / number_of_comments_distributions[0][index]
+        fraction_of_comments_after_benchmarking_contriubiton.append(fraction)
+
+
+
+    frequency_graph.create_overlapping_histogram_step(
+        owner,
+        repo,
+        data_set["name"],
+        f"Fraction of comments remaining",
+        0.9,
+        fraction_of_comments_after_benchmarking_contriubiton,
+        data_set["bot_prs_name"],
+        None,
+        None,
+        0.4,
+        0.1,
+        1
+    )
+
+    comments_printer(owner, repo, data_set, "bot_prs")
+    comments_printer(owner, repo, data_set, "non_bot_prs")
 
 
 def generate_reviews(owner, repo, data_set):

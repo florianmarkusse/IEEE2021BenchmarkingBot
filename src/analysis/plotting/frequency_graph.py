@@ -7,31 +7,43 @@ from src.analysis import helpers
 
 
 def create_overlapping_histogram_step(owner, repo, data_set_name, x_label, overflow_value, first_values, first_name,
-                                      second_values=None, second_name=None, max_value=1.0, overflow=False,
-                                      tick_frequency=5,
-                                      is_step=False, density=True, step_size=1):
-    max_val = 0
-    if overflow:
-        bins = range(0, overflow_value, step_size)
+                                      second_values=None, second_name=None, max_value=1.0, step_size=1, tick_frequency=1):
+    bins = list(np.linspace(0, overflow_value, num=round(overflow_value/step_size) + 1))
 
-        if is_step:
-            res = plt.hist(np.clip(first_values, bins[0], bins[-1] - 1), bins, label=first_name, color='blue',
-                           density=density, histtype='step')
-            print(res[0])
-            max_val = max(res)
+    first_values = np.clip(first_values, bins[0], bins[-1])
 
-            if second_values is not None:
-                res = plt.hist(np.clip(second_values, bins[0], bins[-1] - 1), bins, label=second_name, color='green',
-                               density=density, histtype='step')
-                max_val = max(res)
+    first_density, first_bins = np.histogram(first_values, density=True, bins=bins)
+    first_unity_density = first_density / first_density.sum()
+    first_widths = first_bins[:-1] - first_bins[1:]
+
+    plt.bar(first_bins[1:], first_unity_density, width=first_widths, label=first_name, color="blue", alpha=0.5, edgecolor="black", align="edge")
+
+    if second_values is not None:
+        second_values = np.clip(second_values, bins[0], bins[-1])
+
+        second_density, second_bins = np.histogram(second_values, density=True, bins=bins)
+        second_unity_density = second_density / second_density.sum()
+        second_widths = second_bins[:-1] - second_bins[1:]
+
+        plt.bar(second_bins[1:], second_unity_density, width=second_widths, label=second_name, color="green", alpha=0.5, edgecolor="black", align="edge")
+
+    N_ticks = round(overflow_value / step_size / tick_frequency + 1)
+
+    ticks = [round(tick * step_size * tick_frequency, 1) for tick in range(N_ticks)]
+
+    str_ticks = [str(tick) for tick in ticks]
+    str_ticks[-1] += "+"
+
+    plt.xticks(ticks=ticks, labels=str_ticks)
+
+    plt.legend(loc='upper right', fontsize=20)
+    plt.ylim([0, max_value])
 
     plt.xlabel(x_label)
     plt.xlabel(x_label, size=24)
 
     plt.xticks(size=16)
     plt.yticks(size=16)
-    plt.legend(loc='upper right', fontsize=20)
-    plt.ylim([0, max_val])
 
     plt.tight_layout(pad=0.04)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}_{x_label.replace(' ', '_')}.png",
