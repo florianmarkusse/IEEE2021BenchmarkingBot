@@ -15,14 +15,29 @@ def get_bot_caller_participants_commenters_in_pr_page(owner, repo, pull_number, 
         'page': str(page)
     }
 
-    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/issues/{pull_number}/comments'.format(
-        owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
+    resp = {}
+    try:
+        resp = requests.get('https://api.github.com/repos/{owner}/{repo}/issues/{pull_number}/comments'.format(
+            owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
+    except:
+        print("Error")
+        print("Sleeping for 60 second(s)")
+        time.sleep(60)
+        return get_bot_caller_participants_commenters_in_pr_page(owner, repo, pull_number, bot_call_string, page, token)
 
     page_results = {
         "callers": [],
         "participants": [],
         "commenterAndLengths": []
     }
+
+    try:
+        thing = len(resp.json()) == 0
+    except:
+        print("Error")
+        print("Sleeping for 60 second(s)")
+        time.sleep(60)
+        return get_bot_caller_participants_commenters_in_pr_page(owner, repo, pull_number, bot_call_string, page, token)
 
     if len(resp.json()) == 0:
         return 999

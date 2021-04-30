@@ -21,9 +21,15 @@ def get_changed_files_pull_page(owner, repo, pull_number, page, token):
         'page': str(page)
     }
 
-    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/files'.format(
+    res = {}
+    try:
+        resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/files'.format(
         owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
-
+    except:
+        print("Error")
+        print("Sleeping for 60 second(s)")
+        time.sleep(60)
+        return get_changed_files_pull_page(owner, repo, pull_number, page, token)
     files = []
 
     if resp.status_code == 200:

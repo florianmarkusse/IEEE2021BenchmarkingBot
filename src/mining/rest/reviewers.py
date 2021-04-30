@@ -16,10 +16,28 @@ def get_reviewers_pr_page(owner, repo, pull_number, page, token):
         'page': str(page)
     }
 
-    resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/reviews'.format(
-        owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
+
+
+    resp = {}
+
+    try:
+        resp = requests.get('https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/reviews'.format(
+            owner=owner, repo=repo, pull_number=str(pull_number)), headers=headers, params=payload)
+    except:
+        print("Error")
+        print("Sleeping for 60 second(s)")
+        time.sleep(60)
+        return get_reviewers_pr_page(owner, repo, pull_number, page, token)
 
     page_reviewers = []
+
+    try:
+        thing = len(resp.json()) == 0
+    except:
+        print("Error")
+        print("Sleeping for 60 second(s)")
+        time.sleep(60)
+        return get_reviewers_pr_page(owner, repo, pull_number, page, token)
 
     if len(resp.json()) == 0:
         return 999
