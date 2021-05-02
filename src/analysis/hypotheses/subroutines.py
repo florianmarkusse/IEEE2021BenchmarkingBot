@@ -1,6 +1,6 @@
 from src.utility.file_management import get_projects_to_mine
 from src.utility.helpers import categorize_prs
-
+import statistics
 
 def get_distributions(data_set, attribute, at_least=0):
     x_distribution = []
@@ -32,3 +32,21 @@ def get_bot_username(owner, repo):
             # Remove bot from results if applicable
             return project["botUsername"]
     return None
+
+def get_mean_median(prs, attribute):
+    distribution = []
+    for pr in prs:
+        if isinstance(pr[attribute], list):
+            distribution.append(len(pr[attribute]))
+        else:
+            distribution.append(pr[attribute])
+
+    print(f"{attribute}: median = {statistics.median(distribution)}, average = {statistics.mean(distribution)}")
+
+def descriptive_statistics(prs):
+    get_mean_median(prs, "participants")
+    get_mean_median(prs, "comments")
+    get_mean_median(prs, "reviews")
+    get_mean_median(prs, "commits")
+    get_mean_median(prs, "additions")
+    get_mean_median(prs, "deletions")

@@ -18,27 +18,9 @@ for project in projects:
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
 
-    path = f"../data/projects/{owner}/{repo}/allPRs.json"
+    # Create non bot PR's.
+    matcher.create_non_bot_prs(owner, repo)
 
-    all_prs_file = open(path, "r")
-
-    file_name = "allPRs"
-
-    all_prs = json.loads(all_prs_file.read())
-
-    print(f"Collecting {file_name} reviewers")
-    reviewers.get_reviewers_prs(owner, repo, all_prs, token)
-    file_management.write_data(all_prs, owner, repo, file_name)
-
-    print(f"Enriching {file_name} with human comments")
-    enhancement.add_human_comments_member(all_prs)
-    file_management.write_data(all_prs, owner, repo, file_name)
-
-    print(f"Enriching {file_name} with benchmark bot free participants")
-    enhancement.add_benchmark_bot_free_participants_member(owner, repo, all_prs)
-    file_management.write_data(all_prs, owner, repo, file_name)
-
-    print(f"Enriching {file_name} with comments after benchmarking bot contribution")
-    enhancement.add_comments_after_benchmarking_bot_contribution(owner, repo, all_prs)
-    file_management.write_data(all_prs, owner, repo, file_name)
+    data = file_management.get_all_mined_prs(owner, repo)
+    matcher.do_matchings(owner, repo, data.get("bot_prs"), data.get("non_bot_prs"))
 

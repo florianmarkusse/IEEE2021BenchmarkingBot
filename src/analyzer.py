@@ -1,6 +1,7 @@
 from src.utility import file_management
 from src.analysis.plotting import qq_plot, top_ten, frequency_graph
 from src.analysis.hypotheses import pr_activity, pr_impact, pr_contribution, subroutines
+import json
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -24,8 +25,8 @@ for project in projects:
     #     print(f" {data_set_pair['name']}: bot PR's size: {len(data_set_pair['bot_prs'])}")
     #     print(f" {data_set_pair['name']}: non bot PR's size: {len(data_set_pair['non_bot_prs'])}")
 
-    ### PR Activity
-    # Participants
+    # ### PR Activity
+    # # Participants
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
@@ -90,8 +91,14 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_additions_deletions(owner, repo, data_set_pair)
 
-    ### PR contribution
-    for data_set_pair in data_set_pairs:
-        pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    # ### PR contribution
     # for data_set_pair in data_set_pairs:
-    #     pr_contribution.generate_pr_benchmark_calling(owner, repo, data_set_pair)
+    #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+
+    path = f"../data/projects/{owner}/{repo}/allPRs.json"
+
+    all_prs_file = open(path, "r")
+    all_prs = json.loads(all_prs_file.read()),
+    all_prs_file.close()
+
+    subroutines.descriptive_statistics(all_prs[0])
