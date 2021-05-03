@@ -30,10 +30,10 @@ for project in projects:
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_participants(owner, repo, data_set_pair)
 
-    # Comments
+    # # Comments
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_comments(owner, repo, data_set_pair)
-
+    #
     # changed_source_sets = []
     # colors = ["red", "green", "blue"]
     # found = 0
@@ -79,7 +79,7 @@ for project in projects:
     # PR status
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_pr_status(owner, repo, data_set_pair)
-    # Commits
+    # # Commits
     # for data_set_pair in data_set_pairs:
     #     pr_impact.generate_commits(owner, repo, data_set_pair)
     #
@@ -99,6 +99,12 @@ for project in projects:
 
     all_prs_file = open(path, "r")
     all_prs = json.loads(all_prs_file.read()),
+
     all_prs_file.close()
 
-    subroutines.descriptive_statistics(all_prs[0])
+    all_prs = all_prs[0]
+    bot_prs = file_management.get_all_mined_prs(owner, repo)["bot_prs"]
+
+    pr_contribution.generate_contributor_interaction(owner, repo, all_prs, bot_prs)
+
+    # subroutines.descriptive_statistics(all_prs)

@@ -25,15 +25,16 @@ def scatter_graph(owner, repo, data_set_name, x_distribution, y_distribution, x_
     plt.xlim(left=x_min, right=x_max)
 
     plt.scatter(x_distribution, y_distribution)
-    plt.xlabel(x_label, size=20)
-    plt.ylabel(y_label, size=20)
-    plt.xticks(size=16)
-    plt.yticks(size=16)
+    plt.xlabel(x_label, size=24)
+    plt.ylabel(y_label, size=24)
+    plt.xticks(size=20)
+    plt.yticks(size=20)
 
     file_name = str.lower(x_label[0]) + x_label[1:] + "_" + str.lower(y_label[0]) + y_label[1:]
     file_name = file_name.replace(" ", "_")
+    file_name = file_name.replace("#", "number")
 
-    plt.tight_layout(pad=0.1)
+    plt.tight_layout(pad=0.04)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/scatter/{data_set_name}_{file_name}.png", transparent=True)
 
     plt.show()

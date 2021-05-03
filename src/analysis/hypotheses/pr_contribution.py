@@ -1,6 +1,6 @@
-from src.analysis.plotting import combo, boxplot, frequency_graph
+from src.analysis.plotting import combo, boxplot, frequency_graph, scatter_graph
 from src.analysis.hypotheses import subroutines
-from src.utility.helpers import periodize_prs
+from src.utility.helpers import periodize_prs, categorize_prs
 from src.analysis.helpers import split_prs_into_lists
 from functools import cmp_to_key
 
@@ -145,3 +145,29 @@ def generate_pr_benchmark_calling(owner, repo, data_set):
         True,
         1,
     )
+
+def generate_contributor_interaction(owner, repo, all_prs, bot_prs):
+
+    created_to_prs = categorize_prs(all_prs, "author", "login")
+
+    for author in created_to_prs:
+        with_benchmark = 0
+        total_prs = len(created_to_prs[author])
+        for pr in created_to_prs[author]:
+            if "callers" in pr and len(pr["callers"]) > 0:
+                with_benchmark += 1
+
+        created_to_prs[author] = {
+            "created": total_prs,
+            "fraction": with_benchmark / total_prs
+        }
+
+    cut_offs = [0, 10, 50, 100]
+
+    for cut_off in cut_offs:
+        x_distribution = [created_to_prs[key]["fraction"] for key in created_to_prs if created_to_prs[key]["created"] >= cut_off]
+        y_distribution = [created_to_prs[key]["created"] for key in created_to_prs if created_to_prs[key]["created"] >= cut_off]
+
+        scatter_graph.scatter_graph(owner, repo, f"allPRs_at_least_{cut_off}", x_distribution, y_distribution,
+                                    "Fraction of PR's", "Number of created PR's",
+                                    0.0, 1.0)
