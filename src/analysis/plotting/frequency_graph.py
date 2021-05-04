@@ -43,8 +43,8 @@ def compare_changed_files(owner, repo, data_set_name, overflow_value, changed_fi
     plt.xlabel(x_label)
     plt.xlabel(x_label, size=24)
 
-    plt.xticks(size=16)
-    plt.yticks(size=16)
+    plt.xticks(size=20)
+    plt.yticks(size=20)
 
     plt.tight_layout(pad=0.04)
     plt.savefig(helpers.get_graph_path(owner,
@@ -56,7 +56,7 @@ def compare_changed_files(owner, repo, data_set_name, overflow_value, changed_fi
 
 def create_single_hist(owner, repo, data_set_name, x_label, overflow_value, first_values, first_name,
                        second_values=None, second_name=None,
-                        max_value=1.0, step_size=1, tick_frequency=1, add_plus=True, cum=False):
+                        max_value=1.0, step_size=1, tick_frequency=1, add_plus=True, cum=False, rounder=1):
     bins = list(np.linspace(0, overflow_value, num=round(overflow_value/step_size) + 1))
 
     first_values = np.clip(first_values, bins[0], bins[-1])
@@ -79,16 +79,19 @@ def create_single_hist(owner, repo, data_set_name, x_label, overflow_value, firs
         second_widths = second_bins[:-1] - second_bins[1:]
 
         if cum:
-            plt.bar(first_bins[1:], first_unity_density.cumsum(), width=first_widths, label=first_name, color="blue",
+            plt.bar(second_bins[1:], second_unity_density.cumsum(), width=second_widths, label=second_name, color="green",
                     alpha=0.5,
                     edgecolor="black", align="edge")
         else:
-            plt.bar(first_bins[1:], first_unity_density, width=first_widths, label=first_name, color="blue", alpha=0.5,
+            plt.bar(second_bins[1:], second_unity_density, width=second_widths, label=second_name, color="green", alpha=0.5,
                     edgecolor="black", align="edge")
 
     N_ticks = round(overflow_value / step_size / tick_frequency + 1)
 
-    ticks = [round(tick * step_size * tick_frequency, 1) for tick in range(N_ticks)]
+    if rounder == 0:
+        ticks = [round(tick * step_size * tick_frequency) for tick in range(N_ticks)]
+    else:
+        ticks = [round(tick * step_size * tick_frequency, rounder) for tick in range(N_ticks)]
 
     str_ticks = [str(tick) for tick in ticks]
     if add_plus:
@@ -105,8 +108,8 @@ def create_single_hist(owner, repo, data_set_name, x_label, overflow_value, firs
     plt.xlabel(x_label)
     plt.xlabel(x_label, size=24)
 
-    plt.xticks(size=16)
-    plt.yticks(size=16)
+    plt.xticks(size=20)
+    plt.yticks(size=20)
 
     plt.tight_layout(pad=0.04)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}_cum_is_{cum}_{x_label.replace(' ', '_')}.png",

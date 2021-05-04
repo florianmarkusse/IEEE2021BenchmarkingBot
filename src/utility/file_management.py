@@ -87,21 +87,21 @@ def get_all_mined_prs(owner, repo):
     data_set = ("botPRs", "nonBotPRs", "BOT PRS - NON BOT PRS")
 
     bot_prs_full_path = path + f"/{data_set[0]}.json"
-    all_prs_full_path = path + f"/{data_set[1]}.json"
+    non_bot_prs_full_path = path + f"/{data_set[1]}.json"
 
     bot_prs_file = open(bot_prs_full_path, "r")
-    all_prs_file = open(all_prs_full_path, "r")
+    non_bot_prs_file = open(non_bot_prs_full_path, "r")
 
     data_set = {
         "name": data_set[2],
         "bot_prs_name": "Bot PR's",
         "non_bot_prs_name": "Non bot PR's",
         "bot_prs": json.loads(bot_prs_file.read()),
-        "non_bot_prs": json.loads(all_prs_file.read())
+        "non_bot_prs": json.loads(non_bot_prs_file.read())
     }
 
     bot_prs_file.close()
-    all_prs_file.close()
+    non_bot_prs_file.close()
 
     return data_set
 

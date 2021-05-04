@@ -9,10 +9,10 @@ from src.analysis import helpers
 def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_label, y_label, file_name, log_scale=False):
     plt.figure()
     qq_plot(x_distribution, y_distribution, edgecolor='k')
-    plt.xlabel(x_label, size=20)
-    plt.ylabel(y_label, size=20)
-    plt.xticks(size=16)
-    plt.yticks(size=16)
+    plt.xlabel(x_label, size=24)
+    plt.ylabel(y_label, size=24)
+    plt.xticks(size=20)
+    plt.yticks(size=20)
 
     max_value = max(max(x_distribution), max(y_distribution))
 

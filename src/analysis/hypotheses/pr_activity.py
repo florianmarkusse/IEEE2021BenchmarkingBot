@@ -164,37 +164,49 @@ def generate_comments(owner, repo, data_set):
     comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set,
                                                                                      "non_bot_prs")
 
+    divider = 1000
+    comment_lengths_bot_prs = [ele / divider for ele in comment_lengths_bot_prs]
+    comment_lengths_non_bot_prs = [ele / divider for ele in comment_lengths_non_bot_prs]
+
     qq_plot.qq_plotting(owner, repo, data_set["name"], comment_lengths_bot_prs,
                         comment_lengths_non_bot_prs,
                         data_set["bot_prs_name"],
-                        data_set["non_bot_prs_name"], "comment_lengths")
+                        data_set["non_bot_prs_name"], f"comment_lengths_X{divider}")
 
     frequency_graph.create_single_hist(
         owner,
         repo,
         data_set["name"],
-        "Total comment length",
-        50000,
+        f"Total comment length",
+        50000 / divider,
         comment_lengths_bot_prs,
         data_set["bot_prs_name"],
         comment_lengths_non_bot_prs,
         data_set["non_bot_prs_name"],
         1.0,
-        2500,
-        4
+        2500 / divider,
+        4,
+        True,
+        False,
+        0
     )
 
     comments_after_benchmarking_bot_distributions = get_distributions(data_set, "commentsAfterContribution")
     number_of_comments_distributions = get_distributions(data_set, "comments")
 
+    min_length = min(len(comments_after_benchmarking_bot_distributions[0]), len(number_of_comments_distributions[0]))
+
+    comment_after_bb_distributions = comments_after_benchmarking_bot_distributions[0][:min_length]
+    number_of_comments_bot_distributions = number_of_comments_distributions[0][:min_length]
+
     fraction_of_comments_after_benchmarking_contribution = []
 
-    for index in range(len(number_of_comments_distributions[0])):
-        fraction = comments_after_benchmarking_bot_distributions[0][index] / number_of_comments_distributions[0][index]
+    for index in range(len(number_of_comments_bot_distributions)):
+        fraction = comment_after_bb_distributions[index] / number_of_comments_bot_distributions[index]
         fraction_of_comments_after_benchmarking_contribution.append(fraction)
 
     scatter_graph.scatter_graph(owner, repo, data_set["name"],
-                                number_of_comments_distributions[0], fraction_of_comments_after_benchmarking_contribution,
+                                number_of_comments_bot_distributions, fraction_of_comments_after_benchmarking_contribution,
                                 "total # of comments", "Fraction comments remaining")
 
     frequency_graph.create_single_hist(
@@ -205,11 +217,13 @@ def generate_comments(owner, repo, data_set):
         1.0,
         fraction_of_comments_after_benchmarking_contribution,
         data_set["bot_prs_name"],
+        None,
+        None,
         0.25,
         0.1,
         1,
         False,
-        False
+        False,
     )
     frequency_graph.create_single_hist(
         owner,
@@ -219,6 +233,8 @@ def generate_comments(owner, repo, data_set):
         1.0,
         fraction_of_comments_after_benchmarking_contribution,
         data_set["bot_prs_name"],
+        None,
+        None,
         1.0,
         0.1,
         1,
@@ -257,38 +273,7 @@ def generate_reviews(owner, repo, data_set):
     )
 
 
-def generate_benchmarking_bot_callers(owner, repo, data_set):
 
-    caller_to_prs = helpers.categorize_prs(data_set["bot_prs"], "callers")
 
-    caller_frequencies = []
-    for key in caller_to_prs:
-        caller_frequencies.append(len(caller_to_prs[key]))
 
-    result = boxplot.boxplot(owner, repo, data_set["name"], caller_frequencies, "benchmark_bot_calls")
 
-    outlier_values = []
-    for ele in result["fliers"]:
-        for outlier in ele.get_data()[1]:
-            outlier_values.append(outlier)
-
-    frequency_graph.create_overlapping_histogram(
-        owner,
-        repo,
-        data_set["name"],
-        "Benchmark bot calls",
-        min(outlier_values),
-        caller_frequencies,
-        "Contributors",
-        None,
-        None,
-        0.4,
-        True,
-        20,
-        False,
-        True
-    )
-    # print(data_set["name"])
-    # print(len(caller_to_prs.keys()))
-    # print(list(caller_to_prs.keys())[0])
-    # print(len(caller_to_prs[list(caller_to_prs.keys())[0]]))
