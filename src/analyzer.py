@@ -16,6 +16,16 @@ for project in projects:
     # Get data set pairs.
     data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
+    path = f"../data/projects/{owner}/{repo}/allPRs.json"
+
+    all_prs_file = open(path, "r")
+    all_prs = json.loads(all_prs_file.read()),
+
+    all_prs_file.close()
+
+    all_prs = all_prs[0]
+    bot_prs = file_management.get_all_mined_prs(owner, repo)["bot_prs"]
+
     ##
     # Create summarizing data.
     ##
@@ -33,7 +43,7 @@ for project in projects:
     # # Comments
     # for data_set_pair in data_set_pairs:
     #     pr_activity.generate_comments(owner, repo, data_set_pair)
-    #
+
     # changed_source_sets = []
     # colors = ["red", "green", "blue"]
     # found = 0
@@ -94,17 +104,9 @@ for project in projects:
     # ### PR contribution
     # for data_set_pair in data_set_pairs:
     #     pr_contribution.generate_quarterly_pr_contribution(owner, repo, data_set_pair)
+    #     pr_contribution.generate_pr_benchmark_calling(owner, repo, data_set_pair)
 
-    path = f"../data/projects/{owner}/{repo}/allPRs.json"
 
-    all_prs_file = open(path, "r")
-    all_prs = json.loads(all_prs_file.read()),
-
-    all_prs_file.close()
-
-    all_prs = all_prs[0]
-    bot_prs = file_management.get_all_mined_prs(owner, repo)["bot_prs"]
 
     pr_contribution.generate_contributor_interaction(owner, repo, all_prs, bot_prs)
-
     # subroutines.descriptive_statistics(all_prs)

@@ -159,7 +159,8 @@ def generate_contributor_interaction(owner, repo, all_prs, bot_prs):
 
         created_to_prs[author] = {
             "created": total_prs,
-            "fraction": with_benchmark / total_prs
+            "fraction": with_benchmark / total_prs,
+            "with_benchmark": with_benchmark
         }
 
     cut_offs = [0, 10, 50, 100]
@@ -171,3 +172,15 @@ def generate_contributor_interaction(owner, repo, all_prs, bot_prs):
         scatter_graph.scatter_graph(owner, repo, f"allPRs_at_least_{cut_off}", x_distribution, y_distribution,
                                     "Fraction of PR's", "Number of created PR's",
                                     0.0, 1.0)
+    for i in range(10):
+        interacted_previously = 0
+        interacted_again = 0
+        for author in created_to_prs:
+            if created_to_prs[author]["with_benchmark"] >= i:
+                interacted_previously += 1
+            if created_to_prs[author]["with_benchmark"] >= i + 1:
+                interacted_again += 1
+
+        fraction = interacted_again / interacted_previously
+
+        print(f"From {i} to {i + 1}: Fraction: {fraction}\tPreviously: {interacted_previously}\tAgain: {interacted_again}")

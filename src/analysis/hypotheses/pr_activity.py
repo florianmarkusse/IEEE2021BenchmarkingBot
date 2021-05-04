@@ -194,14 +194,19 @@ def generate_comments(owner, repo, data_set):
     comments_after_benchmarking_bot_distributions = get_distributions(data_set, "commentsAfterContribution")
     number_of_comments_distributions = get_distributions(data_set, "comments")
 
+    min_length = min(len(comments_after_benchmarking_bot_distributions[0]), len(number_of_comments_distributions[0]))
+
+    comment_after_bb_distributions = comments_after_benchmarking_bot_distributions[0][:min_length]
+    number_of_comments_bot_distributions = number_of_comments_distributions[0][:min_length]
+
     fraction_of_comments_after_benchmarking_contribution = []
 
-    for index in range(len(number_of_comments_distributions[0])):
-        fraction = comments_after_benchmarking_bot_distributions[0][index] / number_of_comments_distributions[0][index]
+    for index in range(len(number_of_comments_bot_distributions)):
+        fraction = comment_after_bb_distributions[index] / number_of_comments_bot_distributions[index]
         fraction_of_comments_after_benchmarking_contribution.append(fraction)
 
     scatter_graph.scatter_graph(owner, repo, data_set["name"],
-                                number_of_comments_distributions[0], fraction_of_comments_after_benchmarking_contribution,
+                                number_of_comments_bot_distributions, fraction_of_comments_after_benchmarking_contribution,
                                 "total # of comments", "Fraction comments remaining")
 
     frequency_graph.create_single_hist(
