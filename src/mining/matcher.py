@@ -27,7 +27,7 @@ def create_non_bot_prs(owner, repo):
 def do_matchings(owner, repo, bot_prs, non_bot_prs):
     do_one_to_one_matching(owner, repo, bot_prs, non_bot_prs, "OneToOne")
     do_changed_source_files_larger_matching(owner, repo, bot_prs, non_bot_prs, "ChangedSourceFilesAtLeast")
-    do_performance_label_matching(owner, repo, bot_prs, non_bot_prs, "PerformanceLabels")
+    #do_performance_label_matching(owner, repo, bot_prs, non_bot_prs, "PerformanceLabels")
 
 
 def do_one_to_one_matching(owner, repo, bot_prs, non_bot_prs, file_name):

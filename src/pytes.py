@@ -37,7 +37,7 @@ for project in projects:
     all_prs_file.close()
     non_bot_prs_file.close()
 
-    bot_prs = [pr for pr in all_prs if pr["number"] not in non_bot_prs_numbers]
+    bot_prs = [pr for pr in all_prs if pr["number"] not in non_bot_prs_numbers and "swift-ci" in pr["participants"]]
 
     print(len(bot_prs))
 

@@ -207,7 +207,7 @@ def generate_comments(owner, repo, data_set):
 
     scatter_graph.scatter_graph(owner, repo, data_set["name"],
                                 number_of_comments_bot_distributions, fraction_of_comments_after_benchmarking_contribution,
-                                "total # of comments", "Fraction comments remaining")
+                                "total # of comments", "Fraction remaining")
 
     frequency_graph.create_single_hist(
         owner,
@@ -219,7 +219,7 @@ def generate_comments(owner, repo, data_set):
         data_set["bot_prs_name"],
         None,
         None,
-        0.25,
+        0.5,
         0.1,
         1,
         False,

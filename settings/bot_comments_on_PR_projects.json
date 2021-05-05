@@ -17,7 +17,8 @@
     "owner": "rust-lang",
     "repo": "rust",
     "botQuery": "commenter:rust-timer",
-    "startDate": "2018-08-18"
+    "startDate": "2018-08-18",
+    "botUsername": "rust-timer"
   },
   {
     "owner": "diem",
