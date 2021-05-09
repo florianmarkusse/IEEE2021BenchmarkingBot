@@ -50,6 +50,7 @@
     "owner": "microsoft",
     "repo": "fluentui",
     "botQuery": "commenter:fabricteam Perf Analysis (Fluent) in:comments",
-    "startDate": "2020-11-04"
+    "startDate": "2020-11-04",
+    "always": true
   }
 ]

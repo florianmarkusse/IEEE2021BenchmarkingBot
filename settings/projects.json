@@ -1,10 +1,12 @@
 [
   {
-    "owner": "apple",
-    "repo": "swift",
-    "botQuery": "@swift-ci benchmark in:comments",
-    "startDate": "2017-01-30",
-    "botCallString": "@swift-ci benchmark",
-    "botUsername": "swift-ci"
+    "owner": "microsoft",
+    "repo": "fluentui",
+    "botQuery": "commenter:fabricteam Perf Analysis (Fluent) in:comments",
+    "startDate": "2020-11-04",
+    "botCallString": "",
+    "botUserName": "fabricteam",
+    "always": true,
+    "nonBotStartDate": "2019-11-04"
   }
 ]

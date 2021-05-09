@@ -4,9 +4,9 @@ from src.mining.enhancement import enhancement
 from src.utility import file_management
 
 
-def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, bot_call_string, file_name, token):
+def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, bot_call_string, file_name, token, end_date=None):
     print(f"Collecting {file_name}")
-    prs = pull_requests.get_prs(owner, repo, search_parameters, start_date, attributes, token)
+    prs = pull_requests.get_prs(owner, repo, search_parameters, start_date, attributes, token, end_date)
     file_management.write_data(prs, owner, repo, file_name)
 
     # In GraphQL it is hard to get some other parameters so add this data using their REST API.

@@ -1,6 +1,6 @@
 # File that collects all the PR data from the projects that is used in the data analysis that is possible to
 # be retrieved through the graphQL API from GitHub.
-
+import datetime
 import time
 import requests
 
@@ -78,7 +78,7 @@ def get_query(owner, repo, search_parameters, start_date, attributes, cursor):
            cursor="" if cursor == "" else ', after: "' + cursor + '"')
 
 
-def get_prs(owner, repo, search_parameters, start_date, attributes, token):
+def get_prs(owner, repo, search_parameters, start_date, attributes, token, end_date=None):
     """
     Gets all the PR's from the repository with the desired attributes.
 
@@ -108,6 +108,13 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
     first_empty = False
     found_all = False
 
+    if end_date is not None:
+        end_date = end_date.split("-")
+        year = int(end_date[0])
+        month = int(end_date[1])
+        day = int(end_date[2])
+        end_date = datetime.date(year, month, day)
+
     while not found_all:
         query_result = run_query(
             get_query(owner, repo, search_parameters, start_date, attributes, final_cursor), token)  # Execute the query
@@ -125,6 +132,27 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token):
 
             final_cursor = get_updated_cursor(temp_query_result, results[len(results) - 1])
         else:
+
+            if end_date is not None:
+                index = -1
+                is_earlier = False
+                final_search = False
+                while not is_earlier:
+                    final_date_found = get_date_from_string(query_result["data"]["search"]["edges"][index]["node"]["createdAt"])
+                    final_date_found = final_date_found.date() # just get date
+
+                    if final_search and final_date_found < end_date:
+                        found_all = True
+                        # Throw away rest of query result
+                        query_result["data"]["search"]["edges"] = \
+                            query_result["data"]["search"]["edges"][0:(index + 1)]
+
+                    if final_date_found >= end_date:
+                        final_search = True
+                        index = index - 1
+                    else:
+                        is_earlier = True
+
             first_empty = False
             edges = query_result["data"]["search"]["edges"]
             results.extend(edges)

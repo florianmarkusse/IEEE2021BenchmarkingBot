@@ -22,15 +22,28 @@ for project in projects:
     bot_query = project.get("botQuery")
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
+    always = project.get("always")
+    non_bot_start_date = project.get("nonBotStartDate")
 
     print("Mining PR's from project {owner}/{repo}".format(owner=owner, repo=repo))
 
-    bot_prs = collector.collect_and_enrich(owner, repo, standard_query + " " + bot_query, start_date,
-                                           helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
-                                           "botPRs", token)
-    all_prs = collector.collect_and_enrich(owner, repo, standard_query, start_date,
-                                           helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
-                                           "allPRs", token)
+    all_prs = 0
+    bot_prs = 0
+
+    if always:
+        all_prs = collector.collect_and_enrich(owner, repo, standard_query, non_bot_start_date,
+                                               helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                               "allPRs", token, start_date)
+        bot_prs = collector.collect_and_enrich(owner, repo, standard_query, start_date,
+                                               helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                               "botPRs", token)
+    else:
+        bot_prs = collector.collect_and_enrich(owner, repo, standard_query + " " + bot_query, start_date,
+                                               helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                               "botPRs", token)
+        all_prs = collector.collect_and_enrich(owner, repo, standard_query, start_date,
+                                               helpers.get_graphql_attributes(graphql_parameters), bot_call_string,
+                                               "allPRs", token)
 
     # Create non bot PR's.
     matcher.create_non_bot_prs(owner, repo)
