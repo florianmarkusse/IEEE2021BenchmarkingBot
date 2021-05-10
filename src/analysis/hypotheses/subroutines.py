@@ -25,6 +25,22 @@ def categorize_data_set(owner, repo, data_set, attribute_to_categorize_on):
     return bot_prs_categorized, non_bot_prs_categorized
 
 
+def get_always(owner, repo):
+    projects = get_projects_to_mine()
+    for project in projects:
+        if project["owner"] == owner and project["repo"] == repo:
+            return project["always"]
+    return None
+
+def get_additional_bots(owner, repo):
+    projects = get_projects_to_mine()
+    for project in projects:
+        if project["owner"] == owner and project["repo"] == repo:
+            # Remove bot from results if applicable
+            return project["additionalBots"]
+    return None
+
+
 def get_bot_username(owner, repo):
     projects = get_projects_to_mine()
     for project in projects:

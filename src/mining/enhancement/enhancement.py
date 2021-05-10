@@ -1,19 +1,35 @@
 from src.analysis.hypotheses import subroutines
 
 
-def add_human_comments_member(prs):
+def add_human_comments_member(owner, repo, prs):
     for pr in prs:
         pr["comments"] = len(pr["commenterAndLengths"])
-        pr["humanComments"] = pr["comments"] - (len(pr["callers"]) * 2)
+        if not subroutines.get_always(owner, repo):
+            pr["humanComments"] = pr["comments"] - (len(pr["callers"]) * 2)
+        else:
+            counter = 0
+            for comment in pr["commenterAndLengths"]:
+                if comment[0] == subroutines.get_bot_username(owner, repo) or comment[0] in subroutines.get_additional_bots(owner, repo):
+                    counter += 1
+            pr["humanComments"] = pr["comments"] - counter
 
 
 def add_benchmark_bot_free_participants_member(owner, repo, prs):
     botUserName = subroutines.get_bot_username(owner, repo)
-    for pr in prs:
-        if botUserName in pr["participants"]:
-            pr["benchmarkBotFreeParticipants"] = len(pr["participants"]) - 1
-        else:
-            pr["benchmarkBotFreeParticipants"] = len(pr["participants"])
+    if subroutines.get_always(owner, repo):
+        other_bots = subroutines.get_additional_bots(owner, repo)
+        for pr in prs:
+            counter = 0
+            for participant in pr["participants"]:
+                if participant == botUserName or participant in other_bots:
+                    counter += 1
+            pr["benchmarkBotFreeParticipants"] = len(pr["participants"]) - counter
+    else:
+        for pr in prs:
+            if botUserName in pr["participants"]:
+                pr["benchmarkBotFreeParticipants"] = len(pr["participants"]) - 1
+            else:
+                pr["benchmarkBotFreeParticipants"] = len(pr["participants"])
 
 
 def add_comments_after_benchmarking_bot_contribution(owner, repo, prs):

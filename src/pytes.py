@@ -20,28 +20,30 @@ for project in projects:
 
     path = f"../data/projects/{owner}/{repo}"
 
-    # (bot PR's file name, all PR's file name, data set name)
-    data_set = ("botPRs", "nonBotPRs", "BOT PRS - NON BOT PRS")
-
     all_prs_full_path = path + f"/allPRs.json"
-    non_bot_full_path = path + f"/nonBotPRs.json"
+    non_bot_full_path = path + f"/botPRs.json"
 
     all_prs_file = open(all_prs_full_path, "r")
     non_bot_prs_file = open(non_bot_full_path, "r")
 
     all_prs = json.loads(all_prs_file.read())
     all_prs_numbers = [pr["number"] for pr in all_prs]
-    non_bot_prs = json.loads(non_bot_prs_file.read())
-    non_bot_prs_numbers = [pr["number"] for pr in non_bot_prs]
+    bot_prs = json.loads(non_bot_prs_file.read())
+    bot_prs_numbers = [pr["number"] for pr in bot_prs]
 
     all_prs_file.close()
     non_bot_prs_file.close()
 
-    bot_prs = [pr for pr in all_prs if pr["number"] not in non_bot_prs_numbers and "swift-ci" in pr["participants"]]
+    enhancement.add_benchmark_bot_free_participants_member(owner, repo, all_prs)
+    enhancement.add_human_comments_member(owner, repo, all_prs)
+    file_management.write_data(all_prs, owner, repo, "allPRs")
 
-    print(len(bot_prs))
-
+    enhancement.add_benchmark_bot_free_participants_member(owner, repo, bot_prs)
+    enhancement.add_human_comments_member(owner, repo, bot_prs)
     file_management.write_data(bot_prs, owner, repo, "botPRs")
+
+    # Create non bot PR's.
+    matcher.create_non_bot_prs(owner, repo)
 
     data = file_management.get_all_mined_prs(owner, repo)
     matcher.do_matchings(owner, repo, data.get("bot_prs"), data.get("non_bot_prs"))

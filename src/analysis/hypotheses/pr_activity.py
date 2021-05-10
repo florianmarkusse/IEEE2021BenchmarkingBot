@@ -2,7 +2,7 @@ import statistics
 import collections
 
 from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot, scatter_graph
-from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set
+from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set, get_always, get_additional_bots
 from src.utility import helpers
 
 
@@ -57,11 +57,16 @@ def get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, pr
     for pr in data_set[pr_type]:
         bot_indices = []
         for pair in pr["commenterAndLengths"]:
-            if pair[0] == get_bot_username(owner, repo):
-                bot_indices.append(pr["commenterAndLengths"].index(pair))
+            if get_always(owner, repo):
+                if pair[0] == get_bot_username(owner, repo) or pair[0] in get_additional_bots(owner, repo):
+                    bot_indices.append(pr["commenterAndLengths"].index(pair))
+            else:
+                if pair[0] == get_bot_username(owner, repo):
+                    bot_indices.append(pr["commenterAndLengths"].index(pair))
         non_countable_indices = []
         for index in bot_indices:
-            non_countable_indices.append(index - 1)
+            if not get_always(owner, repo):
+                non_countable_indices.append(index - 1)
             non_countable_indices.append(index)
 
         total_length = 0
@@ -95,10 +100,15 @@ def generate_comments(owner, repo, data_set):
     for pr in data_set["bot_prs"]:
         benchmark_bot_contributions = 0
         for pair in pr["commenterAndLengths"]:
-            if pair[0] == get_bot_username(owner, repo):
-                benchmark_bot_contributions += 1
+            is_always = get_always(owner, repo)
+            if is_always:
+                if pair[0] == get_bot_username(owner, repo) or pair[0] in get_additional_bots(owner, repo):
+                    benchmark_bot_contributions += 1
+            else:
+                if pair[0] == get_bot_username(owner, repo):
+                    benchmark_bot_contributions += (1 + 1) # Add explicit invocation
         bot_pr_comments_distribution_without_bot_contribution.append(
-            max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
+            max(0, len(pr["commenterAndLengths"]) - benchmark_bot_contributions)
         )
 
     number_of_comments_distributions = get_distributions(data_set, "comments")
@@ -130,9 +140,14 @@ def generate_comments(owner, repo, data_set):
     for pr in data_set["bot_prs"]:
         benchmark_bot_contributions = 0
         for pair in pr["commenterAndLengths"]:
-            if pair[0] == get_bot_username(owner, repo):
-                benchmark_bot_contributions += 1
-        result = max(0, len(pr["commenterAndLengths"]) - (2 * benchmark_bot_contributions))
+            is_always = get_always(owner, repo)
+            if is_always:
+                if pair[0] == get_bot_username(owner, repo) or pair[0] in get_additional_bots(owner, repo):
+                    benchmark_bot_contributions += 1
+            else:
+                if pair[0] == get_bot_username(owner, repo):
+                    benchmark_bot_contributions += (1 + 1)  # Add explicit invocation
+        result = max(0, len(pr["commenterAndLengths"]) - benchmark_bot_contributions)
         if result >= at_least:
             bot_pr_comments_distribution_without_bot_contribution.append(result)
 

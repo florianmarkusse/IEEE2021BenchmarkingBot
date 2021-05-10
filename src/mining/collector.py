@@ -35,7 +35,7 @@ def collect_and_enrich(owner, repo, search_parameters, start_date, attributes, b
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Enriching {file_name} with human comments")
-    enhancement.add_human_comments_member(prs)
+    enhancement.add_human_comments_member(owner, repo, prs)
     file_management.write_data(prs, owner, repo, file_name)
 
     print(f"Enriching {file_name} with benchmark bot free participants")

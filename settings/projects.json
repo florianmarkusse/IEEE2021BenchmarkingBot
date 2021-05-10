@@ -6,6 +6,10 @@
     "startDate": "2020-11-04",
     "botCallString": "",
     "botUsername": "fabricteam",
+    "additionalBots": [
+      "size-auditor[bot]",
+      "codesandbox[bot]"
+    ],
     "always": true,
     "nonBotStartDate": "2019-11-04"
   }
