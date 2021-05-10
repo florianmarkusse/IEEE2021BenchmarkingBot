@@ -23,21 +23,28 @@ def run_query(query, token):
     """
     headers = {"Authorization": "token {token}".format(token=token)}
 
-    request = requests.post('https://api.github.com/graphql',
-                            json={'query': query}, headers=headers)
+    request = {}
 
-    wait_time = 2
-    exponent = 0
-    while request.status_code == 502:
-        sleep_period = pow(wait_time, exponent)
-        print("received 502, sleeping for {sleep_period} second(s)".format(sleep_period=sleep_period))
-        time.sleep(sleep_period)
+    try:
         request = requests.post('https://api.github.com/graphql',
-                                json={'query': query}, headers=headers)
-        exponent += 1
+                            json={'query': query}, headers=headers)
+    except:
+        print("Error, sleeping for 60 second(s)")
+        time.sleep(60)
+        return run_query(query, token)
+
+    if request.status_code == 502:
+        print("received 502, sleeping for 60 second(s)")
+        time.sleep(60)
+        return run_query(query, token)
 
     if request.status_code == 200:
-        return request.json()
+        try:
+            return request.json()
+        except:
+            print("Error, sleeping for 60 second(s)")
+            time.sleep(60)
+            return run_query(query, token)
     else:
         raise Exception("Query failed to run by returning code of {}. {}".format(
             request.status_code, query))
