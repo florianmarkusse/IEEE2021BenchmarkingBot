@@ -148,6 +148,9 @@ def generate_pr_benchmark_calling(owner, repo, data_set):
 
 def generate_contributor_interaction(owner, repo, all_prs, bot_prs):
 
+    if subroutines.get_always(owner, repo):
+        return
+
     created_to_prs = categorize_prs(all_prs, "author", "login")
 
     for author in created_to_prs:

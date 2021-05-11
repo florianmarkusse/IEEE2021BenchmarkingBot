@@ -1,17 +1,15 @@
 [
   {
-    "owner": "microsoft",
-    "repo": "fluentui",
-    "botQuery": "commenter:fabricteam Perf Analysis (Fluent) in:comments",
-    "startDate": "2020-11-04",
-    "botCallString": "",
-    "botUsername": "fabricteam",
+    "owner": "diem",
+    "repo": "diem",
+    "botQuery": "Cluster Test Result in:comments repro cmd in:comments",
+    "startDate": "2020-03-03",
+    "botCallString": "/canary",
+    "botUsername": "github-actions[bot]",
     "additionalBots": [
-      "size-auditor[bot]",
-      "codesandbox[bot]",
-      "msft-github-bot"
+      "bors-libra"
     ],
-    "always": true,
-    "nonBotStartDate": "2019-11-04"
-  }
+    "always": false,
+    "nonBotStartDate": ""
+}
 ]
