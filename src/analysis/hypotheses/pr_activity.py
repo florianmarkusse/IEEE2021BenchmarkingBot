@@ -2,7 +2,8 @@ import statistics
 import collections
 
 from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot, scatter_graph
-from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set, get_always, get_additional_bots
+from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set, get_always, \
+    get_additional_bots
 from src.utility import helpers
 
 
@@ -54,20 +55,21 @@ def generate_participants(owner, repo, data_set):
 def get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, pr_type):
     # comments length distribution
     prs_total_comment_lengths_without_bot = []
+
     for pr in data_set[pr_type]:
-        bot_indices = []
-        for pair in pr["commenterAndLengths"]:
-            if get_always(owner, repo):
-                if pair[0] == get_bot_username(owner, repo) or pair[0] in get_additional_bots(owner, repo):
-                    bot_indices.append(pr["commenterAndLengths"].index(pair))
-            else:
-                if pair[0] == get_bot_username(owner, repo):
-                    bot_indices.append(pr["commenterAndLengths"].index(pair))
         non_countable_indices = []
-        for index in bot_indices:
-            if not get_always(owner, repo):
-                non_countable_indices.append(index - 1)
-            non_countable_indices.append(index)
+        if get_always(owner, repo):
+            for pair in pr["commenterAndLengths"]:
+                if pair[0] == get_bot_username(owner, repo) or pair[0] in get_additional_bots(owner, repo):
+                    non_countable_indices.append(pr["commenterAndLengths"].index(pair))
+        else:
+            for pair in pr["commenterAndLengths"]:
+                if pair[0] == get_bot_username(owner, repo):
+                    bot_index = pr["commenterAndLengths"].index(pair)
+                    non_countable_indices.append(bot_index - 1)
+                    non_countable_indices.append(bot_index)
+                if pair[0] in get_additional_bots(owner, repo):
+                    non_countable_indices.append(pr["commenterAndLengths"].index(pair))
 
         total_length = 0
 
@@ -106,7 +108,9 @@ def generate_comments(owner, repo, data_set):
                     benchmark_bot_contributions += 1
             else:
                 if pair[0] == get_bot_username(owner, repo):
-                    benchmark_bot_contributions += (1 + 1) # Add explicit invocation
+                    benchmark_bot_contributions += (1 + 1)  # Add explicit invocation
+                if pair[0] in get_additional_bots(owner, repo):
+                    benchmark_bot_contributions += 1
         bot_pr_comments_distribution_without_bot_contribution.append(
             max(0, len(pr["commenterAndLengths"]) - benchmark_bot_contributions)
         )
@@ -147,6 +151,8 @@ def generate_comments(owner, repo, data_set):
             else:
                 if pair[0] == get_bot_username(owner, repo):
                     benchmark_bot_contributions += (1 + 1)  # Add explicit invocation
+                if pair[0] in get_additional_bots(owner, repo):
+                    benchmark_bot_contributions += 1
         result = max(0, len(pr["commenterAndLengths"]) - benchmark_bot_contributions)
         if result >= at_least:
             bot_pr_comments_distribution_without_bot_contribution.append(result)
@@ -221,7 +227,8 @@ def generate_comments(owner, repo, data_set):
         fraction_of_comments_after_benchmarking_contribution.append(fraction)
 
     scatter_graph.scatter_graph(owner, repo, data_set["name"],
-                                number_of_comments_bot_distributions, fraction_of_comments_after_benchmarking_contribution,
+                                number_of_comments_bot_distributions,
+                                fraction_of_comments_after_benchmarking_contribution,
                                 "total # of comments", "Fraction remaining")
 
     frequency_graph.create_single_hist(
@@ -286,9 +293,3 @@ def generate_reviews(owner, repo, data_set):
         0.5,
         True
     )
-
-
-
-
-
-

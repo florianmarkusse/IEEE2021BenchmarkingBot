@@ -1,5 +1,6 @@
 import requests
 import time
+from src.analysis.hypotheses.subroutines import get_always
 
 per_page_number = 30  # max 100 per GitHub API
 error_message = "GitHub Comments API does not have the comments."
@@ -48,7 +49,7 @@ def get_bot_caller_participants_commenters_in_pr_page(owner, repo, pull_number, 
                 page_results["participants"].append(comments["user"]["login"])
                 page_results["commenterAndLengths"].append((comments["user"]["login"], 0))
             else:
-                if bot_call_string in comments["body"] and comments["user"]["login"] not in page_results["callers"]:
+                if not get_always(owner, repo) and bot_call_string in comments["body"] and comments["user"]["login"] not in page_results["callers"]:
                     page_results["callers"].append(comments["user"]["login"])
 
                 if comments["user"]["login"] not in page_results["participants"]:

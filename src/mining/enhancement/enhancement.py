@@ -4,14 +4,18 @@ from src.analysis.hypotheses import subroutines
 def add_human_comments_member(owner, repo, prs):
     for pr in prs:
         pr["comments"] = len(pr["commenterAndLengths"])
-        if not subroutines.get_always(owner, repo):
-            pr["humanComments"] = pr["comments"] - (len(pr["callers"]) * 2)
-        else:
-            counter = 0
-            for comment in pr["commenterAndLengths"]:
+        if subroutines.get_always(owner, repo):
+            pr["callers"] = []
+        counter = 0
+        counter += len(pr["callers"]) * 2
+        for comment in pr["commenterAndLengths"]:
+            if subroutines.get_always(owner, repo):
                 if comment[0] == subroutines.get_bot_username(owner, repo) or comment[0] in subroutines.get_additional_bots(owner, repo):
                     counter += 1
-            pr["humanComments"] = pr["comments"] - counter
+            else:
+                if comment[0] in subroutines.get_additional_bots(owner, repo):
+                    counter += 1
+        pr["humanComments"] = pr["comments"] - counter
 
 
 def add_benchmark_bot_free_participants_member(owner, repo, prs):

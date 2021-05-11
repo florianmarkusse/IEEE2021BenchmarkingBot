@@ -8,7 +8,8 @@
     "botUsername": "fabricteam",
     "additionalBots": [
       "size-auditor[bot]",
-      "codesandbox[bot]"
+      "codesandbox[bot]",
+      "msft-github-bot"
     ],
     "always": true,
     "nonBotStartDate": "2019-11-04"
