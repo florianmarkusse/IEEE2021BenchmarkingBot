@@ -1,1 +1,904 @@
-[{"title": "REPL: reference the global MIState as a LineEditREPL field", "createdAt": "2017-11-27T18:52:49Z", "merged": true, "mergedAt": "2017-12-06T11:44:42Z", "closed": true, "closedAt": "2017-12-06T11:44:42Z", "number": 24809, "additions": 10, "deletions": 7, "baseRefName": "master", "author": {"login": "rfourquet"}, "reviews": 2, "comments": 4, "commits": 1, "labels": {"edges": [{"node": {"name": "REPL"}}]}, "changedFiles": ["base/repl/LineEdit.jl", "base/repl/REPL.jl"], "changedSourceFiles": ["base/repl/LineEdit.jl", "base/repl/REPL.jl"], "callers": [], "participants": ["staticfloat", "rfourquet", "davidanthoff"], "commenterAndLengths": [["rfourquet", 240], ["rfourquet", 414], ["staticfloat", 86], ["davidanthoff", 113]], "humanComments": 4, "benchmarkBotFreeParticipants": 3, "reviewers": ["staticfloat"], "commentsAfterContribution": 0}, {"title": "update w.del_msgs array atomically in flush_gc_msgs", "createdAt": "2016-07-14T00:29:34Z", "merged": true, "mergedAt": "2016-07-14T15:19:11Z", "closed": true, "closedAt": "2016-07-14T15:19:11Z", "number": 17407, "additions": 7, "deletions": 4, "baseRefName": "master", "author": {"login": "vtjnash"}, "reviews": 0, "comments": 1, "commits": 1, "labels": {"edges": []}, "changedFiles": ["base/multi.jl"], "changedSourceFiles": ["base/multi.jl"], "callers": [], "participants": ["vtjnash"], "commenterAndLengths": [["vtjnash", 24]], "humanComments": 1, "benchmarkBotFreeParticipants": 1, "reviewers": [], "commentsAfterContribution": 0}, {"title": "Fix reflection test failure on 32bit", "createdAt": "2017-01-06T00:18:49Z", "merged": true, "mergedAt": "2017-01-06T10:56:31Z", "closed": true, "closedAt": "2017-01-06T10:56:31Z", "number": 19885, "additions": 4, "deletions": 4, "baseRefName": "master", "author": {"login": "Keno"}, "reviews": 0, "comments": 3, "commits": 1, "labels": {"edges": []}, "changedFiles": ["src/disasm.cpp"], "changedSourceFiles": ["src/disasm.cpp"], "callers": [], "participants": ["Keno", "tkelman"], "commenterAndLengths": [["Keno", 268], ["tkelman", 64], ["Keno", 248]], "humanComments": 3, "benchmarkBotFreeParticipants": 2, "reviewers": [], "commentsAfterContribution": 0}, {"title": "BinaryBuilder dependencies bump", "createdAt": "2020-01-02T22:35:04Z", "merged": true, "mergedAt": "2020-01-19T20:34:50Z", "closed": true, "closedAt": "2020-01-19T20:34:50Z", "number": 34242, "additions": 160, "deletions": 90, "baseRefName": "master", "author": {"login": "staticfloat"}, "reviews": 0, "comments": 7, "commits": 6, "labels": {"edges": [{"node": {"name": "build"}}]}, "changedFiles": ["contrib/normalize_triplet.py", "contrib/refresh_bb_tarballs.sh", "deps/Versions.make", "deps/blas.mk", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran3.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran3.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran4.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran4.tar.gz/sha512", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran5.tar.gz/md5", "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran3.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran3.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran4.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran4.tar.gz/sha512", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran5.tar.gz/md5", "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran5.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-gnu.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-gnu.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-musl.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-musl.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-gnueabihf.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-gnueabihf.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-musleabihf.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-musleabihf.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-gnu.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-gnu.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-musl.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-musl.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.i686-w64-mingw32.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.i686-w64-mingw32.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.powerpc64le-linux-gnu.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.powerpc64le-linux-gnu.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-apple-darwin14.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-apple-darwin14.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-gnu.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-gnu.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-musl.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-musl.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-unknown-freebsd11.1.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-unknown-freebsd11.1.tar.gz/sha512", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-w64-mingw32.tar.gz/md5", "deps/checksums/OpenLibm.v0.7.0-0.x86_64-w64-mingw32.tar.gz/sha512", "deps/checksums/openblas-5f36f18148603facb6c3540e673610d6b24cbfbb.tar.gz/md5", "deps/checksums/openblas-5f36f18148603facb6c3540e673610d6b24cbfbb.tar.gz/sha512", "deps/checksums/openblas-eebc18928715775c9ed254684edee16e4efe0342.tar.gz/md5", "deps/checksums/openblas-eebc18928715775c9ed254684edee16e4efe0342.tar.gz/sha512", "deps/checksums/openlibm-5efed306d509905714e3c43fc3a43fb26f3df743.tar.gz/md5", "deps/checksums/openlibm-5efed306d509905714e3c43fc3a43fb26f3df743.tar.gz/sha512", "deps/checksums/openlibm-ce69bf1f32d3e2e9791da36c9e33ba38670d5576.tar.gz/md5", "deps/checksums/openlibm-ce69bf1f32d3e2e9791da36c9e33ba38670d5576.tar.gz/sha512", "deps/openblas.version", "deps/openlibm.mk", "deps/openlibm.version", "deps/patches/openblas-skylakexdgemm.patch", "deps/patches/openblas-winexit.patch", "deps/tools/bb-install.mk"], "changedSourceFiles": ["contrib/normalize_triplet.py", "contrib/refresh_bb_tarballs.sh", "deps/blas.mk", "deps/openlibm.mk", "deps/tools/bb-install.mk"], "callers": [], "participants": ["Keno", "staticfloat", "JeffBezanson"], "commenterAndLengths": [["staticfloat", 678], ["staticfloat", 127], ["staticfloat", 140], ["Keno", 161], ["JeffBezanson", 138], ["staticfloat", 293], ["staticfloat", 218]], "humanComments": 7, "benchmarkBotFreeParticipants": 3, "reviewers": [], "commentsAfterContribution": 0}, {"title": "Update to where syntax in misc files", "createdAt": "2017-04-29T18:03:39Z", "merged": true, "mergedAt": "2017-05-01T17:01:11Z", "closed": true, "closedAt": "2017-05-01T17:01:11Z", "number": 21641, "additions": 33, "deletions": 33, "baseRefName": "master", "author": {"login": "musm"}, "reviews": 1, "comments": 3, "commits": 2, "labels": {"edges": []}, "changedFiles": ["base/abstractarray.jl", "base/linalg/hessenberg.jl", "base/random.jl", "base/reducedim.jl", "base/reshapedarray.jl", "base/show.jl", "base/tuple.jl", "base/twiceprecision.jl"], "changedSourceFiles": ["base/abstractarray.jl", "base/linalg/hessenberg.jl", "base/random.jl", "base/reducedim.jl", "base/reshapedarray.jl", "base/show.jl", "base/tuple.jl", "base/twiceprecision.jl"], "callers": [], "participants": ["musm", "Sacha0"], "commenterAndLengths": [["musm", 0], ["Sacha0", 113], ["musm", 11]], "humanComments": 3, "benchmarkBotFreeParticipants": 2, "reviewers": ["Sacha0"], "commentsAfterContribution": 0}, {"title": "Fix #17675 (concatenations involving special matrices) and #17738 (concatenations involving sparse vectors)", "createdAt": "2016-07-28T20:34:57Z", "merged": true, "mergedAt": "2016-08-07T06:52:48Z", "closed": true, "closedAt": "2016-08-07T06:52:48Z", "number": 17685, "additions": 127, "deletions": 35, "baseRefName": "master", "author": {"login": "Sacha0"}, "reviews": 0, "comments": 6, "commits": 2, "labels": {"edges": [{"node": {"name": "linear algebra"}}]}, "changedFiles": ["base/sparse/sparsematrix.jl", "base/sparse/sparsevector.jl", "test/linalg/special.jl", "test/sparsedir/sparsevector.jl"], "changedSourceFiles": ["base/sparse/sparsematrix.jl", "base/sparse/sparsevector.jl", "test/linalg/special.jl", "test/sparsedir/sparsevector.jl"], "callers": [], "participants": ["tkelman", "Sacha0"], "commenterAndLengths": [["Sacha0", 660], ["Sacha0", 105], ["Sacha0", 36], ["Sacha0", 23], ["Sacha0", 8], ["tkelman", 72]], "humanComments": 6, "benchmarkBotFreeParticipants": 2, "reviewers": [], "commentsAfterContribution": 0}, {"title": "Naive fix for pretty-printing of compact broadcast expressions", "createdAt": "2016-07-21T00:10:30Z", "merged": true, "mergedAt": "2016-07-22T16:48:31Z", "closed": true, "closedAt": "2016-07-22T16:48:31Z", "number": 17521, "additions": 16, "deletions": 6, "baseRefName": "master", "author": {"login": "Sacha0"}, "reviews": 0, "comments": 5, "commits": 1, "labels": {"edges": []}, "changedFiles": ["base/show.jl", "test/show.jl"], "changedSourceFiles": ["base/show.jl", "test/show.jl"], "callers": [], "participants": ["vtjnash", "Sacha0"], "commenterAndLengths": [["Sacha0", 20], ["Sacha0", 171], ["vtjnash", 88], ["Sacha0", 81], ["Sacha0", 34]], "humanComments": 5, "benchmarkBotFreeParticipants": 2, "reviewers": [], "commentsAfterContribution": 0}, {"title": "RFC: create an extra slot for arguments that get assigned", "createdAt": "2016-05-17T19:18:04Z", "merged": true, "mergedAt": "2016-06-06T01:44:08Z", "closed": true, "closedAt": "2016-06-06T01:44:08Z", "number": 16410, "additions": 60, "deletions": 66, "baseRefName": "master", "author": {"login": "JeffBezanson"}, "reviews": 0, "comments": 3, "commits": 1, "labels": {"edges": []}, "changedFiles": ["base/inference.jl", "src/codegen.cpp", "src/julia-syntax.scm", "src/julia.h"], "changedSourceFiles": ["base/inference.jl", "src/codegen.cpp", "src/julia-syntax.scm", "src/julia.h"], "callers": [], "participants": ["JeffBezanson", "vtjnash"], "commenterAndLengths": [["JeffBezanson", 346], ["vtjnash", 20], ["JeffBezanson", 23]], "humanComments": 3, "benchmarkBotFreeParticipants": 2, "reviewers": [], "commentsAfterContribution": 0}, {"title": "Remove error thrown by joinpath (fixes #20912)", "createdAt": "2017-07-27T12:43:01Z", "merged": true, "mergedAt": "2017-08-24T13:02:38Z", "closed": true, "closedAt": "2017-08-24T13:02:38Z", "number": 22978, "additions": 20, "deletions": 4, "baseRefName": "master", "author": {"login": "SaschaMann"}, "reviews": 5, "comments": 19, "commits": 5, "labels": {"edges": []}, "changedFiles": ["NEWS.md", "base/path.jl", "test/path.jl"], "changedSourceFiles": ["base/path.jl", "test/path.jl"], "callers": [], "participants": ["StefanKarpinski", "SaschaMann", "tkelman"], "commenterAndLengths": [["SaschaMann", 138], ["StefanKarpinski", 103], ["SaschaMann", 77], ["SaschaMann", 43], ["tkelman", 216], ["SaschaMann", 213], ["StefanKarpinski", 100], ["StefanKarpinski", 61], ["SaschaMann", 365], ["StefanKarpinski", 372], ["SaschaMann", 121], ["StefanKarpinski", 73], ["StefanKarpinski", 71], ["StefanKarpinski", 34], ["SaschaMann", 207], ["SaschaMann", 24], ["StefanKarpinski", 87], ["SaschaMann", 35], ["StefanKarpinski", 86]], "humanComments": 19, "benchmarkBotFreeParticipants": 3, "reviewers": ["SaschaMann", "StefanKarpinski", "tkelman", "Sacha0"], "commentsAfterContribution": 0}, {"title": "RFC: address issue #20882", "createdAt": "2017-03-04T07:47:16Z", "merged": true, "mergedAt": "2017-03-10T14:36:52Z", "closed": true, "closedAt": "2017-03-10T14:36:52Z", "number": 20889, "additions": 31, "deletions": 21, "baseRefName": "master", "author": {"login": "ajkeller34"}, "reviews": 17, "comments": 11, "commits": 8, "labels": {"edges": [{"node": {"name": "lowering"}}, {"node": {"name": "maths"}}]}, "changedFiles": ["NEWS.md", "base/intfuncs.jl", "base/promotion.jl", "src/julia-syntax.scm", "test/numbers.jl"], "changedSourceFiles": ["base/intfuncs.jl", "base/promotion.jl", "src/julia-syntax.scm", "test/numbers.jl"], "callers": [], "participants": ["stevengj", "StefanKarpinski", "JeffBezanson", "ajkeller34"], "commenterAndLengths": [["ajkeller34", 3551], ["ajkeller34", 1372], ["StefanKarpinski", 477], ["StefanKarpinski", 36], ["ajkeller34", 286], ["stevengj", 182], ["StefanKarpinski", 79], ["stevengj", 4], ["ajkeller34", 372], ["JeffBezanson", 47], ["StefanKarpinski", 72]], "humanComments": 11, "benchmarkBotFreeParticipants": 4, "reviewers": ["stevengj", "vtjnash", "pabloferz", "ajkeller34", "StefanKarpinski", "tkelman"], "commentsAfterContribution": 0}]
+[
+  {
+    "title": "REPL: reference the global MIState as a LineEditREPL field",
+    "createdAt": "2017-11-27T18:52:49Z",
+    "merged": true,
+    "mergedAt": "2017-12-06T11:44:42Z",
+    "closed": true,
+    "closedAt": "2017-12-06T11:44:42Z",
+    "number": 24809,
+    "additions": 10,
+    "deletions": 7,
+    "baseRefName": "master",
+    "author": {
+      "login": "rfourquet"
+    },
+    "reviews": 2,
+    "comments": 4,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "REPL"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/repl/LineEdit.jl",
+      "base/repl/REPL.jl"
+    ],
+    "changedSourceFiles": [
+      "base/repl/LineEdit.jl",
+      "base/repl/REPL.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "staticfloat",
+      "rfourquet",
+      "davidanthoff"
+    ],
+    "commenterAndLengths": [
+      [
+        "rfourquet",
+        240
+      ],
+      [
+        "rfourquet",
+        414
+      ],
+      [
+        "staticfloat",
+        86
+      ],
+      [
+        "davidanthoff",
+        113
+      ]
+    ],
+    "humanComments": 4,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [
+      "staticfloat"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "update w.del_msgs array atomically in flush_gc_msgs",
+    "createdAt": "2016-07-14T00:29:34Z",
+    "merged": true,
+    "mergedAt": "2016-07-14T15:19:11Z",
+    "closed": true,
+    "closedAt": "2016-07-14T15:19:11Z",
+    "number": 17407,
+    "additions": 7,
+    "deletions": 4,
+    "baseRefName": "master",
+    "author": {
+      "login": "vtjnash"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/multi.jl"
+    ],
+    "changedSourceFiles": [
+      "base/multi.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "vtjnash"
+    ],
+    "commenterAndLengths": [
+      [
+        "vtjnash",
+        24
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Fix reflection test failure on 32bit",
+    "createdAt": "2017-01-06T00:18:49Z",
+    "merged": true,
+    "mergedAt": "2017-01-06T10:56:31Z",
+    "closed": true,
+    "closedAt": "2017-01-06T10:56:31Z",
+    "number": 19885,
+    "additions": 4,
+    "deletions": 4,
+    "baseRefName": "master",
+    "author": {
+      "login": "Keno"
+    },
+    "reviews": 0,
+    "comments": 3,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "src/disasm.cpp"
+    ],
+    "changedSourceFiles": [
+      "src/disasm.cpp"
+    ],
+    "callers": [],
+    "participants": [
+      "Keno",
+      "tkelman"
+    ],
+    "commenterAndLengths": [
+      [
+        "Keno",
+        268
+      ],
+      [
+        "tkelman",
+        64
+      ],
+      [
+        "Keno",
+        248
+      ]
+    ],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "BinaryBuilder dependencies bump",
+    "createdAt": "2020-01-02T22:35:04Z",
+    "merged": true,
+    "mergedAt": "2020-01-19T20:34:50Z",
+    "closed": true,
+    "closedAt": "2020-01-19T20:34:50Z",
+    "number": 34242,
+    "additions": 160,
+    "deletions": 90,
+    "baseRefName": "master",
+    "author": {
+      "login": "staticfloat"
+    },
+    "reviews": 0,
+    "comments": 7,
+    "commits": 6,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "build"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "contrib/normalize_triplet.py",
+      "contrib/refresh_bb_tarballs.sh",
+      "deps/Versions.make",
+      "deps/blas.mk",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.aarch64-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.arm-linux-gnueabihf-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.i686-w64-mingw32-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.powerpc64le-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-apple-darwin14-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-linux-musl-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran3.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran3.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran4.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran4.tar.gz/sha512",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran5.tar.gz/md5",
+      "deps/checksums/LLVM.v8.0.1-4.x86_64-w64-mingw32-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.aarch64-linux-musl-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-gnueabihf-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.arm-linux-musleabihf-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-linux-musl-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.i686-w64-mingw32-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.powerpc64le-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-apple-darwin14-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-gnu-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-linux-musl-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran3.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran3.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran4.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran4.tar.gz/sha512",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran5.tar.gz/md5",
+      "deps/checksums/OpenBLAS.v0.3.7-2.x86_64-w64-mingw32-libgfortran5.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-gnu.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-gnu.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-musl.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.aarch64-linux-musl.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-gnueabihf.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-gnueabihf.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-musleabihf.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.arm-linux-musleabihf.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-gnu.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-gnu.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-musl.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-linux-musl.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-w64-mingw32.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.i686-w64-mingw32.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.powerpc64le-linux-gnu.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.powerpc64le-linux-gnu.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-apple-darwin14.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-apple-darwin14.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-gnu.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-gnu.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-musl.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-linux-musl.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-unknown-freebsd11.1.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-unknown-freebsd11.1.tar.gz/sha512",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-w64-mingw32.tar.gz/md5",
+      "deps/checksums/OpenLibm.v0.7.0-0.x86_64-w64-mingw32.tar.gz/sha512",
+      "deps/checksums/openblas-5f36f18148603facb6c3540e673610d6b24cbfbb.tar.gz/md5",
+      "deps/checksums/openblas-5f36f18148603facb6c3540e673610d6b24cbfbb.tar.gz/sha512",
+      "deps/checksums/openblas-eebc18928715775c9ed254684edee16e4efe0342.tar.gz/md5",
+      "deps/checksums/openblas-eebc18928715775c9ed254684edee16e4efe0342.tar.gz/sha512",
+      "deps/checksums/openlibm-5efed306d509905714e3c43fc3a43fb26f3df743.tar.gz/md5",
+      "deps/checksums/openlibm-5efed306d509905714e3c43fc3a43fb26f3df743.tar.gz/sha512",
+      "deps/checksums/openlibm-ce69bf1f32d3e2e9791da36c9e33ba38670d5576.tar.gz/md5",
+      "deps/checksums/openlibm-ce69bf1f32d3e2e9791da36c9e33ba38670d5576.tar.gz/sha512",
+      "deps/openblas.version",
+      "deps/openlibm.mk",
+      "deps/openlibm.version",
+      "deps/patches/openblas-skylakexdgemm.patch",
+      "deps/patches/openblas-winexit.patch",
+      "deps/tools/bb-install.mk"
+    ],
+    "changedSourceFiles": [
+      "contrib/normalize_triplet.py",
+      "contrib/refresh_bb_tarballs.sh",
+      "deps/blas.mk",
+      "deps/openlibm.mk",
+      "deps/tools/bb-install.mk"
+    ],
+    "callers": [],
+    "participants": [
+      "Keno",
+      "staticfloat",
+      "JeffBezanson"
+    ],
+    "commenterAndLengths": [
+      [
+        "staticfloat",
+        678
+      ],
+      [
+        "staticfloat",
+        127
+      ],
+      [
+        "staticfloat",
+        140
+      ],
+      [
+        "Keno",
+        161
+      ],
+      [
+        "JeffBezanson",
+        138
+      ],
+      [
+        "staticfloat",
+        293
+      ],
+      [
+        "staticfloat",
+        218
+      ]
+    ],
+    "humanComments": 7,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Update to where syntax in misc files",
+    "createdAt": "2017-04-29T18:03:39Z",
+    "merged": true,
+    "mergedAt": "2017-05-01T17:01:11Z",
+    "closed": true,
+    "closedAt": "2017-05-01T17:01:11Z",
+    "number": 21641,
+    "additions": 33,
+    "deletions": 33,
+    "baseRefName": "master",
+    "author": {
+      "login": "musm"
+    },
+    "reviews": 1,
+    "comments": 3,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/hessenberg.jl",
+      "base/random.jl",
+      "base/reducedim.jl",
+      "base/reshapedarray.jl",
+      "base/show.jl",
+      "base/tuple.jl",
+      "base/twiceprecision.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/hessenberg.jl",
+      "base/random.jl",
+      "base/reducedim.jl",
+      "base/reshapedarray.jl",
+      "base/show.jl",
+      "base/tuple.jl",
+      "base/twiceprecision.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "musm",
+      "Sacha0"
+    ],
+    "commenterAndLengths": [
+      [
+        "musm",
+        0
+      ],
+      [
+        "Sacha0",
+        113
+      ],
+      [
+        "musm",
+        11
+      ]
+    ],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [
+      "Sacha0"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Fix #17675 (concatenations involving special matrices) and #17738 (concatenations involving sparse vectors)",
+    "createdAt": "2016-07-28T20:34:57Z",
+    "merged": true,
+    "mergedAt": "2016-08-07T06:52:48Z",
+    "closed": true,
+    "closedAt": "2016-08-07T06:52:48Z",
+    "number": 17685,
+    "additions": 127,
+    "deletions": 35,
+    "baseRefName": "master",
+    "author": {
+      "login": "Sacha0"
+    },
+    "reviews": 0,
+    "comments": 6,
+    "commits": 2,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "linear algebra"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/sparse/sparsematrix.jl",
+      "base/sparse/sparsevector.jl",
+      "test/linalg/special.jl",
+      "test/sparsedir/sparsevector.jl"
+    ],
+    "changedSourceFiles": [
+      "base/sparse/sparsematrix.jl",
+      "base/sparse/sparsevector.jl",
+      "test/linalg/special.jl",
+      "test/sparsedir/sparsevector.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "tkelman",
+      "Sacha0"
+    ],
+    "commenterAndLengths": [
+      [
+        "Sacha0",
+        660
+      ],
+      [
+        "Sacha0",
+        105
+      ],
+      [
+        "Sacha0",
+        36
+      ],
+      [
+        "Sacha0",
+        23
+      ],
+      [
+        "Sacha0",
+        8
+      ],
+      [
+        "tkelman",
+        72
+      ]
+    ],
+    "humanComments": 6,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Naive fix for pretty-printing of compact broadcast expressions",
+    "createdAt": "2016-07-21T00:10:30Z",
+    "merged": true,
+    "mergedAt": "2016-07-22T16:48:31Z",
+    "closed": true,
+    "closedAt": "2016-07-22T16:48:31Z",
+    "number": 17521,
+    "additions": 16,
+    "deletions": 6,
+    "baseRefName": "master",
+    "author": {
+      "login": "Sacha0"
+    },
+    "reviews": 0,
+    "comments": 5,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/show.jl",
+      "test/show.jl"
+    ],
+    "changedSourceFiles": [
+      "base/show.jl",
+      "test/show.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "vtjnash",
+      "Sacha0"
+    ],
+    "commenterAndLengths": [
+      [
+        "Sacha0",
+        20
+      ],
+      [
+        "Sacha0",
+        171
+      ],
+      [
+        "vtjnash",
+        88
+      ],
+      [
+        "Sacha0",
+        81
+      ],
+      [
+        "Sacha0",
+        34
+      ]
+    ],
+    "humanComments": 5,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "RFC: create an extra slot for arguments that get assigned",
+    "createdAt": "2016-05-17T19:18:04Z",
+    "merged": true,
+    "mergedAt": "2016-06-06T01:44:08Z",
+    "closed": true,
+    "closedAt": "2016-06-06T01:44:08Z",
+    "number": 16410,
+    "additions": 60,
+    "deletions": 66,
+    "baseRefName": "master",
+    "author": {
+      "login": "JeffBezanson"
+    },
+    "reviews": 0,
+    "comments": 3,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/inference.jl",
+      "src/codegen.cpp",
+      "src/julia-syntax.scm",
+      "src/julia.h"
+    ],
+    "changedSourceFiles": [
+      "base/inference.jl",
+      "src/codegen.cpp",
+      "src/julia-syntax.scm",
+      "src/julia.h"
+    ],
+    "callers": [],
+    "participants": [
+      "JeffBezanson",
+      "vtjnash"
+    ],
+    "commenterAndLengths": [
+      [
+        "JeffBezanson",
+        346
+      ],
+      [
+        "vtjnash",
+        20
+      ],
+      [
+        "JeffBezanson",
+        23
+      ]
+    ],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Remove error thrown by joinpath (fixes #20912)",
+    "createdAt": "2017-07-27T12:43:01Z",
+    "merged": true,
+    "mergedAt": "2017-08-24T13:02:38Z",
+    "closed": true,
+    "closedAt": "2017-08-24T13:02:38Z",
+    "number": 22978,
+    "additions": 20,
+    "deletions": 4,
+    "baseRefName": "master",
+    "author": {
+      "login": "SaschaMann"
+    },
+    "reviews": 5,
+    "comments": 19,
+    "commits": 5,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/path.jl",
+      "test/path.jl"
+    ],
+    "changedSourceFiles": [
+      "base/path.jl",
+      "test/path.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "StefanKarpinski",
+      "SaschaMann",
+      "tkelman"
+    ],
+    "commenterAndLengths": [
+      [
+        "SaschaMann",
+        138
+      ],
+      [
+        "StefanKarpinski",
+        103
+      ],
+      [
+        "SaschaMann",
+        77
+      ],
+      [
+        "SaschaMann",
+        43
+      ],
+      [
+        "tkelman",
+        216
+      ],
+      [
+        "SaschaMann",
+        213
+      ],
+      [
+        "StefanKarpinski",
+        100
+      ],
+      [
+        "StefanKarpinski",
+        61
+      ],
+      [
+        "SaschaMann",
+        365
+      ],
+      [
+        "StefanKarpinski",
+        372
+      ],
+      [
+        "SaschaMann",
+        121
+      ],
+      [
+        "StefanKarpinski",
+        73
+      ],
+      [
+        "StefanKarpinski",
+        71
+      ],
+      [
+        "StefanKarpinski",
+        34
+      ],
+      [
+        "SaschaMann",
+        207
+      ],
+      [
+        "SaschaMann",
+        24
+      ],
+      [
+        "StefanKarpinski",
+        87
+      ],
+      [
+        "SaschaMann",
+        35
+      ],
+      [
+        "StefanKarpinski",
+        86
+      ]
+    ],
+    "humanComments": 19,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [
+      "SaschaMann",
+      "StefanKarpinski",
+      "tkelman",
+      "Sacha0"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "RFC: address issue #20882",
+    "createdAt": "2017-03-04T07:47:16Z",
+    "merged": true,
+    "mergedAt": "2017-03-10T14:36:52Z",
+    "closed": true,
+    "closedAt": "2017-03-10T14:36:52Z",
+    "number": 20889,
+    "additions": 31,
+    "deletions": 21,
+    "baseRefName": "master",
+    "author": {
+      "login": "ajkeller34"
+    },
+    "reviews": 17,
+    "comments": 11,
+    "commits": 8,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "lowering"
+          }
+        },
+        {
+          "node": {
+            "name": "maths"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/intfuncs.jl",
+      "base/promotion.jl",
+      "src/julia-syntax.scm",
+      "test/numbers.jl"
+    ],
+    "changedSourceFiles": [
+      "base/intfuncs.jl",
+      "base/promotion.jl",
+      "src/julia-syntax.scm",
+      "test/numbers.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "stevengj",
+      "StefanKarpinski",
+      "JeffBezanson",
+      "ajkeller34"
+    ],
+    "commenterAndLengths": [
+      [
+        "ajkeller34",
+        3551
+      ],
+      [
+        "ajkeller34",
+        1372
+      ],
+      [
+        "StefanKarpinski",
+        477
+      ],
+      [
+        "StefanKarpinski",
+        36
+      ],
+      [
+        "ajkeller34",
+        286
+      ],
+      [
+        "stevengj",
+        182
+      ],
+      [
+        "StefanKarpinski",
+        79
+      ],
+      [
+        "stevengj",
+        4
+      ],
+      [
+        "ajkeller34",
+        372
+      ],
+      [
+        "JeffBezanson",
+        47
+      ],
+      [
+        "StefanKarpinski",
+        72
+      ]
+    ],
+    "humanComments": 11,
+    "benchmarkBotFreeParticipants": 4,
+    "reviewers": [
+      "stevengj",
+      "vtjnash",
+      "pabloferz",
+      "ajkeller34",
+      "StefanKarpinski",
+      "tkelman"
+    ],
+    "commentsAfterContribution": 0
+  }
+]
