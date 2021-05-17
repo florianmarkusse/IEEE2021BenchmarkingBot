@@ -10,5 +10,14 @@
     ],
     "always": false,
     "nonBotStartDate": ""
+  },
+  {
+    "owner": "salesforce",
+    "repo": "lwc",
+    "botCallString": "Best has detected that there is a",
+    "botUsername": "salesforce-best-lwc-internal[bot]",
+    "additionalBots": [],
+    "always": false,
+    "nonBotStartDate": ""
   }
 ]
