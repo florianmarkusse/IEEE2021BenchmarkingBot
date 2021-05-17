@@ -19,9 +19,9 @@ standard_query = "is:pr is:closed sort:created-asc"
 for project in projects:
     owner = project.get("owner")
     repo = project.get("repo")
-    bot_query = project.get("botQuery")
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
+    bot_query = f"{bot_call_string} in:comments"
     always = project.get("always")
     non_bot_start_date = project.get("nonBotStartDate")
 

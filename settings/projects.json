@@ -2,7 +2,6 @@
   {
     "owner": "diem",
     "repo": "diem",
-    "botQuery": "Cluster Test Result in:comments repro cmd in:comments",
     "startDate": "2020-03-03",
     "botCallString": "/canary",
     "botUsername": "github-actions[bot]",
@@ -11,5 +10,5 @@
     ],
     "always": false,
     "nonBotStartDate": ""
-}
+  }
 ]
