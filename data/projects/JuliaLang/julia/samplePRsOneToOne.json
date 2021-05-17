@@ -1,0 +1,1098 @@
+[
+  {
+    "title": "Port helper functions,_ldexp_exp and _frexp_exp, for hyperbolic functions",
+    "createdAt": "2018-10-03T12:19:08Z",
+    "merged": true,
+    "mergedAt": "2018-12-21T19:45:24Z",
+    "closed": true,
+    "closedAt": "2018-12-21T19:45:24Z",
+    "number": 29499,
+    "additions": 104,
+    "deletions": 3,
+    "baseRefName": "master",
+    "author": {
+      "login": "pkofod"
+    },
+    "reviews": 4,
+    "comments": 11,
+    "commits": 4,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/math.jl",
+      "base/special/hyperbolic.jl",
+      "base/special/ldexp_exp.jl"
+    ],
+    "changedSourceFiles": [
+      "base/math.jl",
+      "base/special/hyperbolic.jl",
+      "base/special/ldexp_exp.jl"
+    ],
+    "callers": [
+      "KristofferC",
+      "ararslan"
+    ],
+    "participants": [
+      "KristofferC",
+      "pkofod",
+      "ararslan",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "pkofod",
+      "simonbyrne",
+      "ararslan"
+    ],
+    "humanComments": 7,
+    "benchmarkBotFreeParticipants": 3,
+    "commenterAndLengths": [
+      [
+        "pkofod",
+        732
+      ],
+      [
+        "pkofod",
+        148
+      ],
+      [
+        "KristofferC",
+        56
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "pkofod",
+        352
+      ],
+      [
+        "ararslan",
+        52
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "pkofod",
+        46
+      ],
+      [
+        "ararslan",
+        1209
+      ],
+      [
+        "pkofod",
+        405
+      ],
+      [
+        "ararslan",
+        203
+      ]
+    ],
+    "commentsAfterContribution": 7
+  },
+  {
+    "title": "Improve support for ranges with nonstandard Integers",
+    "createdAt": "2018-05-29T04:47:18Z",
+    "merged": true,
+    "mergedAt": "2018-06-22T20:01:26Z",
+    "closed": true,
+    "closedAt": "2018-06-22T20:01:26Z",
+    "number": 27302,
+    "additions": 119,
+    "deletions": 21,
+    "baseRefName": "master",
+    "author": {
+      "login": "tkoolen"
+    },
+    "reviews": 7,
+    "comments": 28,
+    "commits": 4,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/range.jl",
+      "stdlib/Dates/src/ranges.jl",
+      "test/ranges.jl"
+    ],
+    "changedSourceFiles": [
+      "base/range.jl",
+      "stdlib/Dates/src/ranges.jl",
+      "test/ranges.jl"
+    ],
+    "callers": [
+      "KristofferC",
+      "mbauman"
+    ],
+    "participants": [
+      "KristofferC",
+      "StefanKarpinski",
+      "ararslan",
+      "nanosoldier",
+      "tkoolen",
+      "mbauman"
+    ],
+    "reviewers": [
+      "fredrikekre",
+      "mbauman",
+      "tkoolen"
+    ],
+    "humanComments": 24,
+    "benchmarkBotFreeParticipants": 5,
+    "commenterAndLengths": [
+      [
+        "tkoolen",
+        624
+      ],
+      [
+        "tkoolen",
+        255
+      ],
+      [
+        "tkoolen",
+        817
+      ],
+      [
+        "mbauman",
+        165
+      ],
+      [
+        "tkoolen",
+        235
+      ],
+      [
+        "tkoolen",
+        74
+      ],
+      [
+        "tkoolen",
+        93
+      ],
+      [
+        "tkoolen",
+        45
+      ],
+      [
+        "tkoolen",
+        277
+      ],
+      [
+        "tkoolen",
+        292
+      ],
+      [
+        "tkoolen",
+        74
+      ],
+      [
+        "StefanKarpinski",
+        140
+      ],
+      [
+        "mbauman",
+        898
+      ],
+      [
+        "tkoolen",
+        165
+      ],
+      [
+        "KristofferC",
+        49
+      ],
+      [
+        "tkoolen",
+        149
+      ],
+      [
+        "mbauman",
+        41
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "KristofferC",
+        92
+      ],
+      [
+        "mbauman",
+        102
+      ],
+      [
+        "nanosoldier",
+        430
+      ],
+      [
+        "tkoolen",
+        57
+      ],
+      [
+        "KristofferC",
+        118
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "mbauman",
+        128
+      ],
+      [
+        "tkoolen",
+        104
+      ],
+      [
+        "ararslan",
+        243
+      ],
+      [
+        "tkoolen",
+        624
+      ]
+    ],
+    "commentsAfterContribution": 10
+  },
+  {
+    "title": "codegen: mark tbaa information in more places",
+    "createdAt": "2018-06-29T21:45:19Z",
+    "merged": true,
+    "mergedAt": "2018-07-02T02:25:18Z",
+    "closed": true,
+    "closedAt": "2018-07-02T02:25:18Z",
+    "number": 27873,
+    "additions": 197,
+    "deletions": 234,
+    "baseRefName": "master",
+    "author": {
+      "login": "vtjnash"
+    },
+    "reviews": 0,
+    "comments": 7,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/array.jl",
+      "src/ccall.cpp",
+      "src/cgutils.cpp",
+      "src/codegen.cpp",
+      "src/datatype.c",
+      "src/intrinsics.cpp"
+    ],
+    "changedSourceFiles": [
+      "base/array.jl",
+      "src/ccall.cpp",
+      "src/cgutils.cpp",
+      "src/codegen.cpp",
+      "src/datatype.c",
+      "src/intrinsics.cpp"
+    ],
+    "callers": [
+      "KristofferC"
+    ],
+    "participants": [
+      "Keno",
+      "KristofferC",
+      "vtjnash",
+      "nanosoldier"
+    ],
+    "reviewers": [],
+    "humanComments": 5,
+    "benchmarkBotFreeParticipants": 3,
+    "commenterAndLengths": [
+      [
+        "vtjnash",
+        70
+      ],
+      [
+        "Keno",
+        196
+      ],
+      [
+        "vtjnash",
+        183
+      ],
+      [
+        "Keno",
+        315
+      ],
+      [
+        "KristofferC",
+        51
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "vtjnash",
+        107
+      ]
+    ],
+    "commentsAfterContribution": 1
+  },
+  {
+    "title": "Don't use totality when defining the (potentially) partial order relation <=",
+    "createdAt": "2017-05-23T01:52:13Z",
+    "merged": true,
+    "mergedAt": "2017-05-24T00:58:21Z",
+    "closed": true,
+    "closedAt": "2017-05-24T00:58:21Z",
+    "number": 22027,
+    "additions": 16,
+    "deletions": 1,
+    "baseRefName": "master",
+    "author": {
+      "login": "andreasnoack"
+    },
+    "reviews": 2,
+    "comments": 7,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/operators.jl",
+      "test/operators.jl"
+    ],
+    "changedSourceFiles": [
+      "base/operators.jl",
+      "test/operators.jl"
+    ],
+    "callers": [
+      "andreasnoack"
+    ],
+    "participants": [
+      "StefanKarpinski",
+      "andreasnoack",
+      "alyst",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "StefanKarpinski",
+      "yuyichao"
+    ],
+    "humanComments": 5,
+    "benchmarkBotFreeParticipants": 3,
+    "commenterAndLengths": [
+      [
+        "andreasnoack",
+        0
+      ],
+      [
+        "alyst",
+        64
+      ],
+      [
+        "andreasnoack",
+        208
+      ],
+      [
+        "nanosoldier",
+        325
+      ],
+      [
+        "StefanKarpinski",
+        372
+      ],
+      [
+        "andreasnoack",
+        727
+      ],
+      [
+        "StefanKarpinski",
+        57
+      ]
+    ],
+    "commentsAfterContribution": 3
+  },
+  {
+    "title": "inference: enable constant propagation for union-split signatures",
+    "createdAt": "2021-01-18T10:28:08Z",
+    "merged": true,
+    "mergedAt": "2021-03-10T20:25:29Z",
+    "closed": true,
+    "closedAt": "2021-03-10T20:25:29Z",
+    "number": 39305,
+    "additions": 379,
+    "deletions": 243,
+    "baseRefName": "master",
+    "author": {
+      "login": "aviatesk"
+    },
+    "reviews": 10,
+    "comments": 15,
+    "commits": 2,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "inference"
+          }
+        },
+        {
+          "node": {
+            "name": "needs nanosoldier run"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "base/compiler/ssair/inlining.jl",
+      "base/compiler/stmtinfo.jl",
+      "base/compiler/typeutils.jl",
+      "test/compiler/inference.jl"
+    ],
+    "changedSourceFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "base/compiler/ssair/inlining.jl",
+      "base/compiler/stmtinfo.jl",
+      "base/compiler/typeutils.jl",
+      "test/compiler/inference.jl"
+    ],
+    "callers": [
+      "aviatesk"
+    ],
+    "participants": [
+      "KristofferC",
+      "JeffBezanson",
+      "aviatesk",
+      "nanosoldier",
+      "vtjnash"
+    ],
+    "reviewers": [
+      "aviatesk",
+      "vtjnash",
+      "JeffBezanson"
+    ],
+    "humanComments": 13,
+    "benchmarkBotFreeParticipants": 4,
+    "commenterAndLengths": [
+      [
+        "aviatesk",
+        2677
+      ],
+      [
+        "KristofferC",
+        117
+      ],
+      [
+        "aviatesk",
+        97
+      ],
+      [
+        "JeffBezanson",
+        384
+      ],
+      [
+        "aviatesk",
+        209
+      ],
+      [
+        "JeffBezanson",
+        54
+      ],
+      [
+        "aviatesk",
+        116
+      ],
+      [
+        "nanosoldier",
+        168
+      ],
+      [
+        "aviatesk",
+        135
+      ],
+      [
+        "aviatesk",
+        654
+      ],
+      [
+        "nanosoldier",
+        314
+      ],
+      [
+        "aviatesk",
+        49
+      ],
+      [
+        "nanosoldier",
+        314
+      ],
+      [
+        "aviatesk",
+        1425
+      ],
+      [
+        "vtjnash",
+        122
+      ]
+    ],
+    "commentsAfterContribution": 7
+  },
+  {
+    "title": "broadcast cleanup",
+    "createdAt": "2018-10-29T22:03:06Z",
+    "merged": true,
+    "mergedAt": "2018-11-05T16:33:01Z",
+    "closed": true,
+    "closedAt": "2018-11-05T16:33:01Z",
+    "number": 29843,
+    "additions": 25,
+    "deletions": 63,
+    "baseRefName": "master",
+    "author": {
+      "login": "vtjnash"
+    },
+    "reviews": 8,
+    "comments": 3,
+    "commits": 3,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "broadcast"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/broadcast.jl",
+      "base/tuple.jl",
+      "doc/src/base/arrays.md",
+      "doc/src/manual/interfaces.md",
+      "test/broadcast.jl"
+    ],
+    "changedSourceFiles": [
+      "base/broadcast.jl",
+      "base/tuple.jl",
+      "test/broadcast.jl"
+    ],
+    "callers": [
+      "vtjnash"
+    ],
+    "participants": [
+      "vtjnash",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "timholy",
+      "mbauman",
+      "vtjnash",
+      "JeffBezanson"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commenterAndLengths": [
+      [
+        "vtjnash",
+        619
+      ],
+      [
+        "vtjnash",
+        47
+      ],
+      [
+        "nanosoldier",
+        326
+      ]
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Inference for splatting numbers (and more)",
+    "createdAt": "2018-06-05T08:11:36Z",
+    "merged": true,
+    "mergedAt": "2018-06-26T14:21:06Z",
+    "closed": true,
+    "closedAt": "2018-06-26T14:21:07Z",
+    "number": 27434,
+    "additions": 54,
+    "deletions": 11,
+    "baseRefName": "master",
+    "author": {
+      "login": "martinholters"
+    },
+    "reviews": 8,
+    "comments": 10,
+    "commits": 4,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "inference"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "base/number.jl",
+      "test/compiler/compiler.jl",
+      "test/core.jl"
+    ],
+    "changedSourceFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "base/number.jl",
+      "test/compiler/compiler.jl",
+      "test/core.jl"
+    ],
+    "callers": [
+      "martinholters"
+    ],
+    "participants": [
+      "martinholters",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "martinholters",
+      "vtjnash"
+    ],
+    "humanComments": 8,
+    "benchmarkBotFreeParticipants": 1,
+    "commenterAndLengths": [
+      [
+        "martinholters",
+        805
+      ],
+      [
+        "martinholters",
+        614
+      ],
+      [
+        "martinholters",
+        702
+      ],
+      [
+        "martinholters",
+        103
+      ],
+      [
+        "martinholters",
+        3328
+      ],
+      [
+        "martinholters",
+        247
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "martinholters",
+        128
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "martinholters",
+        741
+      ]
+    ],
+    "commentsAfterContribution": 3
+  },
+  {
+    "title": "Faster, more correct complex^complex",
+    "createdAt": "2017-11-11T04:52:43Z",
+    "merged": true,
+    "mergedAt": "2017-12-14T17:20:17Z",
+    "closed": true,
+    "closedAt": "2017-12-14T17:20:17Z",
+    "number": 24570,
+    "additions": 146,
+    "deletions": 80,
+    "baseRefName": "master",
+    "author": {
+      "login": "stevengj"
+    },
+    "reviews": 3,
+    "comments": 29,
+    "commits": 18,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "complex"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/complex.jl",
+      "base/mathconstants.jl",
+      "test/complex.jl"
+    ],
+    "changedSourceFiles": [
+      "base/complex.jl",
+      "base/mathconstants.jl",
+      "test/complex.jl"
+    ],
+    "callers": [
+      "stevengj",
+      "KristofferC",
+      "ararslan"
+    ],
+    "participants": [
+      "giordano",
+      "KristofferC",
+      "pkofod",
+      "JeffBezanson",
+      "ararslan",
+      "oscardssmith",
+      "stevengj",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "StefanKarpinski",
+      "stevengj"
+    ],
+    "humanComments": 23,
+    "benchmarkBotFreeParticipants": 7,
+    "commenterAndLengths": [
+      [
+        "stevengj",
+        1322
+      ],
+      [
+        "oscardssmith",
+        82
+      ],
+      [
+        "stevengj",
+        958
+      ],
+      [
+        "giordano",
+        39
+      ],
+      [
+        "stevengj",
+        687
+      ],
+      [
+        "giordano",
+        147
+      ],
+      [
+        "stevengj",
+        189
+      ],
+      [
+        "stevengj",
+        685
+      ],
+      [
+        "stevengj",
+        501
+      ],
+      [
+        "JeffBezanson",
+        213
+      ],
+      [
+        "stevengj",
+        103
+      ],
+      [
+        "pkofod",
+        273
+      ],
+      [
+        "stevengj",
+        612
+      ],
+      [
+        "stevengj",
+        24
+      ],
+      [
+        "KristofferC",
+        49
+      ],
+      [
+        "stevengj",
+        69
+      ],
+      [
+        "KristofferC",
+        93
+      ],
+      [
+        "stevengj",
+        72
+      ],
+      [
+        "ararslan",
+        47
+      ],
+      [
+        "nanosoldier",
+        476
+      ],
+      [
+        "stevengj",
+        150
+      ],
+      [
+        "ararslan",
+        140
+      ],
+      [
+        "stevengj",
+        197
+      ],
+      [
+        "stevengj",
+        38
+      ],
+      [
+        "ararslan",
+        243
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "stevengj",
+        143
+      ],
+      [
+        "stevengj",
+        21
+      ],
+      [
+        "stevengj",
+        17
+      ]
+    ],
+    "commentsAfterContribution": 9
+  },
+  {
+    "title": "RFC/WIP: fully deprecate partial indexing. Fixes #14770.",
+    "createdAt": "2017-02-13T14:10:16Z",
+    "merged": false,
+    "mergedAt": null,
+    "closed": true,
+    "closedAt": "2017-02-13T21:11:51Z",
+    "number": 20600,
+    "additions": 137,
+    "deletions": 94,
+    "baseRefName": "master",
+    "author": {
+      "login": "timholy"
+    },
+    "reviews": 2,
+    "comments": 8,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/abstractarray.jl",
+      "base/array.jl",
+      "base/deprecated.jl",
+      "base/multidimensional.jl",
+      "test/abstractarray.jl",
+      "test/subarray.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/array.jl",
+      "base/deprecated.jl",
+      "base/multidimensional.jl",
+      "test/abstractarray.jl",
+      "test/subarray.jl"
+    ],
+    "callers": [
+      "timholy"
+    ],
+    "participants": [
+      "timholy",
+      "nanosoldier",
+      "mbauman"
+    ],
+    "reviewers": [
+      "timholy",
+      "tkelman"
+    ],
+    "humanComments": 6,
+    "benchmarkBotFreeParticipants": 2,
+    "commenterAndLengths": [
+      [
+        "timholy",
+        1469
+      ],
+      [
+        "mbauman",
+        1166
+      ],
+      [
+        "timholy",
+        455
+      ],
+      [
+        "timholy",
+        442
+      ],
+      [
+        "nanosoldier",
+        302
+      ],
+      [
+        "mbauman",
+        2641
+      ],
+      [
+        "timholy",
+        36
+      ],
+      [
+        "timholy",
+        380
+      ]
+    ],
+    "commentsAfterContribution": 3
+  },
+  {
+    "title": "Use containertype to determine array type for array broadcast",
+    "createdAt": "2016-12-28T21:09:01Z",
+    "merged": true,
+    "mergedAt": "2016-12-30T17:37:34Z",
+    "closed": true,
+    "closedAt": "2016-12-30T17:37:34Z",
+    "number": 19745,
+    "additions": 35,
+    "deletions": 13,
+    "baseRefName": "master",
+    "author": {
+      "login": "andreasnoack"
+    },
+    "reviews": 10,
+    "comments": 18,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/broadcast.jl",
+      "test/broadcast.jl"
+    ],
+    "changedSourceFiles": [
+      "base/broadcast.jl",
+      "test/broadcast.jl"
+    ],
+    "callers": [
+      "jrevels",
+      "tkelman",
+      "andreasnoack"
+    ],
+    "participants": [
+      "pabloferz",
+      "KristofferC",
+      "tkelman",
+      "stevengj",
+      "nanosoldier",
+      "jrevels",
+      "andreasnoack"
+    ],
+    "reviewers": [
+      "pabloferz",
+      "TotalVerb",
+      "Sacha0",
+      "stevengj",
+      "tkelman",
+      "andreasnoack"
+    ],
+    "humanComments": 12,
+    "benchmarkBotFreeParticipants": 6,
+    "commenterAndLengths": [
+      [
+        "andreasnoack",
+        407
+      ],
+      [
+        "pabloferz",
+        96
+      ],
+      [
+        "tkelman",
+        45
+      ],
+      [
+        "andreasnoack",
+        87
+      ],
+      [
+        "andreasnoack",
+        57
+      ],
+      [
+        "nanosoldier",
+        319
+      ],
+      [
+        "tkelman",
+        115
+      ],
+      [
+        "andreasnoack",
+        142
+      ],
+      [
+        "stevengj",
+        237
+      ],
+      [
+        "andreasnoack",
+        31
+      ],
+      [
+        "tkelman",
+        49
+      ],
+      [
+        "KristofferC",
+        32
+      ],
+      [
+        "andreasnoack",
+        111
+      ],
+      [
+        "tkelman",
+        91
+      ],
+      [
+        "andreasnoack",
+        128
+      ],
+      [
+        "tkelman",
+        69
+      ],
+      [
+        "jrevels",
+        320
+      ],
+      [
+        "nanosoldier",
+        325
+      ]
+    ],
+    "commentsAfterContribution": 12
+  }
+]

@@ -1,0 +1,1970 @@
+[
+  {
+    "title": "Towards #12251 part 2, replace all full(X) calls with convert(Array, X) and migrate tests",
+    "createdAt": "2016-06-23T22:33:52Z",
+    "merged": true,
+    "mergedAt": "2016-07-21T05:04:26Z",
+    "closed": true,
+    "closedAt": "2016-07-21T05:04:26Z",
+    "number": 17079,
+    "additions": 604,
+    "deletions": 601,
+    "baseRefName": "master",
+    "author": {
+      "login": "Sacha0"
+    },
+    "reviews": 0,
+    "comments": 10,
+    "commits": 6,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "linear algebra"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/bidiag.jl",
+      "base/linalg/dense.jl",
+      "base/linalg/diagonal.jl",
+      "base/linalg/hessenberg.jl",
+      "base/linalg/lq.jl",
+      "base/linalg/lu.jl",
+      "base/linalg/qr.jl",
+      "base/linalg/special.jl",
+      "base/linalg/symmetric.jl",
+      "base/linalg/triangular.jl",
+      "base/linalg/tridiag.jl",
+      "base/linalg/uniformscaling.jl",
+      "base/sparse/linalg.jl",
+      "base/sparse/sparsematrix.jl",
+      "base/sparse/umfpack.jl",
+      "base/test.jl",
+      "doc/manual/arrays.rst",
+      "doc/stdlib/linalg.rst",
+      "test/hashing.jl",
+      "test/linalg/arnoldi.jl",
+      "test/linalg/bidiag.jl",
+      "test/linalg/cholesky.jl",
+      "test/linalg/dense.jl",
+      "test/linalg/diagonal.jl",
+      "test/linalg/hessenberg.jl",
+      "test/linalg/lapack.jl",
+      "test/linalg/lq.jl",
+      "test/linalg/lu.jl",
+      "test/linalg/matmul.jl",
+      "test/linalg/qr.jl",
+      "test/linalg/schur.jl",
+      "test/linalg/special.jl",
+      "test/linalg/svd.jl",
+      "test/linalg/symmetric.jl",
+      "test/linalg/triangular.jl",
+      "test/linalg/tridiag.jl",
+      "test/linalg/uniformscaling.jl",
+      "test/perf/threads/stockcorr/pstockcorr.jl",
+      "test/sparsedir/cholmod.jl",
+      "test/sparsedir/sparse.jl",
+      "test/sparsedir/sparsevector.jl",
+      "test/sparsedir/spqr.jl",
+      "test/sparsedir/umfpack.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/bidiag.jl",
+      "base/linalg/dense.jl",
+      "base/linalg/diagonal.jl",
+      "base/linalg/hessenberg.jl",
+      "base/linalg/lq.jl",
+      "base/linalg/lu.jl",
+      "base/linalg/qr.jl",
+      "base/linalg/special.jl",
+      "base/linalg/symmetric.jl",
+      "base/linalg/triangular.jl",
+      "base/linalg/tridiag.jl",
+      "base/linalg/uniformscaling.jl",
+      "base/sparse/linalg.jl",
+      "base/sparse/sparsematrix.jl",
+      "base/sparse/umfpack.jl",
+      "base/test.jl",
+      "test/hashing.jl",
+      "test/linalg/arnoldi.jl",
+      "test/linalg/bidiag.jl",
+      "test/linalg/cholesky.jl",
+      "test/linalg/dense.jl",
+      "test/linalg/diagonal.jl",
+      "test/linalg/hessenberg.jl",
+      "test/linalg/lapack.jl",
+      "test/linalg/lq.jl",
+      "test/linalg/lu.jl",
+      "test/linalg/matmul.jl",
+      "test/linalg/qr.jl",
+      "test/linalg/schur.jl",
+      "test/linalg/special.jl",
+      "test/linalg/svd.jl",
+      "test/linalg/symmetric.jl",
+      "test/linalg/triangular.jl",
+      "test/linalg/tridiag.jl",
+      "test/linalg/uniformscaling.jl",
+      "test/perf/threads/stockcorr/pstockcorr.jl",
+      "test/sparsedir/cholmod.jl",
+      "test/sparsedir/sparse.jl",
+      "test/sparsedir/sparsevector.jl",
+      "test/sparsedir/spqr.jl",
+      "test/sparsedir/umfpack.jl"
+    ],
+    "callers": [
+      "tkelman"
+    ],
+    "participants": [
+      "tkelman",
+      "Sacha0",
+      "andreasnoack",
+      "nanosoldier"
+    ],
+    "reviewers": [],
+    "humanComments": 8,
+    "benchmarkBotFreeParticipants": 3,
+    "commenterAndLengths": [
+      [
+        "Sacha0",
+        295
+      ],
+      [
+        "andreasnoack",
+        98
+      ],
+      [
+        "tkelman",
+        50
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "Sacha0",
+        31
+      ],
+      [
+        "Sacha0",
+        33
+      ],
+      [
+        "tkelman",
+        220
+      ],
+      [
+        "tkelman",
+        157
+      ],
+      [
+        "Sacha0",
+        362
+      ],
+      [
+        "Sacha0",
+        2459
+      ]
+    ],
+    "commentsAfterContribution": 6
+  },
+  {
+    "title": "Introduce `RowVector` as the transpose of a vector",
+    "createdAt": "2016-12-21T14:16:30Z",
+    "merged": true,
+    "mergedAt": "2017-01-13T22:43:28Z",
+    "closed": true,
+    "closedAt": "2017-01-13T22:43:28Z",
+    "number": 19670,
+    "additions": 833,
+    "deletions": 283,
+    "baseRefName": "master",
+    "author": {
+      "login": "andyferris"
+    },
+    "reviews": 54,
+    "comments": 97,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/abstractarray.jl",
+      "base/abstractarraymath.jl",
+      "base/arraymath.jl",
+      "base/bitarray.jl",
+      "base/docs/basedocs.jl",
+      "base/exports.jl",
+      "base/linalg/bidiag.jl",
+      "base/linalg/bitarray.jl",
+      "base/linalg/dense.jl",
+      "base/linalg/diagonal.jl",
+      "base/linalg/generic.jl",
+      "base/linalg/linalg.jl",
+      "base/linalg/matmul.jl",
+      "base/linalg/qr.jl",
+      "base/linalg/rowvector.jl",
+      "base/linalg/transpose.jl",
+      "base/linalg/triangular.jl",
+      "base/range.jl",
+      "base/sparse/cholmod.jl",
+      "base/sparse/linalg.jl",
+      "base/sparse/sparsevector.jl",
+      "doc/src/stdlib/linalg.md",
+      "test/arrayops.jl",
+      "test/bitarray.jl",
+      "test/choosetests.jl",
+      "test/linalg/dense.jl",
+      "test/linalg/matmul.jl",
+      "test/linalg/rowvector.jl",
+      "test/offsetarray.jl",
+      "test/show.jl",
+      "test/sparse/sparse.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/abstractarraymath.jl",
+      "base/arraymath.jl",
+      "base/bitarray.jl",
+      "base/docs/basedocs.jl",
+      "base/exports.jl",
+      "base/linalg/bidiag.jl",
+      "base/linalg/bitarray.jl",
+      "base/linalg/dense.jl",
+      "base/linalg/diagonal.jl",
+      "base/linalg/generic.jl",
+      "base/linalg/linalg.jl",
+      "base/linalg/matmul.jl",
+      "base/linalg/qr.jl",
+      "base/linalg/rowvector.jl",
+      "base/linalg/transpose.jl",
+      "base/linalg/triangular.jl",
+      "base/range.jl",
+      "base/sparse/cholmod.jl",
+      "base/sparse/linalg.jl",
+      "base/sparse/sparsevector.jl",
+      "test/arrayops.jl",
+      "test/bitarray.jl",
+      "test/choosetests.jl",
+      "test/linalg/dense.jl",
+      "test/linalg/matmul.jl",
+      "test/linalg/rowvector.jl",
+      "test/offsetarray.jl",
+      "test/show.jl",
+      "test/sparse/sparse.jl"
+    ],
+    "callers": [
+      "tkelman",
+      "jrevels"
+    ],
+    "participants": [
+      "martinholters",
+      "StefanKarpinski",
+      "JeffBezanson",
+      "andreasnoack",
+      "andyferris",
+      "johnmyleswhite",
+      "tkelman",
+      "stevengj",
+      "vtjnash",
+      "vchuravy",
+      "nanosoldier",
+      "jrevels",
+      "musm",
+      "Jutho",
+      "mbauman"
+    ],
+    "reviewers": [
+      "andyferris",
+      "mbauman",
+      "martinholters",
+      "Sacha0",
+      "stevengj",
+      "tkelman",
+      "andreasnoack"
+    ],
+    "humanComments": 93,
+    "benchmarkBotFreeParticipants": 14,
+    "commenterAndLengths": [
+      [
+        "andyferris",
+        1178
+      ],
+      [
+        "andyferris",
+        78
+      ],
+      [
+        "stevengj",
+        50
+      ],
+      [
+        "stevengj",
+        61
+      ],
+      [
+        "andyferris",
+        1440
+      ],
+      [
+        "stevengj",
+        559
+      ],
+      [
+        "andyferris",
+        2856
+      ],
+      [
+        "stevengj",
+        663
+      ],
+      [
+        "andyferris",
+        843
+      ],
+      [
+        "vtjnash",
+        457
+      ],
+      [
+        "andyferris",
+        71
+      ],
+      [
+        "andyferris",
+        267
+      ],
+      [
+        "stevengj",
+        516
+      ],
+      [
+        "musm",
+        800
+      ],
+      [
+        "stevengj",
+        3148
+      ],
+      [
+        "stevengj",
+        423
+      ],
+      [
+        "andyferris",
+        321
+      ],
+      [
+        "andyferris",
+        240
+      ],
+      [
+        "stevengj",
+        126
+      ],
+      [
+        "andyferris",
+        234
+      ],
+      [
+        "andyferris",
+        181
+      ],
+      [
+        "andreasnoack",
+        424
+      ],
+      [
+        "stevengj",
+        294
+      ],
+      [
+        "andreasnoack",
+        281
+      ],
+      [
+        "stevengj",
+        262
+      ],
+      [
+        "andyferris",
+        1016
+      ],
+      [
+        "andyferris",
+        802
+      ],
+      [
+        "JeffBezanson",
+        314
+      ],
+      [
+        "JeffBezanson",
+        180
+      ],
+      [
+        "andyferris",
+        359
+      ],
+      [
+        "andreasnoack",
+        758
+      ],
+      [
+        "andyferris",
+        472
+      ],
+      [
+        "andyferris",
+        456
+      ],
+      [
+        "andreasnoack",
+        516
+      ],
+      [
+        "andyferris",
+        502
+      ],
+      [
+        "andyferris",
+        68
+      ],
+      [
+        "andreasnoack",
+        126
+      ],
+      [
+        "andyferris",
+        309
+      ],
+      [
+        "andyferris",
+        163
+      ],
+      [
+        "andyferris",
+        49
+      ],
+      [
+        "andyferris",
+        3060
+      ],
+      [
+        "andyferris",
+        170
+      ],
+      [
+        "andreasnoack",
+        66
+      ],
+      [
+        "andyferris",
+        44
+      ],
+      [
+        "vchuravy",
+        73
+      ],
+      [
+        "andyferris",
+        216
+      ],
+      [
+        "andyferris",
+        30
+      ],
+      [
+        "andyferris",
+        1638
+      ],
+      [
+        "andyferris",
+        235
+      ],
+      [
+        "andyferris",
+        61
+      ],
+      [
+        "tkelman",
+        49
+      ],
+      [
+        "andyferris",
+        6
+      ],
+      [
+        "nanosoldier",
+        493
+      ],
+      [
+        "andreasnoack",
+        211
+      ],
+      [
+        "andyferris",
+        16
+      ],
+      [
+        "jrevels",
+        101
+      ],
+      [
+        "nanosoldier",
+        325
+      ],
+      [
+        "andyferris",
+        46
+      ],
+      [
+        "andyferris",
+        378
+      ],
+      [
+        "stevengj",
+        170
+      ],
+      [
+        "andyferris",
+        600
+      ],
+      [
+        "stevengj",
+        338
+      ],
+      [
+        "andyferris",
+        134
+      ],
+      [
+        "andyferris",
+        350
+      ],
+      [
+        "andyferris",
+        212
+      ],
+      [
+        "mbauman",
+        558
+      ],
+      [
+        "johnmyleswhite",
+        221
+      ],
+      [
+        "andyferris",
+        492
+      ],
+      [
+        "andyferris",
+        39
+      ],
+      [
+        "andyferris",
+        536
+      ],
+      [
+        "andyferris",
+        8
+      ],
+      [
+        "andyferris",
+        142
+      ],
+      [
+        "andyferris",
+        4
+      ],
+      [
+        "andyferris",
+        119
+      ],
+      [
+        "andyferris",
+        84
+      ],
+      [
+        "andyferris",
+        563
+      ],
+      [
+        "martinholters",
+        205
+      ],
+      [
+        "stevengj",
+        181
+      ],
+      [
+        "martinholters",
+        240
+      ],
+      [
+        "stevengj",
+        266
+      ],
+      [
+        "andyferris",
+        8
+      ],
+      [
+        "stevengj",
+        33
+      ],
+      [
+        "stevengj",
+        55
+      ],
+      [
+        "andyferris",
+        45
+      ],
+      [
+        "andyferris",
+        11
+      ],
+      [
+        "StefanKarpinski",
+        195
+      ],
+      [
+        "andyferris",
+        41
+      ],
+      [
+        "Jutho",
+        826
+      ],
+      [
+        "andyferris",
+        1120
+      ],
+      [
+        "Jutho",
+        978
+      ],
+      [
+        "andyferris",
+        280
+      ],
+      [
+        "martinholters",
+        256
+      ],
+      [
+        "StefanKarpinski",
+        68
+      ],
+      [
+        "andyferris",
+        116
+      ],
+      [
+        "StefanKarpinski",
+        95
+      ],
+      [
+        "andyferris",
+        915
+      ],
+      [
+        "StefanKarpinski",
+        59
+      ]
+    ],
+    "commentsAfterContribution": 44
+  },
+  {
+    "title": "implement \"nearly division less\" algorithm for rand(a:b)",
+    "createdAt": "2018-09-18T10:14:48Z",
+    "merged": true,
+    "mergedAt": "2020-05-01T16:42:41Z",
+    "closed": true,
+    "closedAt": "2020-05-01T16:42:42Z",
+    "number": 29240,
+    "additions": 89,
+    "deletions": 57,
+    "baseRefName": "master",
+    "author": {
+      "login": "rfourquet"
+    },
+    "reviews": 2,
+    "comments": 42,
+    "commits": 7,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "RNG"
+          }
+        },
+        {
+          "node": {
+            "name": "performance"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "stdlib/LinearAlgebra/test/bunchkaufman.jl",
+      "stdlib/Random/docs/src/index.md",
+      "stdlib/Random/src/RNGs.jl",
+      "stdlib/Random/src/generation.jl",
+      "stdlib/Random/src/misc.jl",
+      "stdlib/Random/test/runtests.jl"
+    ],
+    "changedSourceFiles": [
+      "stdlib/LinearAlgebra/test/bunchkaufman.jl",
+      "stdlib/Random/src/RNGs.jl",
+      "stdlib/Random/src/generation.jl",
+      "stdlib/Random/src/misc.jl",
+      "stdlib/Random/test/runtests.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "KristofferC",
+      "mschauer",
+      "StefanKarpinski",
+      "GregPlowman",
+      "tkluck",
+      "stevengj",
+      "nanosoldier",
+      "rfourquet",
+      "chethega"
+    ],
+    "reviewers": [
+      "halleysfifthinc",
+      "mschauer"
+    ],
+    "humanComments": 42,
+    "benchmarkBotFreeParticipants": 8,
+    "commenterAndLengths": [
+      [
+        "rfourquet",
+        444
+      ],
+      [
+        "rfourquet",
+        11
+      ],
+      [
+        "StefanKarpinski",
+        87
+      ],
+      [
+        "KristofferC",
+        57
+      ],
+      [
+        "tkluck",
+        366
+      ],
+      [
+        "GregPlowman",
+        211
+      ],
+      [
+        "stevengj",
+        161
+      ],
+      [
+        "rfourquet",
+        899
+      ],
+      [
+        "stevengj",
+        402
+      ],
+      [
+        "rfourquet",
+        102
+      ],
+      [
+        "rfourquet",
+        2960
+      ],
+      [
+        "chethega",
+        356
+      ],
+      [
+        "rfourquet",
+        513
+      ],
+      [
+        "GregPlowman",
+        1348
+      ],
+      [
+        "rfourquet",
+        770
+      ],
+      [
+        "rfourquet",
+        132
+      ],
+      [
+        "chethega",
+        1319
+      ],
+      [
+        "rfourquet",
+        518
+      ],
+      [
+        "stevengj",
+        72
+      ],
+      [
+        "StefanKarpinski",
+        644
+      ],
+      [
+        "rfourquet",
+        408
+      ],
+      [
+        "rfourquet",
+        283
+      ],
+      [
+        "stevengj",
+        540
+      ],
+      [
+        "rfourquet",
+        217
+      ],
+      [
+        "mschauer",
+        42
+      ],
+      [
+        "StefanKarpinski",
+        185
+      ],
+      [
+        "rfourquet",
+        1093
+      ],
+      [
+        "mschauer",
+        276
+      ],
+      [
+        "StefanKarpinski",
+        141
+      ],
+      [
+        "rfourquet",
+        48
+      ],
+      [
+        "KristofferC",
+        444
+      ],
+      [
+        "nanosoldier",
+        335
+      ],
+      [
+        "rfourquet",
+        869
+      ],
+      [
+        "rfourquet",
+        211
+      ],
+      [
+        "mschauer",
+        77
+      ],
+      [
+        "rfourquet",
+        233
+      ],
+      [
+        "rfourquet",
+        175
+      ],
+      [
+        "rfourquet",
+        43
+      ],
+      [
+        "nanosoldier",
+        335
+      ],
+      [
+        "rfourquet",
+        78
+      ],
+      [
+        "StefanKarpinski",
+        24
+      ],
+      [
+        "rfourquet",
+        67
+      ]
+    ],
+    "commentsAfterContribution": 10
+  },
+  {
+    "title": "type inference runtime correctness (oldworld)",
+    "createdAt": "2016-06-21T22:12:52Z",
+    "merged": true,
+    "mergedAt": "2016-12-23T05:10:20Z",
+    "closed": true,
+    "closedAt": "2016-12-23T05:10:20Z",
+    "number": 17057,
+    "additions": 2095,
+    "deletions": 761,
+    "baseRefName": "master",
+    "author": {
+      "login": "vtjnash"
+    },
+    "reviews": 58,
+    "comments": 25,
+    "commits": 8,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "breaking"
+          }
+        },
+        {
+          "node": {
+            "name": "codegen"
+          }
+        },
+        {
+          "node": {
+            "name": "inference"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/REPL.jl",
+      "base/REPLCompletions.jl",
+      "base/base.jl",
+      "base/boot.jl",
+      "base/client.jl",
+      "base/coreimg.jl",
+      "base/docs/core.jl",
+      "base/error.jl",
+      "base/inference.jl",
+      "base/methodshow.jl",
+      "base/multi.jl",
+      "base/precompile.jl",
+      "base/reflection.jl",
+      "base/replutil.jl",
+      "base/serialize.jl",
+      "base/sparse/sparsematrix.jl",
+      "base/sysimg.jl",
+      "doc/src/devdocs/ast.md",
+      "doc/src/manual/metaprogramming.md",
+      "doc/src/manual/methods.md",
+      "src/alloc.c",
+      "src/ast.c",
+      "src/builtin_proto.h",
+      "src/builtins.c",
+      "src/ccall.cpp",
+      "src/codegen.cpp",
+      "src/dump.c",
+      "src/gc.c",
+      "src/gf.c",
+      "src/init.c",
+      "src/interpreter.c",
+      "src/jl_uv.c",
+      "src/jlapi.c",
+      "src/jltypes.c",
+      "src/julia.h",
+      "src/julia_internal.h",
+      "src/julia_threads.h",
+      "src/options.h",
+      "src/task.c",
+      "src/toplevel.c",
+      "src/typemap.c",
+      "test/choosetests.jl",
+      "test/compile.jl",
+      "test/core.jl",
+      "test/loading.jl",
+      "test/reflection.jl",
+      "test/runtests.jl",
+      "test/staged.jl",
+      "test/worlds.jl",
+      "ui/repl.c"
+    ],
+    "changedSourceFiles": [
+      "base/REPL.jl",
+      "base/REPLCompletions.jl",
+      "base/base.jl",
+      "base/boot.jl",
+      "base/client.jl",
+      "base/coreimg.jl",
+      "base/docs/core.jl",
+      "base/error.jl",
+      "base/inference.jl",
+      "base/methodshow.jl",
+      "base/multi.jl",
+      "base/precompile.jl",
+      "base/reflection.jl",
+      "base/replutil.jl",
+      "base/serialize.jl",
+      "base/sparse/sparsematrix.jl",
+      "base/sysimg.jl",
+      "src/alloc.c",
+      "src/ast.c",
+      "src/builtin_proto.h",
+      "src/builtins.c",
+      "src/ccall.cpp",
+      "src/codegen.cpp",
+      "src/dump.c",
+      "src/gc.c",
+      "src/gf.c",
+      "src/init.c",
+      "src/interpreter.c",
+      "src/jl_uv.c",
+      "src/jlapi.c",
+      "src/jltypes.c",
+      "src/julia.h",
+      "src/julia_internal.h",
+      "src/julia_threads.h",
+      "src/options.h",
+      "src/task.c",
+      "src/toplevel.c",
+      "src/typemap.c",
+      "test/choosetests.jl",
+      "test/compile.jl",
+      "test/core.jl",
+      "test/loading.jl",
+      "test/reflection.jl",
+      "test/runtests.jl",
+      "test/staged.jl",
+      "test/worlds.jl",
+      "ui/repl.c"
+    ],
+    "callers": [
+      "jrevels",
+      "vtjnash"
+    ],
+    "participants": [
+      "StefanKarpinski",
+      "JeffBezanson",
+      "maleadt",
+      "tkelman",
+      "jrevels",
+      "vtjnash",
+      "nanosoldier",
+      "MichaelHatherly"
+    ],
+    "reviewers": [
+      "MikeInnes",
+      "vtjnash",
+      "tkelman",
+      "JeffBezanson"
+    ],
+    "humanComments": 21,
+    "benchmarkBotFreeParticipants": 7,
+    "commenterAndLengths": [
+      [
+        "vtjnash",
+        1681
+      ],
+      [
+        "tkelman",
+        120
+      ],
+      [
+        "vtjnash",
+        47
+      ],
+      [
+        "JeffBezanson",
+        85
+      ],
+      [
+        "JeffBezanson",
+        127
+      ],
+      [
+        "JeffBezanson",
+        343
+      ],
+      [
+        "vtjnash",
+        1300
+      ],
+      [
+        "vtjnash",
+        77
+      ],
+      [
+        "nanosoldier",
+        504
+      ],
+      [
+        "jrevels",
+        552
+      ],
+      [
+        "jrevels",
+        49
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "MichaelHatherly",
+        2020
+      ],
+      [
+        "vtjnash",
+        192
+      ],
+      [
+        "vtjnash",
+        174
+      ],
+      [
+        "vtjnash",
+        700
+      ],
+      [
+        "vtjnash",
+        146
+      ],
+      [
+        "nanosoldier",
+        325
+      ],
+      [
+        "vtjnash",
+        47
+      ],
+      [
+        "nanosoldier",
+        325
+      ],
+      [
+        "tkelman",
+        25
+      ],
+      [
+        "StefanKarpinski",
+        99
+      ],
+      [
+        "vtjnash",
+        169
+      ],
+      [
+        "maleadt",
+        461
+      ],
+      [
+        "tkelman",
+        84
+      ]
+    ],
+    "commentsAfterContribution": 16
+  },
+  {
+    "title": "Add a builtin that allows specifying which iterate method to use",
+    "createdAt": "2019-09-21T23:19:15Z",
+    "merged": true,
+    "mergedAt": "2019-10-12T18:20:24Z",
+    "closed": true,
+    "closedAt": "2019-10-12T18:20:24Z",
+    "number": 33356,
+    "additions": 70,
+    "deletions": 33,
+    "baseRefName": "master",
+    "author": {
+      "login": "Keno"
+    },
+    "reviews": 3,
+    "comments": 9,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/boot.jl",
+      "base/compiler/abstractinterpretation.jl",
+      "base/compiler/compiler.jl",
+      "base/compiler/ssair/inlining.jl",
+      "base/essentials.jl",
+      "src/builtin_proto.h",
+      "src/builtins.c",
+      "src/codegen.cpp",
+      "src/julia-syntax.scm",
+      "src/staticdata.c",
+      "test/compiler/codegen.jl"
+    ],
+    "changedSourceFiles": [
+      "base/boot.jl",
+      "base/compiler/abstractinterpretation.jl",
+      "base/compiler/compiler.jl",
+      "base/compiler/ssair/inlining.jl",
+      "base/essentials.jl",
+      "src/builtin_proto.h",
+      "src/builtins.c",
+      "src/codegen.cpp",
+      "src/julia-syntax.scm",
+      "src/staticdata.c",
+      "test/compiler/codegen.jl"
+    ],
+    "callers": [
+      "Keno"
+    ],
+    "participants": [
+      "Keno",
+      "vtjnash",
+      "nanosoldier"
+    ],
+    "reviewers": [
+      "Keno",
+      "vtjnash",
+      "JeffBezanson"
+    ],
+    "humanComments": 7,
+    "benchmarkBotFreeParticipants": 2,
+    "commenterAndLengths": [
+      [
+        "Keno",
+        967
+      ],
+      [
+        "vtjnash",
+        117
+      ],
+      [
+        "Keno",
+        137
+      ],
+      [
+        "vtjnash",
+        101
+      ],
+      [
+        "Keno",
+        86
+      ],
+      [
+        "Keno",
+        47
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "Keno",
+        47
+      ],
+      [
+        "nanosoldier",
+        326
+      ]
+    ],
+    "commentsAfterContribution": 2
+  },
+  {
+    "title": "RNG: make a Sampler out of rand(::MersenneTwister, ::UnitRange)",
+    "createdAt": "2017-12-09T10:00:23Z",
+    "merged": true,
+    "mergedAt": "2017-12-12T21:15:18Z",
+    "closed": true,
+    "closedAt": "2017-12-12T21:15:18Z",
+    "number": 25002,
+    "additions": 68,
+    "deletions": 34,
+    "baseRefName": "master",
+    "author": {
+      "login": "rfourquet"
+    },
+    "reviews": 0,
+    "comments": 3,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "RNG"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/random/RNGs.jl",
+      "base/random/generation.jl",
+      "base/random/random.jl",
+      "test/random.jl"
+    ],
+    "changedSourceFiles": [
+      "base/random/RNGs.jl",
+      "base/random/generation.jl",
+      "base/random/random.jl",
+      "test/random.jl"
+    ],
+    "callers": [
+      "rfourquet"
+    ],
+    "participants": [
+      "nanosoldier",
+      "rfourquet"
+    ],
+    "reviewers": [],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commenterAndLengths": [
+      [
+        "rfourquet",
+        155
+      ],
+      [
+        "rfourquet",
+        52
+      ],
+      [
+        "nanosoldier",
+        320
+      ]
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Backports release 1.3.1",
+    "createdAt": "2019-11-29T13:07:44Z",
+    "merged": true,
+    "mergedAt": "2019-12-19T17:59:13Z",
+    "closed": true,
+    "closedAt": "2019-12-19T17:59:13Z",
+    "number": 33979,
+    "additions": 243,
+    "deletions": 137,
+    "baseRefName": "release-1.3",
+    "author": {
+      "login": "KristofferC"
+    },
+    "reviews": 0,
+    "comments": 35,
+    "commits": 18,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "release"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "Make.inc",
+      "Makefile",
+      "base/intfuncs.jl",
+      "base/regex.jl",
+      "base/reshapedarray.jl",
+      "base/stream.jl",
+      "base/strings/search.jl",
+      "base/strings/string.jl",
+      "base/strings/substring.jl",
+      "base/strings/util.jl",
+      "base/twiceprecision.jl",
+      "contrib/fixup-libgfortran.sh",
+      "deps/Versions.make",
+      "deps/checksums/Pkg-5de608c7b1837a24ed84eaaa14dde017986cb460.tar.gz/md5",
+      "deps/checksums/Pkg-5de608c7b1837a24ed84eaaa14dde017986cb460.tar.gz/sha512",
+      "deps/checksums/Pkg-f71e2c5a119b9c850f9b357fc8c56068f5b51cc0.tar.gz/md5",
+      "deps/checksums/Pkg-f71e2c5a119b9c850f9b357fc8c56068f5b51cc0.tar.gz/sha512",
+      "deps/checksums/cacert-2019-08-28.pem/md5",
+      "deps/checksums/cacert-2019-08-28.pem/sha512",
+      "deps/checksums/cacert-2019-10-16.pem/md5",
+      "deps/checksums/cacert-2019-10-16.pem/sha512",
+      "src/array.c",
+      "src/ast.scm",
+      "src/ccall.cpp",
+      "src/codegen.cpp",
+      "src/jitlayers.cpp",
+      "src/julia-syntax.scm",
+      "src/subtype.c",
+      "stdlib/Pkg.version",
+      "test/arrayops.jl",
+      "test/ccall.jl",
+      "test/compiler/codegen.jl",
+      "test/intfuncs.jl",
+      "test/llvmpasses/late-lower-gc.ll",
+      "test/offsetarray.jl",
+      "test/spawn.jl",
+      "test/strings/basic.jl",
+      "test/subtype.jl",
+      "test/syntax.jl"
+    ],
+    "changedSourceFiles": [
+      "Make.inc",
+      "base/intfuncs.jl",
+      "base/regex.jl",
+      "base/reshapedarray.jl",
+      "base/stream.jl",
+      "base/strings/search.jl",
+      "base/strings/string.jl",
+      "base/strings/substring.jl",
+      "base/strings/util.jl",
+      "base/twiceprecision.jl",
+      "contrib/fixup-libgfortran.sh",
+      "src/array.c",
+      "src/ast.scm",
+      "src/ccall.cpp",
+      "src/codegen.cpp",
+      "src/jitlayers.cpp",
+      "src/julia-syntax.scm",
+      "src/subtype.c",
+      "test/arrayops.jl",
+      "test/ccall.jl",
+      "test/compiler/codegen.jl",
+      "test/intfuncs.jl",
+      "test/llvmpasses/late-lower-gc.ll",
+      "test/offsetarray.jl",
+      "test/spawn.jl",
+      "test/strings/basic.jl",
+      "test/subtype.jl",
+      "test/syntax.jl"
+    ],
+    "callers": [
+      "KristofferC"
+    ],
+    "participants": [
+      "KristofferC",
+      "StefanKarpinski",
+      "fredrikekre",
+      "daviehh",
+      "maleadt",
+      "dkarrasch",
+      "nanosoldier",
+      "ViralBShah"
+    ],
+    "reviewers": [],
+    "humanComments": 33,
+    "benchmarkBotFreeParticipants": 7,
+    "commenterAndLengths": [
+      [
+        "KristofferC",
+        1401
+      ],
+      [
+        "maleadt",
+        1377
+      ],
+      [
+        "fredrikekre",
+        500
+      ],
+      [
+        "KristofferC",
+        31
+      ],
+      [
+        "KristofferC",
+        237
+      ],
+      [
+        "StefanKarpinski",
+        116
+      ],
+      [
+        "maleadt",
+        11
+      ],
+      [
+        "KristofferC",
+        40
+      ],
+      [
+        "maleadt",
+        116
+      ],
+      [
+        "KristofferC",
+        54
+      ],
+      [
+        "fredrikekre",
+        8
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "KristofferC",
+        67
+      ],
+      [
+        "daviehh",
+        1628
+      ],
+      [
+        "fredrikekre",
+        56
+      ],
+      [
+        "KristofferC",
+        102
+      ],
+      [
+        "dkarrasch",
+        874
+      ],
+      [
+        "KristofferC",
+        110
+      ],
+      [
+        "ViralBShah",
+        82
+      ],
+      [
+        "StefanKarpinski",
+        106
+      ],
+      [
+        "dkarrasch",
+        846
+      ],
+      [
+        "StefanKarpinski",
+        175
+      ],
+      [
+        "dkarrasch",
+        106
+      ],
+      [
+        "StefanKarpinski",
+        82
+      ],
+      [
+        "maleadt",
+        700
+      ],
+      [
+        "maleadt",
+        59
+      ],
+      [
+        "maleadt",
+        305
+      ],
+      [
+        "KristofferC",
+        317
+      ],
+      [
+        "maleadt",
+        313
+      ],
+      [
+        "KristofferC",
+        64
+      ],
+      [
+        "maleadt",
+        59
+      ],
+      [
+        "nanosoldier",
+        313
+      ],
+      [
+        "KristofferC",
+        430
+      ],
+      [
+        "KristofferC",
+        54
+      ],
+      [
+        "nanosoldier",
+        326
+      ]
+    ],
+    "commentsAfterContribution": 23
+  },
+  {
+    "title": "Revise checkbounds again",
+    "createdAt": "2016-07-09T23:02:34Z",
+    "merged": true,
+    "mergedAt": "2016-07-14T09:21:17Z",
+    "closed": true,
+    "closedAt": "2016-07-14T09:21:17Z",
+    "number": 17355,
+    "additions": 326,
+    "deletions": 107,
+    "baseRefName": "master",
+    "author": {
+      "login": "timholy"
+    },
+    "reviews": 0,
+    "comments": 24,
+    "commits": 6,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/abstractarray.jl",
+      "base/multidimensional.jl",
+      "base/range.jl",
+      "base/subarray.jl",
+      "doc/devdocs/boundscheck.rst",
+      "doc/stdlib/arrays.rst",
+      "test/abstractarray.jl",
+      "test/replutil.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/multidimensional.jl",
+      "base/range.jl",
+      "base/subarray.jl",
+      "test/abstractarray.jl",
+      "test/replutil.jl"
+    ],
+    "callers": [
+      "timholy"
+    ],
+    "participants": [
+      "JeffBezanson",
+      "tkelman",
+      "nanosoldier",
+      "timholy",
+      "mbauman"
+    ],
+    "reviewers": [],
+    "humanComments": 22,
+    "benchmarkBotFreeParticipants": 4,
+    "commenterAndLengths": [
+      [
+        "timholy",
+        595
+      ],
+      [
+        "timholy",
+        89
+      ],
+      [
+        "tkelman",
+        209
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "timholy",
+        50
+      ],
+      [
+        "nanosoldier",
+        320
+      ],
+      [
+        "timholy",
+        87
+      ],
+      [
+        "mbauman",
+        800
+      ],
+      [
+        "timholy",
+        1936
+      ],
+      [
+        "timholy",
+        50
+      ],
+      [
+        "timholy",
+        3137
+      ],
+      [
+        "mbauman",
+        743
+      ],
+      [
+        "timholy",
+        3360
+      ],
+      [
+        "mbauman",
+        599
+      ],
+      [
+        "timholy",
+        199
+      ],
+      [
+        "timholy",
+        223
+      ],
+      [
+        "timholy",
+        100
+      ],
+      [
+        "nanosoldier",
+        326
+      ],
+      [
+        "timholy",
+        194
+      ],
+      [
+        "timholy",
+        43
+      ],
+      [
+        "tkelman",
+        82
+      ],
+      [
+        "timholy",
+        571
+      ],
+      [
+        "JeffBezanson",
+        268
+      ],
+      [
+        "timholy",
+        24
+      ]
+    ],
+    "commentsAfterContribution": 20
+  },
+  {
+    "title": "Limit broadcast mechanism over Nullables",
+    "createdAt": "2016-12-31T00:13:28Z",
+    "merged": true,
+    "mergedAt": "2017-01-01T05:56:34Z",
+    "closed": true,
+    "closedAt": "2017-01-01T05:56:34Z",
+    "number": 19787,
+    "additions": 43,
+    "deletions": 145,
+    "baseRefName": "master",
+    "author": {
+      "login": "pabloferz"
+    },
+    "reviews": 22,
+    "comments": 13,
+    "commits": 5,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "missing data"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/broadcast.jl",
+      "base/nullable.jl",
+      "base/sparse/higherorderfns.jl",
+      "doc/src/manual/types.md",
+      "test/broadcast.jl",
+      "test/nullable.jl"
+    ],
+    "changedSourceFiles": [
+      "base/broadcast.jl",
+      "base/nullable.jl",
+      "base/sparse/higherorderfns.jl",
+      "test/broadcast.jl",
+      "test/nullable.jl"
+    ],
+    "callers": [
+      "tkelman"
+    ],
+    "participants": [
+      "pabloferz",
+      "Sacha0",
+      "JeffBezanson",
+      "TotalVerb",
+      "tkelman",
+      "nanosoldier",
+      "andreasnoack"
+    ],
+    "reviewers": [
+      "pabloferz",
+      "TotalVerb",
+      "Sacha0",
+      "nalimilan",
+      "tkelman"
+    ],
+    "humanComments": 11,
+    "benchmarkBotFreeParticipants": 6,
+    "commenterAndLengths": [
+      [
+        "pabloferz",
+        416
+      ],
+      [
+        "TotalVerb",
+        264
+      ],
+      [
+        "JeffBezanson",
+        19
+      ],
+      [
+        "andreasnoack",
+        460
+      ],
+      [
+        "pabloferz",
+        63
+      ],
+      [
+        "TotalVerb",
+        82
+      ],
+      [
+        "Sacha0",
+        144
+      ],
+      [
+        "tkelman",
+        49
+      ],
+      [
+        "nanosoldier",
+        319
+      ],
+      [
+        "tkelman",
+        232
+      ],
+      [
+        "tkelman",
+        433
+      ],
+      [
+        "pabloferz",
+        89
+      ],
+      [
+        "TotalVerb",
+        80
+      ]
+    ],
+    "commentsAfterContribution": 4
+  },
+  {
+    "title": "Unrevert #34347 and bump Pkg to a version that is compatible with it",
+    "createdAt": "2020-04-07T10:26:11Z",
+    "merged": true,
+    "mergedAt": "2020-04-08T08:38:48Z",
+    "closed": true,
+    "closedAt": "2020-04-08T08:38:48Z",
+    "number": 35390,
+    "additions": 47,
+    "deletions": 34,
+    "baseRefName": "master",
+    "author": {
+      "login": "KristofferC"
+    },
+    "reviews": 0,
+    "comments": 8,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "NEWS.md",
+      "base/Base.jl",
+      "base/client.jl",
+      "base/loading.jl",
+      "base/stream.jl",
+      "base/ttyhascolor.jl",
+      "deps/checksums/Pkg-23da050ea368fade2ff801daf69c928b11ef61ef.tar.gz/md5",
+      "deps/checksums/Pkg-23da050ea368fade2ff801daf69c928b11ef61ef.tar.gz/sha512",
+      "deps/checksums/Pkg-8c415b01924eb4452cb7be8438c2bbc0978d1152.tar.gz/md5",
+      "deps/checksums/Pkg-8c415b01924eb4452cb7be8438c2bbc0978d1152.tar.gz/sha512",
+      "stdlib/Pkg.version",
+      "stdlib/REPL/src/REPL.jl",
+      "stdlib/REPL/src/Terminals.jl",
+      "stdlib/REPL/test/repl.jl"
+    ],
+    "changedSourceFiles": [
+      "base/Base.jl",
+      "base/client.jl",
+      "base/loading.jl",
+      "base/stream.jl",
+      "base/ttyhascolor.jl",
+      "stdlib/REPL/src/REPL.jl",
+      "stdlib/REPL/src/Terminals.jl",
+      "stdlib/REPL/test/repl.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "KristofferC",
+      "JeffBezanson",
+      "DilumAluthge",
+      "maleadt",
+      "nanosoldier"
+    ],
+    "reviewers": [],
+    "humanComments": 8,
+    "benchmarkBotFreeParticipants": 4,
+    "commenterAndLengths": [
+      [
+        "KristofferC",
+        53
+      ],
+      [
+        "DilumAluthge",
+        60
+      ],
+      [
+        "KristofferC",
+        60
+      ],
+      [
+        "maleadt",
+        118
+      ],
+      [
+        "JeffBezanson",
+        187
+      ],
+      [
+        "KristofferC",
+        52
+      ],
+      [
+        "nanosoldier",
+        329
+      ],
+      [
+        "KristofferC",
+        414
+      ]
+    ],
+    "commentsAfterContribution": 1
+  }
+]

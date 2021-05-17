@@ -4,6 +4,7 @@ from src.mining.enhancement import enhancement
 from src.mining.rest import changed_files, participants_bot_callers_comment_lengths, reviewers
 from src.analysis.plotting import qq_plot
 import os, json
+import random
 
 # Get projects to collect PR data for
 projects = file_management.get_projects_to_mine()
@@ -18,33 +19,18 @@ for project in projects:
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
 
-    path = f"../data/projects/{owner}/{repo}"
+    data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
-    all_prs_full_path = path + f"/allPRs.json"
-    non_bot_full_path = path + f"/botPRs.json"
+    interesting_data_set = "PRsChangedSourceFilesAtLeast8"
 
-    all_prs_file = open(all_prs_full_path, "r")
-    non_bot_prs_file = open(non_bot_full_path, "r")
+    for pairs in data_set_pairs:
+        sample_bot_prs = random.sample(pairs["bot_prs"], 10)
+        sample_non_bot_prs = random.sample(pairs["non_bot_prs"], 10)
 
-    all_prs = json.loads(all_prs_file.read())
-    all_prs_numbers = [pr["number"] for pr in all_prs]
-    bot_prs = json.loads(non_bot_prs_file.read())
-    bot_prs_numbers = [pr["number"] for pr in bot_prs]
+        file_management.write_data(sample_bot_prs, owner, repo, f"sample{pairs['name']}")
+        file_management.write_data(sample_non_bot_prs, owner, repo, f"sampleNon{pairs['name']}")
 
-    all_prs_file.close()
-    non_bot_prs_file.close()
 
-    enhancement.add_benchmark_bot_free_participants_member(owner, repo, all_prs)
-    enhancement.add_human_comments_member(owner, repo, all_prs)
-    file_management.write_data(all_prs, owner, repo, "allPRs")
 
-    enhancement.add_benchmark_bot_free_participants_member(owner, repo, bot_prs)
-    enhancement.add_human_comments_member(owner, repo, bot_prs)
-    file_management.write_data(bot_prs, owner, repo, "botPRs")
 
-    # Create non bot PR's.
-    matcher.create_non_bot_prs(owner, repo)
-
-    data = file_management.get_all_mined_prs(owner, repo)
-    matcher.do_matchings(owner, repo, data.get("bot_prs"), data.get("non_bot_prs"))
 

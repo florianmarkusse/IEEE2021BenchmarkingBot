@@ -1,0 +1,700 @@
+[
+  {
+    "title": "Fix build issues introduced in #28872",
+    "createdAt": "2020-02-19T20:08:58Z",
+    "merged": true,
+    "mergedAt": "2020-02-20T21:26:25Z",
+    "closed": true,
+    "closedAt": "2020-02-20T21:26:25Z",
+    "number": 34819,
+    "additions": 0,
+    "deletions": 6,
+    "baseRefName": "master",
+    "author": {
+      "login": "dkarrasch"
+    },
+    "reviews": 0,
+    "comments": 4,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "stdlib/LinearAlgebra/src/uniformscaling.jl"
+    ],
+    "changedSourceFiles": [
+      "stdlib/LinearAlgebra/src/uniformscaling.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "dkarrasch",
+      "KristofferC",
+      "jagot"
+    ],
+    "commenterAndLengths": [
+      [
+        "dkarrasch",
+        163
+      ],
+      [
+        "jagot",
+        37
+      ],
+      [
+        "KristofferC",
+        116
+      ],
+      [
+        "dkarrasch",
+        300
+      ]
+    ],
+    "humanComments": 4,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Update basedocs.jl for $",
+    "createdAt": "2019-12-06T15:43:12Z",
+    "merged": true,
+    "mergedAt": "2019-12-10T20:04:26Z",
+    "closed": true,
+    "closedAt": "2019-12-10T20:04:26Z",
+    "number": 34035,
+    "additions": 17,
+    "deletions": 0,
+    "baseRefName": "master",
+    "author": {
+      "login": "Delta456"
+    },
+    "reviews": 13,
+    "comments": 12,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "doc"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/docs/basedocs.jl"
+    ],
+    "changedSourceFiles": [
+      "base/docs/basedocs.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "ViralBShah",
+      "StefanKarpinski",
+      "Delta456",
+      "jaideep-seth",
+      "abhishalya"
+    ],
+    "commenterAndLengths": [
+      [
+        "Delta456",
+        138
+      ],
+      [
+        "Delta456",
+        29
+      ],
+      [
+        "Delta456",
+        34
+      ],
+      [
+        "jaideep-seth",
+        381
+      ],
+      [
+        "jaideep-seth",
+        110
+      ],
+      [
+        "ViralBShah",
+        46
+      ],
+      [
+        "abhishalya",
+        26
+      ],
+      [
+        "jaideep-seth",
+        288
+      ],
+      [
+        "Delta456",
+        153
+      ],
+      [
+        "jaideep-seth",
+        143
+      ],
+      [
+        "abhishalya",
+        118
+      ],
+      [
+        "StefanKarpinski",
+        108
+      ]
+    ],
+    "humanComments": 12,
+    "benchmarkBotFreeParticipants": 5,
+    "reviewers": [
+      "StefanKarpinski",
+      "Delta456",
+      "abhishalya"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "lower the limit on the required number of precompile statements",
+    "createdAt": "2020-08-31T06:29:01Z",
+    "merged": true,
+    "mergedAt": "2020-08-31T14:28:31Z",
+    "closed": true,
+    "closedAt": "2020-08-31T14:28:31Z",
+    "number": 37292,
+    "additions": 1,
+    "deletions": 1,
+    "baseRefName": "master",
+    "author": {
+      "login": "KristofferC"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "contrib/generate_precompile.jl"
+    ],
+    "changedSourceFiles": [
+      "contrib/generate_precompile.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "KristofferC"
+    ],
+    "commenterAndLengths": [
+      [
+        "KristofferC",
+        90
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Minor LibGit2 cleanup",
+    "createdAt": "2020-04-13T23:43:51Z",
+    "merged": true,
+    "mergedAt": "2020-05-29T14:23:24Z",
+    "closed": true,
+    "closedAt": "2020-05-29T14:23:24Z",
+    "number": 35466,
+    "additions": 50,
+    "deletions": 45,
+    "baseRefName": "master",
+    "author": {
+      "login": "Keno"
+    },
+    "reviews": 4,
+    "comments": 1,
+    "commits": 3,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "libgit2"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "stdlib/LibGit2/src/LibGit2.jl",
+      "stdlib/LibGit2/src/commit.jl",
+      "stdlib/LibGit2/src/merge.jl",
+      "stdlib/LibGit2/src/repository.jl",
+      "stdlib/LibGit2/src/tree.jl",
+      "stdlib/LibGit2/src/types.jl"
+    ],
+    "changedSourceFiles": [
+      "stdlib/LibGit2/src/LibGit2.jl",
+      "stdlib/LibGit2/src/commit.jl",
+      "stdlib/LibGit2/src/merge.jl",
+      "stdlib/LibGit2/src/repository.jl",
+      "stdlib/LibGit2/src/tree.jl",
+      "stdlib/LibGit2/src/types.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "Keno"
+    ],
+    "commenterAndLengths": [
+      [
+        "Keno",
+        124
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [
+      "Keno",
+      "yuyichao",
+      "simonbyrne"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix tab completion not erroring after dot after undefined macro",
+    "createdAt": "2019-10-15T12:31:45Z",
+    "merged": false,
+    "mergedAt": null,
+    "closed": true,
+    "closedAt": "2021-04-03T18:33:43Z",
+    "number": 33560,
+    "additions": 6,
+    "deletions": 0,
+    "baseRefName": "master",
+    "author": {
+      "login": "KristofferC"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "stdlib/REPL/src/REPLCompletions.jl",
+      "stdlib/REPL/test/replcompletions.jl"
+    ],
+    "changedSourceFiles": [
+      "stdlib/REPL/src/REPLCompletions.jl",
+      "stdlib/REPL/test/replcompletions.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "KristofferC"
+    ],
+    "commenterAndLengths": [
+      [
+        "KristofferC",
+        91
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "More specific methods to replace `join(args...)`",
+    "createdAt": "2017-11-27T07:46:16Z",
+    "merged": true,
+    "mergedAt": "2017-11-29T19:53:53Z",
+    "closed": true,
+    "closedAt": "2017-11-29T19:53:53Z",
+    "number": 24801,
+    "additions": 5,
+    "deletions": 1,
+    "baseRefName": "master",
+    "author": {
+      "login": "bramtayl"
+    },
+    "reviews": 0,
+    "comments": 6,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/strings/io.jl",
+      "test/strings/io.jl"
+    ],
+    "changedSourceFiles": [
+      "base/strings/io.jl",
+      "test/strings/io.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "iblis17",
+      "bramtayl",
+      "rfourquet"
+    ],
+    "commenterAndLengths": [
+      [
+        "bramtayl",
+        10
+      ],
+      [
+        "bramtayl",
+        16
+      ],
+      [
+        "bramtayl",
+        43
+      ],
+      [
+        "iblis17",
+        40
+      ],
+      [
+        "rfourquet",
+        40
+      ],
+      [
+        "bramtayl",
+        175
+      ]
+    ],
+    "humanComments": 6,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "[Artifacts] Test c_simple on ppc",
+    "createdAt": "2020-12-14T16:40:42Z",
+    "merged": true,
+    "mergedAt": "2020-12-14T19:46:24Z",
+    "closed": true,
+    "closedAt": "2020-12-14T19:46:24Z",
+    "number": 38875,
+    "additions": 9,
+    "deletions": 10,
+    "baseRefName": "master",
+    "author": {
+      "login": "vchuravy"
+    },
+    "reviews": 1,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "power"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "stdlib/Artifacts/test/Artifacts.toml"
+    ],
+    "changedSourceFiles": [],
+    "callers": [],
+    "participants": [
+      "vchuravy"
+    ],
+    "commenterAndLengths": [
+      [
+        "vchuravy",
+        154
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [
+      "staticfloat"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Implement custom memory manager for LLVM",
+    "createdAt": "2016-06-06T01:16:35Z",
+    "merged": true,
+    "mergedAt": "2016-06-15T18:26:51Z",
+    "closed": true,
+    "closedAt": "2016-06-15T18:26:52Z",
+    "number": 16777,
+    "additions": 945,
+    "deletions": 102,
+    "baseRefName": "master",
+    "author": {
+      "login": "yuyichao"
+    },
+    "reviews": 0,
+    "comments": 27,
+    "commits": 2,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "codegen"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "src/Makefile",
+      "src/cgmemmgr.cpp",
+      "src/codegen.cpp",
+      "src/codegen_internal.h",
+      "src/debuginfo.cpp",
+      "src/jitlayers.cpp",
+      "src/julia_internal.h"
+    ],
+    "changedSourceFiles": [
+      "src/cgmemmgr.cpp",
+      "src/codegen.cpp",
+      "src/codegen_internal.h",
+      "src/debuginfo.cpp",
+      "src/jitlayers.cpp",
+      "src/julia_internal.h"
+    ],
+    "callers": [],
+    "participants": [
+      "Keno",
+      "tkelman",
+      "yuyichao",
+      "JeffBezanson",
+      "vtjnash"
+    ],
+    "commenterAndLengths": [
+      [
+        "yuyichao",
+        885
+      ],
+      [
+        "yuyichao",
+        202
+      ],
+      [
+        "vtjnash",
+        396
+      ],
+      [
+        "yuyichao",
+        324
+      ],
+      [
+        "vtjnash",
+        91
+      ],
+      [
+        "yuyichao",
+        205
+      ],
+      [
+        "yuyichao",
+        62
+      ],
+      [
+        "vtjnash",
+        303
+      ],
+      [
+        "Keno",
+        73
+      ],
+      [
+        "vtjnash",
+        185
+      ],
+      [
+        "yuyichao",
+        148
+      ],
+      [
+        "vtjnash",
+        88
+      ],
+      [
+        "yuyichao",
+        259
+      ],
+      [
+        "Keno",
+        64
+      ],
+      [
+        "yuyichao",
+        56
+      ],
+      [
+        "Keno",
+        245
+      ],
+      [
+        "yuyichao",
+        101
+      ],
+      [
+        "tkelman",
+        217
+      ],
+      [
+        "Keno",
+        15
+      ],
+      [
+        "yuyichao",
+        234
+      ],
+      [
+        "Keno",
+        124
+      ],
+      [
+        "yuyichao",
+        75
+      ],
+      [
+        "Keno",
+        100
+      ],
+      [
+        "yuyichao",
+        125
+      ],
+      [
+        "Keno",
+        43
+      ],
+      [
+        "yuyichao",
+        188
+      ],
+      [
+        "JeffBezanson",
+        80
+      ]
+    ],
+    "humanComments": 27,
+    "benchmarkBotFreeParticipants": 5,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix some specificity and intersection issues",
+    "createdAt": "2017-02-18T19:54:02Z",
+    "merged": true,
+    "mergedAt": "2017-02-20T01:34:54Z",
+    "closed": true,
+    "closedAt": "2017-02-20T01:34:54Z",
+    "number": 20665,
+    "additions": 191,
+    "deletions": 91,
+    "baseRefName": "master",
+    "author": {
+      "login": "JeffBezanson"
+    },
+    "reviews": 5,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "bugfix"
+          }
+        },
+        {
+          "node": {
+            "name": "types and dispatch"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/transpose.jl",
+      "base/refpointer.jl",
+      "base/sparse/higherorderfns.jl",
+      "base/tuple.jl",
+      "src/subtype.c",
+      "test/core.jl",
+      "test/subtype.jl"
+    ],
+    "changedSourceFiles": [
+      "base/abstractarray.jl",
+      "base/linalg/transpose.jl",
+      "base/refpointer.jl",
+      "base/sparse/higherorderfns.jl",
+      "base/tuple.jl",
+      "src/subtype.c",
+      "test/core.jl",
+      "test/subtype.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "JeffBezanson"
+    ],
+    "commenterAndLengths": [
+      [
+        "JeffBezanson",
+        620
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [
+      "Sacha0",
+      "JeffBezanson"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Added notes on closing a library.",
+    "createdAt": "2017-08-28T18:16:34Z",
+    "merged": true,
+    "mergedAt": "2017-08-29T19:27:22Z",
+    "closed": true,
+    "closedAt": "2017-08-29T19:27:23Z",
+    "number": 23489,
+    "additions": 19,
+    "deletions": 0,
+    "baseRefName": "master",
+    "author": {
+      "login": "tuckermcclure"
+    },
+    "reviews": 3,
+    "comments": 2,
+    "commits": 3,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "doc"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "doc/src/manual/calling-c-and-fortran-code.md"
+    ],
+    "changedSourceFiles": [],
+    "callers": [],
+    "participants": [
+      "tuckermcclure"
+    ],
+    "commenterAndLengths": [
+      [
+        "tuckermcclure",
+        12
+      ],
+      [
+        "tuckermcclure",
+        111
+      ]
+    ],
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [
+      "Sacha0",
+      "yuyichao"
+    ],
+    "commentsAfterContribution": 0
+  }
+]

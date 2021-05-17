@@ -1,0 +1,965 @@
+[
+  {
+    "title": "Clean up of Boolean range indexing",
+    "createdAt": "2021-03-12T08:43:47Z",
+    "merged": true,
+    "mergedAt": "2021-04-03T18:39:47Z",
+    "closed": true,
+    "closedAt": "2021-04-03T18:39:47Z",
+    "number": 39993,
+    "additions": 6,
+    "deletions": 26,
+    "baseRefName": "master",
+    "author": {
+      "login": "bkamins"
+    },
+    "reviews": 13,
+    "comments": 2,
+    "commits": 5,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/multidimensional.jl",
+      "base/range.jl"
+    ],
+    "changedSourceFiles": [
+      "base/multidimensional.jl",
+      "base/range.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "bkamins",
+      "simeonschaub"
+    ],
+    "commenterAndLengths": [
+      [
+        "bkamins",
+        240
+      ],
+      [
+        "simeonschaub",
+        23
+      ]
+    ],
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [
+      "jishnub",
+      "mbauman",
+      "bkamins",
+      "vtjnash"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Support zero-dimensional reshapes",
+    "createdAt": "2018-05-10T19:53:30Z",
+    "merged": true,
+    "mergedAt": "2018-05-11T18:15:52Z",
+    "closed": true,
+    "closedAt": "2018-05-11T18:15:52Z",
+    "number": 27061,
+    "additions": 16,
+    "deletions": 2,
+    "baseRefName": "master",
+    "author": {
+      "login": "mbauman"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/reshapedarray.jl",
+      "test/arrayops.jl"
+    ],
+    "changedSourceFiles": [
+      "base/reshapedarray.jl",
+      "test/arrayops.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "mbauman"
+    ],
+    "commenterAndLengths": [
+      [
+        "mbauman",
+        34
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "GC Extensions",
+    "createdAt": "2018-07-31T04:17:45Z",
+    "merged": true,
+    "mergedAt": "2018-10-05T19:55:54Z",
+    "closed": true,
+    "closedAt": "2018-10-05T19:55:54Z",
+    "number": 28368,
+    "additions": 1459,
+    "deletions": 45,
+    "baseRefName": "master",
+    "author": {
+      "login": "rbehrends"
+    },
+    "reviews": 51,
+    "comments": 33,
+    "commits": 15,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "GC"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "src/Makefile",
+      "src/datatype.c",
+      "src/gc-debug.c",
+      "src/gc.c",
+      "src/gc.h",
+      "src/julia_gcext.h",
+      "src/julia_internal.h",
+      "src/julia_threads.h",
+      "src/task.c",
+      "test/Makefile",
+      "test/gcext/.gitignore",
+      "test/gcext/LocalTest.jl",
+      "test/gcext/Makefile",
+      "test/gcext/gcext-test.jl",
+      "test/gcext/gcext.c"
+    ],
+    "changedSourceFiles": [
+      "src/datatype.c",
+      "src/gc-debug.c",
+      "src/gc.c",
+      "src/gc.h",
+      "src/julia_gcext.h",
+      "src/julia_internal.h",
+      "src/julia_threads.h",
+      "src/task.c",
+      "test/gcext/LocalTest.jl",
+      "test/gcext/gcext-test.jl",
+      "test/gcext/gcext.c"
+    ],
+    "callers": [],
+    "participants": [
+      "KristofferC",
+      "rbehrends",
+      "fingolfin",
+      "Keno",
+      "kim366",
+      "StefanKarpinski",
+      "yuyichao",
+      "wbhart",
+      "vchuravy",
+      "vtjnash"
+    ],
+    "commenterAndLengths": [
+      [
+        "rbehrends",
+        239
+      ],
+      [
+        "rbehrends",
+        1816
+      ],
+      [
+        "yuyichao",
+        608
+      ],
+      [
+        "rbehrends",
+        1442
+      ],
+      [
+        "vtjnash",
+        119
+      ],
+      [
+        "rbehrends",
+        935
+      ],
+      [
+        "fingolfin",
+        297
+      ],
+      [
+        "rbehrends",
+        199
+      ],
+      [
+        "KristofferC",
+        95
+      ],
+      [
+        "rbehrends",
+        69
+      ],
+      [
+        "rbehrends",
+        107
+      ],
+      [
+        "fingolfin",
+        448
+      ],
+      [
+        "fingolfin",
+        39
+      ],
+      [
+        "wbhart",
+        288
+      ],
+      [
+        "fingolfin",
+        494
+      ],
+      [
+        "StefanKarpinski",
+        100
+      ],
+      [
+        "fingolfin",
+        749
+      ],
+      [
+        "vtjnash",
+        317
+      ],
+      [
+        "fingolfin",
+        713
+      ],
+      [
+        "fingolfin",
+        221
+      ],
+      [
+        "rbehrends",
+        57
+      ],
+      [
+        "fingolfin",
+        1555
+      ],
+      [
+        "rbehrends",
+        777
+      ],
+      [
+        "vchuravy",
+        309
+      ],
+      [
+        "StefanKarpinski",
+        231
+      ],
+      [
+        "rbehrends",
+        368
+      ],
+      [
+        "vtjnash",
+        642
+      ],
+      [
+        "fingolfin",
+        202
+      ],
+      [
+        "Keno",
+        211
+      ],
+      [
+        "fingolfin",
+        136
+      ],
+      [
+        "kim366",
+        241
+      ],
+      [
+        "fingolfin",
+        239
+      ],
+      [
+        "kim366",
+        61
+      ]
+    ],
+    "humanComments": 33,
+    "benchmarkBotFreeParticipants": 10,
+    "reviewers": [
+      "rbehrends",
+      "Keno",
+      "yuyichao",
+      "fingolfin"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Allow inference of _apply(_apply, ...)",
+    "createdAt": "2018-07-12T08:54:01Z",
+    "merged": true,
+    "mergedAt": "2018-07-13T18:17:14Z",
+    "closed": true,
+    "closedAt": "2018-07-13T18:17:14Z",
+    "number": 28074,
+    "additions": 8,
+    "deletions": 5,
+    "baseRefName": "master",
+    "author": {
+      "login": "martinholters"
+    },
+    "reviews": 1,
+    "comments": 4,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "inference"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "test/compiler/compiler.jl"
+    ],
+    "changedSourceFiles": [
+      "base/compiler/abstractinterpretation.jl",
+      "test/compiler/compiler.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "jrevels",
+      "StefanKarpinski",
+      "martinholters"
+    ],
+    "commenterAndLengths": [
+      [
+        "martinholters",
+        13
+      ],
+      [
+        "martinholters",
+        44
+      ],
+      [
+        "StefanKarpinski",
+        166
+      ],
+      [
+        "jrevels",
+        253
+      ]
+    ],
+    "humanComments": 4,
+    "benchmarkBotFreeParticipants": 3,
+    "reviewers": [
+      "vtjnash"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "[build] Mass-update JLL versions to get codesigned libraries on Darwin",
+    "createdAt": "2021-02-17T23:45:13Z",
+    "merged": true,
+    "mergedAt": "2021-02-24T05:09:14Z",
+    "closed": true,
+    "closedAt": "2021-02-24T05:09:14Z",
+    "number": 39719,
+    "additions": 585,
+    "deletions": 564,
+    "baseRefName": "master",
+    "author": {
+      "login": "staticfloat"
+    },
+    "reviews": 4,
+    "comments": 24,
+    "commits": 3,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "Make.inc",
+      "deps/Versions.make",
+      "deps/checksums/LibCURL-8310487053915d5c995513f569ad85ba65c3544f.tar.gz/md5",
+      "deps/checksums/LibCURL-8310487053915d5c995513f569ad85ba65c3544f.tar.gz/sha512",
+      "deps/checksums/clang",
+      "deps/checksums/compilersupportlibraries",
+      "deps/checksums/curl",
+      "deps/checksums/dsfmt",
+      "deps/checksums/libcxx-11.0.0.src.tar.xz/md5",
+      "deps/checksums/libcxx-11.0.0.src.tar.xz/sha512",
+      "deps/checksums/libgit2",
+      "deps/checksums/libssh2",
+      "deps/checksums/libuv",
+      "deps/checksums/llvmunwind",
+      "deps/checksums/mbedtls",
+      "deps/checksums/mpfr",
+      "deps/checksums/nghttp2",
+      "deps/checksums/openblas",
+      "deps/checksums/openlibm",
+      "deps/checksums/pcre",
+      "deps/checksums/suitesparse",
+      "deps/checksums/unwind",
+      "deps/checksums/zlib",
+      "deps/patches/pcre2-sljit-nomprotect.patch",
+      "deps/pcre.mk",
+      "stdlib/CompilerSupportLibraries_jll/Project.toml",
+      "stdlib/LibSSH2_jll/Project.toml",
+      "stdlib/LibUV_jll/Project.toml",
+      "stdlib/MPFR_jll/Project.toml",
+      "stdlib/MbedTLS_jll/Project.toml",
+      "stdlib/OpenBLAS_jll/Project.toml",
+      "stdlib/OpenBLAS_jll/src/OpenBLAS_jll.jl",
+      "stdlib/OpenLibm_jll/Project.toml",
+      "stdlib/PCRE2_jll/Project.toml",
+      "stdlib/SuiteSparse_jll/Project.toml",
+      "stdlib/Zlib_jll/Project.toml",
+      "stdlib/dSFMT_jll/Project.toml",
+      "stdlib/nghttp2_jll/Project.toml"
+    ],
+    "changedSourceFiles": [
+      "Make.inc",
+      "deps/pcre.mk",
+      "stdlib/OpenBLAS_jll/src/OpenBLAS_jll.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "omus",
+      "Keno",
+      "staticfloat",
+      "KristofferC"
+    ],
+    "commenterAndLengths": [
+      [
+        "staticfloat",
+        206
+      ],
+      [
+        "omus",
+        84
+      ],
+      [
+        "staticfloat",
+        88
+      ],
+      [
+        "staticfloat",
+        601
+      ],
+      [
+        "staticfloat",
+        35
+      ],
+      [
+        "staticfloat",
+        536
+      ],
+      [
+        "Keno",
+        99
+      ],
+      [
+        "staticfloat",
+        1209
+      ],
+      [
+        "Keno",
+        65
+      ],
+      [
+        "staticfloat",
+        328
+      ],
+      [
+        "Keno",
+        159
+      ],
+      [
+        "KristofferC",
+        202
+      ],
+      [
+        "staticfloat",
+        106
+      ],
+      [
+        "omus",
+        195
+      ],
+      [
+        "omus",
+        69
+      ],
+      [
+        "staticfloat",
+        3433
+      ],
+      [
+        "staticfloat",
+        101
+      ],
+      [
+        "staticfloat",
+        586
+      ],
+      [
+        "Keno",
+        87
+      ],
+      [
+        "Keno",
+        62
+      ],
+      [
+        "staticfloat",
+        152
+      ],
+      [
+        "staticfloat",
+        32
+      ],
+      [
+        "omus",
+        36
+      ],
+      [
+        "Keno",
+        35
+      ]
+    ],
+    "humanComments": 24,
+    "benchmarkBotFreeParticipants": 4,
+    "reviewers": [
+      "Keno",
+      "omus"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Deprecate `^(x, p::Integer)`",
+    "createdAt": "2017-08-18T20:28:14Z",
+    "merged": false,
+    "mergedAt": null,
+    "closed": true,
+    "closedAt": "2018-02-06T22:01:22Z",
+    "number": 23332,
+    "additions": 3,
+    "deletions": 1,
+    "baseRefName": "master",
+    "author": {
+      "login": "iamed2"
+    },
+    "reviews": 0,
+    "comments": 16,
+    "commits": 2,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "deprecation"
+          }
+        },
+        {
+          "node": {
+            "name": "maths"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "base/deprecated.jl",
+      "base/intfuncs.jl"
+    ],
+    "changedSourceFiles": [
+      "base/deprecated.jl",
+      "base/intfuncs.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "fredrikekre",
+      "stevengj",
+      "iamed2",
+      "StefanKarpinski",
+      "tkelman",
+      "JeffBezanson"
+    ],
+    "commenterAndLengths": [
+      [
+        "iamed2",
+        340
+      ],
+      [
+        "iamed2",
+        56
+      ],
+      [
+        "fredrikekre",
+        840
+      ],
+      [
+        "iamed2",
+        107
+      ],
+      [
+        "iamed2",
+        67
+      ],
+      [
+        "fredrikekre",
+        270
+      ],
+      [
+        "iamed2",
+        130
+      ],
+      [
+        "tkelman",
+        59
+      ],
+      [
+        "fredrikekre",
+        214
+      ],
+      [
+        "iamed2",
+        280
+      ],
+      [
+        "fredrikekre",
+        306
+      ],
+      [
+        "iamed2",
+        120
+      ],
+      [
+        "tkelman",
+        221
+      ],
+      [
+        "JeffBezanson",
+        15
+      ],
+      [
+        "stevengj",
+        237
+      ],
+      [
+        "StefanKarpinski",
+        390
+      ]
+    ],
+    "humanComments": 16,
+    "benchmarkBotFreeParticipants": 6,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Get rid of legacy gc use markers",
+    "createdAt": "2017-06-18T04:27:55Z",
+    "merged": true,
+    "mergedAt": "2017-06-20T04:54:22Z",
+    "closed": true,
+    "closedAt": "2017-06-20T04:54:22Z",
+    "number": 22419,
+    "additions": 5,
+    "deletions": 100,
+    "baseRefName": "master",
+    "author": {
+      "login": "Keno"
+    },
+    "reviews": 1,
+    "comments": 3,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "codegen"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "src/ccall.cpp",
+      "src/cgutils.cpp",
+      "src/codegen.cpp",
+      "src/intrinsics.cpp",
+      "src/llvm-late-gc-lowering.cpp"
+    ],
+    "changedSourceFiles": [
+      "src/ccall.cpp",
+      "src/cgutils.cpp",
+      "src/codegen.cpp",
+      "src/intrinsics.cpp",
+      "src/llvm-late-gc-lowering.cpp"
+    ],
+    "callers": [],
+    "participants": [
+      "yuyichao",
+      "Keno"
+    ],
+    "commenterAndLengths": [
+      [
+        "Keno",
+        69
+      ],
+      [
+        "yuyichao",
+        64
+      ],
+      [
+        "yuyichao",
+        310
+      ]
+    ],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [
+      "yuyichao"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Fix #31357 - Missing Upsilon node in nested try/catch",
+    "createdAt": "2019-03-15T20:48:01Z",
+    "merged": true,
+    "mergedAt": "2019-03-16T16:54:44Z",
+    "closed": true,
+    "closedAt": "2019-03-16T16:54:44Z",
+    "number": 31365,
+    "additions": 24,
+    "deletions": 5,
+    "baseRefName": "master",
+    "author": {
+      "login": "Keno"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/compiler/ssair/slot2ssa.jl",
+      "test/core.jl"
+    ],
+    "changedSourceFiles": [
+      "base/compiler/ssair/slot2ssa.jl",
+      "test/core.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "Keno"
+    ],
+    "commenterAndLengths": [
+      [
+        "Keno",
+        538
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "sk/reloaded",
+    "createdAt": "2018-01-08T10:06:38Z",
+    "merged": true,
+    "mergedAt": "2018-01-20T19:23:42Z",
+    "closed": true,
+    "closedAt": "2018-01-20T19:23:42Z",
+    "number": 25455,
+    "additions": 1427,
+    "deletions": 401,
+    "baseRefName": "master",
+    "author": {
+      "login": "StefanKarpinski"
+    },
+    "reviews": 8,
+    "comments": 5,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "base/exports.jl",
+      "base/initdefs.jl",
+      "base/loading.jl",
+      "base/pkg/entry.jl",
+      "base/precompile.jl",
+      "base/sysimg.jl",
+      "base/uuid.jl",
+      "doc/make.jl",
+      "examples/embedding/embedding.c",
+      "src/datatype.c",
+      "src/dump.c",
+      "src/julia.h",
+      "src/module.c",
+      "src/toplevel.c",
+      "stdlib/Distributed/src/Distributed.jl",
+      "stdlib/LinearAlgebra/test/triangular.jl",
+      "stdlib/Random/src/misc.jl",
+      "stdlib/Random/test/runtests.jl",
+      "stdlib/Serialization/src/Serialization.jl",
+      "test/arrayops.jl",
+      "test/compile.jl",
+      "test/depot/packages/9HkB/TCSb/src/Baz.jl",
+      "test/depot/packages/SXm7/WLVn/src/Foo.jl",
+      "test/libgit2.jl",
+      "test/lineedit.jl",
+      "test/loading.jl",
+      "test/offsetarray.jl",
+      "test/project/Manifest.toml",
+      "test/project/Project.toml",
+      "test/project/deps/Bar/src/Bar.jl",
+      "test/project/deps/Foo1/src/Foo.jl",
+      "test/project/deps/Foo2.jl/src/Foo.jl",
+      "test/project/deps/Qux.jl",
+      "test/ranges.jl",
+      "test/repl.jl",
+      "test/replcompletions.jl",
+      "test/sets.jl",
+      "test/statistics.jl"
+    ],
+    "changedSourceFiles": [
+      "base/exports.jl",
+      "base/initdefs.jl",
+      "base/loading.jl",
+      "base/pkg/entry.jl",
+      "base/precompile.jl",
+      "base/sysimg.jl",
+      "base/uuid.jl",
+      "doc/make.jl",
+      "examples/embedding/embedding.c",
+      "src/datatype.c",
+      "src/dump.c",
+      "src/julia.h",
+      "src/module.c",
+      "src/toplevel.c",
+      "stdlib/Distributed/src/Distributed.jl",
+      "stdlib/LinearAlgebra/test/triangular.jl",
+      "stdlib/Random/src/misc.jl",
+      "stdlib/Random/test/runtests.jl",
+      "stdlib/Serialization/src/Serialization.jl",
+      "test/arrayops.jl",
+      "test/compile.jl",
+      "test/depot/packages/9HkB/TCSb/src/Baz.jl",
+      "test/depot/packages/SXm7/WLVn/src/Foo.jl",
+      "test/libgit2.jl",
+      "test/lineedit.jl",
+      "test/loading.jl",
+      "test/offsetarray.jl",
+      "test/project/deps/Bar/src/Bar.jl",
+      "test/project/deps/Foo1/src/Foo.jl",
+      "test/project/deps/Foo2.jl/src/Foo.jl",
+      "test/project/deps/Qux.jl",
+      "test/ranges.jl",
+      "test/repl.jl",
+      "test/replcompletions.jl",
+      "test/sets.jl",
+      "test/statistics.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "StefanKarpinski",
+      "JeffBezanson"
+    ],
+    "commenterAndLengths": [
+      [
+        "StefanKarpinski",
+        17
+      ],
+      [
+        "StefanKarpinski",
+        188
+      ],
+      [
+        "StefanKarpinski",
+        113
+      ],
+      [
+        "StefanKarpinski",
+        81
+      ],
+      [
+        "JeffBezanson",
+        20
+      ]
+    ],
+    "humanComments": 5,
+    "benchmarkBotFreeParticipants": 2,
+    "reviewers": [
+      "mbauman",
+      "StefanKarpinski",
+      "vtjnash"
+    ],
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "Fix #27276",
+    "createdAt": "2018-05-30T12:06:05Z",
+    "merged": true,
+    "mergedAt": "2018-06-01T13:00:04Z",
+    "closed": true,
+    "closedAt": "2018-06-01T13:00:05Z",
+    "number": 27320,
+    "additions": 5,
+    "deletions": 1,
+    "baseRefName": "master",
+    "author": {
+      "login": "maleadt"
+    },
+    "reviews": 0,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "bugfix"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "stdlib/InteractiveUtils/src/codeview.jl",
+      "stdlib/InteractiveUtils/test/runtests.jl"
+    ],
+    "changedSourceFiles": [
+      "stdlib/InteractiveUtils/src/codeview.jl",
+      "stdlib/InteractiveUtils/test/runtests.jl"
+    ],
+    "callers": [],
+    "participants": [
+      "maleadt"
+    ],
+    "commenterAndLengths": [
+      [
+        "maleadt",
+        0
+      ]
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "reviewers": [],
+    "commentsAfterContribution": 0
+  }
+]
