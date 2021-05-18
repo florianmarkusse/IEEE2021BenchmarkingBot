@@ -994,121 +994,87 @@
     "commentsAfterContribution": 10
   },
   {
-    "title": "remove Core._apply Builtin",
-    "createdAt": "2021-01-06T03:37:05Z",
+    "title": "typemap: attempt split on typenames also",
+    "createdAt": "2020-04-06T19:56:05Z",
     "merged": true,
-    "mergedAt": "2021-01-07T16:57:17Z",
+    "mergedAt": "2020-07-14T14:58:43Z",
     "closed": true,
-    "closedAt": "2021-01-07T16:57:17Z",
-    "number": 39115,
-    "additions": 48,
-    "deletions": 68,
+    "closedAt": "2020-07-14T14:58:43Z",
+    "number": 35384,
+    "additions": 391,
+    "deletions": 73,
     "baseRefName": "master",
     "author": {
       "login": "vtjnash"
     },
-    "reviews": 1,
-    "comments": 11,
-    "commits": 1,
+    "reviews": 5,
+    "comments": 4,
+    "commits": 3,
     "labels": {
-      "edges": []
+      "edges": [
+        {
+          "node": {
+            "name": "latency"
+          }
+        }
+      ]
     },
     "changedFiles": [
-      "base/boot.jl",
-      "base/compiler/abstractinterpretation.jl",
-      "base/compiler/compiler.jl",
-      "base/compiler/optimize.jl",
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/types.jl",
-      "src/builtin_proto.h",
-      "src/builtins.c",
+      "base/reflection.jl",
       "src/codegen.cpp",
-      "src/module.c",
-      "src/staticdata.c",
-      "src/toplevel.c",
-      "stdlib/InteractiveUtils/src/macros.jl",
-      "test/compiler/inference.jl",
-      "test/compiler/inline.jl"
+      "src/datatype.c",
+      "src/dump.c",
+      "src/jltypes.c",
+      "src/julia.h",
+      "src/julia_internal.h",
+      "src/rtutils.c",
+      "src/typemap.c",
+      "test/precompile.jl"
     ],
     "changedSourceFiles": [
-      "base/boot.jl",
-      "base/compiler/abstractinterpretation.jl",
-      "base/compiler/compiler.jl",
-      "base/compiler/optimize.jl",
-      "base/compiler/ssair/inlining.jl",
-      "base/compiler/types.jl",
-      "src/builtin_proto.h",
-      "src/builtins.c",
+      "base/reflection.jl",
       "src/codegen.cpp",
-      "src/module.c",
-      "src/staticdata.c",
-      "src/toplevel.c",
-      "stdlib/InteractiveUtils/src/macros.jl",
-      "test/compiler/inference.jl",
-      "test/compiler/inline.jl"
+      "src/datatype.c",
+      "src/dump.c",
+      "src/jltypes.c",
+      "src/julia.h",
+      "src/julia_internal.h",
+      "src/rtutils.c",
+      "src/typemap.c",
+      "test/precompile.jl"
     ],
-    "callers": [],
+    "callers": [
+      "vtjnash"
+    ],
     "participants": [
-      "KristofferC",
-      "StefanKarpinski",
-      "simeonschaub",
-      "maleadt",
-      "Keno",
       "vtjnash",
       "nanosoldier"
     ],
     "reviewers": [
+      "vtjnash",
       "JeffBezanson"
     ],
-    "humanComments": 11,
-    "benchmarkBotFreeParticipants": 6,
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 1,
     "commenterAndLengths": [
       [
         "vtjnash",
-        151
-      ],
-      [
-        "maleadt",
-        44
-      ],
-      [
-        "nanosoldier",
-        301
-      ],
-      [
-        "StefanKarpinski",
-        238
-      ],
-      [
-        "simeonschaub",
-        36
-      ],
-      [
-        "simeonschaub",
-        518
-      ],
-      [
-        "Keno",
-        59
-      ],
-      [
-        "StefanKarpinski",
-        23
-      ],
-      [
-        "Keno",
-        204
+        435
       ],
       [
         "vtjnash",
-        87
+        47
       ],
       [
-        "KristofferC",
-        143
+        "vtjnash",
+        335
+      ],
+      [
+        "nanosoldier",
+        326
       ]
     ],
-    "commentsAfterContribution": 8
+    "commentsAfterContribution": 0
   },
   {
     "title": "Use new compact parametric syntax where possible",
