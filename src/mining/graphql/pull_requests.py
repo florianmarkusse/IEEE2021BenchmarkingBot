@@ -130,6 +130,8 @@ def get_prs(owner, repo, search_parameters, start_date, attributes, token, end_d
                 found_all = True
             first_empty = True
 
+            if len(results) < 1:
+                break
             start_date = get_new_start_date(results[len(results) - 1]["node"]["createdAt"])
 
             # Perform query to get new cursor for new set of results
