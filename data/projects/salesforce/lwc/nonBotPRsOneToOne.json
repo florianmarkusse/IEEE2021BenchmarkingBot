@@ -1,1 +1,822 @@
-[]
+[
+  {
+    "title": "chore: Weekly dependencies update",
+    "createdAt": "2020-03-03T09:02:13Z",
+    "merged": true,
+    "mergedAt": "2020-03-03T15:35:34Z",
+    "closed": true,
+    "closedAt": "2020-03-03T15:35:34Z",
+    "number": 1749,
+    "additions": 180,
+    "deletions": 181,
+    "baseRefName": "master",
+    "author": {
+      "login": "pmdartus"
+    },
+    "reviews": 1,
+    "comments": 1,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "package.json",
+      "packages/@lwc/compiler/package.json",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_compat_config_simple_app.js",
+      "yarn.lock"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_compat_config_simple_app.js"
+    ],
+    "callers": [],
+    "participants": [
+      "pmdartus"
+    ],
+    "commenterAndLengths": [
+      [
+        "pmdartus",
+        705
+      ]
+    ],
+    "reviewers": [
+      "ravijayaramappa"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix(wire-service): wired field dont triggers rehydration",
+    "createdAt": "2020-04-20T20:18:06Z",
+    "merged": true,
+    "mergedAt": "2020-04-21T23:31:45Z",
+    "closed": true,
+    "closedAt": "2020-04-21T23:31:45Z",
+    "number": 1839,
+    "additions": 32,
+    "deletions": 3,
+    "baseRefName": "master",
+    "author": {
+      "login": "jodarove"
+    },
+    "reviews": 3,
+    "comments": 2,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/engine/src/framework/decorators/wire.ts",
+      "packages/integration-karma/test/wire/wiring/index.spec.js",
+      "packages/integration-karma/test/wire/wiring/x/broadcastConsumer/broadcastConsumer.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine/src/framework/decorators/wire.ts",
+      "packages/integration-karma/test/wire/wiring/index.spec.js",
+      "packages/integration-karma/test/wire/wiring/x/broadcastConsumer/broadcastConsumer.js"
+    ],
+    "callers": [],
+    "participants": [
+      "jodarove"
+    ],
+    "commenterAndLengths": [
+      [
+        "jodarove",
+        582
+      ],
+      [
+        "jodarove",
+        114
+      ]
+    ],
+    "reviewers": [
+      "ekashida",
+      "jodarove",
+      "caridy"
+    ],
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix: update compat mode detection logic",
+    "createdAt": "2020-09-03T23:52:10Z",
+    "merged": true,
+    "mergedAt": "2020-09-04T21:32:00Z",
+    "closed": true,
+    "closedAt": "2020-09-04T21:32:00Z",
+    "number": 2019,
+    "additions": 11,
+    "deletions": 8,
+    "baseRefName": "master",
+    "author": {
+      "login": "ravijayaramappa"
+    },
+    "reviews": 4,
+    "comments": 1,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/engine-dom/src/renderer.ts"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine-dom/src/renderer.ts"
+    ],
+    "callers": [],
+    "participants": [
+      "ravijayaramappa"
+    ],
+    "commenterAndLengths": [
+      [
+        "ravijayaramappa",
+        557
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "ravijayaramappa",
+      "caridy"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "chore: explicit imports of babel plugins",
+    "createdAt": "2020-10-09T02:52:11Z",
+    "merged": true,
+    "mergedAt": "2020-10-09T13:13:39Z",
+    "closed": true,
+    "closedAt": "2020-10-09T13:13:39Z",
+    "number": 2055,
+    "additions": 69,
+    "deletions": 30,
+    "baseRefName": "master",
+    "author": {
+      "login": "ekashida"
+    },
+    "reviews": 1,
+    "comments": 4,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel.js",
+      "packages/@lwc/compiler/src/__tests__/regression.spec.ts",
+      "packages/@lwc/compiler/src/transformers/javascript.ts",
+      "packages/@lwc/compiler/tsconfig.json",
+      "packages/@lwc/compiler/typings/@babel-plugin-proposal-class-properties.d.ts",
+      "packages/@lwc/compiler/typings/@babel-plugin-proposal-object-rest-spread.d.ts"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel.js",
+      "packages/@lwc/compiler/src/__tests__/regression.spec.ts",
+      "packages/@lwc/compiler/src/transformers/javascript.ts",
+      "packages/@lwc/compiler/typings/@babel-plugin-proposal-class-properties.d.ts",
+      "packages/@lwc/compiler/typings/@babel-plugin-proposal-object-rest-spread.d.ts"
+    ],
+    "callers": [],
+    "participants": [
+      "salesforce-nucleus[bot]",
+      "ekashida",
+      "pmdartus"
+    ],
+    "commenterAndLengths": [
+      [
+        "ekashida",
+        96
+      ],
+      [
+        "salesforce-nucleus[bot]",
+        4540
+      ],
+      [
+        "pmdartus",
+        603
+      ],
+      [
+        "salesforce-nucleus[bot]",
+        4540
+      ]
+    ],
+    "reviewers": [
+      "pmdartus"
+    ],
+    "humanComments": 4,
+    "benchmarkBotFreeParticipants": 3,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix: hmr memory leak + feature flag",
+    "createdAt": "2020-11-19T02:12:31Z",
+    "merged": true,
+    "mergedAt": "2020-11-19T18:39:45Z",
+    "closed": true,
+    "closedAt": "2020-11-19T18:39:45Z",
+    "number": 2103,
+    "additions": 114,
+    "deletions": 75,
+    "baseRefName": "master",
+    "author": {
+      "login": "diervo"
+    },
+    "reviews": 4,
+    "comments": 5,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/engine-core/src/framework/hot-swaps.ts",
+      "packages/@lwc/engine-core/src/framework/vm.ts",
+      "packages/@lwc/features/src/flags.ts",
+      "packages/integration-karma/test/swapping/components/index.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine-core/src/framework/hot-swaps.ts",
+      "packages/@lwc/engine-core/src/framework/vm.ts",
+      "packages/@lwc/features/src/flags.ts",
+      "packages/integration-karma/test/swapping/components/index.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "pmdartus",
+      "diervo"
+    ],
+    "commenterAndLengths": [
+      [
+        "diervo",
+        401
+      ],
+      [
+        "pmdartus",
+        332
+      ],
+      [
+        "diervo",
+        297
+      ],
+      [
+        "pmdartus",
+        225
+      ],
+      [
+        "diervo",
+        101
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "jodarove",
+      "diervo",
+      "nolanlawson"
+    ],
+    "humanComments": 5,
+    "benchmarkBotFreeParticipants": 2,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "refactor(synthetic-shadow): relatedTarget prototype patching for FocusEvent and MouseEvent",
+    "createdAt": "2020-11-12T00:45:38Z",
+    "merged": true,
+    "mergedAt": "2020-11-18T17:04:12Z",
+    "closed": true,
+    "closedAt": "2020-11-18T17:04:12Z",
+    "number": 2087,
+    "additions": 334,
+    "deletions": 287,
+    "baseRefName": "ekashida/caridy/polyfills-order",
+    "author": {
+      "login": "ekashida"
+    },
+    "reviews": 6,
+    "comments": 1,
+    "commits": 13,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      ".circleci/config.yml",
+      "lerna.json",
+      "packages/@lwc/babel-plugin-component/package.json",
+      "packages/@lwc/babel-plugin-component/src/index.js",
+      "packages/@lwc/compiler/package.json",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel.js",
+      "packages/@lwc/compiler/src/compiler/__tests__/result.spec.ts",
+      "packages/@lwc/compiler/src/transformers/javascript.ts",
+      "packages/@lwc/engine-core/package.json",
+      "packages/@lwc/engine-dom/package.json",
+      "packages/@lwc/engine-server/package.json",
+      "packages/@lwc/engine/package.json",
+      "packages/@lwc/errors/package.json",
+      "packages/@lwc/features/package.json",
+      "packages/@lwc/module-resolver/package.json",
+      "packages/@lwc/rollup-plugin/package.json",
+      "packages/@lwc/shared/package.json",
+      "packages/@lwc/style-compiler/package.json",
+      "packages/@lwc/synthetic-shadow/package.json",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
+      "packages/@lwc/synthetic-shadow/src/index.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/focus-event/README.md",
+      "packages/@lwc/synthetic-shadow/src/polyfills/focus-event/main.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/focus-event/polyfill.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/mouse-event/README.md",
+      "packages/@lwc/synthetic-shadow/src/polyfills/mouse-event/main.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/mouse-event/polyfill.ts",
+      "packages/@lwc/synthetic-shadow/src/shared/retarget-related-target.ts",
+      "packages/@lwc/template-compiler/package.json",
+      "packages/@lwc/wire-service/README.md",
+      "packages/@lwc/wire-service/package.json",
+      "packages/integration-karma/package.json",
+      "packages/integration-karma/test/events/focus-event-related-target/index.spec.js",
+      "packages/integration-karma/test/events/focus-event-related-target/x/container/container.html",
+      "packages/integration-karma/test/events/focus-event-related-target/x/container/container.js",
+      "packages/integration-karma/test/events/focus-event-related-target/x/input/input.html",
+      "packages/integration-karma/test/events/focus-event-related-target/x/input/input.js",
+      "packages/integration-tests/package.json",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/child/child.html",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/child/child.js",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/retarget-related-target/retarget-related-target.html",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/retarget-related-target/retarget-related-target.js",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/retarget-related-target.spec.js",
+      "packages/lwc/package.json",
+      "packages/perf-benchmarks/package.json",
+      "scripts/release/README.md",
+      "scripts/release/version.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/babel-plugin-component/src/index.js",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel-compat.js",
+      "packages/@lwc/compiler/src/__tests__/fixtures/expected-babel.js",
+      "packages/@lwc/compiler/src/compiler/__tests__/result.spec.ts",
+      "packages/@lwc/compiler/src/transformers/javascript.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
+      "packages/@lwc/synthetic-shadow/src/index.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/focus-event/main.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/focus-event/polyfill.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/mouse-event/main.ts",
+      "packages/@lwc/synthetic-shadow/src/polyfills/mouse-event/polyfill.ts",
+      "packages/@lwc/synthetic-shadow/src/shared/retarget-related-target.ts",
+      "packages/integration-karma/test/events/focus-event-related-target/index.spec.js",
+      "packages/integration-karma/test/events/focus-event-related-target/x/container/container.js",
+      "packages/integration-karma/test/events/focus-event-related-target/x/input/input.js",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/child/child.js",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/integration/retarget-related-target/retarget-related-target.js",
+      "packages/integration-tests/src/components/events/test-retarget-related-target/retarget-related-target.spec.js",
+      "scripts/release/version.js"
+    ],
+    "callers": [],
+    "participants": [
+      "ekashida"
+    ],
+    "commenterAndLengths": [
+      [
+        "ekashida",
+        526
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "ekashida",
+      "caridy"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "fix(engine-core): leaking reactive observers for wire config",
+    "createdAt": "2020-12-09T23:04:23Z",
+    "merged": true,
+    "mergedAt": "2021-01-04T17:54:44Z",
+    "closed": true,
+    "closedAt": "2021-01-04T17:54:44Z",
+    "number": 2127,
+    "additions": 137,
+    "deletions": 54,
+    "baseRefName": "spring21",
+    "author": {
+      "login": "jodarove"
+    },
+    "reviews": 1,
+    "comments": 1,
+    "commits": 2,
+    "labels": {
+      "edges": [
+        {
+          "node": {
+            "name": "nomerge"
+          }
+        }
+      ]
+    },
+    "changedFiles": [
+      "packages/@lwc/engine-core/src/framework/wiring.ts",
+      "packages/integration-karma/test/wire/legacy-adapters/index.spec.js",
+      "packages/integration-karma/test/wire/property-trap/index.spec.js",
+      "packages/integration-karma/test/wire/wiring/index.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine-core/src/framework/wiring.ts",
+      "packages/integration-karma/test/wire/legacy-adapters/index.spec.js",
+      "packages/integration-karma/test/wire/property-trap/index.spec.js",
+      "packages/integration-karma/test/wire/wiring/index.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "jodarove"
+    ],
+    "commenterAndLengths": [
+      [
+        "jodarove",
+        291
+      ]
+    ],
+    "reviewers": [
+      "pmdartus"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "feat(synthetic-shadow): enable innerText shadow dom semantics by default",
+    "createdAt": "2021-02-16T18:46:08Z",
+    "merged": true,
+    "mergedAt": "2021-02-17T19:48:27Z",
+    "closed": true,
+    "closedAt": "2021-02-17T19:48:27Z",
+    "number": 2247,
+    "additions": 18,
+    "deletions": 9,
+    "baseRefName": "master",
+    "author": {
+      "login": "jodarove"
+    },
+    "reviews": 2,
+    "comments": 1,
+    "commits": 3,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/features/src/flags.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/html-element.ts",
+      "packages/integration-karma/test/synthetic-shadow/inner-outer-text/inner-outer-text.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/features/src/flags.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/html-element.ts",
+      "packages/integration-karma/test/synthetic-shadow/inner-outer-text/inner-outer-text.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "jodarove"
+    ],
+    "commenterAndLengths": [
+      [
+        "jodarove",
+        188
+      ]
+    ],
+    "reviewers": [
+      "ekashida"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "refactor(shared): Make @lwc/shared treeshakable",
+    "createdAt": "2021-01-08T13:19:30Z",
+    "merged": true,
+    "mergedAt": "2021-01-19T08:02:28Z",
+    "closed": true,
+    "closedAt": "2021-01-19T08:02:28Z",
+    "number": 2160,
+    "additions": 84,
+    "deletions": 71,
+    "baseRefName": "master",
+    "author": {
+      "login": "pmdartus"
+    },
+    "reviews": 1,
+    "comments": 1,
+    "commits": 2,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/shared/package.json",
+      "packages/@lwc/shared/src/aria.ts",
+      "packages/@lwc/shared/src/global-this.ts",
+      "packages/@lwc/shared/src/language.ts",
+      "packages/@lwc/shared/src/symbol.ts",
+      "scripts/tasks/verify-treeshakable.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/shared/src/aria.ts",
+      "packages/@lwc/shared/src/global-this.ts",
+      "packages/@lwc/shared/src/language.ts",
+      "packages/@lwc/shared/src/symbol.ts",
+      "scripts/tasks/verify-treeshakable.js"
+    ],
+    "callers": [],
+    "participants": [
+      "pmdartus"
+    ],
+    "commenterAndLengths": [
+      [
+        "pmdartus",
+        1046
+      ]
+    ],
+    "reviewers": [
+      "ekashida"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "docs(engine-core): Improve decorator validation message",
+    "createdAt": "2021-01-11T11:59:24Z",
+    "merged": true,
+    "mergedAt": "2021-01-13T14:59:26Z",
+    "closed": true,
+    "closedAt": "2021-01-13T14:59:26Z",
+    "number": 2165,
+    "additions": 129,
+    "deletions": 49,
+    "baseRefName": "master",
+    "author": {
+      "login": "pmdartus"
+    },
+    "reviews": 5,
+    "comments": 3,
+    "commits": 3,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/engine-core/src/framework/decorators/register.ts",
+      "packages/integration-karma/test/component/decorators/api/index.spec.js",
+      "packages/integration-karma/test/component/decorators/track/index.spec.js",
+      "packages/integration-karma/test/component/decorators/wire/index.spec.js",
+      "packages/integration-karma/test/component/decorators/wire/x/adapter/adapter.js",
+      "packages/integration-karma/test/component/observed-fields/index.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine-core/src/framework/decorators/register.ts",
+      "packages/integration-karma/test/component/decorators/api/index.spec.js",
+      "packages/integration-karma/test/component/decorators/track/index.spec.js",
+      "packages/integration-karma/test/component/decorators/wire/index.spec.js",
+      "packages/integration-karma/test/component/decorators/wire/x/adapter/adapter.js",
+      "packages/integration-karma/test/component/observed-fields/index.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "pmdartus",
+      "ravijayaramappa"
+    ],
+    "commenterAndLengths": [
+      [
+        "pmdartus",
+        746
+      ],
+      [
+        "pmdartus",
+        783
+      ],
+      [
+        "ravijayaramappa",
+        147
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "ravijayaramappa",
+      "caridy"
+    ],
+    "humanComments": 3,
+    "benchmarkBotFreeParticipants": 2,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "refactor(synthetic-shadow): Move ShadowRoot method restrictions to synthetic-shadow",
+    "createdAt": "2021-02-05T14:01:15Z",
+    "merged": true,
+    "mergedAt": "2021-02-08T09:24:37Z",
+    "closed": true,
+    "closedAt": "2021-02-08T09:24:37Z",
+    "number": 2227,
+    "additions": 29,
+    "deletions": 32,
+    "baseRefName": "master",
+    "author": {
+      "login": "pmdartus"
+    },
+    "reviews": 1,
+    "comments": 2,
+    "commits": 1,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/engine-core/src/framework/restrictions.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/shadow-root.ts",
+      "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/engine-core/src/framework/restrictions.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/shadow-root.ts",
+      "packages/integration-karma/test/shadow-dom/ShadowRoot-properties/ShadowRoot.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "pmdartus"
+    ],
+    "commenterAndLengths": [
+      [
+        "pmdartus",
+        379
+      ],
+      [
+        "pmdartus",
+        143
+      ]
+    ],
+    "reviewers": [
+      "ekashida"
+    ],
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "refactor(synthetic-shadow): account for event targets that are neither Window nor Node in path-composer",
+    "createdAt": "2021-01-19T13:59:49Z",
+    "merged": true,
+    "mergedAt": "2021-02-08T15:15:12Z",
+    "closed": true,
+    "closedAt": "2021-02-08T15:15:12Z",
+    "number": 2195,
+    "additions": 57,
+    "deletions": 28,
+    "baseRefName": "master",
+    "author": {
+      "login": "ekashida"
+    },
+    "reviews": 6,
+    "comments": 1,
+    "commits": 7,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/synthetic-shadow/src/3rdparty/polymer/path-composer.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
+      "packages/integration-karma/test/shadow-dom/Event-properties/Event.composedPath.spec.js",
+      "packages/integration-karma/test/shadow-dom/Event-properties/x/child/child.html",
+      "packages/integration-karma/test/shadow-dom/Event-properties/x/container/container.html"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/synthetic-shadow/src/3rdparty/polymer/path-composer.ts",
+      "packages/@lwc/synthetic-shadow/src/faux-shadow/events.ts",
+      "packages/integration-karma/test/shadow-dom/Event-properties/Event.composedPath.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "ekashida"
+    ],
+    "commenterAndLengths": [
+      [
+        "ekashida",
+        236
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "ekashida"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "refactor(compiler): clean up type definitions",
+    "createdAt": "2021-04-28T06:20:58Z",
+    "merged": true,
+    "mergedAt": "2021-04-29T14:31:33Z",
+    "closed": true,
+    "closedAt": "2021-04-29T14:31:33Z",
+    "number": 2313,
+    "additions": 24,
+    "deletions": 31,
+    "baseRefName": "master",
+    "author": {
+      "login": "ekashida"
+    },
+    "reviews": 2,
+    "comments": 1,
+    "commits": 3,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/compiler/src/options.ts",
+      "packages/@lwc/compiler/src/transformers/template.ts",
+      "packages/@lwc/compiler/src/transformers/transformer.ts"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/compiler/src/options.ts",
+      "packages/@lwc/compiler/src/transformers/template.ts",
+      "packages/@lwc/compiler/src/transformers/transformer.ts"
+    ],
+    "callers": [],
+    "participants": [
+      "ekashida"
+    ],
+    "commenterAndLengths": [
+      [
+        "ekashida",
+        244
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "jodarove"
+    ],
+    "humanComments": 1,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  },
+  {
+    "title": "test: use Jest snapshots for rollup-plugin tests",
+    "createdAt": "2021-05-03T19:41:36Z",
+    "merged": true,
+    "mergedAt": "2021-05-05T15:55:43Z",
+    "closed": true,
+    "closedAt": "2021-05-05T15:55:43Z",
+    "number": 2316,
+    "additions": 401,
+    "deletions": 531,
+    "baseRefName": "master",
+    "author": {
+      "login": "nolanlawson"
+    },
+    "reviews": 6,
+    "comments": 2,
+    "commits": 4,
+    "labels": {
+      "edges": []
+    },
+    "changedFiles": [
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_compat_config_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app_css_resolver.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app_relative.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_ts_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/index.spec.js"
+    ],
+    "changedSourceFiles": [
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_compat_config_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app_css_resolver.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_simple_app_relative.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/fixtures/expected_default_config_ts_simple_app.js",
+      "packages/@lwc/rollup-plugin/src/__tests__/index.spec.js"
+    ],
+    "callers": [],
+    "participants": [
+      "nolanlawson"
+    ],
+    "commenterAndLengths": [
+      [
+        "nolanlawson",
+        288
+      ],
+      [
+        "nolanlawson",
+        62
+      ]
+    ],
+    "reviewers": [
+      "pmdartus",
+      "ravijayaramappa",
+      "ekashida",
+      "nolanlawson"
+    ],
+    "humanComments": 2,
+    "benchmarkBotFreeParticipants": 1,
+    "commentsAfterContribution": 0
+  }
+]

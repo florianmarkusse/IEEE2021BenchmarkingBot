@@ -57,7 +57,8 @@ def get_mean_median(prs, attribute):
         else:
             distribution.append(pr[attribute])
 
-    print(f"{attribute}: median = {statistics.median(distribution)}, average = {statistics.mean(distribution)}")
+    if len(distribution) > 0:
+        print(f"{attribute}: median = {statistics.median(distribution)}, average = {statistics.mean(distribution)}")
 
 def descriptive_statistics(prs):
     get_mean_median(prs, "participants")

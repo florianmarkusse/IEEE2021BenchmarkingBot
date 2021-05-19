@@ -2,6 +2,7 @@
   {
     "owner": "salesforce",
     "repo": "lwc",
+    "startDate": "2019-07-29",
     "botCallString": "Best has detected that there is a",
     "botUsername": "salesforce-best-lwc-internal[bot]",
     "additionalBots": [],

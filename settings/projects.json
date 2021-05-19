@@ -1,19 +1,8 @@
 [
   {
-    "owner": "diem",
-    "repo": "diem",
-    "startDate": "2020-03-03",
-    "botCallString": "/canary",
-    "botUsername": "github-actions[bot]",
-    "additionalBots": [
-      "bors-libra"
-    ],
-    "always": false,
-    "nonBotStartDate": ""
-  },
-  {
     "owner": "salesforce",
     "repo": "lwc",
+    "startDate": "2019-07-29",
     "botCallString": "Best has detected that there is a",
     "botUsername": "salesforce-best-lwc-internal[bot]",
     "additionalBots": [],
