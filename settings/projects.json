@@ -1,12 +1,16 @@
 [
   {
-    "owner": "JuliaLang",
-    "repo": "julia",
-    "startDate": "2016-04-01 ",
-    "botCallString": "runbenchmarks(",
-    "botUsername": "nanosoldier",
-    "additionalBots": [],
-    "always": false,
-    "nonBotStartDate": ""
+    "owner": "microsoft",
+    "repo": "fluentui",
+    "startDate": "2020-11-04",
+    "botCallString": "",
+    "botUsername": "fabricteam",
+    "additionalBots": [
+      "size-auditor[bot]",
+      "codesandbox[bot]",
+      "msft-github-bot"
+    ],
+    "always": true,
+    "nonBotStartDate": "2019-11-04"
   }
 ]
