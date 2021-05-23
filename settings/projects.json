@@ -1,10 +1,10 @@
 [
   {
-    "owner": "salesforce",
-    "repo": "lwc",
-    "startDate": "2019-07-29",
-    "botCallString": "Best has detected that there is a",
-    "botUsername": "salesforce-best-lwc-internal[bot]",
+    "owner": "JuliaLang",
+    "repo": "julia",
+    "startDate": "2016-04-01 ",
+    "botCallString": "runbenchmarks(",
+    "botUsername": "nanosoldier",
     "additionalBots": [],
     "always": false,
     "nonBotStartDate": ""

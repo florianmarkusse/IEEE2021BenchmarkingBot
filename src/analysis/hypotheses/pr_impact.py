@@ -2,6 +2,7 @@ from src.analysis.hypotheses.subroutines import get_distributions
 from src.analysis.plotting import qq_plot, frequency_graph
 from src.utility import helpers
 import statistics
+from src.analysis.tests.MC_test import perform_mc_test
 
 
 def pr_status_printer(owner, repo, data_set, pr_type):
@@ -41,6 +42,8 @@ def generate_pr_status(owner, repo, data_set):
 
 def generate_commits(owner, repo, data_set):
     distributions = get_distributions(data_set, "commits")
+
+    perform_mc_test(owner, repo, data_set["name"], "# of commits", distributions[0], distributions[1])
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1],
                         data_set["bot_prs_name"],

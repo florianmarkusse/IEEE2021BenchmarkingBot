@@ -5,11 +5,13 @@ from src.analysis.plotting import qq_plot, top_ten, frequency_graph, boxplot, sc
 from src.analysis.hypotheses.subroutines import get_distributions, get_bot_username, categorize_data_set, get_always, \
     get_additional_bots
 from src.utility import helpers
-
+from src.analysis.tests.MC_test import perform_mc_test
 
 def generate_participants(owner, repo, data_set):
     # Q-Q plot
     distributions = get_distributions(data_set, "benchmarkBotFreeParticipants")
+
+    perform_mc_test(owner, repo, data_set["name"], "# of participants", distributions[0], distributions[1])
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0], distributions[1], data_set["bot_prs_name"],
                         data_set["non_bot_prs_name"], "participants")
@@ -117,6 +119,9 @@ def generate_comments(owner, repo, data_set):
 
     number_of_comments_distributions = get_distributions(data_set, "comments")
 
+    perform_mc_test(owner, repo, data_set["name"], "# of comments",
+                    bot_pr_comments_distribution_without_bot_contribution, number_of_comments_distributions[1])
+
     qq_plot.qq_plotting(owner, repo, data_set["name"], bot_pr_comments_distribution_without_bot_contribution,
                         number_of_comments_distributions[1],
                         data_set["bot_prs_name"],
@@ -185,6 +190,9 @@ def generate_comments(owner, repo, data_set):
     comment_lengths_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set, "bot_prs")
     comment_lengths_non_bot_prs = get_total_comment_lengths_without_bot_contribution(owner, repo, data_set,
                                                                                      "non_bot_prs")
+
+    perform_mc_test(owner, repo, data_set["name"], "total comment length",
+                    comment_lengths_bot_prs, comment_lengths_non_bot_prs)
 
     divider = 1000
     comment_lengths_bot_prs = [ele / divider for ele in comment_lengths_bot_prs]
@@ -272,6 +280,8 @@ def generate_comments(owner, repo, data_set):
 def generate_reviews(owner, repo, data_set):
     # number of reviews
     distributions = get_distributions(data_set, "reviews")
+
+    perform_mc_test(owner, repo, data_set["name"], "# of reviews", distributions[0], distributions[1])
 
     qq_plot.qq_plotting(owner, repo, data_set["name"], distributions[0],
                         distributions[1],
