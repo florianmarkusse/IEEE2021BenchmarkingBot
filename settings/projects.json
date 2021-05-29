@@ -1,5 +1,57 @@
 [
   {
+    "owner": "salesforce",
+    "repo": "lwc",
+    "startDate": "2019-07-29",
+    "botCallString": "Best has detected that there is a",
+    "botUsername": "salesforce-best-lwc-internal[bot]",
+    "additionalBots": [],
+    "always": false,
+    "nonBotStartDate": ""
+  },
+  {
+    "owner": "JuliaLang",
+    "repo": "julia",
+    "startDate": "2016-04-01 ",
+    "botCallString": "runbenchmarks(",
+    "botUsername": "nanosoldier",
+    "additionalBots": [],
+    "always": false,
+    "nonBotStartDate": ""
+  },
+  {
+    "owner": "rust-lang",
+    "repo": "rust",
+    "startDate": "2018-08-18",
+    "botCallString": "@rust-timer queue",
+    "botUsername": "rust-timer",
+    "additionalBots": [],
+    "always": false,
+    "nonBotStartDate": ""
+  },
+  {
+    "owner": "diem",
+    "repo": "diem",
+    "startDate": "2020-03-03",
+    "botCallString": "/canary",
+    "botUsername": "github-actions[bot]",
+    "additionalBots": [
+      "bors-libra"
+    ],
+    "always": false,
+    "nonBotStartDate": ""
+  },
+  {
+    "owner": "apple",
+    "repo": "swift",
+    "startDate": "2017-01-30",
+    "botCallString": "@swift-ci benchmark",
+    "botUsername": "swift-ci",
+    "additionalBots": [],
+    "always": false,
+    "nonBotStartDate": ""
+  },
+  {
     "owner": "microsoft",
     "repo": "fluentui",
     "startDate": "2020-11-04",
