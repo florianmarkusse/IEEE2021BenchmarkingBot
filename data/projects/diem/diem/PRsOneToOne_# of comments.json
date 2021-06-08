@@ -1,1 +1,1 @@
-{"U-statistic": 3789.0, "p-value": 3.5963374941700444e-05, "CL effect size": 0.3372196511213955}
+{"U-statistic": 3789.0, "p-value": 3.5963374941700444e-05, "CL": 0.3372196511213955, "Glass' Delta": -0.30051010535686606, "Cliff's Delta": -0.32556069775720897, "Cliff's Effect": "small"}

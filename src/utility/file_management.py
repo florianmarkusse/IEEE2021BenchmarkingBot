@@ -59,6 +59,14 @@ def get_projects_to_mine():
     file.close()
     return projects
 
+def get_metric_file(owner, repo, file):
+
+    path = f"../data/projects/{owner}/{repo}/{file}.json"
+    file = open(path, "r")
+    projects = json.loads(file.read())
+    file.close()
+    return projects
+
 
 def get_extensions():
     """
