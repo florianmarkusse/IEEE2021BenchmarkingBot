@@ -1,5 +1,6 @@
 import scipy.stats
 from src.utility import file_management
+import statistics
 
 
 def perform_mc_test(owner, repo, name, metric, x, y):
@@ -20,7 +21,11 @@ def perform_mc_test(owner, repo, name, metric, x, y):
         "CL": common_language_effect_size,
         "Glass' Delta": glass_delta,
         "Cliff's Delta": cliffs_effect,
-        "Cliff's Effect": cliffs_size
+        "Cliff's Effect": cliffs_size,
+        "Bot mean": scipy.stats.tmean(x),
+        "Bot median": statistics.median(x),
+        "Non-bot mean": scipy.stats.tmean(y),
+        "Non-bot median": statistics.median(y),
     }
 
     file_management.write_data(test_result, owner, repo, f"{name}_{metric}")
@@ -30,7 +35,7 @@ def cliffsDelta(lst1, lst2, **dull):
 
     """Returns delta and true if there are more than 'dull' differences"""
     if not dull:
-        dull = {'medium': 0.33, 'large': 0.474} # effect sizes from (Hess and Kromrey, 2004)
+        dull = {'small': 0.147, 'medium': 0.33, 'large': 0.474} # effect sizes from (Hess and Kromrey, 2004)
     m, n = len(lst1), len(lst2)
     lst2 = sorted(lst2)
     j = more = less = 0
@@ -51,7 +56,10 @@ def lookup_size(delta: float, dull: dict) -> str:
     :type delta: float
     :type dull: dict, a dictionary of small, medium, large thresholds.
     """
-    if delta < dull['medium']:
+    delta = abs(delta)
+    if delta < dull['small']:
+        return 'negligible'
+    if dull['small'] <= delta < dull['medium']:
         return 'small'
     if dull['medium'] <= delta < dull['large']:
         return 'medium'

@@ -1,1 +1,12 @@
-{"U-statistic": 5558.0, "p-value": 0.8754010473622057, "CL": 0.49466002135991455, "Glass' Delta": -0.08287244484264072, "Cliff's Delta": -0.01067995728017088, "Cliff's Effect": "small"}
+{
+  "U-statistic": 5558.0,
+  "p-value": 0.8754010473622057,
+  "CL": 0.49466002135991455,
+  "Glass' Delta": -0.08287244484264072,
+  "Cliff's Delta": -0.01067995728017088,
+  "Cliff's Effect": "negligible",
+  "Bot mean": 1.971698113207547,
+  "Bot median": 1.0,
+  "Non-bot mean": 2.160377358490566,
+  "Non-bot median": 1.0
+}

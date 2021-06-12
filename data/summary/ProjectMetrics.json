@@ -1,0 +1,782 @@
+{
+  "JuliaLang/julia": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 1,
+        "Bot mean": 2.7196261682242993,
+        "Bot median": 2,
+        "Non-bot mean": 2.6043613707165107
+      },
+      "Number of participants": {
+        "Non-bot median": 2,
+        "Bot mean": 3.5763239875389408,
+        "Bot median": 3,
+        "Non-bot mean": 2.2679127725856696
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 4.866043613707165,
+        "Bot median": 2,
+        "Non-bot mean": 3.965732087227414
+      },
+      "Number of comments": {
+        "Non-bot median": 4,
+        "Bot mean": 8.881619937694705,
+        "Bot median": 6,
+        "Non-bot mean": 5.788161993769471
+      },
+      "Total comment length": {
+        "Non-bot median": 703,
+        "Bot mean": 3220.2803738317757,
+        "Bot median": 1680,
+        "Non-bot mean": 1533.9034267912773
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 1,
+        "Bot mean": 7.367041198501872,
+        "Bot median": 2.0,
+        "Non-bot mean": 5.360787695845911
+      },
+      "Number of participants": {
+        "Non-bot median": 2,
+        "Bot mean": 4.50187265917603,
+        "Bot median": 4.0,
+        "Non-bot mean": 2.471180106367687
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 7.432584269662922,
+        "Bot median": 2.0,
+        "Non-bot mean": 3.0181112548512288
+      },
+      "Number of comments": {
+        "Non-bot median": 3,
+        "Bot mean": 14.132958801498127,
+        "Bot median": 9.0,
+        "Non-bot mean": 5.98102630444157
+      },
+      "Total comment length": {
+        "Non-bot median": 587,
+        "Bot mean": 5817.374531835206,
+        "Bot median": 2757.0,
+        "Non-bot mean": 1952.4766422308467
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 2.0,
+        "Bot mean": 10.32121212121212,
+        "Bot median": 3.0,
+        "Non-bot mean": 11.104726976365118
+      },
+      "Number of participants": {
+        "Non-bot median": 2.0,
+        "Bot mean": 4.984848484848484,
+        "Bot median": 4.0,
+        "Non-bot mean": 2.9270578647106764
+      },
+      "Number of reviews": {
+        "Non-bot median": 1.0,
+        "Bot mean": 9.196969696969697,
+        "Bot median": 3.0,
+        "Non-bot mean": 4.036674816625917
+      },
+      "Number of comments": {
+        "Non-bot median": 4.0,
+        "Bot mean": 16.60909090909091,
+        "Bot median": 10.0,
+        "Non-bot mean": 7.8736756316218415
+      },
+      "Total comment length": {
+        "Non-bot median": 939.5,
+        "Bot mean": 7182.884848484849,
+        "Bot median": 3714.0,
+        "Non-bot mean": 2849.7249388753057
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 2.0,
+        "Bot mean": 15.570652173913043,
+        "Bot median": 5.0,
+        "Non-bot mean": 21.317005545286506
+      },
+      "Number of participants": {
+        "Non-bot median": 3.0,
+        "Bot mean": 5.869565217391305,
+        "Bot median": 5.0,
+        "Non-bot mean": 3.398336414048059
+      },
+      "Number of reviews": {
+        "Non-bot median": 1.0,
+        "Bot mean": 11.043478260869565,
+        "Bot median": 4.0,
+        "Non-bot mean": 4.780961182994455
+      },
+      "Number of comments": {
+        "Non-bot median": 5.0,
+        "Bot mean": 21.168478260869566,
+        "Bot median": 14.0,
+        "Non-bot mean": 9.727356746765249
+      },
+      "Total comment length": {
+        "Non-bot median": 1243.0,
+        "Bot mean": 9654.967391304348,
+        "Bot median": 5398.5,
+        "Non-bot mean": 3715.8419593345657
+      }
+    }
+  },
+  "rust-lang/rust": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 2,
+        "Bot mean": 3.5383502170767005,
+        "Bot median": 2,
+        "Non-bot mean": 6.007235890014472
+      },
+      "Number of participants": {
+        "Non-bot median": 4,
+        "Bot mean": 5.570188133140376,
+        "Bot median": 5,
+        "Non-bot mean": 4.781476121562952
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 5.164978292329956,
+        "Bot median": 2,
+        "Non-bot mean": 4.041968162083936
+      },
+      "Number of comments": {
+        "Non-bot median": 9,
+        "Bot mean": 16.287988422575978,
+        "Bot median": 12,
+        "Non-bot mean": 12.42836468885673
+      },
+      "Total comment length": {
+        "Non-bot median": 2420,
+        "Bot mean": 19082.646888567295,
+        "Bot median": 5012,
+        "Non-bot mean": 11779.39507959479
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 3,
+        "Bot mean": 5.0246913580246915,
+        "Bot median": 2.0,
+        "Non-bot mean": 11.101098473801885
+      },
+      "Number of participants": {
+        "Non-bot median": 4,
+        "Bot mean": 6.079218106995885,
+        "Bot median": 5.0,
+        "Non-bot mean": 4.396519879459512
+      },
+      "Number of reviews": {
+        "Non-bot median": 0,
+        "Bot mean": 6.62962962962963,
+        "Bot median": 2.0,
+        "Non-bot mean": 3.2242636337124524
+      },
+      "Number of comments": {
+        "Non-bot median": 7,
+        "Bot mean": 20.622427983539094,
+        "Bot median": 14.0,
+        "Non-bot mean": 10.865461261786722
+      },
+      "Total comment length": {
+        "Non-bot median": 2248,
+        "Bot mean": 30961.899176954732,
+        "Bot median": 6872.0,
+        "Non-bot mean": 11739.677165354331
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 5,
+        "Bot mean": 5.992957746478873,
+        "Bot median": 3.0,
+        "Non-bot mean": 15.790110701107011
+      },
+      "Number of participants": {
+        "Non-bot median": 4,
+        "Bot mean": 6.191549295774648,
+        "Bot median": 6.0,
+        "Non-bot mean": 4.230553505535055
+      },
+      "Number of reviews": {
+        "Non-bot median": 0,
+        "Bot mean": 7.912676056338028,
+        "Bot median": 3.0,
+        "Non-bot mean": 3.4890036900369004
+      },
+      "Number of comments": {
+        "Non-bot median": 7,
+        "Bot mean": 22.871830985915494,
+        "Bot median": 16.0,
+        "Non-bot mean": 11.517638376383763
+      },
+      "Total comment length": {
+        "Non-bot median": 2649,
+        "Bot mean": 35369.15915492958,
+        "Bot median": 8979.5,
+        "Non-bot mean": 14124.568413284132
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 13.0,
+        "Bot mean": 7.631808278867102,
+        "Bot median": 4,
+        "Non-bot mean": 21.69567118495846
+      },
+      "Number of participants": {
+        "Non-bot median": 3.0,
+        "Bot mean": 6.3050108932461875,
+        "Bot median": 6,
+        "Non-bot mean": 3.9713598600787057
+      },
+      "Number of reviews": {
+        "Non-bot median": 0.0,
+        "Bot mean": 9.433551198257081,
+        "Bot median": 4,
+        "Non-bot mean": 3.2929602098819415
+      },
+      "Number of comments": {
+        "Non-bot median": 7.0,
+        "Bot mean": 24.956427015250544,
+        "Bot median": 19,
+        "Non-bot mean": 11.522299956274596
+      },
+      "Total comment length": {
+        "Non-bot median": 2696.0,
+        "Bot mean": 44703.62091503268,
+        "Bot median": 12119,
+        "Non-bot mean": 15873.969392216877
+      }
+    }
+  },
+  "apple/swift": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 1.0,
+        "Bot mean": 3.42722371967655,
+        "Bot median": 2.0,
+        "Non-bot mean": 2.5202156334231804
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.8679245283018868,
+        "Bot median": 2.0,
+        "Non-bot mean": 1.5983827493261455
+      },
+      "Number of reviews": {
+        "Non-bot median": 1.0,
+        "Bot mean": 2.861185983827493,
+        "Bot median": 1.0,
+        "Non-bot mean": 2.8638814016172507
+      },
+      "Number of comments": {
+        "Non-bot median": 5.0,
+        "Bot mean": 7.319407008086253,
+        "Bot median": 5.0,
+        "Non-bot mean": 7.319407008086253
+      },
+      "Total comment length": {
+        "Non-bot median": 638.5,
+        "Bot mean": 2635.412398921833,
+        "Bot median": 900.5,
+        "Non-bot mean": 1345.6967654986522
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 1,
+        "Bot mean": 5.333017975402082,
+        "Bot median": 2,
+        "Non-bot mean": 9.940256776034238
+      },
+      "Number of participants": {
+        "Non-bot median": 1,
+        "Bot mean": 2.0728476821192054,
+        "Bot median": 2,
+        "Non-bot mean": 1.4954636233951497
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 3.5600756859035005,
+        "Bot median": 1,
+        "Non-bot mean": 2.1738659058487872
+      },
+      "Number of comments": {
+        "Non-bot median": 4,
+        "Bot mean": 8.527909176915799,
+        "Bot median": 6,
+        "Non-bot mean": 6.330156918687589
+      },
+      "Total comment length": {
+        "Non-bot median": 530,
+        "Bot mean": 3179.838221381268,
+        "Bot median": 1034,
+        "Non-bot mean": 1012.7939514978602
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 2,
+        "Bot mean": 7.231481481481482,
+        "Bot median": 3.0,
+        "Non-bot mean": 16.75716502845318
+      },
+      "Number of participants": {
+        "Non-bot median": 1,
+        "Bot mean": 2.174382716049383,
+        "Bot median": 2.0,
+        "Non-bot mean": 1.538851526125194
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 4.271604938271605,
+        "Bot median": 1.0,
+        "Non-bot mean": 2.7379203310915674
+      },
+      "Number of comments": {
+        "Non-bot median": 5,
+        "Bot mean": 9.621913580246913,
+        "Bot median": 6.0,
+        "Non-bot mean": 7.371546818416968
+      },
+      "Total comment length": {
+        "Non-bot median": 610,
+        "Bot mean": 4031.2006172839506,
+        "Bot median": 1345.5,
+        "Non-bot mean": 1193.0088980858768
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 3,
+        "Bot mean": 9.728947368421053,
+        "Bot median": 5.0,
+        "Non-bot mean": 31.34301722349035
+      },
+      "Number of participants": {
+        "Non-bot median": 1,
+        "Bot mean": 2.1605263157894736,
+        "Bot median": 2.0,
+        "Non-bot mean": 1.5901639344262295
+      },
+      "Number of reviews": {
+        "Non-bot median": 1,
+        "Bot mean": 4.871052631578947,
+        "Bot median": 1.0,
+        "Non-bot mean": 3.357958082589749
+      },
+      "Number of comments": {
+        "Non-bot median": 6,
+        "Bot mean": 10.381578947368421,
+        "Bot median": 7.0,
+        "Non-bot mean": 8.498236148578544
+      },
+      "Total comment length": {
+        "Non-bot median": 692,
+        "Bot mean": 5235.957894736842,
+        "Bot median": 1670.0,
+        "Non-bot mean": 1376.7507781697448
+      }
+    }
+  },
+  "diem/diem": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.971698113207547,
+        "Bot median": 1.0,
+        "Non-bot mean": 2.160377358490566
+      },
+      "Number of participants": {
+        "Non-bot median": 2.0,
+        "Bot mean": 3.047169811320755,
+        "Bot median": 3.0,
+        "Non-bot mean": 2.0754716981132075
+      },
+      "Number of reviews": {
+        "Non-bot median": 3.0,
+        "Bot mean": 5.39622641509434,
+        "Bot median": 3.0,
+        "Non-bot mean": 5.613207547169812
+      },
+      "Number of comments": {
+        "Non-bot median": 4.5,
+        "Bot mean": 4.716981132075472,
+        "Bot median": 3.0,
+        "Non-bot mean": 6.113207547169812
+      },
+      "Total comment length": {
+        "Non-bot median": 986.0,
+        "Bot mean": 4699.2830188679245,
+        "Bot median": 2203.0,
+        "Non-bot mean": 1588.367924528302
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 1.0,
+        "Bot mean": 2.4496644295302015,
+        "Bot median": 1,
+        "Non-bot mean": 2.5432900432900434
+      },
+      "Number of participants": {
+        "Non-bot median": 2.0,
+        "Bot mean": 3.1879194630872485,
+        "Bot median": 3,
+        "Non-bot mean": 2.480952380952381
+      },
+      "Number of reviews": {
+        "Non-bot median": 2.0,
+        "Bot mean": 6.1879194630872485,
+        "Bot median": 3,
+        "Non-bot mean": 4.337229437229437
+      },
+      "Number of comments": {
+        "Non-bot median": 6.0,
+        "Bot mean": 5.067114093959732,
+        "Bot median": 3,
+        "Non-bot mean": 7.7770562770562774
+      },
+      "Total comment length": {
+        "Non-bot median": 989.0,
+        "Bot mean": 4795.0,
+        "Bot median": 2434,
+        "Non-bot mean": 2138.160173160173
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 1,
+        "Bot mean": 2.9583333333333335,
+        "Bot median": 1.0,
+        "Non-bot mean": 3.1548172757475084
+      },
+      "Number of participants": {
+        "Non-bot median": 2,
+        "Bot mean": 3.3229166666666665,
+        "Bot median": 3.0,
+        "Non-bot mean": 2.564784053156146
+      },
+      "Number of reviews": {
+        "Non-bot median": 2,
+        "Bot mean": 7.25,
+        "Bot median": 4.0,
+        "Non-bot mean": 5.100996677740864
+      },
+      "Number of comments": {
+        "Non-bot median": 7,
+        "Bot mean": 5.177083333333333,
+        "Bot median": 3.5,
+        "Non-bot mean": 8.273754152823921
+      },
+      "Total comment length": {
+        "Non-bot median": 1093,
+        "Bot mean": 3937.7604166666665,
+        "Bot median": 2395.5,
+        "Non-bot mean": 2536.520930232558
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 1,
+        "Bot mean": 3.625,
+        "Bot median": 1.0,
+        "Non-bot mean": 4.3967861557478365
+      },
+      "Number of participants": {
+        "Non-bot median": 2,
+        "Bot mean": 3.4285714285714284,
+        "Bot median": 3.0,
+        "Non-bot mean": 2.689740420271941
+      },
+      "Number of reviews": {
+        "Non-bot median": 3,
+        "Bot mean": 8.464285714285714,
+        "Bot median": 6.0,
+        "Non-bot mean": 5.836835599505562
+      },
+      "Number of comments": {
+        "Non-bot median": 7,
+        "Bot mean": 5.553571428571429,
+        "Bot median": 3.5,
+        "Non-bot mean": 8.893695920889988
+      },
+      "Total comment length": {
+        "Non-bot median": 1172,
+        "Bot mean": 4514.267857142857,
+        "Bot median": 2582.0,
+        "Non-bot mean": 2961.8640296662547
+      }
+    }
+  },
+  "microsoft/fluentui": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 4.0,
+        "Bot mean": 6.45,
+        "Bot median": 4.0,
+        "Non-bot mean": 4.375
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.3,
+        "Bot median": 1.0,
+        "Non-bot mean": 1.4
+      },
+      "Number of reviews": {
+        "Non-bot median": 1.0,
+        "Bot mean": 4.65,
+        "Bot median": 2.0,
+        "Non-bot mean": 2.1
+      },
+      "Number of comments": {
+        "Non-bot median": 5.5,
+        "Bot mean": 1.75,
+        "Bot median": 1.0,
+        "Non-bot mean": 5.675
+      },
+      "Total comment length": {
+        "Non-bot median": 570.0,
+        "Bot mean": 1206.4,
+        "Bot median": 648.5,
+        "Non-bot mean": 909.8
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 5.0,
+        "Bot mean": 10.65103448275862,
+        "Bot median": 4,
+        "Non-bot mean": 10.899669239250276
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 2.017931034482759,
+        "Bot median": 2,
+        "Non-bot mean": 1.5402425578831311
+      },
+      "Number of reviews": {
+        "Non-bot median": 2.0,
+        "Bot mean": 6.012413793103448,
+        "Bot median": 2,
+        "Non-bot mean": 5.22877618522602
+      },
+      "Number of comments": {
+        "Non-bot median": 5.0,
+        "Bot mean": 5.096551724137931,
+        "Bot median": 2,
+        "Non-bot mean": 5.5077177508269015
+      },
+      "Total comment length": {
+        "Non-bot median": 706.0,
+        "Bot mean": 1968.56,
+        "Bot median": 1009,
+        "Non-bot mean": 1003.337927232635
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 7.0,
+        "Bot mean": 14.563758389261745,
+        "Bot median": 6,
+        "Non-bot mean": 13.723154362416107
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 2.0648769574944073,
+        "Bot median": 2,
+        "Non-bot mean": 1.5528523489932886
+      },
+      "Number of reviews": {
+        "Non-bot median": 3.0,
+        "Bot mean": 7.83668903803132,
+        "Bot median": 3,
+        "Non-bot mean": 6.305369127516778
+      },
+      "Number of comments": {
+        "Non-bot median": 5.0,
+        "Bot mean": 5.975391498881431,
+        "Bot median": 3,
+        "Non-bot mean": 5.630872483221476
+      },
+      "Total comment length": {
+        "Non-bot median": 738.5,
+        "Bot mean": 2335.76062639821,
+        "Bot median": 1209,
+        "Non-bot mean": 1084.5595637583892
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 9.0,
+        "Bot mean": 19.696629213483146,
+        "Bot median": 8,
+        "Non-bot mean": 16.859420289855073
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 2.033707865168539,
+        "Bot median": 2,
+        "Non-bot mean": 1.5826086956521739
+      },
+      "Number of reviews": {
+        "Non-bot median": 3.0,
+        "Bot mean": 10.277153558052435,
+        "Bot median": 4,
+        "Non-bot mean": 7.16231884057971
+      },
+      "Number of comments": {
+        "Non-bot median": 5.0,
+        "Bot mean": 6.310861423220974,
+        "Bot median": 3,
+        "Non-bot mean": 5.831884057971014
+      },
+      "Total comment length": {
+        "Non-bot median": 817.0,
+        "Bot mean": 2497.1573033707864,
+        "Bot median": 1372,
+        "Non-bot mean": 1179.6434782608696
+      }
+    }
+  },
+  "salesforce/lwc": {
+    "PRsOneToOne": {
+      "Number of commits": {
+        "Non-bot median": 2.0,
+        "Bot mean": 4.785714285714286,
+        "Bot median": 3.0,
+        "Non-bot mean": 3.2857142857142856
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.4285714285714286,
+        "Bot median": 1.0,
+        "Non-bot mean": 1.2857142857142858
+      },
+      "Number of reviews": {
+        "Non-bot median": 2.5,
+        "Bot mean": 3.2142857142857144,
+        "Bot median": 2.0,
+        "Non-bot mean": 3.0714285714285716
+      },
+      "Number of comments": {
+        "Non-bot median": 1.0,
+        "Bot mean": 0.5714285714285714,
+        "Bot median": 0.0,
+        "Non-bot mean": 1.8571428571428572
+      },
+      "Total comment length": {
+        "Non-bot median": 541.5,
+        "Bot mean": 994.2857142857143,
+        "Bot median": 0.0,
+        "Non-bot mean": 1298.0
+      }
+    },
+    "PRsChangedSourceFilesAtLeast2": {
+      "Number of commits": {
+        "Non-bot median": 3,
+        "Bot mean": 7.729166666666667,
+        "Bot median": 4.5,
+        "Non-bot mean": 4.137809187279152
+      },
+      "Number of participants": {
+        "Non-bot median": 1,
+        "Bot mean": 1.4583333333333333,
+        "Bot median": 1.0,
+        "Non-bot mean": 1.4028268551236749
+      },
+      "Number of reviews": {
+        "Non-bot median": 2,
+        "Bot mean": 6.635416666666667,
+        "Bot median": 2.5,
+        "Non-bot mean": 4.106007067137809
+      },
+      "Number of comments": {
+        "Non-bot median": 1,
+        "Bot mean": 1.40625,
+        "Bot median": 0.0,
+        "Non-bot mean": 2.2614840989399294
+      },
+      "Total comment length": {
+        "Non-bot median": 654,
+        "Bot mean": 3232.53125,
+        "Bot median": 55.0,
+        "Non-bot mean": 1711.183745583039
+      }
+    },
+    "PRsChangedSourceFilesAtLeast4": {
+      "Number of commits": {
+        "Non-bot median": 3,
+        "Bot mean": 9.08,
+        "Bot median": 6,
+        "Non-bot mean": 4.714285714285714
+      },
+      "Number of participants": {
+        "Non-bot median": 1,
+        "Bot mean": 1.5066666666666666,
+        "Bot median": 1,
+        "Non-bot mean": 1.3793103448275863
+      },
+      "Number of reviews": {
+        "Non-bot median": 2,
+        "Bot mean": 7.64,
+        "Bot median": 3,
+        "Non-bot mean": 4.753694581280788
+      },
+      "Number of comments": {
+        "Non-bot median": 1,
+        "Bot mean": 1.64,
+        "Bot median": 0,
+        "Non-bot mean": 2.3793103448275863
+      },
+      "Total comment length": {
+        "Non-bot median": 696,
+        "Bot mean": 4048.266666666667,
+        "Bot median": 72,
+        "Non-bot mean": 2057.5960591133003
+      }
+    },
+    "PRsChangedSourceFilesAtLeast8": {
+      "Number of commits": {
+        "Non-bot median": 4.0,
+        "Bot mean": 10.8,
+        "Bot median": 8.0,
+        "Non-bot mean": 6.633333333333334
+      },
+      "Number of participants": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.58,
+        "Bot median": 1.0,
+        "Non-bot mean": 1.4222222222222223
+      },
+      "Number of reviews": {
+        "Non-bot median": 3.0,
+        "Bot mean": 9.56,
+        "Bot median": 3.5,
+        "Non-bot mean": 5.633333333333334
+      },
+      "Number of comments": {
+        "Non-bot median": 1.0,
+        "Bot mean": 1.36,
+        "Bot median": 0.0,
+        "Non-bot mean": 2.911111111111111
+      },
+      "Total comment length": {
+        "Non-bot median": 753.5,
+        "Bot mean": 1181.18,
+        "Bot median": 89.0,
+        "Non-bot mean": 3399.866666666667
+      }
+    }
+  }
+}

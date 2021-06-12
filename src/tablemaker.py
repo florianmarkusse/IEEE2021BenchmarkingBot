@@ -8,7 +8,9 @@ projects = file_management.get_projects_to_mine()
 
 file_starts = [
     "PRsOneToOne",
-    "PRsChangedSourceFilesAtLeast2"
+    "PRsChangedSourceFilesAtLeast2",
+    "PRsChangedSourceFilesAtLeast4",
+    "PRsChangedSourceFilesAtLeast8",
 ]
 
 file_ends = {

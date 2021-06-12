@@ -40,6 +40,25 @@ def write_data(pull_requests, owner, repo, file_name):
     file.close()
 
 
+def write_summary(data, file_name):
+    path = "../data/summary"
+
+    json_data = json.dumps(data)
+
+    file = open(path + "/" + file_name + ".json", "w")
+    file.write(json_data)
+    file.close()
+
+def read_summary(file_name):
+    path = "../data/summary"
+    file = open(path + "/" + file_name + ".json", "r")
+    data = file.read()
+    file.close()
+
+    json_data = json.loads(data)
+
+    return json_data
+
 def get_token():
     """
     Gets the GitHub authorization token.
@@ -59,8 +78,8 @@ def get_projects_to_mine():
     file.close()
     return projects
 
-def get_metric_file(owner, repo, file):
 
+def get_metric_file(owner, repo, file):
     path = f"../data/projects/{owner}/{repo}/{file}.json"
     file = open(path, "r")
     projects = json.loads(file.read())
