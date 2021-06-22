@@ -25,7 +25,9 @@
     "startDate": "2018-08-18",
     "botCallString": "@rust-timer queue",
     "botUsername": "rust-timer",
-    "additionalBots": [],
+    "additionalBots": [
+      "bors"
+    ],
     "always": false,
     "nonBotStartDate": ""
   },

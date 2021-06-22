@@ -18,17 +18,19 @@ for project in projects:
     bot_query = project.get("botQuery")
     start_date = project.get("startDate")
     bot_call_string = project.get("botCallString")
+    additional_bots = project.get("additionalBots")
 
     data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
-    interesting_data_set = "PRsChangedSourceFilesAtLeast8"
-
     for pairs in data_set_pairs:
-        sample_bot_prs = random.sample(pairs["bot_prs"], 10)
-        sample_non_bot_prs = random.sample(pairs["non_bot_prs"], 10)
 
-        file_management.write_data(sample_bot_prs, owner, repo, f"sample{pairs['name']}")
-        file_management.write_data(sample_non_bot_prs, owner, repo, f"sampleNon{pairs['name']}")
+        file_name = pairs.get("name")
+
+        bot_prs = pairs.get("bot_prs")
+        file_management.write_data(bot_prs, owner, repo, f"1bot{file_name}")
+
+        non_bot_prs = pairs.get("non_bot_prs")
+        file_management.write_data(non_bot_prs, owner, repo, f"1nonBot{file_name}")
 
 
 

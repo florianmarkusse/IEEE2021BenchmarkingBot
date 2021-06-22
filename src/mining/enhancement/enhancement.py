@@ -47,3 +47,19 @@ def add_comments_after_benchmarking_bot_contribution(owner, repo, prs):
             if botUserName in comment[0]:
                 benchmark_bot_contributed = True
         pr["commentsAfterContribution"] = after_benchmark_contribution_count
+
+
+def delete_element(list_object, pos):
+    """Delete element from list at given index
+     position (pos) """
+    if pos < len(list_object):
+        list_object.pop(pos)
+
+def fix_additionalbots(owner, repo, additional_bots, prs):
+    for pr in prs:
+        indices_to_remove = []
+        for i in range(len(pr["commenterAndLengths"])):
+            if pr["commenterAndLengths"][i][0] in additional_bots:
+                indices_to_remove.append(i)
+        for index in indices_to_remove:
+            delete_element(pr["commenterAndLengths"], index)
