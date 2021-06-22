@@ -27,10 +27,12 @@ for project in projects:
         file_name = pairs.get("name")
 
         bot_prs = pairs.get("bot_prs")
-        file_management.write_data(bot_prs, owner, repo, f"1bot{file_name}")
+        bot_prs = enhancement.fix_additionalbots(owner, repo, additional_bots, bot_prs)
+        file_management.write_data(bot_prs, owner, repo, f"bot{file_name}")
 
         non_bot_prs = pairs.get("non_bot_prs")
-        file_management.write_data(non_bot_prs, owner, repo, f"1nonBot{file_name}")
+        non_bot_prs = enhancement.fix_additionalbots(owner, repo, additional_bots, non_bot_prs)
+        file_management.write_data(non_bot_prs, owner, repo, f"nonBot{file_name}")
 
 
 

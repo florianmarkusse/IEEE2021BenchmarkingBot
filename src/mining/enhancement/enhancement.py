@@ -63,3 +63,20 @@ def fix_additionalbots(owner, repo, additional_bots, prs):
                 indices_to_remove.append(i)
         for index in indices_to_remove:
             delete_element(pr["commenterAndLengths"], index)
+
+    for pr in prs:
+        indices_to_remove = []
+        for i in range(len(pr["participants"])):
+            if pr["participants"][i] in additional_bots:
+                indices_to_remove.append(i)
+        for index in indices_to_remove:
+            delete_element(pr["participants"], index)
+
+    for pr in prs:
+        pr["comments"] = len(pr["commenterAndLengths"])
+
+    add_human_comments_member(owner, repo, prs)
+    add_benchmark_bot_free_participants_member(owner, repo, prs)
+    add_comments_after_benchmarking_bot_contribution(owner, repo, prs)
+
+    return prs
