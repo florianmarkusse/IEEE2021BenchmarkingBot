@@ -35,7 +35,7 @@ If you want to run the project do the following:
 
 Now you have the required modules installed to perform either mining or analysis:
 
-To **mine**: `python -m src.miner`. Note that you will mine more recent data as well which is not included in the collected data that was used to perform the analysis.
+To **mine**: `python -m src.miner`. Note that you will mine more recent data as well which is not included in the collected data that was used to perform the analysis. Furthermore, you need to create a file named "token.txt" to the root of this directory, i.e. (IEEE2021\\token.txt), that contains your GitHub API token.
 
 To **analyse**: `python -m src.analyzer`
 
