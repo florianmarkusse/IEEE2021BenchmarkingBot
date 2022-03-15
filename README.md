@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/470327366.svg)](https://zenodo.org/badge/latestdoi/470327366)
+
 # PR (Pull Request) data and analysis of benchmarking bots
 
 ## Project layout
