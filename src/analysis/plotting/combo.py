@@ -50,7 +50,8 @@ def combo_period_analysis(owner, repo, data_set_name, period_summaries):
     plt.tight_layout(pad=0)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/combo/{data_set_name}_bot_pr_periodized.png", transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
 
 def combo_period(owner, repo, data_set_name, period_name, periods, bot_frequency, non_bot_frequency, bot_fraction):
@@ -76,4 +77,5 @@ def combo_period(owner, repo, data_set_name, period_name, periods, bot_frequency
     plt.tight_layout(pad=0)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/combo/{data_set_name}_{period_name}_bot_pr_periodized.png", transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()

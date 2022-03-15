@@ -1,0 +1,4 @@
+###### Packages required ######
+matplotlib
+probscale
+scipy

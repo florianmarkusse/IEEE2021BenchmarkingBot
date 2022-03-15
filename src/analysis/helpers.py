@@ -11,7 +11,7 @@ def get_graph_path(owner, repo):
     -------
     The path to get to a repository's graph folder.
     """
-    return f"../data/projects/{owner}/{repo}/images/graphs"
+    return f"data/projects/{owner}/{repo}/images/graphs"
 
 
 def split_prs_into_lists(prs, remove_bot_contribution=True):

@@ -10,4 +10,5 @@ def pie_chart(owner, repo, labels, colors, values, explode, file_title):
 
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/pie/{file_title}.png", transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()

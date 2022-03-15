@@ -1,26 +1,42 @@
-# PR (Pull Request) Data salesforce/lwc
+# PR (Pull Request) data and analysis of benchmarking bots
 
-This directory contains the PR data for the salesforce/lwc project. The files have the following contents:
+## Project layout
 
-- **botPRData.json**: This file contains all the PR's from 2019-07-29 (yyyy-mm-dd) until currentDate where the benchmark
-  bot contributed in.
-- **allPRData.json**: This file contains all the PR's from 2019-07-29 (yyyy-mm-dd) until currentDate.
+### data
+This directory contains all the data and analyses for each of the mined projects.
 
-# PR features
+- **projects**: In this folder you can find each of the mined projects with their corresponding data.
+  - **_project name_**: This folder contains all the images created by the analyses as well as the PR data for the project. All the results flow from 2 .json files:
+    - **botPRData.json**: This file contains all the PR's the project's benchmarking bot contributed to.
+    - **nonBotPRs.json**: This file contains all the PR's the project's benchmarking bot **did not** contribute to.
+- **summary**: This directory contains a summary created for each of the projects, _not used in the article_.
 
-The data collected from each PR is the following (note that the data may have changed at the time of viewing):
+### settings
+This directory contains all the settings that can be changed during mining/analysis. Currently, the only change that can be made is to specify which project(s) you want to mine/analyze. This can be done in the _projects.json_ file.
 
-- **cursor**: This is a unique ID and is only used for pagination to retrieve all the data.
-- **title**: This is the current title of the PR.
-- **createdAt** (): The date the PR was created.
-- **merged**: Whether or not the PR was merged.
-- **mergedAt**: The date of when the PR was merged. (_null_ if not applicable)
-- **closed**: Whether or not the PR was closed.
-- **closedAt**: The date of when the PR was closed. (_null_ if not applicable)
-- **participants/totalCount**: The number of participants in this PR.
-- **reviews/totalCount**: The number of reviews in this PR.
-- **comments/totalCount**: The number of comments in this PR.
-- **commits/totalCount**: The number of commits in this PR.
-- **additions**: The number of lines this PR adds
-- **deletions**: The number of lines this PR deletes. 
+### src
+This is the folder where the mining/analysis is performed. The top-level Python files perform the following action
+- **analyzer.py**: Performs the analysis according to the settings.
+- **get-pip.py**: File to get Pip, a Python module manager.
+- **miner.py**: Performs the mining according to the settings.
+- **summarizer.py**: Creates the summary data, again this is _not used in the article_.
+
+The other Python scripts are utilities used for various purposed in the project. Feel free to have a look.
+
+## Running the project
+
+First off, all the analysis data can be found in the data directory without running either the analysis or mining script.
+
+If you want to run the project do the following:
+
+1. Navigate to the root directory of this project (..\\..\\IEE2021BenchmarkingBot)
+2. If you do not have Pip installed: `python -m src.get-pip`
+3. Then install the required modules: `pip install -r requirements.txt`
+
+Now you have the required modules installed to perform either mining or analysis:
+
+To **mine**: `python -m src.miner`. Note that you will mine more recent data as well which is not included in the collected data that was used to perform the analysis.
+
+To **analyse**: `python -m src.analyzer`
+
 

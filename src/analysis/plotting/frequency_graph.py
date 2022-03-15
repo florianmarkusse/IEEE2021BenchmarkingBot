@@ -51,7 +51,8 @@ def compare_changed_files(owner, repo, data_set_name, overflow_value, changed_fi
                                        repo) + f"/frequency/{data_set_name}_cum_is_{cum}_{x_label.replace(' ', '_')}.png",
                 transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
 
 def create_single_hist(owner, repo, data_set_name, x_label, overflow_value, first_values, first_name,
@@ -115,7 +116,8 @@ def create_single_hist(owner, repo, data_set_name, x_label, overflow_value, firs
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}_cum_is_{cum}_{x_label.replace(' ', '_')}.png",
                 transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
 
 def create_overlapping_histogram(owner, repo, data_set_name, x_label, overflow_value, first_values, first_name,
@@ -180,7 +182,8 @@ def create_overlapping_histogram(owner, repo, data_set_name, x_label, overflow_v
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/frequency/{data_set_name}_{x_label.replace(' ', '_')}.png",
                 transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
 
 def frequency_analysis(owner, repo, pr_type, frequencies, x_label, cut_offs):
@@ -267,4 +270,5 @@ def create_frequency_bar_chart(sorted_counter, cut_off, is_every_tick, x_label, 
     plt.tight_layout(pad=0.04)
     plt.savefig(path, transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()

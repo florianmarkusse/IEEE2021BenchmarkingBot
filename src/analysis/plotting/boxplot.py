@@ -12,7 +12,8 @@ def boxplot(owner, repo, data_set_name, data, file_name):
     plt.tight_layout(pad=0.1)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/boxplot/{data_set_name}_{file_name}.png", transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
     return result
 

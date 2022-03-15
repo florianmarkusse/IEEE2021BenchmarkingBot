@@ -11,12 +11,12 @@ for project in projects:
     repo = project.get("repo")
 
     # Create directories if missing.
-    file_management.make_project_folder("../data/projects", owner, repo)
+    file_management.make_project_folder("data/projects", owner, repo)
 
     # Get data set pairs.
     data_set_pairs = file_management.get_data_set_pairs(owner, repo)
 
-    path = f"../data/projects/{owner}/{repo}/allPRs.json"
+    path = f"data/projects/{owner}/{repo}/allPRs.json"
 
     all_prs_file = open(path, "r")
     all_prs = json.loads(all_prs_file.read()),

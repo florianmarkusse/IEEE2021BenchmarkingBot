@@ -37,4 +37,5 @@ def scatter_graph(owner, repo, data_set_name, x_distribution, y_distribution, x_
     plt.tight_layout(pad=0.04)
     plt.savefig(helpers.get_graph_path(owner, repo) + f"/scatter/{data_set_name}_{file_name}.png", transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()

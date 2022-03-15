@@ -42,4 +42,5 @@ def create_top_ten_prs(owner, repo, data_set_name, prs, categorized_prs, pr_type
     plt.tight_layout(pad=0.04)
     plt.savefig(path, transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()

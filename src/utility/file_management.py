@@ -29,7 +29,7 @@ def write_data(pull_requests, owner, repo, file_name):
     """
     Writes the PR data to the file in json format
     """
-    path = "../data/projects"
+    path = "data/projects"
     make_project_folder(path, owner, repo)
 
     json_data = json.dumps(pull_requests)
@@ -41,7 +41,7 @@ def write_data(pull_requests, owner, repo, file_name):
 
 
 def write_summary(data, file_name):
-    path = "../data/summary"
+    path = "data/summary"
 
     json_data = json.dumps(data)
 
@@ -50,7 +50,7 @@ def write_summary(data, file_name):
     file.close()
 
 def read_summary(file_name):
-    path = "../data/summary"
+    path = "data/summary"
     file = open(path + "/" + file_name + ".json", "r")
     data = file.read()
     file.close()
@@ -63,7 +63,7 @@ def get_token():
     """
     Gets the GitHub authorization token.
     """
-    file = open("../token.txt", "r")
+    file = open("token.txt", "r")
     token = file.read()
     file.close()
     return token
@@ -73,14 +73,14 @@ def get_projects_to_mine():
     """
     Gets all the projects to mine from along with the queries to get the correct PR's
     """
-    file = open("../settings/projects.json", "r")
+    file = open("settings/projects.json", "r")
     projects = json.loads(file.read())
     file.close()
     return projects
 
 
 def get_metric_file(owner, repo, file):
-    path = f"../data/projects/{owner}/{repo}/{file}.json"
+    path = f"data/projects/{owner}/{repo}/{file}.json"
     file = open(path, "r")
     projects = json.loads(file.read())
     file.close()
@@ -91,7 +91,7 @@ def get_extensions():
     """
     Gets all the extensions that are considered source files
     """
-    file = open("../settings/programming_file_extensions.json", "r")
+    file = open("settings/programming_file_extensions.json", "r")
     extensions = json.loads(file.read())
     file.close()
     return extensions
@@ -101,14 +101,14 @@ def get_graphql_parameters():
     """
     Gets the parameters to collect on the PR's in the GraphQL query and their description.
     """
-    file = open("../settings/graphql_attributes_to_collect.json", "r")
+    file = open("settings/graphql_attributes_to_collect.json", "r")
     attributes = json.loads(file.read())
     file.close()
     return attributes
 
 
 def get_all_mined_prs(owner, repo):
-    path = f"../data/projects/{owner}/{repo}"
+    path = f"data/projects/{owner}/{repo}"
 
     # (bot PR's file name, all PR's file name, data set name)
     data_set = ("botPRs", "nonBotPRs", "BOT PRS - NON BOT PRS")
@@ -136,7 +136,7 @@ def get_all_mined_prs(owner, repo):
 def get_data_sets(owner, repo):
     prs = []
 
-    path = f"../data/projects/{owner}/{repo}"
+    path = f"data/projects/{owner}/{repo}"
 
     comparison_data_sets = [
         # (bot PR's file name, all PR's file name, data set name)
@@ -169,7 +169,7 @@ def get_data_sets(owner, repo):
 
 
 def get_data_set_pairs(owner, repo):
-    path = f"../data/projects/{owner}/{repo}"
+    path = f"data/projects/{owner}/{repo}"
     files_in_dir = os.listdir(path)
     data_files = [file for file in files_in_dir if file.endswith(".json")]
 

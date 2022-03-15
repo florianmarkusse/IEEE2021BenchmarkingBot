@@ -23,7 +23,8 @@ def qq_plotting(owner, repo, data_set_name, x_distribution, y_distribution, x_la
     plt.tight_layout(pad=0.04)
     plt.savefig(path, transparent=True)
 
-    plt.show()
+    # uncomment to show figure (blocks execution)
+    # plt.show()
 
 
 def qq_plot(x, y, log_scale=False, quantiles=None, interpolation='nearest', ax=None, rug=False,
